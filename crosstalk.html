@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Frontispiece</title> <!-- 60 characters or less -->
+		<title>Fronts</title> <!-- 60 characters or less -->
 		
 		<meta name="title" content="">  
 		<meta name="description" content=""> <!-- 160 characters or less -->
@@ -20,7 +20,7 @@
 		<link rel="stylesheet" href="css/anticipatory.css">
 
 		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="../reveal.js/css/theme/chalkup.css" id="theme">
+		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
 
 		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery-ui.css">
 		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery.ui.theme.css">
@@ -117,7 +117,11 @@
 				</section>
 
 
-
+				<section>
+					<iframe width="420" height="315" src="//www.youtube-nocookie.com/embed/soe-dm0aO6Q?rel=0" frameborder="0" allowfullscreen></iframe>
+					|<iframe width="420" height="315" src="//www.youtube-nocookie.com/embed/BLfi81ji5as?rel=0" frameborder="0" allowfullscreen></iframe>
+					<iframe width="420" height="315" src="//www.youtube-nocookie.com/embed/xO4USUNsD4Y?rel=0" frameborder="0" allowfullscreen></iframe>
+				</section>
 
 
 				<section>
@@ -778,7 +782,7 @@
 		</div>
 
 		<script src="../reveal.js/lib/js/head.min.js"></script>
-		<script src="../reveal.js/js/reveal.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
 
 		<script>
 
@@ -792,16 +796,16 @@
 				center: false,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 				autoSlide: Reveal.getQueryHash().timer || 12000, // linger time in milliseconds between auto-advancing slides or fragments
 
 				// Parallax scrolling
-				parallaxBackgroundImage: 'http://127.0.0.1/coloriis/mined/green-spread.jpg',
-				parallaxBackgroundSize: '1800px 1600px',
+				// parallaxBackgroundImage: 'http://127.0.0.1/coloriis/mined/green-spread.jpg',
+				// parallaxBackgroundSize: '1800px 1600px',
 
 				// Bounds for smallest/largest possible scale to apply to content
-				// minScale: 1,
-				// maxScale: 1,
+				minScale: 0.5,
+				maxScale: 4,
 
 				math: {
 					mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
