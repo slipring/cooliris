@@ -2,3 +2,90 @@ div {
 display: block;
 }
 
+
+#ofcourse {
+    padding:7.5px;
+    z-index: 210;
+}
+
+
+.reveal .slides #numerical_lead {
+	text-align: center;
+	margin-bottom:-20px;
+	letter-spacing: 40px;
+	margin-left:34px;
+	/*color: #eea950;*/
+	color: #2FBBFF;
+	font-family: 'Dosis', sans-serif; 
+	font-weight: 200;
+	font-size: 6em;
+}
+
+
+.reveal .slides #numerical_sub {
+margin-bottom: 50px;
+text-align: center;
+font-size: 2.2em;
+letter-spacing: 4px;
+/*color: #b13e3e;*/
+color: #53F293;
+font-family: 'Dosis', sans-serif;
+font-weight: 400;
+}
+
+
+
+
+.cloud body {
+ background: #add9e4;
+  background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4));
+  background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background-color: #f7fbfc;
+}
+
+
+
+/* http://jsfiddle.net/7uTTs/ */
+
+#framewrap {
+    padding:10px;
+    background-color:#f60;
+}
+#frame {
+    width:100%;
+    height:100%;
+    background-color:#fff;
+}
+
+/* http://jsfiddle.net/7uTTs/ */
+
+
+
+/* http://jsfiddle.net/XtksX/2/ */
+
+.reveal .slides .rotate {
+    background: url(http://upload.wikimedia.org/wikipedia/commons/c/c5/Two_finger_rotate.png) no-repeat;
+/*    position: absolute;*/
+    width: 350px;
+    height: 300px;
+    margin: 0;
+/*    margin-top: 40px;
+    margin-left: 40px;
+    left: -50px;
+    top: -50px; */
+    -webkit-animation: rotate 10s linear infinite;
+    animation: rotate 10s linear infinite;
+    -moz-animation: rotate 10s linear 0s infinite;
+}
+.reveal .slides .slider {
+/*    position: relative;*/
+/*    top: 320px;*/
+    width: 200px;
+/*    left: 50px;*/
+}
+
+/* http://jsfiddle.net/XtksX/2/ */
