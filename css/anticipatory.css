@@ -9,6 +9,45 @@ display: block;
 }
 
 
+/* #f87458 */
+
+/* http://web.mit.edu/wdmc/Public/gfd/synth/hadley.html#/controls */
+
+
+.push {
+height: 0.5em;
+	}
+
+.tail	{
+	display: block;
+	position: relative;
+}
+
+.trail {
+	background: rgba(25,25,25,.75);
+	color:#FFFFFF;
+	padding: 0px 0px;
+	z-index: 10;
+	display: block;
+	position: absolute;
+	bottom: -1000px;
+	left: 50px;
+	right: 50px;
+	border-radius:25px;
+
+	-webkit-transition: bottom .5s;
+	-moz-transition: bottom .5s;
+	-ms-transition: bottom .5s;
+	-o-transition: bottom .5s;
+	transition: bottom .5s;
+}
+.tail:hover .trail {
+	bottom: 10px;
+}
+
+/* http://web.mit.edu/wdmc/Public/gfd/synth/hadley.html#/controls */
+
+
 .reveal .slides #numerical_lead {
 	text-align: center;
 	margin-bottom:-20px;
