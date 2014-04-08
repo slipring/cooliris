@@ -1,0 +1,76 @@
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Talking Points</title>
+
+		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section text-to-speech="Do not be alarmed, you may not hear this message upon first site">
+					<h1>Text-to-Speech Demo</h1>
+
+					<p>
+						<small>Adjust the volume of your device's audio output accordingly.</small>
+					</p>
+				</section>
+
+				<section text-to-speech="Welcome to a presentation, of the feature!">
+					<h1>Welcome</h1>
+
+					<p>
+						<small>to the feature presentation!</small>
+					</p>
+				</section>
+
+				<section text-to-speech="I mean to impart upon you, a vivid impression of tone and time, for a general idea to be conveyed.">
+					<h2>Going straight to the point</h2>
+
+					<p>
+						<small>entails more than circling around the boundary conditions</small>
+					</p>
+				</section>
+
+				<section text-to-speech="Rotating fluids exhibit counter intuitive behaviors">
+					<h1>Intuition</h1>
+					
+					<p>
+						<small>Turning counterclockwise knowledge into counterclockwisdom</small>
+					</p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal.js/plugin/notes/notes.js' },
+					{ src: '../reveal.js/plugin/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
