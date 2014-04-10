@@ -66,7 +66,7 @@
 				dependencies: [
 					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: '../reveal.js/plugin/notes/notes.js' },
-					{ src: '../reveal.js/plugin/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } }
+					{ src: 'pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } }
 				]
 			});
 

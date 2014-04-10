@@ -9,6 +9,18 @@ display: block;
 }
 
 
+
+/*********************************************
+ * TAGCLOUD
+ *********************************************/
+span.clouditem {
+  padding-left: 0.15em;
+  padding-right: 0.15em;
+  line-height: 90%;
+}
+
+
+
 /* #f87458 */
 
 /* http://web.mit.edu/wdmc/Public/gfd/synth/hadley.html#/controls */

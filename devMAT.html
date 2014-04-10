@@ -64,7 +64,7 @@
 					<p>Cool irises</p>
 				</section>
 
-				<section>
+				<section text-to-speech="hello, can, you, handle a comma">
 					<section data-background="../mined/binding_dark.png" data-background-repeat="repeat" data-background-size="180px">
 						<h2>rotating fluids log</h2>
 						<p id="numerical_lead">01</p>
@@ -215,7 +215,8 @@
 					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: '../reveal.js/plugin/math/math.js', async: true },
 					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } }
 				]
 			});
 
