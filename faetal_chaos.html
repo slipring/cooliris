@@ -91,7 +91,7 @@
 					</p>
 				</section>
 
-				<section>
+				<section tagcloud bw>
 					Lorem ipsum
 					dolor sit
 					amet
@@ -436,11 +436,11 @@ function linkify( selector ) {
 					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: '../reveal.js/plugin/math/math.js', async: true },
-					{ src: '../reveal.js/plugin/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } },
 					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../reveal.js/plugin/animate/animate.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../reveal.js/plugin/tagcloud/tagcloud.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: '../reveal.js/plugin/animate/animate.js', async: true, condition: function() { return !!document.body.classList; } }
+					,	{ src: 'pkg/tagcloud/tagcloud.js', async: true, condition: function() { return !!document.body.classList; } }
+					,	{ src: 'pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } },
 
 				]
 			});
