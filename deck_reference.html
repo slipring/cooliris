@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Reference</title> <!-- 60 characters or less -->
+		
+		<meta name="title" content="">  
+		<meta name="description" content=""> <!-- 160 characters or less -->
+		<meta name="author" content="">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="shortcut icon" href="degree_spread.ico">
+
+		<link rel="stylesheet" href="css/anticipatory.css">
+
+		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
+
+		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery-ui.css">
+		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery.ui.theme.css">
+		<link rel="stylesheet" href="pkg/font-awesome-4.0.3/css/font-awesome.css">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" type="text/css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="css/exceptional.css">
+		<!-- <link rel="stylesheet" href="css/vestigial.css" /> -->
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = '../reveal.js/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+
+			</div>
+
+		</div>
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				mouseWheel: true,
+				progress: true,
+				slideNumber: true,
+				history: true,
+				center: false,
+
+				fragments: Reveal.getQueryHash().fragments || true, // turns fragments on and off globally, keeps fragments hidden if false
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				autoSlide: Reveal.getQueryHash().timer || 12000, // time in milliseconds before auto-advancing slides or fragments
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'http://127.0.0.1/coloriis/mined/green-spread.jpg',
+				// parallaxBackgroundSize: '1800px 1600px',
+
+				// Bounds for smallest/largest possible scale to apply to content
+				minScale: 0.5,
+				maxScale: 4,
+
+				math: {
+					mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+					config: 'TeX-AMS_HTML-full'
+				},
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal.js/plugin/math/math.js', async: true },
+					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/animate/animate.js', async: true, condition: function() { return !!document.body.classList; } },
+					,	{ src: 'pkg/tagcloud/tagcloud.js', async: true, condition: function() { return !!document.body.classList; } }
+					,	{ src: 'pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } },
+				]
+			});
+
+		</script>
+
+		<script language="javascript" type="text/javascript" src="pkg/h5utils.js"></script>	
+		<script language="javascript" type="text/javascript" src="pkg/jquery-1.11.0.js"></script>
+		<script language="javascript" type="text/javascript" src="pkg/jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script>
+		<script language="javascript" type="text/javascript" src="pkg/jquery-browser/dist/jquery.browser.js"></script>
+		<script language="javascript" type="text/javascript" defer src="js/overlayUI.js"></script>
+		<script language="javascript" type="text/javascript" defer src="js/eventListeners.js"></script>
+		<!--script language="javascript" type="text/javascript" defer src="js/vestigial.js"></script-->
+
+	</body>
+</html>

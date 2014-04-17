@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Dev</title> <!-- 60 characters or less -->
+		<title>Define</title> <!-- 60 characters or less -->
 		
 		<meta name="title" content="">  
 		<meta name="description" content=""> <!-- 160 characters or less -->
@@ -15,7 +15,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="shortcut icon" href="blackbox.ico">
+		<link rel="shortcut icon" href="degree_spread.ico">
 
 		<link rel="stylesheet" href="css/anticipatory.css">
 
@@ -57,109 +57,27 @@
 			<div class="slides">
 
 
-				<section>
-					<div id="ofcourse" class="indicator">
-						<i id="coursing" class="spin-up-ccw fa fa-book fa-inverse"></i>
-					</div>
-					<p>Cool irises</p>
+
+				<section text-to-speech="Will  you say this with a, comma?">
+					<h1>I bet maybe</h1>
 				</section>
 
-				<section text-to-speech="hello, can, you, handle a comma">
-					<section data-background="../mined/binding_dark.png" data-background-repeat="repeat" data-background-size="180px">
-						<h2>rotating fluids log</h2>
-						<p id="numerical_lead">01</p>
-						<p id="numerical_sub">FRONTS</p>
-						<a href="http://coriolis.no-ip.org/coloriis/mined/green-spread.jpg" data-preview-link>Dyespread</a><br>
-					</section>
-
-					<section>
-						<h4>Cool iris</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, sed, molestiae eligendi accusamus nemo repellendus nisi eius rerum eum beatae eos dignissimos accusantium sapiente quia dicta inventore laboriosam necessitatibus facilis earum nobis qui consectetur dolores culpa. Alias veniam sapiente soluta.</p>
-					</section>
-
-					<section>
-						<h2>Invest</h2>
-					</section>
-
-
-					<section>
-						<table>
-							<thead>
-								<tr>
-									<th>Key</th>
-									<th>Function</th>
-									<th>Instruction</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>?timer=12000</td>
-									<td>autoslide in ms</td>
-									<td>place after URL</td>
-								</tr>
-								<tr>
-									<td>B or .</td>
-									<td>Pause</td>
-									<td>cover up slide</td>
-								</tr>
-								<tr>
-									<td>F</td>
-									<td>Fullscreen</td>
-									<td>Esc to exit</td>
-								</tr>
-								<tr>
-									<td>Alt+click</td>
-									<td>Zoom-in</td>
-									<td>again to zoom out</td>
-								</tr>
-								<tr>
-									<td>Esc</td>
-									<td>Overview</td>
-									<td>nav or click to land</td>
-								</tr>
-								<tr>
-									<td>S</td>
-									<td>Speaker notes</td>
-									<td>view notes & upcoming</td>
-								</tr>
-								<tr>
-									<td>?print-pdf</td>
-									<td>Print-out</td>
-									<td>place after URL</td>
-								</tr>
-							</tbody>
-						</table>
-						<aside class="notes">
-							Navigation with UDLR arrows, scrollwheel. Swipe in mobile, pinch to overview.
-						</aside>
-					</section>
+				<section text-to-speech="Will  you say this with a comma?">
+					<h1>I bet probably (not)</h1>
 				</section>
 
-
-				<section>
-						<h3>Margules - Eq.(7.21)</h3>
-						\[\begin{aligned}
-						(u_2-u_1) = \frac{g' \tan \gamma}{2 \Omega} \\
-						u: \text{component of the current parallel to the front} \\
-						g' = g \frac{\Delta \rho}{\rho_1} \text{ : 'reduced gravity'} \\
-						\Delta \rho = \rho_1 - \rho_2 \text{ : cf. parcel 'buoyancy', defined in Eq.(4.3)} \\
-						\text{relates swirl speed of the cone to } g', \gamma, \Omega \\
-						\end{aligned} \]
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-
-
-				<section id="seasonal" title="Seasonal variation of the potential temperature and jet" data-transition="zoom">
-					<img class="prefacing" title="Northern hemisphere" src="http://web.mit.edu/wdmc/www/trailer/img/theta-jet-12-month-loop.gif" width="700" height="700" title="#IMAGEREF caption">
+				<section tagcloud bw>
+					what
+					in
+					the
+					world
+					is
+					this
 				</section>
-
 
 			</div>
 
 		</div>
-
 
 		<script src="../reveal.js/lib/js/head.min.js"></script>
 		<script src="../reveal.js/js/reveal.js"></script>
@@ -174,33 +92,20 @@
 				progress: true,
 				slideNumber: true,
 				history: true,
-				loop: false,
+				center: false,
 
-				transitionSpeed: 'default', // default/fast/slow
+				fragments: Reveal.getQueryHash().fragments || true, // turns fragments on and off globally, keeps fragments hidden if false
 				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 				autoSlide: Reveal.getQueryHash().timer || 12000, // time in milliseconds before auto-advancing slides or fragments
-				fragments: Reveal.getQueryHash().fragments || true, // turns fragments on and off globally, fragments stay hidden if false
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'http://127.0.0.1/coloriis/mined/green-spread.jpg',
 				// parallaxBackgroundSize: '1800px 1600px',
-				parallaxBackgroundImage: 'http://coriolis.no-ip.org/coloriis/mined/space_hedron.jpg',
-				parallaxBackgroundSize: '4000px 2500px',
-				parallaxForceVertical: true,
 
-				center: false,
-				width: 960,
-				height: 700,
-				margin: 0.1,
 				// Bounds for smallest/largest possible scale to apply to content
 				minScale: 0.5,
 				maxScale: 4,
-				// Opens links in an iframe preview overlay
-				previewLinks: false,
-				// Number of slides away from the current that are visible
-				viewDistance: 3,
-
 
 				math: {
 					mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
@@ -216,7 +121,10 @@
 					{ src: '../reveal.js/plugin/math/math.js', async: true },
 					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../reveal.js/plugin/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } }
+					{ src: '../reveal.js/plugin/animate/animate.js', async: true, condition: function() { return !!document.body.classList; } }
+					,	{ src: 'pkg/tagcloud/tagcloud.js', async: true, condition: function() { return !!document.body.classList; } }
+					,	{ src: 'pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } },
+
 				]
 			});
 
@@ -226,7 +134,7 @@
 		<script language="javascript" type="text/javascript" src="pkg/jquery-1.11.0.js"></script>
 		<script language="javascript" type="text/javascript" src="pkg/jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script>
 		<script language="javascript" type="text/javascript" src="pkg/jquery-browser/dist/jquery.browser.js"></script>
-		<script language="javascript" type="text/javascript" src="js/overlayUI.js"></script>
+		<script language="javascript" type="text/javascript" defer src="js/overlayUI.js"></script>
 		<script language="javascript" type="text/javascript" defer src="js/eventListeners.js"></script>
 		<!--script language="javascript" type="text/javascript" defer src="js/vestigial.js"></script-->
 
