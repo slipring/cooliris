@@ -305,9 +305,9 @@ header nav a.current {
 	color: #fff;
 }
 
-.victorias-secret,
-.swanson,
-.lambo {
+.vectoria-secret,
+.swansong,
+.limbo {
 	-webkit-transition: opacity .5s;
 	   -moz-transition: opacity .5s;
 	    -ms-transition: opacity .5s;
@@ -315,7 +315,7 @@ header nav a.current {
 	        transition: opacity .5s;
 }
 
-.victorias-secret {
+.vectoria-secret {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -323,13 +323,15 @@ header nav a.current {
 	height: 591px;
 }
 
-.lambo {
+.limbo {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 488px;
-	height: 367px;
+	height: 460px;
 	background: #fff;
+	margin-left: -100px;
+	margin-top: 15px;
 	opacity: 0;
 	-webkit-transform-origin: top left;
 	   -moz-transform-origin: top left;
@@ -343,13 +345,17 @@ header nav a.current {
 	        transform: rotate(-90deg) translateX(-488px);
 }
 
-.swanson {
+.swansong {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 648px;
+	/*	width: 648px;
+	height: 367px;*/
+	/*width: 1000px;
+	height: 1000px;*/
+	width: 488px;
 	height: 367px;
-	margin-top: -70px;
+	margin-top: 0px;
 	opacity: 0;
 	-webkit-transform-origin: top left;
 	   -moz-transform-origin: top left;
@@ -363,7 +369,7 @@ header nav a.current {
 	        transform: rotate(90deg) translateY(-370px);
 }
 
-.lambo .lenticular-set img {
+.limbo .lenticular-set img {
 	margin-top: 100px;
 }
 
@@ -508,7 +514,7 @@ header nav a.current {
 	-webkit-transition: all .2s;
 }
 
-.mobile-examples .victoria-link {
+.mobile-examples .vectoria-link {
 	background: url(../images/victoria-preview.jpg) no-repeat;
 	background-size: 100% 100%;
 	-webkit-transform: translate3d(-150px, 50px, 0);
@@ -518,7 +524,7 @@ header nav a.current {
 	        transform: translate3d(-150px, 50px, 0);
 }
 
-.mobile-examples .swanson-link {
+.mobile-examples .swansong-link {
 	background: url(../images/swanson-preview.jpg) no-repeat;
 	background-size: 100% 100%;
 	-webkit-transform: translate3d(150px, 50px, 0);
@@ -528,7 +534,7 @@ header nav a.current {
 	        transform: translate3d(150px, 50px, 0);
 }
 
-.mobile-examples .lambo-link {
+.mobile-examples .limbo-link {
 	background: url(../images/lambo-preview.jpg) no-repeat;
 	background-size: 100% 100%;
 	-webkit-transform: translate3d(0, 50px, 0);
@@ -538,7 +544,7 @@ header nav a.current {
 	        transform: translate3d(0, 50px, 0);
 }
 
-.is-portrait .mobile-examples .victoria-link {
+.is-portrait .mobile-examples .vectoria-link {
 	background: url(../images/victoria-preview.jpg) no-repeat;
 	background-size: 100% 100%;
 	-webkit-transform: translate3d(-75px, -10px, 0);
@@ -548,7 +554,7 @@ header nav a.current {
 	        transform: translate3d(-75px, -10px, 0);
 }
 
-.is-portrait .mobile-examples .swanson-link {
+.is-portrait .mobile-examples .swansong-link {
 	background: url(../images/swanson-preview.jpg) no-repeat;
 	background-size: 100% 100%;
 	-webkit-transform: translate3d(75px, -10px, 0);
@@ -558,7 +564,7 @@ header nav a.current {
 	        transform: translate3d(75px, -10px, 0);
 }
 
-.is-portrait .mobile-examples .lambo-link {
+.is-portrait .mobile-examples .limbo-link {
 	background: url(../images/lambo-preview.jpg) no-repeat;
 	background-size: 100% 100%;
 	-webkit-transform: translate3d(0, 115px, 0);
@@ -588,19 +594,19 @@ header nav a.current {
 	height: 100%;
 }
 
-.is-landscape .victoria-lenticular-wrapper {
+.is-landscape .vectoria-lenticular-wrapper {
 	margin-left: 140px;
 }
 
-.is-landscape .lambo-lenticular-wrapper {
+.is-landscape .limbo-lenticular-wrapper {
 	margin-top: 50px;
 }
 
-.is-portrait .lambo-lenticular-wrapper {
+.is-portrait .limbo-lenticular-wrapper {
 	margin-top: 130px;
 }
 
-.is-portrait .swanson-lenticular-wrapper {
+.is-portrait .swansong-lenticular-wrapper {
 	margin-top: 100px;
 }
 

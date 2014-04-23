@@ -12,9 +12,9 @@ var $lenticularWrapper;
 var $closeBtn;
 var bodyWidth;
 var bodyHeight;
-var sexyLenticular;
-var lamboLenticular;
-var swansonLenticular;
+var vectoriaLenticular;
+var limboLenticular;
+var swansongLenticular;
 var currentExample;
 var windowWidth;
 var zRotation;
@@ -72,33 +72,29 @@ $(document).ready(function() {
 
 	if(bodyWidth > 480) {
 		// create mouse-driven lenticulars
-		sexyLenticular = new Lenticular.Image($('.victorias-secret')[0], {
+		vectoriaLenticular = new Lenticular.Image($('.vectoria-secret')[0], {
 			images: '../lenticular/victoria/##.jpg',
 			frames: 82,
 			useTilt: false
 		});
-		sexyLenticular.showFrame(0);
+		vectoriaLenticular.showFrame(0);
 
-		lamboLenticular = new Lenticular.Image($('.lambo')[0], {
-			images: '../lenticular/lambo/##.jpg',
-			frames: 18,
+		limboLenticular = new Lenticular.Image($('.limbo')[0], {
+			// images: '../lenticular/simpolar/Atmos-##.png',
+			// frames: 9,
+			images: '../lenticular/simpolar/Tank-##.png',
+			// frames: 61,
+			frames: 44,
 			useTilt: false
 		});
-		lamboLenticular.showFrame(0);
+		limboLenticular.showFrame(0);
 
-		// swansonLenticular = new Lenticular.Image($('.swanson')[0], {
-		// 	images: '../lenticular/swanson/##.jpg',
-		// 	frames: 13,
-		// 	useTilt: false
-		// });
-		// swansonLenticular.showFrame(0);
-
-		swansonLenticular = new Lenticular.Image($('.swanson')[0], {
-			images: '../lenticular/theta/thetajet12monthloop-##.gif',
-			frames: 11,
+		swansongLenticular = new Lenticular.Image($('.swansong')[0], {
+			images: '../lenticular/yearthetajet/yearthetajet-##.gif',
+			frames: 13,
 			useTilt: false
 		});
-		swansonLenticular.showFrame(0);
+		swansongLenticular.showFrame(0);
 
 		$body.bind('mousemove', setMouseCoords);
 		setCurrent();
@@ -131,33 +127,38 @@ function showLenticular(e) {
 	$mobileLenticular.append($lenticularWrapper);
 
 	switch($(e.target).attr('class')) {
-		case 'victoria-link':
+		case 'vectoria-link':
 			lenticular = new Lenticular.Image($lenticularWrapper[0], {
 				images: '../lenticular/victoria/##.jpg',
-				frames: 82
-			});
-			$mobileLenticular.css('background-color', '#000');
-			$mobileLenticular.find('img').css('height', '100%');
-			$lenticularWrapper.addClass('victoria-lenticular-wrapper');
-			break;
-		case 'swanson-link':
-			lenticular = new Lenticular.Image($lenticularWrapper[0], {
-				images: '../lenticular/theta/thetajet12monthloop-##.gif',
-				frames: 11,
+				frames: 82,
 				axis: 'x'
 			});
 			$mobileLenticular.css('background-color', '#000');
-			$mobileLenticular.find('img').css('width', '100%');
-			$lenticularWrapper.addClass('swanson-lenticular-wrapper');
+			$mobileLenticular.find('img').css('height', '100%');
+			$lenticularWrapper.addClass('vectoria-lenticular-wrapper');
 			break;
-		case 'lambo-link':
+		case 'swansong-link':
 			lenticular = new Lenticular.Image($lenticularWrapper[0], {
-				images: '../lenticular/lambo/##.jpg',
-				frames: 18
+				images: '../lenticular/theta/thetajet12monthloop-##.gif',
+				frames: 13,
+				axis: 'y'
+			});
+			$mobileLenticular.css('background-color', '#000');
+			$mobileLenticular.find('img').css('width', '100%');
+			$lenticularWrapper.addClass('swansong-lenticular-wrapper');
+			break;
+		case 'limbo-link':
+			lenticular = new Lenticular.Image($lenticularWrapper[0], {
+			// images: '../lenticular/simpolar/Atmos-##.png',
+			// frames: 9,
+			images: '../lenticular/simpolar/Tank-##.png',
+			// frames: 61,
+			frames: 44,
+			// axis: 'z'
 			});
 			$mobileLenticular.css('background-color', '#fff');
 			$mobileLenticular.find('img').css('width', '100%');
-			$lenticularWrapper.addClass('lambo-lenticular-wrapper');
+			$lenticularWrapper.addClass('limbo-lenticular-wrapper');
 			break;
 	}
 	$mobileLenticular.show();
@@ -220,7 +221,7 @@ function setCurrent() {
 			zPosition = 0;
 			marginLeft = -230;
 			marginTop = -290;
-			currentLenticular = sexyLenticular;
+			currentLenticular = vectoriaLenticular;
 			break;
 		case 1:
 			zRotation = -100;
@@ -228,7 +229,7 @@ function setCurrent() {
 			zPosition = 0;
 			marginLeft = -290;
 			marginTop = -340;
-			currentLenticular = swansonLenticular;
+			currentLenticular = swansongLenticular;
 			break;
 		case 2:
 			zRotation = 97;
@@ -236,7 +237,7 @@ function setCurrent() {
 			zPosition = 0;
 			marginLeft = 30;
 			marginTop = -350;
-			currentLenticular = lamboLenticular;
+			currentLenticular = limboLenticular;
 			break;
 	}
 
