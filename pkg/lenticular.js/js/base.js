@@ -86,9 +86,16 @@ $(document).ready(function() {
 		});
 		lamboLenticular.showFrame(0);
 
+		// swansonLenticular = new Lenticular.Image($('.swanson')[0], {
+		// 	images: '../lenticular/swanson/##.jpg',
+		// 	frames: 13,
+		// 	useTilt: false
+		// });
+		// swansonLenticular.showFrame(0);
+
 		swansonLenticular = new Lenticular.Image($('.swanson')[0], {
-			images: '../lenticular/swanson/##.jpg',
-			frames: 13,
+			images: '../lenticular/theta/thetajet12monthloop-##.gif',
+			frames: 11,
 			useTilt: false
 		});
 		swansonLenticular.showFrame(0);
@@ -135,8 +142,9 @@ function showLenticular(e) {
 			break;
 		case 'swanson-link':
 			lenticular = new Lenticular.Image($lenticularWrapper[0], {
-				images: '../lenticular/swanson/##.jpg',
-				frames: 13
+				images: '../lenticular/theta/thetajet12monthloop-##.gif',
+				frames: 11,
+				axis: 'x'
 			});
 			$mobileLenticular.css('background-color', '#000');
 			$mobileLenticular.find('img').css('width', '100%');
