@@ -73,8 +73,8 @@ $(document).ready(function() {
 	if(bodyWidth > 480) {
 		// create mouse-driven lenticulars
 		vectoriaLenticular = new Lenticular.Image($('.vectoria-secret')[0], {
-			images: '../lenticular/victoria/##.jpg',
-			frames: 82,
+			images: '../lenticular/cyclapse/uncanny_##.jpg',
+			frames: 218,
 			useTilt: false
 		});
 		vectoriaLenticular.showFrame(0);
@@ -129,8 +129,8 @@ function showLenticular(e) {
 	switch($(e.target).attr('class')) {
 		case 'vectoria-link':
 			lenticular = new Lenticular.Image($lenticularWrapper[0], {
-				images: '../lenticular/victoria/##.jpg',
-				frames: 82,
+				images: '../lenticular/cyclapse/540/uncanny_##.jpg',
+				frames: 218,
 				axis: 'x'
 			});
 			$mobileLenticular.css('background-color', '#000');
@@ -139,7 +139,7 @@ function showLenticular(e) {
 			break;
 		case 'swansong-link':
 			lenticular = new Lenticular.Image($lenticularWrapper[0], {
-				images: '../lenticular/theta/thetajet12monthloop-##.gif',
+				images: '../lenticular/yearthetajet/600/yearthetajet-##.gif',
 				frames: 13,
 				axis: 'y'
 			});
@@ -152,8 +152,8 @@ function showLenticular(e) {
 			// images: '../lenticular/simpolar/Atmos-##.png',
 			// frames: 9,
 			images: '../lenticular/simpolar/Tank-##.png',
-			// frames: 61,
 			frames: 44,
+			// frames: 61,
 			// axis: 'z'
 			});
 			$mobileLenticular.css('background-color', '#fff');
