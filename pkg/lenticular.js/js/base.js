@@ -73,8 +73,10 @@ $(document).ready(function() {
 	if(bodyWidth > 480) {
 		// create mouse-driven lenticulars
 		vectoriaLenticular = new Lenticular.Image($('.vectoria-secret')[0], {
-			images: '../lenticular/cyclapse/uncanny_##.jpg',
-			frames: 218,
+			// images: '../lenticular/cyclapse/540.25I/uncanny_##.jpg',
+			// frames: 55,
+				images: '../lenticular/maximin/fronts_2-4_##.jpg',
+				frames: 302,
 			useTilt: false
 		});
 		vectoriaLenticular.showFrame(0);
@@ -129,9 +131,11 @@ function showLenticular(e) {
 	switch($(e.target).attr('class')) {
 		case 'vectoria-link':
 			lenticular = new Lenticular.Image($lenticularWrapper[0], {
-				images: '../lenticular/cyclapse/540/uncanny_##.jpg',
-				frames: 218,
-				axis: 'x'
+				// images: '../lenticular/cyclapse/360x4fps/uncanny_##.jpg',
+				// frames: 145,
+				images: '../lenticular/maximin/fronts_2-4_##.jpg',
+				frames: 302,
+				axis: 'y'
 			});
 			$mobileLenticular.css('background-color', '#000');
 			$mobileLenticular.find('img').css('height', '100%');
@@ -154,9 +158,11 @@ function showLenticular(e) {
 			images: '../lenticular/simpolar/Tank-##.png',
 			frames: 44,
 			// frames: 61,
-			// axis: 'z'
+			minTilt:-90,
+			maxTilt:90,
+			axis: 'y'
 			});
-			$mobileLenticular.css('background-color', '#fff');
+			$mobileLenticular.css('background-color', '#000');
 			$mobileLenticular.find('img').css('width', '100%');
 			$lenticularWrapper.addClass('limbo-lenticular-wrapper');
 			break;
