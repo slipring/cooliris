@@ -92,7 +92,7 @@ $(document).ready(function() {
 		limboLenticular.showFrame(0);
 
 		swansongLenticular = new Lenticular.Image($('.swansong')[0], {
-			images: '../lenticular/yearthetajet/yearthetajet-##.gif',
+			images: '../lenticular/30yrav/12moUTh-##.png',
 			frames: 13,
 			useTilt: false
 		});
@@ -133,9 +133,8 @@ function showLenticular(e) {
 			lenticular = new Lenticular.Image($lenticularWrapper[0], {
 				// images: '../lenticular/cyclapse/360x4fps/uncanny_##.jpg',
 				// frames: 145,
-				images: '../lenticular/maximin/fronts_2-4_##.jpg',
+				images: '../lenticular/cycull/iphone/rs/uncanny_##.jpg',
 				frames: 302,
-				axis: 'y'
 			});
 			$mobileLenticular.css('background-color', '#000');
 			$mobileLenticular.find('img').css('height', '100%');
@@ -143,9 +142,8 @@ function showLenticular(e) {
 			break;
 		case 'swansong-link':
 			lenticular = new Lenticular.Image($lenticularWrapper[0], {
-				images: '../lenticular/yearthetajet/600/yearthetajet-##.gif',
+				images: '../lenticular/30yrav/sm/12moUTh-##.jpg',
 				frames: 13,
-				axis: 'y'
 			});
 			$mobileLenticular.css('background-color', '#000');
 			$mobileLenticular.find('img').css('width', '100%');
@@ -158,9 +156,8 @@ function showLenticular(e) {
 			images: '../lenticular/simpolar/Tank-##.png',
 			frames: 44,
 			// frames: 61,
-			minTilt:-90,
-			maxTilt:90,
-			axis: 'y'
+			// minTilt:-90,
+			// maxTilt:90,
 			});
 			$mobileLenticular.css('background-color', '#000');
 			$mobileLenticular.find('img').css('width', '100%');

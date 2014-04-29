@@ -357,9 +357,9 @@ header nav a.current {
 	/*width: 1000px;
 	height: 1000px;*/
 	width: 488px;
-	height: 488px;
+	height: 588px;
 	margin-top: 0px;
-	margin-left:110px;
+	margin-left:0px;
 	opacity: 0;
 	-webkit-transform-origin: top left;
 	   -moz-transform-origin: top left;
@@ -519,7 +519,7 @@ header nav a.current {
 }
 
 .mobile-examples .vectoria-link {
-	background: url(../images/victoria-preview.jpg) no-repeat;
+	background: url(../images/clearfront_bd.png) no-repeat;
 	background-size: 100% 100%;
 	-webkit-transform: translate3d(-150px, 50px, 0);
 	   -moz-transform: translate3d(-150px, 50px, 0);
@@ -529,7 +529,7 @@ header nav a.current {
 }
 
 .mobile-examples .swansong-link {
-	background: url(../images/swanson-preview.jpg) no-repeat;
+	background: url(../images/thetajan_300db.gif) no-repeat;
 	background-size: 100% 100%;
 	-webkit-transform: translate3d(150px, 50px, 0);
 	   -moz-transform: translate3d(150px, 50px, 0);
@@ -539,7 +539,7 @@ header nav a.current {
 }
 
 .mobile-examples .limbo-link {
-	background: url(../images/lambo-preview.jpg) no-repeat;
+	background: url(../images/clearsim_bd.png) no-repeat;
 	background-size: 100% 100%;
 	-webkit-transform: translate3d(0, 50px, 0);
 	   -moz-transform: translate3d(0, 50px, 0);
@@ -549,7 +549,7 @@ header nav a.current {
 }
 
 .is-portrait .mobile-examples .vectoria-link {
-	background: url(../images/victoria-preview.jpg) no-repeat;
+	background: url(../images/clearfront_bd.png) no-repeat;
 	background-size: 100% 100%;
 	-webkit-transform: translate3d(-75px, -10px, 0);
 	   -moz-transform: translate3d(-75px, -10px, 0);
@@ -559,7 +559,7 @@ header nav a.current {
 }
 
 .is-portrait .mobile-examples .swansong-link {
-	background: url(../images/swanson-preview.jpg) no-repeat;
+	background: url(../images/thetajan_300db.gif) no-repeat;
 	background-size: 100% 100%;
 	-webkit-transform: translate3d(75px, -10px, 0);
 	   -moz-transform: translate3d(75px, -10px, 0);
@@ -569,7 +569,7 @@ header nav a.current {
 }
 
 .is-portrait .mobile-examples .limbo-link {
-	background: url(../images/lambo-preview.jpg) no-repeat;
+	background: url(../images/clearsim_bd.png) no-repeat;
 	background-size: 100% 100%;
 	-webkit-transform: translate3d(0, 115px, 0);
 	   -moz-transform: translate3d(0, 115px, 0);
