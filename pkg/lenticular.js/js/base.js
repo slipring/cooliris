@@ -82,11 +82,11 @@ $(document).ready(function() {
 		vectoriaLenticular.showFrame(0);
 
 		limboLenticular = new Lenticular.Image($('.limbo')[0], {
-			// images: '../lenticular/simpolar/Atmos-##.png',
-			// frames: 9,
-			images: '../lenticular/simpolar/Tank-##.png',
-			// frames: 61,
-			frames: 44,
+			images: '../lenticular/simpolar/Atmos-##.png',
+			frames: 9,
+			// images: '../lenticular/simpolar/Tank-##.png',
+			// // frames: 61,
+			// frames: 44,
 			useTilt: false
 		});
 		limboLenticular.showFrame(0);
@@ -143,7 +143,7 @@ function showLenticular(e) {
 		case 'swansong-link':
 			lenticular = new Lenticular.Image($lenticularWrapper[0], {
 				images: '../lenticular/30yrav/sm/12moUTh-##.jpg',
-				frames: 13,
+				frames: 13
 			});
 			$mobileLenticular.css('background-color', '#000');
 			$mobileLenticular.find('img').css('width', '100%');
@@ -151,10 +151,10 @@ function showLenticular(e) {
 			break;
 		case 'limbo-link':
 			lenticular = new Lenticular.Image($lenticularWrapper[0], {
-			// images: '../lenticular/simpolar/Atmos-##.png',
-			// frames: 9,
-			images: '../lenticular/simpolar/Tank-##.png',
-			frames: 44,
+			images: '../lenticular/simpolar/Atmos-##.png',
+			frames: 9
+			// images: '../lenticular/simpolar/Tank-##.png',
+			// frames: 44
 			// frames: 61,
 			// minTilt:-90,
 			// maxTilt:90,
