@@ -8,7 +8,10 @@ display: block;
     z-index: 210;
 }
 
-
+.reveal section {
+/*background: rgba(0,0,0,.3);
+border-radius: 20px;*/
+}
 
 /*********************************************
  * TAGCLOUD
@@ -104,7 +107,7 @@ font-weight: 400;
 
 #framewrap {
     padding:10px;
-    background-color:#f60;
+    background-color:#fff;
 }
 #frame {
     width:100%;
@@ -132,11 +135,198 @@ font-weight: 400;
     animation: rotate 10s linear infinite;
     -moz-animation: rotate 10s linear 0s infinite;
 }
-.reveal .slides .slider {
+
+/*.reveal .slides .slider {
 /*    position: relative;*/
 /*    top: 320px;*/
-    width: 200px;
+/*    width: 200px;
 /*    left: 50px;*/
-}
+/*}
 
 /* http://jsfiddle.net/XtksX/2/ */
+
+
+
+i {
+	opacity:.8;
+}
+
+.dash {
+	border:1px dashed gray;	
+}
+
+#defrag {
+	position:relative;
+	display:block;
+	width:2px;
+	height:10px;
+	margin-left:-80px;
+	background:rgba(0,0,0,.4);
+	border:1px dashed aqua;
+	opacity: .8;
+	z-index:50;
+}
+
+
+.indicator {
+	position: fixed;
+    display: block; 
+/*  border:1px dashed #eeeeee;*/
+}
+
+#spCB {
+    padding:10px;
+    z-index: 210;
+}
+
+#spCT {
+    padding:5px;
+    z-index: 210;
+}
+
+#spLC {
+    padding:5px;
+    z-index: 210;
+}
+
+#spRC {
+    padding:5px;
+    z-index: 210;
+}
+
+
+#eraser {
+    z-index: 210;
+}
+
+#Dpad {
+     z-index: 209;
+}
+
+
+#crosshair {
+    padding:20px;
+    z-index: 210;
+}
+
+#scopeoscope {
+    padding:20px;
+    z-index: 210;
+}
+
+#timevortex {
+    padding:30px;
+    padding-bottom:28px;
+    z-index: 10;
+}
+
+#tardis {
+    padding:58.5px;
+    padding-bottom:57.5px;
+    z-index: 10;
+}
+
+
+
+#ofcourse {
+    padding:7.5px;
+    z-index: 210;
+}
+
+#contextclue {
+	padding:7.5px;
+    z-index: 210;
+}
+
+#retarget {
+    min-height:10px; 
+    padding:7.5px;
+    z-index: 220;
+}
+
+#desplash {
+    min-height:10px; 
+    padding:7.5px;
+    z-index: 230;
+}
+
+#chatsoff {
+	padding:5px;
+    z-index: 210;
+}
+
+#anticyclone {
+	padding:10px;
+    z-index: 210;
+}
+
+#cyclone {
+	padding:10px;
+    z-index: 212;
+}
+
+#eyesight {
+	padding:7.5px;
+    z-index: 210;
+}
+
+#inspector {
+	padding:7.5px;
+    z-index: 210;
+}
+
+
+
+
+#defile {
+    z-index: 210;
+}
+
+#offofflink {
+    z-index: 211;
+}
+
+
+
+.indicated {
+	position:fixed;
+	display:block;
+	opacity: 0.9;
+	background:rgba(0,0,0,.3);
+	color:aqua;
+/*	border:1px dashed #eeeeee;*/
+}
+
+#gearable {
+	min-width:40px;
+	max-height:80%;
+}
+
+#slipstream {
+	min-width:150px;
+	min-height:10%;
+	font-size: 12px;
+	overflow:hidden;
+	z-index:50;
+}
+
+#targetline {
+	min-height:18px;
+	font-size: 18px;
+	z-index:50;
+}
+
+#splashline {
+	min-height:15px;
+	font-size: 14px;
+	z-index:50;
+}
+
+.indicator {
+	opacity:.3;
+}
+
+.indicator:hover {
+	opacity:.8;
+}
+

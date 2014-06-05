@@ -1,0 +1,51 @@
+  #accordion-resizer {
+    padding: 10px;
+    width: 960px;
+    height: 400px;
+  }
+
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%;}
+.column-center{ display: inline-block; width: 33%;}
+
+.callem-left{ float: left; width: 33%;}
+.callem-right{ float: right; width: 33%;}
+.callem-center{ display: inline-block; width: 33%;}
+
+table td {
+    border: 1px solid #eee;
+}
+.level1 td:first-child {
+    padding-left: 30px;
+}
+.level2 td:first-child {
+    padding-left: 60px;
+}
+.level3 td:first-child {
+    padding-left: 90px;
+}
+.level4 td:first-child {
+    padding-left: 90px;
+}
+.level5 td:first-child {
+    padding-left: 120px;
+}
+.level6 td:first-child {
+    padding-left: 150px;
+}
+
+.collapse .toggle {
+    background: url(ui/collapse.png);
+    background-size:16px 16px;
+}
+.expand .toggle {
+    background: url(ui/expand.png);
+		background-size:16px 16px;
+}
+.toggle {
+    height: 16px;
+    width: 16px;
+    margin-bottom:-4px;
+    margin-right:4px;
+    display: inline-block;   
+}

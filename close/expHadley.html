@@ -1,0 +1,2128 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>DEMO - General Circulation</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	
+		<!-- LOCAL STY -->
+			<link rel="stylesheet" href="css/revealEXP.css">
+			<link rel="stylesheet" href="css/theme/light.css" id="theme">
+			<!-- <link rel="stylesheet" href="css/bootstrap.min.css" media="screen"> -->
+			<!-- <script src="js/bootstrap.min.js"></script> -->
+			<script src="lib/js/head.min.js"></script>
+			<!--preq for ContentEditable-->
+			<script src="js/h5utils.js"></script>
+
+		<!-- NONLOCAL STY -->
+			<script src="http://code.jquery.com/jquery-latest.js"></script>
+			<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script> 
+			<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+	    	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css">
+
+		<!--PRELOADING-->
+			<script type="text/javascript" src="js/PxLoader.js"></script>
+			<script type="text/javascript" src="js/PxLoaderImage.js"></script> 
+			<script type="text/javascript" src="preloadHadley.js"></script>
+
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+			<script>
+				document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+			</script>
+		<!--[if lt IE 9]>
+			<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+			
+			<link rel="stylesheet" href="css/stylesheet.css">
+			<link rel="stylesheet" href="css/deckHadley.css">
+					
+	</head>
+
+
+
+
+<body>
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+<!-- 			<section id="EXAMPLE STACK">
+				<section id="mainstream" data-state="tops">
+					<h1>SYNOPSIS LEVEL</h1>
+					
+					<aside class="coordinate">
+						*.0 
+					</aside>
+					<aside class="headline">
+						Mainline point
+					</aside>
+					<aside class="notes">
+						Toggling explanatory text
+					</aside>
+				</section>
+				<section id="moreinfo" data-state="blueprint">
+					<h1>SCHEMATIC LEVEL</h1>
+					
+					<aside class="coordinate">
+						*.1 
+					</aside>
+					<aside class="headline">
+						Supporting points
+					</aside>
+					<aside class="notes">
+						Another toggling explanation
+					</aside>
+				</section>
+				<section id="indepth" data-state="blackout">
+					<h1>BACKGROUND LEVEL</h1>
+
+					<aside class="coordinate">
+						*.2 
+					</aside>
+					<aside class="headline">
+						Background points 
+					</aside>
+					<aside class="notes">
+						Explanatory text
+					</aside>
+				</section>
+			</section>  -->
+
+
+			<section>
+				<section data-state="tops splash">
+
+					<img id="M2m"
+						style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:80%;"
+						 src="trigger/gcsplash.png">
+
+
+
+					<aside id="originc" class="coordinate">
+						0.0  
+					</aside>
+					<aside id="originh" class="headline">
+						Weather in a Tank  
+					</aside>
+					<aside id="originn" class="notes">
+						Dynamics of the atmosphere using a tank of water, a bucket of ice, and a rotating turntable apparatus. Experience the planetary 
+					</aside>
+
+				</section>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<section>
+				<section data-state="tops regimes">
+					<div id="grouper">
+						<div id="groupee">
+	    					<img id="hadleyio" class="sublet"
+								style="background:none;
+									border:none;
+									box-shadow:none;
+									max-height:100%;"
+							src="trigger/gctankspin_horzn.jpg">
+						</div>
+						<div id="groupeer">
+							<img id="worldio" class="sublet"
+								style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:100%;"
+							src="trigger/gcworldspin_trans.jpg">
+						</div>
+
+						<div id="groupeer">
+							<img id="eddio" class="fragment roll-in sublet" 
+								data-fragment-index="1"
+								style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:100%;"
+							src="trigger/gctankspin_eddy.jpg">
+						</div>
+					</div>
+
+					<aside class="coordinate">
+						1.0  
+					</aside>
+					<aside class="headline">
+						studying the atmosphere's general circulation in the laboratory  
+					</aside>
+					<aside class="notes">
+						The air of our earth's atmosphere can be modeled by {compressible/incompressible} 
+					</aside>
+				</section>
+
+
+
+
+
+				<section data-state="blueprint">
+					<img 
+						id="protomap02"
+						usemap="#protomap02"
+						style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:80%;"
+						src="image/H1B0.png">
+
+					<map id="_protomap02" name="protomap02">
+					<area shape="poly" coords="0,0,0" alt="geophysical fluid dynamics" title="geophysical fluid dynamics" onMouseOver="" onMouseOut="" />
+					</map>
+
+					
+					<aside class="coordinate">
+						1.1  
+					</aside>
+					<aside class="headline">
+						Tagline  
+					</aside>
+					<aside class="notes">
+						1.	air (symbol) water (symbol). Air and water are both ‘fluids’.
+						2.	earth rotation (Ω) tank rotation (symbol). On the earth the poles feel maximum rotation, while the equator none. In the tank experiment we can vary the magnitude of the rotation.
+						3.	north-south temperature difference (symbol) ice bucket in the middle of the tank (symbol)
+					</aside>
+				</section>
+
+
+
+				<section data-state="blackout">
+					<img 
+						id="protomap04"
+
+						usemap="#protomap04"
+
+						style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:100%;"
+						src="image/hadley_superprox.gif">
+
+					<map id="_protomap04" name="protomap04">
+					</map>
+
+					<aside class="coordinate">
+						1.2  
+					</aside>
+					<aside class="headline">
+						Tagline  
+					</aside>
+					<aside class="notes">
+						Description should work for primary 3 experiments
+					</aside>
+				</section>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<section>
+				<section data-state="tops pretracers">
+					
+					 
+					  <iframe allowtransparency="true" width="485" height="402" src="http://scratch.mit.edu/projects/embed/10459062/" frameborder="0" allowfullscreen></iframe>
+    	
+				<h4> use spacebar to switch tracers </h4>
+
+
+				<div id="grouper">
+					<img
+					    id="protomap05"
+						usemap="#protomap05"
+						style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:100%;"
+						src="image/H2B0.png">
+
+					<map id="_protomap05" name="protomap05">
+					<area shape="rect" coords="40 90 180 180" alt="scoopula" title="scoopula" onMouseOver="if(document.images) document.getElementById('protomap05').src= 'image/H2B1.png';" onMouseOut="if(document.images) document.getElementById('protomap05').src= 'image/H2B0.png';" />
+					
+					<area shape="rect" coords="230 20 300 150" alt="eye dropper" title="eye dropper" onMouseOver="if(document.images) document.getElementById('protomap05').src= 'image/H2B2.png';" onMouseOut="if(document.images) document.getElementById('protomap05').src= 'image/H2B0.png';" />
+
+					<area shape="rect" coords="320 70 530 190" alt="hand and dot" title="hand and dot" onMouseOver="if(document.images) document.getElementById('protomap05').src= 'image/H2B3.png';" onMouseOut="if(document.images) document.getElementById('protomap05').src= 'image/H2B0.png';" />
+					</map>
+
+
+
+					<img id="groupee"			
+						style="background:none;
+							border:none;
+							box-shadow:none;
+							max-height:50%;
+							top: -0px;
+							left: 500px;
+							float:right;"
+						src="image/hadley_1rpm.gif">
+					
+
+
+<!-- 					<img id="groupee"
+						usemap="#switcher"
+						style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:10%;
+								top: 100px;
+								left: 5px;"
+						src="image/wiat_experiment_swap.png"> -->
+						
+					<map id="_switcher" name="switcher">
+							<area shape="rect" coords="0 0 40 40" href="DEMOfronts.html#/1/1" />
+							<area shape="rect" coords="40 0 200 40" href="DEMOeddies.html#/1/1" />
+					</map>
+				</div>
+
+					<aside class="coordinate">
+						2.0  
+					</aside>
+					<aside class="headline">
+						Using colored dye to reveal patterns of flow  
+					</aside>
+					<aside class="notes">
+						 Hadley ingredients icons + values [ Ice in center, 1rpm ] ] + OVERHEAD schematic with warm periphery, cool center
+					</aside>
+    			</section>
+
+
+
+
+
+
+				<section data-state="blueprint">
+
+					<img class="sublet"
+					     style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:80%;"
+						 src="image/hadley_norotato.jpg">
+
+					<aside class="coordinate">
+						2.1  
+					</aside>
+					<aside class="headline">
+						Title  
+					</aside>
+					<aside class="notes">
+						Add tracer icons above, split screen // right half, overhead.. animation in sketch space of dye drops, into axial symmetric spread, fade into photograph
+					</aside>
+				</section>
+
+
+
+
+				<section data-state="blackout">
+					 <img 
+						style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:100%;"
+						 src="image/H2C0.png">
+
+					<aside class="coordinate">
+						2.2  
+					</aside>
+					<aside class="headline">
+						Tagline  
+					</aside>
+					<aside class="notes">
+						Description
+					</aside>
+			    </section>
+
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<section>
+
+				<section data-state="tops vimvid">
+
+					<iframe src="http://player.vimeo.com/video/62612780?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+					<aside class="coordinate">
+						3.0  
+					</aside>
+					<aside class="headline">
+						Tagline  
+					</aside>
+					<aside class="notes">
+						Additional notes
+					</aside>
+
+				</section>
+
+
+
+
+
+
+				<section data-state="blueprint spritely_A">
+					
+					<!-- <img id="protomap08"
+						style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:80%;"
+						src="flux/H3B0.png">
+					<a href="http://web.mit.edu/wdmc/Public/gfd/synth/explo.html">spritely config</a> -->
+
+					
+					<div id="hadleySprite" style="top:0px"></div>
+
+					<aside class="coordinate">
+						3.1  
+					</aside>
+					<aside class="headline">
+						Tagline  
+					</aside>
+					<aside class="notes">
+						Description
+					</aside>
+				</section>
+
+
+
+
+
+
+				<section data-state="blackout spritely_B">
+
+					<div id="grouper">
+    					<img class="sublet"
+						id="protomap09"
+
+						usemap="#protomap09"
+
+						style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:80%;"
+					  src="image/hadley_40-1200_1000w.jpg">
+
+					<map id="_protomap09" name="protomap09"></map>
+	
+	    			<img	style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:80%;"
+
+    					src="image/H3C0.png" id="groupee" />
+					</div>
+
+
+					<aside class="coordinate">
+						3.2  
+					</aside>
+					<aside class="headline">
+						Title 
+					</aside>
+					<aside class="notes">
+						Description
+					</aside>
+				</section>
+		
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<section>
+					
+
+					<section id="renderings" data-state="tops vlab">
+
+
+
+						<div class="row-fluid">
+  							<div class="span12">
+    							<div class="row-fluid">
+
+
+     								 <div class="span3">
+     								 	<div id="grouper">
+     								 		<div id="groupee" style="z-index:3">
+     								 			<img id="synthgifI" class="sublet renewer"
+     								 			style="border:none;margin:0px;margin:0px;margin-top:60px;background:none;box-shadow:none;" 
+     								 			src="trigger/hadley_replay1.jpg"
+     								 			onClick="document.getElementById('synthgifI').src='trigger/hadley_replay1.gif'">
+     								 		</div>
+     								 		<div id="groupeer" style="z-index:0">
+     								 			<img style="border:none;margin:0px;margin:0px;margin-top:60px;background:none;box-shadow:none;" src="static/hadley_replay1bdrop.png">
+     								 		</div>
+     								 	</div>
+     								 </div>
+
+
+      								<div class="span9">
+        								<div class="row-fluid">
+          									<div class="span6">
+          										<h5 style="color:gray;">time evo</h5>
+          									</div>
+          									<div class="span6" >
+          										<h4 style="color:gray;">still frame</h4>
+          									</div>
+			        					</div>
+
+        								<div class="row-fluid">
+          									<div class="span6">
+												<img id="nowater" 
+												class="sublet renewer" 
+												style="border:0px;box-shadow: 0px 4px 4px rgba(0,0,0,.4);"
+												src="trigger/hadley_mediumless.jpg"
+												onClick="document.getElementById('nowater').src='trigger/hadley_mediumless.gif'">
+					          				</div>
+          		    				   		 <div class="span6">
+          										<img 
+          										style="border:0px;box-shadow: 0px 4px 4px rgba(0,0,0,.4);" 
+          										src="static/hadley_1wind.png">
+          									</div>
+ 						       			</div>
+
+        								<div class="row-fluid">
+          									<div class="span6">
+          										<img id="nocan" 
+          										style="border:0px;box-shadow: 0px 4px 4px rgba(0,0,0,.4);" 
+          										class="sublet renewer" 
+          										src="trigger/hadley_canless.jpg" 
+          										onClick="document.getElementById('nocan').src='trigger/hadley_canless.gif'">
+          									</div>
+          									<div class="span6">
+          										<img style="border:0px;box-shadow: 0px 4px 4px rgba(0,0,0,.4);" 
+          										src="static/hadley_1p5wind.png">
+          									</div>
+        								</div>
+      								</div>
+
+    							</div>
+  							</div>
+						</div>
+
+
+					<aside class="coordinate">
+						4.0  
+					</aside>
+					<aside class="headline">
+						Title  
+					</aside>
+					<aside class="notes">
+						Description _ top left no-loop GIF _ 
+					</aside>
+				</section>
+
+
+
+				<section data-state="blueprint" id="construct">
+					<div class="row-fluid">
+ 						<div class="span12">
+    						<div class="row-fluid">
+      							<div class="span6">
+        							<div class="row-fluid">
+          								<div class="span11">
+          									<img id="contourings" class="sublet renewer"
+          									style="border:none;margin:0px;background:none;box-shadow: 0px 4px 4px rgba(0,0,0,.4);" 
+          									src="trigger/hadley_contourside.jpg"
+          									onClick="document.getElementById('contourings').src='trigger/hadley_contourside.gif'">
+          								</div>
+					          			<div class="span10">
+					          				<img id="contouringo" class="sublet renewer"
+					          				style="border:none;margin:5px;background:none;box-shadow: 0px 4px 4px rgba(0,0,0,.4);" 
+					          				src="trigger/hadley_contourover.jpg"
+					          				onClick="document.getElementById('contouringo').src='trigger/hadley_contourover.gif'">
+					          			</div>
+        							</div>
+      							</div>
+ 			     				<div class="span6">
+ 			     					<div class="row-fluid">
+ 			     					<div class="span12">
+ 			     						<img 
+ 			     						style="border:none;margin:0px;background:none;float:right;box-shadow: 0px 4px 4px rgba(0,0,0,.4);" 
+ 			     						src="static/hadley_rotoscope.png">
+ 			     					</div>
+ 			     				</div>
+ 			     				<div class="row-fluid">
+ 			     					<img 
+ 			     					style="border:none;margin:11px;background:none;box-shadow:none;float:right;" 
+ 			     					src="cursors/transparentpixel.gif">
+ 			     				</div>
+ 			     				<div class="row-fluid">
+ 			     					<div class="span12">
+         								<img id="mesher" class="sublet renewer"
+         								style="border:none;margin:0px;background:none;box-shadow:0px 4px 4px rgba(0,0,0,.4);" 
+         								src="trigger/hadley_inking.jpg"
+         								onClick="document.getElementById('mesher').src='trigger/hadley_inking.gif'">
+         							</div>
+         						</div>
+    							</div>
+  							</div>
+						</div>
+					</div>
+					
+
+					<aside class="coordinate">
+						4.1  
+					</aside>
+					<aside class="headline">
+						Title  
+					</aside>
+					<aside class="notes">
+						Description
+					</aside>
+				</section>
+
+
+
+
+
+				<section data-state="blackout" id="digital">
+					<img id="floorless" class="sublet renewer"
+					style="border:none;margin:0px;background:none;box-shadow: 0px 4px 4px rgba(0,0,0,.4);" 
+					src="trigger/hadley_fcontext.jpg"
+					onClick="document.getElementById('floorless').src='trigger/hadley_fcontext.gif'">
+					<img id="floored" class="sublet renewer"
+					style="border:none;margin:0px;background:none;box-shadow: 0px 4px 4px rgba(0,0,0,.4);" 
+					src="trigger/hadley_wcontext.jpg"
+					onClick="document.getElementById('floored').src='trigger/hadley_wcontext.gif'">
+					
+
+					<aside class="coordinate">
+						4.2  
+					</aside>
+					<aside class="headline">
+						Title  
+					</aside>
+					<aside class="notes">
+						Description
+					</aside>
+				</section>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<section>
+
+					<section data-state="tops freecam">
+						<img id="artifistill"
+						class="sublet renewer"
+						style="border:none;margin:0px;background:none;box-shadow: 0px 4px 4px rgba(0,0,0,.4);" 
+						src="trigger/hadley_roamview.jpg"
+						onClick="document.getElementById('artifistill').src='trigger/hadley_roamview.gif'"
+						>
+
+
+
+					<aside class="coordinate">
+						5.0  
+					</aside>
+					<aside class="headline">
+							Title  
+					</aside>
+					<aside class="notes">
+							Description
+					</aside>
+					</section>
+
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section>
+					<section id="inspect" data-state="tops tracerlooks">
+						<h3>tracer feature evolution</h3>
+					<br>
+					<h4>short timescale</h4>
+					<h5>
+					<ul style="list-style-type:none;">
+						<li>AI. <a href="#/7" style="color:seagreen;">green dye drop</a></li>
+						<li>BI. <a href="#/8" style="color:violet;">permanganate clinamen</a></li>
+					</ul><h5>
+					<h4>long timescale</h4>
+					<h5>
+					<ul style="list-style-type:none;">
+						<li>AII. <a href="#/9" style="color:seagreen;">green dye mixing</a></li>
+						<li>BII. <a href="#/10" style="color:violet;">permanganate spread</a></li>
+					</ul>
+					</h5>
+					<br>
+					<h5>(. <a href="#/11">particle tracks</a>)</h5>
+
+
+					<aside class="coordinate">
+						6.0  
+					</aside>
+					<aside class="headline">
+						Tagline 
+					</aside>
+					<aside class="notes">
+						Descript
+					</aside>
+					
+					</section>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section>
+					<section data-state="tops greenrelease">
+						<img class="sublet"
+							style="border:none;margin:0px;background:none;box-shadow:none;" 
+							src="image/hadley_greendye256_4sdelay.jpg">
+
+						<aside class="coordinate">
+						7.0  
+					</aside>
+						<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+					</section>
+
+
+					<section data-state="blueprint">
+						<img style="border:none;margin:0px;background:none;box-shadow:none;" src="image/hadley_top-level-ana.png">
+
+						<aside class="coordinate">
+						7.1  
+						</aside>
+						<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+					</section>
+
+					<section data-state="blackout">
+						<h3>TANK  | |  EARTH</h3>
+						<img style="border:none;margin:0px;background:none;box-shadow:none;" src="image/hadley_proxy001.png">
+						
+						<aside class="coordinate">
+						7.2  
+						</aside>
+
+						<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+					</section>
+	
+				</section>
+
+
+
+
+
+
+
+
+
+			<section>
+				<section data-state="tops pinkrelease">
+
+					<img  
+						src="image/hadley_pdrop.png"
+						style="width:50%;border:none;background:none;box-shadow:none;margin-top:-150px;margin-left:-50px;">
+					<br>
+					<img class="sublet"
+					 	src="image/hadley_perma256.gif"
+						style="width:30%;border:none;background:none;box-shadow:none;margin-top:-40px;border-radius:10px;">
+					
+
+					<aside class="coordinate">
+						8.0  
+					</aside>
+					<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description 
+					</aside>
+				</section>
+
+
+
+
+				<section data-state="blueprint">
+					<img style="border:none;margin:0px;background:none;box-shadow:none" src="image/hadley_permdrop.png">
+					<img style="border:none;margin:0px;background:none;box-shadow:none;" src="image/hadley_key_perm.png">
+						
+
+
+					<aside class="coordinate">
+						8.1  
+					</aside>
+
+						<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+				</section>
+
+
+
+
+
+				<section data-state="blackout">
+						<h3>TANK  | |  EARTH</h3>
+
+
+						<aside class="coordinate">
+						8.2  
+					</aside>
+					<aside class="headline">
+							Title 
+						</aside>
+						<aside class="notes">
+							Description 
+					</aside>
+				</section>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<section >
+					<section data-state="tops pinkspread">
+					<img class="sublet"
+						 src="image/hadley_permlongterm.jpg"
+						style="border:none;box-shadow:none;background:none;max-height:90%">
+
+					<aside class="coordinate">
+						9.0  
+					</aside>
+					<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+
+
+					</section>
+
+					<section data-state="blueprint">
+						<img class="proxys" src="image/hadley_permdrifter.gif" style="border:none;box-shadow:none;background:none;">
+						<img class="proxys" src="image/hadley_bottomflows.png" style="border:none;box-shadow:none;max-height:45%;background:none;border-radius:15px;">
+
+						<aside class="coordinate">
+							9.1  
+						</aside>
+						<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description 
+						</aside>
+					</section>
+
+
+					<section data-state="blackout">
+						<h3>TANK  | |  EARTH</h3>
+			
+
+					<aside class="coordinate">
+						9.2  
+					</aside>
+					<aside class="headline">
+							Title  
+					</aside>
+						<aside class="notes">
+							Description 
+						</aside>
+					</section>
+
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section >
+					<section data-state="tops greenwinding">
+					<img 
+						class="sublet" 
+						src="image/hadleydome_pattern.gif"
+						style="border:none;box-shadow:none;background:none;float:left;border-radius:10px;">
+					<img 
+						 src="image/hadley_domezoom.png"
+						 style="border:none;box-shadow:none;max-height:50%;float:right;background:none;">
+
+
+						<aside class="coordinate">
+							10.0  
+						</aside>
+						<aside class="headline">
+							Tagline  
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+				</section>
+
+
+				<section data-state="blueprint">
+					<img class="proxys" src="image/hadley_topflows.png" style="border:none;box-shadow:none;max-height:45%;background:none;border-radius:10px;">
+
+
+					<aside class="coordinate">
+						10.1  
+					</aside>
+						<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+
+					</section>
+
+
+					<section data-state="blackout">
+						<h3>TANK  | |  EARTH</h3>
+			
+					<aside class="coordinate">
+						10.2  
+					</aside>
+					<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+					</section>
+
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<section>
+				<section data-state="tops particletrk">
+ 					<h3>Particle Tracks</h3>
+
+ 					<img class="sublet"
+ 					 src="image/hadley_particletracks.gif" 
+ 					 style="border:none;box-shadow:none;max-height:80%;background:none;border-radius:10px;">
+
+
+					<aside class="coordinate">
+						11.0 
+					</aside>
+					<aside class="headline">
+							Title   
+						</aside>
+						<aside class="notes">
+							Description- 10 second intervals, relative scale
+						</aside>
+ 				</section>
+
+
+				<section data-state="blueprint">
+ 					<h3>surface flow dr / dome cone</h3>
+
+ 					<img class="proxys" src="image/hadley_domeproxy.gif" style="border:none;box-shadow:none;max-height:40%;background:none;border-radius:10px;">
+ 					<img class="proxys" src="image/hadley_ptrackult.png" style="border:none;box-shadow:none;max-height:50%;background:none;border-radius:10px;">
+
+
+
+ 					<aside class="coordinate">
+						11.1  
+					</aside>
+					<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+ 				</section>
+
+				<section data-state="blackout">
+ 					<h3>Subtropical Jet</h3>
+ 					<h3>TANK  | |  EARTH</h3>
+	
+					<aside class="coordinate">
+						11.2  
+					</aside>
+					<aside class="headline">
+							Title 
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+ 				</section>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<section>
+				
+				<section  id="schematic" data-state="tops schemata">
+					<h3>hadley circulation</h3>
+					<h4>break this into 3schematics</h4>
+					 <img src="image/hadley_schematic.png" alt="" style="max-width:25%;">
+					  <img src="image/hadley_schematic.png" alt="" style="max-width:25%;">
+					   <img src="image/hadley_schematic.png" alt="" style="max-width:25%;">
+
+
+					<aside class="coordinate">
+						12.0  
+					</aside>
+					<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							a Hadley cell may be considered as a composition of radially (on earth, meridional) overturning circulation and circumferential (o.e. zonal) flows that vary with depth.
+						</aside>
+
+				</section>
+
+ 				<section data-state="blueprint">
+ 					<h3>support (3) schematic components with uniform view loops</h3>
+
+
+ 					<aside class="coordinate">
+						12.1  
+					</aside>
+					<aside class="headline">
+							Title 
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+
+ 				</section>
+
+ 				<section data-state="blackout">
+ 					<h3>integrated schematic</h3>
+ 						 <img width="529" height="374" src="image/hadley_schematic.png" alt="">
+
+ 					<aside class="coordinate">
+						12.2  
+					</aside>
+					<aside class="headline">
+						Title 
+					</aside>
+					<aside class="notes">
+						Description
+					</aside>
+
+ 				</section>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<section>
+				<section data-state="tops numnumnum">
+ 					<h3>Sim tank</h3>
+
+
+ 					<aside class="coordinate">
+						13.0  
+					</aside>
+					<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description 
+						</aside>
+ 				</section>
+
+
+				<section data-state="blueprint">
+ 					<h3>Theory & Numerics</h3>
+
+ 					<aside class="coordinate">
+						13.1  
+					</aside>
+					<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+ 				</section>
+
+				<section data-state="blackout">
+ 					<h3>Sim earth</h3>
+
+					<aside class="coordinate">
+						13.2  
+					</aside>
+					<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+ 				</section>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 			<section>
+				<section  id="moredemos" data-state="blackout climated">
+					<a href="http://web.mit.edu/wdmc/Public/gfd/cite">
+				<img id="groupee"
+						style="background:none;
+								border:none;
+								box-shadow:none;
+								max-height:80%;
+								top: 150px;
+								left: -40px;"
+						 src="image/wiat_portal.png">
+						</a>
+
+					<h2>Link to Climate</h2>
+					
+					
+
+					<ul>
+						<li><a href="http://web.mit.edu/wdmc/Public/gfd/fronts.html" target="_blank">Fronts & Thermal Wind - Lab Demo</a></li>
+						<li><a href="http://web.mit.edu/wdmc/Public/gfd/frontsIDV.html" target="_blank">Polar Dome & Jetstreams - Climate IDV</a></li>
+						<li><a href="http://slipring.tumblr.com" target="_blank">Rotating Fluids Log (feat. the Eddy Regime)</a></li>
+						<li><a href="http://paoc.mit.edu/labguide/" target="_blank">Weather in a Tank Lab Guide @ paoc.mit</a></li>
+					</ul>
+
+					<aside class="coordinate">
+						14.0  
+					</aside>
+
+					<aside class="headline">
+							Title  
+						</aside>
+						<aside class="notes">
+							Description
+						</aside>
+
+				</section>
+			</section>
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+<sox>
+	<div id="temponav">
+		<a id="backlink" href="http://lab.rotating.co">
+			<img id="exitcurrent" 
+				src="cursors/outi.png" 
+				style="float:left;margin-top:-1px"
+				onMouseOver="if(1) document.getElementById('exitcurrent').src= 'cursors/out.png';" 
+				onMouseOut="if(1) document.getElementById('exitcurrent').src= 
+				'cursors/outi.png';" />
+		</a>
+
+		<a id="supernav">
+			<img id="snup" 
+				src="cursors/jumpto.png" 
+				style="float:right;margin-top:0px;"/>
+			<img id="sndown" 
+				src="cursors/jumptoi.png" 
+				style="float:right;margin-top:1px;display:none;"/>
+		</a>
+	</div>
+
+
+	<div id="toggleyou" style="display:none;">
+		<a id="IDVclimate">
+			<img id="whirld" src="cursors/worldi.png" style="float:left;"
+			onMouseOver="if(1) document.getElementById('whirld').src= 'cursors/world.png';" onMouseOut="if(1) document.getElementById('whirld').src= 'cursors/worldi.png';" /></a>
+		<a id="virtualLab">
+			<img id="atank" src="cursors/tank.png" style="float:left;" />
+		</a>
+		<br>
+		<a id="numericMods">
+			<img id="numerc" src="cursors/simi.png" style="float:left;margin-left:7px;margin-top:-20px"
+			onMouseOver="if(1) document.getElementById('numerc').src= 'cursors/sim.png';" onMouseOut="if(1) document.getElementById('numerc').src= 'cursors/simi.png';" />
+		</a>
+	</div>
+
+
+	<div id="selector" style="display:none;">
+		<ul id="inatank" style="list-style-type: none;  margin-top:0px; margin-left:14px; margin-right:18px;">
+			<li>
+				<a href="DEMOeddies.html"
+					onMouseOver="if(1) document.getElementById('eddied').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('eddied').src= 'cursors/di.png';" style="float:right">
+					<img id="eddied" src="cursors/di.png"/>
+				</a>
+			<br>
+			</li>
+			<li>
+	 			<a href="expHadley.html"
+	 				style="float:right">
+	 				<img id="hadleyd" src="cursors/d.png"/>
+	 			</a>
+	 		<br>
+			</li>
+			<li>
+				<a href="DEMOfronts.html"
+					onMouseOver="if(1) document.getElementById('frontd').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('frontd').src= 'cursors/di.png';" style="float:right"> 
+					<img id="frontd" src="cursors/di.png"/> 
+				</a>
+			<br>
+			</li>
+		</ul>
+
+
+		<ul id="whorled" style="list-style-type: none; margin-left:14px; margin-right:18px; display:none; margin-top:-70px ">
+			<li>
+				<a href="IDVeddies.html"
+					onMouseOver="if(1) document.getElementById('extratropics').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('extratropics').src= 'cursors/di.png';">
+					<img id="extratropics" src="cursors/di.png"/>
+				</a>
+			</li>
+			<li>
+			 	<a href="idvHadley.html"
+	 				onMouseOver="if(1) document.getElementById('tropics').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('tropics').src= 'cursors/di.png';">		<img id="tropics" src="cursors/d.png"/>
+	 			</a>
+			</li>
+			<li>
+				<a href="IDVfronts.html"
+					onMouseOver="if(1) document.getElementById('polar').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('polar').src= 'cursors/di.png';"> 
+					<img id="polar" src="cursors/di.png"/> 
+				</a>
+			</li>
+		</ul>
+
+
+		<ul id="simwe" style="list-style-type: none; margin-left:28px; margin-right:32px; display:none; margin-top:-70px">
+			<li>
+				<a onMouseOver="if(1) document.getElementById('atmosime').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('atmosime').src= 'cursors/di.png';" style="float:left;">
+					<img id="atmosime" src="cursors/di.png" />
+				</a>
+				<a onMouseOver="if(1) document.getElementById('tanksime').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('tanksime').src= 'cursors/di.png';" style="float:right;">
+					<img id="tanksime" src="cursors/di.png" />
+				</a>
+				<br>
+			</li>
+			<li>
+			 	<a  onMouseOver="if(1) document.getElementById('atmosimh').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('atmosimh').src= 'cursors/di.png';" style="float:left;">
+			 		<img id="atmosimh" src="cursors/d.png" />
+			 	</a>
+				<a onMouseOver="if(1) document.getElementById('tanksimh').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('tanksimh').src= 'cursors/di.png';" style="float:right;">
+					<img id="tanksimh" src="cursors/d.png" />
+				</a>
+			<br>
+			</li>
+			<li>
+				<a onMouseOver="if(1) document.getElementById('atmosimf').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('atmosimf').src= 'cursors/di.png';" style="float:left;"> 
+					<img id="atmosimf" src="cursors/di.png" />
+				</a>
+				<a onMouseOver="if(1) document.getElementById('tanksimf').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('tanksimf').src= 'cursors/di.png';" style="float:right;">
+					<img id="tanksimf" src="cursors/di.png" />
+				</a>
+			</li>
+		</ul>
+	</div>
+</sox>
+
+	<!-- 	<div id="hotmap">New Floating Areaoid</div> -->
+
+	<!-- 	<div id="infobar">
+		<p id="clickette">
+			<img id="refeye" src="cursors/eye.png" style="float:left;margin-top:-2px;margin-left:5px"/>
+		</p>
+		<div id="loaderImage" style="margin-left:4px"></div>
+		<img id="reflock" src="cursors/unlock.png" style="margin-top:-20px;margin-left:12px;">
+	</div>  -->
+
+
+<shoes>
+	<div id="toggler">
+		<p id="toggleme"><img src="cursors/narration.png" style="float:left;"></p>
+	</div>
+
+	<div id="wholeview">
+		<a id="Oview"><img id="zoomO" src="cursors/zoomout.png"></a>
+    </div>
+
+	<div id="coordinates">
+		<h4 id="coord">*.*</h4>
+	</div>
+
+	<!-- 	<div id="narration" class="closeable" onClick="document.getElementById('narration').style.display = 'none';"> -->
+	<div id="narration" class="stuckopen">
+		<center>
+			<h3 id="headliner" contenteditable="true">
+				General Circulation of the Atmosphere</h3>		</center>
+			<p id="contented" contenteditable="true">
+				 To understand the hows of climate change, we
+				 forces shaping (invisible) winds, weather, and climate can be  and weather can climate behaviors and weather formations Dynamics of the atmosphere 
+				 Planetary balancing of
+				 using a tank of 
+			</p>
+
+	</div>
+
+	<div id="preloadpop" class="closeable" onClick="document.getElementById('preloadpop').style.display = 'none';">
+		<h3 id="pheadliner">&nbsp;&nbsp;&nbsp;preloading</h3>
+		<p id="pcontented">counter</p>
+	</div>
+</shoes>
+
+
+
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script src="js/revealEXP.js"></script>
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme || 'light', // available themes are in /css/theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+
+		</script>
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+		<script>
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+			// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+			
+			var notes = event.currentSlide.querySelector(".notes");
+			if(notes) {
+			console.info(notes.innerHTML.replace(/\n\s+/g,'\n'));
+			document.getElementById('contented').innerHTML = notes.innerHTML;
+			}
+			
+			var headline = event.currentSlide.querySelector(".headline");
+			if(headline) {
+			document.getElementById('headliner').innerHTML = headline.innerHTML;
+			}
+
+			var currentcoord = event.currentSlide.querySelector(".coordinate");
+			if(currentcoord) {
+			document.getElementById('coord').innerHTML = currentcoord.innerHTML;
+			}
+
+			} );
+
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script>
+		/*		Reveal.addEventListener( 'fragmentshown', function( event ) {
+		 	   // event.fragment = the fragment DOM element
+				console.log(event.fragment);
+				} );
+				Reveal.addEventListener( 'fragmenthidden', function( event ) {
+		    	// event.fragment = the fragment DOM element
+		    	console.log(event.fragment);
+				} );
+		*/
+
+
+
+		/*	$( document ).on( 'click', function( event ) {
+			 console.log( event.type );    // The event type, eg. "click"
+			 console.log( event.which );   // The button or key that was pressed.
+		 	 console.log( event.target );  // The originating element.
+		 	 console.log( event.pageX );   // The document mouse X coordinate.
+		 	 console.log( event.pageY );   // The document mouse Y coordinate.
+			});
+		*/
+
+
+
+		/*	var handleClick = function() {
+		 	 console.log( 'something was clicked' );
+			};
+
+			$( 'img' ).on( 'click', handleClick );
+			$( 'h2' ).on( 'click', handleClick );
+		*/
+		</script>
+
+
+
+
+
+	<script src="triggerHadley.js"></script>
+
+
+
+
+
+	<script>
+
+	/*	function changeImage(img) {
+ 		   document.getElementById("img").src = img.src.replace(".gif", ".png");
+		}
+	*/
+
+	function argsToArray(args) {
+ 		 var r = []; for (var i = 0; i < args.length; i++)
+    r.push(args[i]);
+ 		 return r;
+	}
+
+	Reveal.addEventListener( 'slidechanged', function( event ) {
+	    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+/*			console.log(event.previousSlide);*/
+		argsToArray(event.currentSlide.getElementsByClassName("sublet")).forEach(function(img) {
+  			img.src = img.src.split('jpg').join('gif');
+		});
+
+
+		argsToArray(event.previousSlide.getElementsByClassName("sublet")).forEach(function(img) {
+  			img.src = img.src.split('gif').join('jpg');
+  		}); 
+
+	} );
+
+
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script>
+		var editable = document.getElementById('editable');
+
+		addEvent(editable, 'blur', function () {
+ 		 // lame that we're hooking the blur event
+  		localStorage.setItem('contenteditable', this.innerHTML);
+ 		 document.designMode = 'off';
+		});
+
+		addEvent(editable, 'focus', function () {
+  		document.designMode = 'on';
+		});
+
+		addEvent(document.getElementById('clear'), 'click', function () {
+ 		 localStorage.clear();
+  		window.location = window.location; // refresh
+		});
+
+		if (localStorage.getItem('contenteditable')) {
+  		editable.innerHTML = localStorage.getItem('contenteditable');
+		}
+
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+/*	Hadley Sprite Variable Speed  */
+
+	var cSpeed=122;
+	var cWidth=587;
+	var cHeight=1200;
+	var cTotalFrames=30;
+	var cFrameWidth=587;
+	var cImageSrc='sprites/hadley_sprite.png';
+	var cImageTimeout=false;
+	var cIndex=0;
+	var cXpos=0;
+	var cPreloaderTimeout=false;
+	var SECONDS_BETWEEN_FRAMES=0;
+	
+
+
+  	function startAnimation(){
+		
+		document.getElementById('hadleySprite').style.backgroundImage='url('+cImageSrc+')';
+		document.getElementById('hadleySprite').style.width=cWidth+'px';
+		document.getElementById('hadleySprite').style.height=cHeight+'px';
+		
+		//FPS = Math.round(100/(maxSpeed+2-speed));
+		FPS = Math.round(100/cSpeed);
+		SECONDS_BETWEEN_FRAMES = 1 / FPS;
+		
+		cPreloaderTimeout=setTimeout('continueAnimation()', SECONDS_BETWEEN_FRAMES/1000);
+		
+	}
+	
+	function continueAnimation(){
+		
+		cXpos += cFrameWidth;
+		//increase the index so we know which frame of our animation we are currently on
+		cIndex += 1;
+		 
+		//if our cIndex is higher than our total number of frames, we're at the end and should restart
+		if (cIndex >= cTotalFrames) {
+			cXpos =0;
+			cIndex=0;
+		}
+		
+		if(document.getElementById('hadleySprite'))
+			document.getElementById('hadleySprite').style.backgroundPosition=(-cXpos)+'px 0';
+		
+		cPreloaderTimeout=setTimeout('continueAnimation()', SECONDS_BETWEEN_FRAMES*1000);
+	}
+	
+	function stopAnimation(){//stops animation
+		clearTimeout(cPreloaderTimeout);
+		cPreloaderTimeout=false;
+	}
+	
+	function imageLoader(s, fun)//Pre-loads the sprites image
+	{
+		clearTimeout(cImageTimeout);
+		cImageTimeout=0;
+		genImage = new Image();
+		genImage.onload=function (){cImageTimeout=setTimeout(fun, 0)};
+		genImage.onerror=new Function('alert(\'Could not load the image\')');
+		genImage.src=s;
+	}
+	
+
+
+	//The following code starts the animation
+	/*new imageLoader(cImageSrc, 'startAnimation()');*/
+		new imageLoader(cImageSrc, 'startAnimation()');
+
+
+	Reveal.addEventListener( 'regimes', function() {
+			console.log( '"halter" has fired' );
+			 	stopAnimation();
+		} );
+	Reveal.addEventListener( 'spritely_A', function() {
+			 	continueAnimation();
+		} );
+	Reveal.addEventListener( 'vimvid', function() {
+			 	stopAnimation();
+		} );
+	Reveal.addEventListener( 'spritely_B', function() {
+			 	stopAnimation();
+		} );
+	Reveal.addEventListener( 'vlab', function() {
+			 	stopAnimation();
+		} );
+	Reveal.addEventListener( 'pretracers', function() {
+			 	stopAnimation();
+		} );
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!--<script>
+				/*	var dstate = event.currentSlide.querySelector(".data-state");
+					if(dstate='fluid') {
+					document.getElementById('loaderImage').style.backgroundImage='url('+dImageSrc+')';
+					if(dstate='blackout') {
+					document.getElementById('loaderImage').style.backgroundImage='url('+eImageSrc+')';
+					}*/
+
+				/*	Reveal.addEventListener( 'fluid', function() {
+				console.log( '"fluid" has fired' );
+				document.getElementById('loaderImage').style.backgroundImage='url('+dImageSrc+')';
+
+				} );
+
+				Reveal.addEventListener( 'blackout', function() {
+				console.log( '"blackout" has fired' );
+				document.getElementById('loaderImage').style.backgroundImage='url('+eImageSrc+')';
+				} );
+
+				Reveal.addEventListener( 'levels', function() {
+				console.log( '"levels" has fired' );
+				document.getElementById('loaderImage').style.backgroundImage='url('+cImageSrc+')';
+				} );
+				*/
+
+				/*	Reveal.addEventListener( 'freeze', function() {
+				console.log( '"freeze" has fired' );
+				document.getElementById('reflock').src='cursors/lock.png';
+				document.getElementById('reflock').style.marginLeft="3px";
+				document.getElementById('refeye').style.marginLeft="2px";
+				document.getElementById('loaderImage').style.marginLeft="2px";
+				} );
+
+				Reveal.addEventListener( 'thaw', function() {
+				console.log( '"thaw" has fired' );
+				document.getElementById('reflock').src='cursors/unlock4d.png';
+				document.getElementById('reflock').style.marginLeft="12px";
+				  document.getElementById('refeye').style.marginLeft="5px";
+				  document.getElementById('loaderImage').style.marginLeft="4px";
+
+				} );*/
+				</script>-->
+
+
+
+
+
+
+
+	<script>
+
+		$('#Oview').click(function() {
+	   		 Reveal.toggleOverview();
+			});
+
+		$('#toggleme').click(function() {
+   		 $('#contented').toggle();
+   		  $('#toggler').toggleClass('withborder');
+   		  $('#narration').show();
+  			});
+
+
+
+
+		$('#supernav').click(function() {
+   		 $('#toggleyou').toggle();
+		 $('#snup').toggle();
+		  $('#sndown').toggle();
+		  $('#selector').toggle();
+			});
+
+
+		$('#IDVclimate').click(function() {
+   		 $('#whorled').toggle();
+			});
+
+/*		$('#virtualLab').click(function() {
+   		 $('#inatank').toggle();
+   			});*/
+
+		$('#numericMods').click(function() {
+   		 $('#simwe').toggle();
+			});
+
+	</script>
+
+
+
+	</body>
+</html>

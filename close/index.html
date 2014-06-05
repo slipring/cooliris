@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Weather in a Tank Virtual Lab</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="stylesheet" href="css/revealEXP.css">
+		<link rel="stylesheet" href="css/theme/blackboard.css" id="theme">
+
+
+		<link rel="stylesheet" href="css/stylesheet.css" id="theme">
+
+
+		<!-- Bootstrap -->
+		<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+	    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/bootstrap.min0mod.css" rel="stylesheet" media="screen">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	
+	</head>
+
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>CO.ROTATING.LAB</h3>
+					<ul style="list-style-type:none">
+						<li><a href="expHadley.html">Hadley Cell - GFD Experiment</a></li>
+						<li><a href="idvHadley.html">Tropical Climatology - IDV Study</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+
+
+<footer>
+
+<sox>
+	<div id="temponav">
+		<a id="backlink" href="http://lab.rotating.co">
+			<img id="exitcurrent" 
+				src="cursors/outi.png" 
+				style="float:left;margin-top:-1px"
+				onMouseOver="if(1) document.getElementById('exitcurrent').src= 'cursors/out.png';" 
+				onMouseOut="if(1) document.getElementById('exitcurrent').src= 
+				'cursors/outi.png';" />
+		</a>
+
+		<a id="supernav">
+			<img id="snup" 
+				src="cursors/jumpto.png" 
+				style="float:right;margin-top:0px;"/>
+			<img id="sndown" 
+				src="cursors/jumptoi.png" 
+				style="float:right;margin-top:1px;display:none;"/>
+		</a>
+	</div>
+
+
+	<div id="toggleyou" style="display:none;">
+		<a id="IDVclimate">
+			<img id="whirld" src="cursors/world.png" style="float:left;"
+			onMouseOver="if(1) document.getElementById('whirld').src= 'cursors/world.png';" onMouseOut="if(1) document.getElementById('whirld').src= 'cursors/worldi.png';" /></a>
+		<a id="virtualLab">
+			<img id="atank" src="cursors/tank.png" style="float:left;" />
+		</a>
+		<br>
+		<a id="numericMods">
+			<img id="numerc" src="cursors/simi.png" style="float:left;margin-left:7px;margin-top:-20px"
+			onMouseOver="if(1) document.getElementById('numerc').src= 'cursors/sim.png';" onMouseOut="if(1) document.getElementById('numerc').src= 'cursors/simi.png';" />
+		</a>
+	</div>
+
+
+	<div id="selector" style="display:none;">
+		<ul id="inatank" style="list-style-type: none;  margin-top:0px; margin-left:14px; margin-right:18px;">
+			<li>
+				<a href="DEMOeddies.html"
+					onMouseOver="if(1) document.getElementById('eddied').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('eddied').src= 'cursors/di.png';" style="float:right">
+					<img id="eddied" src="cursors/di.png"/>
+				</a>
+			<br>
+			</li>
+			<li>
+	 			<a href="expHadley.html"
+	 				style="float:right">
+	 				<img id="hadleyd" src="cursors/d.png"/>
+	 			</a>
+	 		<br>
+			</li>
+			<li>
+				<a href="DEMOfronts.html"
+					onMouseOver="if(1) document.getElementById('frontd').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('frontd').src= 'cursors/di.png';" style="float:right"> 
+					<img id="frontd" src="cursors/di.png"/> 
+				</a>
+			<br>
+			</li>
+		</ul>
+
+
+		<ul id="whorled" style="list-style-type: none; margin-left:14px; margin-right:18px; margin-top:-70px ">
+			<li>
+				<a href="IDVeddies.html"
+					onMouseOver="if(1) document.getElementById('extratropics').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('extratropics').src= 'cursors/di.png';">
+					<img id="extratropics" src="cursors/di.png"/>
+				</a>
+			</li>
+			<li>
+			 	<a href="idvHadley.html"
+	 				onMouseOver="if(1) document.getElementById('tropics').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('tropics').src= 'cursors/d.png';">		<img id="tropics" src="cursors/d.png"/>
+	 			</a>
+			</li>
+			<li>
+				<a href="IDVfronts.html"
+					onMouseOver="if(1) document.getElementById('polar').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('polar').src= 'cursors/di.png';"> 
+					<img id="polar" src="cursors/di.png"/> 
+				</a>
+			</li>
+		</ul>
+
+
+		<ul id="simwe" style="list-style-type: none; margin-left:28px; margin-right:32px; display:none; margin-top:-70px">
+			<li>
+				<a onMouseOver="if(1) document.getElementById('atmosime').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('atmosime').src= 'cursors/di.png';" style="float:left;">
+					<img id="atmosime" src="cursors/di.png" />
+				</a>
+				<a onMouseOver="if(1) document.getElementById('tanksime').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('tanksime').src= 'cursors/di.png';" style="float:right;">
+					<img id="tanksime" src="cursors/di.png" />
+				</a>
+				<br>
+			</li>
+			<li>
+			 	<a  onMouseOver="if(1) document.getElementById('atmosimh').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('atmosimh').src= 'cursors/di.png';" style="float:left;">
+			 		<img id="atmosimh" src="cursors/d.png" />
+			 	</a>
+				<a onMouseOver="if(1) document.getElementById('tanksimh').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('tanksimh').src= 'cursors/di.png';" style="float:right;">
+					<img id="tanksimh" src="cursors/d.png" />
+				</a>
+			<br>
+			</li>
+			<li>
+				<a onMouseOver="if(1) document.getElementById('atmosimf').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('atmosimf').src= 'cursors/di.png';" style="float:left;"> 
+					<img id="atmosimf" src="cursors/di.png" />
+				</a>
+				<a onMouseOver="if(1) document.getElementById('tanksimf').src= 'cursors/d.png';" onMouseOut="if(1) document.getElementById('tanksimf').src= 'cursors/di.png';" style="float:right;">
+					<img id="tanksimf" src="cursors/di.png" />
+				</a>
+			</li>
+		</ul>
+	</div>
+</sox>
+
+	<!-- 	<div id="hotmap">New Floating Areaoid</div> -->
+
+	<!-- 	<div id="infobar">
+		<p id="clickette">
+			<img id="refeye" src="cursors/eye.png" style="float:left;margin-top:-2px;margin-left:5px"/>
+		</p>
+		<div id="loaderImage" style="margin-left:4px"></div>
+		<img id="reflock" src="cursors/unlock.png" style="margin-top:-20px;margin-left:12px;">
+	</div>  -->
+
+
+<shoes>
+	<div id="toggler">
+		<p id="toggleme"><img src="cursors/narration.png" style="float:left;"></p>
+	</div>
+
+	<div id="wholeview">
+		<a id="Oview"><img id="zoomO" src="cursors/zoomout.png"></a>
+    </div>
+
+	<div id="coordinates">
+		<h4 id="coord">*.*</h4>
+	</div>
+
+	<!-- 	<div id="narration" class="closeable" onClick="document.getElementById('narration').style.display = 'none';"> -->
+	<div id="narration" class="stuckopen">
+		<center>
+			<h3 id="headliner" contenteditable="true">
+				Weather in a Tank - Virtual Laboratory</h3>		</center>
+			<p id="contented" contenteditable="true">
+				 Bringing rotating fluid experiments together with world-scale observation and numerical simulations of our atmosphere, to help make intuitable the dynamics at play in the formation of our weather.
+			</p>
+
+	</div>
+
+</shoes>
+
+
+
+
+
+
+</footer>
+
+
+
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/revealEXP.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme || 'blackboard', // available themes are in /css/theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+		<script>
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+			// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+			var notes = event.currentSlide.querySelector(".notes");
+			if(notes) {
+				console.info(notes.innerHTML.replace(/\n\s+/g,'\n'));
+				}
+			} );
+		</script>
+
+
+	<script>
+
+		$('#Oview').click(function() {
+	   		 Reveal.toggleOverview();
+			});
+
+		$('#toggleme').click(function() {
+   		 $('#contented').toggle();
+   		  $('#toggler').toggleClass('withborder');
+   		  $('#narration').show();
+  			});
+
+
+
+
+		$('#supernav').click(function() {
+   		 $('#toggleyou').toggle();
+		 $('#snup').toggle();
+		  $('#sndown').toggle();
+		  $('#selector').toggle();
+			});
+
+
+		$('#IDVclimate').click(function() {
+   		 $('#whorled').toggle();
+			});
+
+/*		$('#virtualLab').click(function() {
+   		 $('#inatank').toggle();
+   			});*/
+
+		$('#numericMods').click(function() {
+   		 $('#simwe').toggle();
+			});
+
+	</script>
+
+	</body>
+</html>

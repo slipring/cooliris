@@ -13,7 +13,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="shortcut icon" href="all_earth.ico">
 
@@ -22,9 +22,9 @@
 		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
 
-		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery-ui.css">
-		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery.ui.theme.css">
-		<link rel="stylesheet" href="pkg/font-awesome-4.0.3/css/font-awesome.css">
+		<!--<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery-ui.css">
+		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery.ui.theme.css"> -->
+		<link rel="stylesheet" href="pkg/font-awesome-4.1.0/css/font-awesome.css">
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" type="text/css">
 
 		<!-- For syntax highlighting -->
@@ -33,15 +33,14 @@
 		<link rel="stylesheet" href="css/exceptional.css">
 		<!-- <link rel="stylesheet" href="css/vestigial.css" /> -->
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+
+		<!-- Include the appropriate print stylesheet -->
 		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = '../reveal.js/css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
 		<!--[if lt IE 9]>
@@ -56,23 +55,20 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section>
-					<h1>version 0.10</h1>
-				</section>
-
 
 				<section>
 					<section>
 						<h1>Frontogenesis</h1>
-						<h3>Meeting fluid mass dynamics</h3>
+						<h3>fluid mass dynamics</h3>
 						<p>
-							<small>Decomposed by <a href="http://www.timeoccupation.com">Bill McKenna</a> / <a href="http://twitter.com/spacevacation">@spacevacation</a></small>
+							<!-- <small>deck built by <a href="http://www.timeoccupation.com">Bill McKenna</a> / <a href="http://twitter.com/spacevacation">@spacevacation</a></small> -->
 						</p>
-						<img src="http://127.0.0.1/coloriis/mined/green-wavy-bar-arrow.gif">
+						<img data-src="http://coriolis.no-ip.org/coloriis/mined/green-wavy-bar-arrow.gif">
 						<aside class="notes">
 							Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 						</aside>
 					</section>
+
 
 
 					<section>
@@ -103,7 +99,7 @@
 
 				<section>
 					<video width="794" height="1080" controls data-autoplay>
-						<source src="http://127.0.0.1/www/stream/fronts_10m_H264.mp4" type="video/mp4">
+						<source data-src="http://coriolis.no-ip.org/www/stream/fronts_10m_H264.mp4" type="video/mp4">
 						<!--  <source src="movie.ogg" type="video/ogg"> -->
 						Your browser does not support the video tag.
 					</video>
@@ -116,9 +112,9 @@
 
 
 				<section>
-					<iframe width="420" height="315" src="//www.youtube-nocookie.com/embed/soe-dm0aO6Q?rel=0" frameborder="0" allowfullscreen></iframe>
-					|<iframe width="420" height="315" src="//www.youtube-nocookie.com/embed/BLfi81ji5as?rel=0" frameborder="0" allowfullscreen></iframe>
-					<iframe width="420" height="315" src="//www.youtube-nocookie.com/embed/xO4USUNsD4Y?rel=0" frameborder="0" allowfullscreen></iframe>
+					<iframe width="420" height="315" data-src="//www.youtube-nocookie.com/embed/soe-dm0aO6Q?rel=0" frameborder="0" allowfullscreen></iframe>
+					|<iframe width="420" height="315" data-src="//www.youtube-nocookie.com/embed/BLfi81ji5as?rel=0" frameborder="0" allowfullscreen></iframe>
+					<iframe width="420" height="315" data-src="//www.youtube-nocookie.com/embed/xO4USUNsD4Y?rel=0" frameborder="0" allowfullscreen></iframe>
 				</section>
 
 
@@ -149,19 +145,19 @@
 				<section>
 					<center>
 					<p style="width: 30%;float: left;margin-left: 0px; margin-top: 25px">
-						<img style="background:none; border:none;box-shadow:none;width:100%;"class="clear" src="http://127.0.0.1/www/image/fronts_movie_narrow.gif"
+						<img style="background:none; border:none;box-shadow:none;width:100%;"class="clear" data-src="http://coriolis.no-ip.org/www/image/fronts_movie_narrow.gif"
 						alt="The more you know">
 						<a class="fragmeant">1 Rotation Loop</a>
 					</p>
 
 					<p class="fragment roll-in" style="width: 30%;float: left;margin-left: 10px;">
-						<img style="background:none;border:none;box-shadow:none;width:100%;" src="http://127.0.0.1/www/image/fronts_posterline_narrow.gif" 
+						<img style="background:none;border:none;box-shadow:none;width:100%;" data-src="http://coriolis.no-ip.org/www/image/fronts_posterline_narrow.gif" 
 						alt="The more there is to for you to know">
 						<a class="fragmeant">Time & Color Quantization</a>
 					</p>
 				
 					<p class="fragment roll-in" style="width: 30%;float: left;margin-left: 10px;">
-						<img style="background:none; border:none;box-shadow:none;width:100%;" src="http://127.0.0.1/www/image/fronts_line_build480w.gif" 
+						<img style="background:none; border:none;box-shadow:none;width:100%;" data-src="http://coriolis.no-ip.org/www/image/fronts_line_build480w.gif" 
 						alt="The more you know! ☄">
 						<a class="fragmeant">360&deg; to 3D</a>
 					</p>
@@ -179,10 +175,10 @@
 				<section>
 					<div id="wrapper" style="position:relative;">
 						<div class="fragment fade-out" data-fragment-index="0" style="position:absolute;">
-							<img style="background:none; border:none;box-shadow:none;" src="http://127.0.0.1/www/loop/fronts_transparent-4step-13sloop.gif">
+							<img style="background:none; border:none;box-shadow:none;" data-src="http://coriolis.no-ip.org/www/loop/fronts_transparent-4step-13sloop.gif">
 						</div>
 						<div class="fragment fade-in" data-fragment-index="0" style="position:absolute;">
-							<img style="background:none; border:none;box-shadow:none;" src="http://127.0.0.1/www/loop/fronts_transparent-2step-15sloop.gif">
+							<img style="background:none; border:none;box-shadow:none;" data-src="http://coriolis.no-ip.org/www/loop/fronts_transparent-2step-15sloop.gif">
 						</div>
 					</div>
 
@@ -198,10 +194,10 @@
 				<section>
 					<div id="wrapper" style="position:relative;">
 						<div class="fragment fade-out" data-fragment-index="0" style="position:absolute;">
-							<img style="background:none; border:none;box-shadow:none;" src="http://127.0.0.1/www/image/fronts_overhead_trailer.png">
+							<img style="background:none; border:none;box-shadow:none;" data-src="http://coriolis.no-ip.org/www/image/fronts_overhead_trailer.png">
 						</div>
 						<div style="position:absolute;" class="fragment fade-in" data-fragment-index="0">
-							<img style="background:none; border:none;box-shadow:none;" src="http://127.0.0.1/www/image/fronts_num_velocities.png">
+							<img style="background:none; border:none;box-shadow:none;" data-src="http://coriolis.no-ip.org/www/image/fronts_num_velocities.png">
 						</div>
 					</div>
 
@@ -215,7 +211,7 @@
 
 
 				<section>
-					<img style="background:none; border:none;box-shadow:none;" src="http://127.0.0.1/www/image/fronts_polar_dome.png">
+					<img style="background:none; border:none;box-shadow:none;" data-src="http://coriolis.no-ip.org/www/image/fronts_polar_dome.png">
 					<aside class="notes">
 						Toggling explanatory text
 					</aside>
@@ -227,12 +223,18 @@
 
 				<section>
 					<section>
-						<video width="1198" height="816" controls>
-							  <source src="http://127.0.0.1/www/stream/99_FINALIZE_JET.mp4" type="video/mp4">
-							 <!--  <source src="movie.ogg" type="video/ogg"> -->
-							  Your browser does not support the video tag.
-						</video>
+						<img data-src="http://web.mit.edu/wdmc/Public/gfd/img/jet-animation-greaterthan12cmps.gif">
 					</section>
+
+					<section>
+					<iframe width="960" height="720" src="//www.youtube-nocookie.com/embed/_KeGXntgQ_s?rel=0" frameborder="0" allowfullscreen></iframe>
+
+						<!-- <video width="1198" height="816" controls>
+							  <source data-src="http://coriolis.no-ip.org/www/stream/99_FINALIZE_JET.mp4" type="video/mp4">
+							  <source src="" type="video/ogg"> 
+							  Your browser does not support the video tag.
+						</video> -->
+				</section>
 
 
 					<section> 
@@ -242,6 +244,8 @@
 						</aside>
 					</section>
 				</section>
+
+
 
 
 
@@ -336,11 +340,11 @@
 
 				<section>
 					<section>
-						<img src="http://127.0.0.1/www/loop/Tank-Loop_ProVision.gif">
+						<img data-src="http://coriolis.no-ip.org/www/loop/Tank-Loop_ProVision.gif">
 						\[\begin{aligned}
 							\between \\
 						\end{aligned} \]
-						<img src="http://127.0.0.1/www/loop/Atmos-Loop.gif">
+						<img data-src="http://coriolis.no-ip.org/www/loop/Atmos-Loop.gif">
 						<aside class="notes">
 							Delete:  | Modify:  | Add:   | Create:    | Simplify:
 						</aside>
@@ -420,7 +424,7 @@
 
 				<section>
 					<h3>Thermal Wind Balance, Eq.(7.24) [Ch.7, pg. 29]</h3>
-					<img src="http://127.0.0.1/www/pool/thermal-wind-eq.png">
+					<img data-src="http://coriolis.no-ip.org/www/pool/thermal-wind-eq.png">
 					
 						\[\begin{aligned}
 
@@ -451,7 +455,7 @@
 						</div>				
 						<!-- **proxy bridge: rotate the graphic 180 before next reveal -->
 						<div class="fragment fade-in" style="position:absolute;">
-							<img src="http://127.0.0.1/www/pool/209.png" />
+							<img data-src="http://coriolis.no-ip.org/www/pool/209.png" />
 						</div>
 					</div>
 					
@@ -779,6 +783,154 @@
 
 		</div>
 
+
+
+		<div id="spCB" class="indicator">
+			<i id="spindle" class="fa fa-crosshairs fa-rotate-45 fa-inverse"></i>
+		</div>
+
+		<div id="spCT" class="indicator">
+			<i id="spindle" class="fa fa-crosshairs fa-rotate-45 fa-inverse"></i>
+		</div>
+
+		<div id="spLC" class="indicator">
+			<i id="spindle" class="fa fa-crosshairs fa-rotate-45 fa-inverse"></i>
+		</div>
+
+		<div id="spRC" class="indicator">
+			<i id="spindle" class="fa fa-crosshairs fa-rotate-45 fa-inverse"></i>
+		</div>
+
+
+
+
+
+
+
+		
+
+
+
+		
+
+		<!-- toggles overlayUI below -->
+		<div id="eraser" class="indicator" style="display:none;">
+			<i class="fa fa-eraser fa-inverse"></i>
+		</div>
+		
+		<!-- toggles Reveal navigation arrows and clock -->
+		<div id="Dpad" class="indicator" style="display:none;">
+			<i class="fa fa-gamepad fa-inverse fa-flip-horizontal"></i>
+		</div>
+		
+
+
+
+		<div id="overlayUI">
+
+
+			<div id="crosshair" class="indicator">
+				<i id="spindle" class="fa fa-crosshairs fa-inverse fa-1p5x"></i>
+			</div>
+
+			<div id="scopeoscope" class="indicator">
+				<i id="spindle" class="fa fa-crosshairs fa-inverse fa-1p5x"></i>
+			</div>
+
+			<div id="timevortex" class="indicator" style="opacity:0">
+				<i id="heartbeat" class="fa fa-crosshairs fa-inverse fa-1p5x"></i>
+			</div>
+
+			<div id="tardis" class="indicator" style="opacity:0">
+				<i id="spindle" class="fa fa-crosshairs fa-inverse"></i>
+			</div>
+
+
+
+			<div id="ofcourse" class="indicator">
+				<i id="coursing" class="spin-up-ccw fa fa-book fa-inverse"></i>
+			</div>
+
+			<div id="contextclue" class="indicator">
+				<i id="environment" class="fa fa-bullseye fa-inverse"></i>
+			</div>
+
+			<div id="cyclone" class="indicator" style="display:none;">
+				<i id="basketballL" class="fa fa-dribbble fa-spin fa-inverse"></i>
+			</div>
+
+			<div id="anticyclone" class="indicator" style="display:none;">
+				<i id="basketballR" class="fa fa-dribbble fa-spin fa-inverse"></i>
+			</div>
+
+
+			
+			
+
+			<div id="eyesight" class="indicator">
+				<i id="eyelet" class="fa fa-eye fa-inverse"></i>
+			</div>
+
+			<div id="inspector" class="indicator">
+				<i id="infogadget" class="fa fa-search fa-inverse"></i>
+			</div>
+
+
+			<div id="offofflink" class="indicator">
+				<i class="fa fa-external-link fa-inverse"></i>
+			</div>
+
+			<div id="defile" class="indicator">
+				<i class="fa fa-external-link fa-rotate-180 fa-inverse"></i>
+			</div>
+
+
+
+
+
+
+			<div id="retarget" class="indicator">
+				<i class="fa fa-dot-circle-o fa-inverse"></i>
+			</div>
+
+			<div id="targetline" class="indicated">default target</div>
+
+
+
+			<div id="defrag"></div>
+
+
+
+			<div id="desplash" class="indicator">
+				<i class="fa fa-undo fa-spin-ccw fa-inverse"></i>
+			</div>
+			
+			<div id="splashline" class="indicated">
+				default action
+			</div>
+
+
+
+			<div id="chatsoff" class="indicator">
+				<i id="chatter" class="fa fa-comment fa-inverse"></i>
+			</div>
+
+			<div id="chatterbox" class="indicated">
+			</div>
+
+
+			<div id="slipstream" class="indicated dash ui-widget-content" style="display:none;">
+				<ul>
+					<li>sinking feeling</li>
+				</ul>
+			</div>
+			
+
+		</div>
+
+
+
+
 		<script src="../reveal.js/lib/js/head.min.js"></script>
 		<script src="../reveal.js/js/reveal.js"></script>
 
@@ -831,6 +983,8 @@
 		<script language="javascript" type="text/javascript" src="pkg/jquery-browser/dist/jquery.browser.js"></script>
 		<script language="javascript" type="text/javascript" src="js/overlayUI.js"></script>
 		<script language="javascript" type="text/javascript" defer src="js/eventListeners.js"></script>
+		<script language="javascript" type="text/javascript" src="plugin/vticker/jquery.vticker.js"></script>
+		
 		<!--script language="javascript" type="text/javascript" defer src="js/vestigial.js"></script-->
 
 	</body>
