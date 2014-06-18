@@ -1,29 +1,8 @@
-Reveal.addEventListener( 'slidechanged', function( event ) {
-	// event.previousSlide, event.currentSlide, event.indexh, event.indexv
-	MathJax.Hub.Rerender();  // ctrlpt #010
+var fragWidth = 60;
 
-} );
-
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-
-Reveal.addEventListener( 'cloud', function() {
-	console.log( '"cloud" has fired' );
-} );
-
-
-Reveal.addEventListener( 'fragmentshown', function( event ) {
-	setTimeout(
-	   		function() {
-				MathJax.Hub.Rerender(document.querySelector(".slides .present")) 
-	   		}, 100);   // ctrlpt #010
-
-
-
-	function toArray( o ) {
+function toArray( o ) {
 	return Array.prototype.slice.call( o );
-	}
+};
 
 function sortFragments( fragments ) {
 
@@ -41,9 +20,25 @@ function sortFragments( fragments ) {
 
 	return a;
 
-}
+};
 
-var fragWidth = 60;
+
+
+
+Reveal.addEventListener( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+} );
+
+Reveal.addEventListener( 'cloud', function() {
+	console.log( '"cloud" has fired' );
+} );
+
+
+Reveal.addEventListener( 'fragmentshown', function( event ) {
+	setTimeout(
+	   		function() {
+				MathJax.Hub.Rerender(document.querySelector(".slides .present")) 
+	   		}, 100);   // ctrlpt #010
 
 
 Reveal.addEventListener( 'slidechanged', function( event ) {

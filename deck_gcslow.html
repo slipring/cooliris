@@ -372,6 +372,14 @@
 				// parallaxBackgroundImage: 'http://coriolis.no-ip.org/coloriis/UI/green-spread.jpg',
 				// parallaxBackgroundSize: '1800px 1600px',
 
+				// Audio Slideshow plugin (care of: http://www.faculty.jacobs-university.de/agoel/audio-slideshow/)
+				audioPrefix: 'audio/',	// audio files are stored in the "audio" folder //~
+				audioSuffix: '.wav',	// audio files have the ".wav" ending //~
+				keyboard: { 
+					82: function() { Recorder.toggleRecording(); },	// press 'r' to start/stop recording
+					90: function() { Recorder.downloadZip(); } 	// press 'z' to download zip containing audio files
+				},
+
 				center: true,
 				width: 960, //~
 				height: 700, //~
@@ -399,7 +407,9 @@
 					{ src: 'http://coriolis.no-ip.org/coloriis/reveal.js/plugin/math/math.js', async: true },
 					{ src: 'http://coriolis.no-ip.org/coloriis/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'http://coriolis.no-ip.org/coloriis/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'http://coriolis.no-ip.org/coloriis/cooliris/pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } },
+					{ src: 'http://coriolis.no-ip.org/coloriis/reveal.js/plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },				
+					{ src: 'http://coriolis.no-ip.org/coloriis/reveal.js/plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } }
+					// { src: 'http://coriolis.no-ip.org/coloriis/cooliris/pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } },
 					// ,	{ src: 'pkg/tagcloud/tagcloud.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
@@ -409,7 +419,7 @@
 		<script language="javascript" type="text/javascript" src="pkg/h5utils.js"></script>	
 		<script language="javascript" type="text/javascript" src="pkg/jquery-1.11.0.js"></script>
 		<script language="javascript" type="text/javascript" src="pkg/jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script>
-		<script language="javascript" type="text/javascript" src="pkg/jquery-browser/dist/jquery.browser.js"></script>
+		<script language="javascript" type="text/javascript" src="pkg/jbrowser/jquery.browser.js"></script>
 		<script language="javascript" type="text/javascript" src="js/overlayUI.js"></script>
 		<script language="javascript" type="text/javascript" defer src="js/eventListeners.js"></script>
 		<!--script language="javascript" type="text/javascript" defer src="js/vestigial.js"></script-->

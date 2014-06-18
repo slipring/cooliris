@@ -5,7 +5,7 @@
 	// });
 
 
-
+//fix lines 171 & 304    setUIpositions overlayUI.js:171   &  (anonymous function)
 /* http://jsfiddle.net/7uTTs/ */
 
 $(function () {
