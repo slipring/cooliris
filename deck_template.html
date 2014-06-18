@@ -59,7 +59,7 @@
 				<section>
 					<section>
 						<p>cool iris</p>
-						<img src="http://coriolis.no-ip.org/owncloud/public.php?service=files&t=5f71cd45d04b3ae007fefc438cded8b1&download">
+						<i class="fa fa-eye"></i>
 					</section>
 					
 					<section>
@@ -144,6 +144,14 @@
 				autoSlide: Reveal.getQueryHash().timer || 12000, // time in milliseconds before auto-advancing slides or fragments //~
 				fragments: Reveal.getQueryHash().fragments || true, // turns fragments on and off globally, fragments stay hidden if false //~
 
+				// Audio Slideshow plugin (care of: http://www.faculty.jacobs-university.de/agoel/audio-slideshow/)
+				// audioPrefix: 'audio/',	// audio files are stored in the "audio" folder //~
+				// audioSuffix: '.ogg',	// audio files have the ".ogg" ending //~
+				keyboard: { 
+					82: function() { Recorder.toggleRecording(); },	// press 'r' to start/stop recording
+					90: function() { Recorder.downloadZip(); } 	// press 'z' to download zip containing audio files
+				},
+
 				// Parallax scrolling
 				parallaxBackgroundImage: 'http://coriolis.no-ip.org/coloriis/UI/space_hedron.jpg',
 				parallaxBackgroundSize: '4000px 2500px',
@@ -178,8 +186,10 @@
 					{ src: '../reveal.js/plugin/math/math.js', async: true },
 					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } },
-					// ,	{ src: 'pkg/tagcloud/tagcloud.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: '../reveal.js/plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },				
+					{ src: '../reveal.js/plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } },
+					// { src: 'pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } },
+					// { src: 'pkg/tagcloud/tagcloud.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 
