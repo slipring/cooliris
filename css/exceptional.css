@@ -12,7 +12,187 @@
 	font-size: 14pt;
 }
 
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 100%;
+  max-height: 100%; }
 
+.reveal section img {
+  margin: 0px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 0px solid #eeeeee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.reveal section img.aliasedWhite {
+	background: rgba(255, 255, 255, 0.88);
+}
+
+
+.reveal section div.holds {
+    position: relative;
+}
+
+.reveal section div.overlapped {
+    position: absolute;
+/*    left: 0px;
+    top: 0px;
+    z-index: 20;*/
+}
+
+.reveal section div.underlapper {
+    position: absolute;
+    bottom:  0px;
+    right:0px;
+/*    left: 0px;
+    top: 0px;
+    z-index: 20;*/
+}
+
+.reveal section div.overlapper {
+    position: absolute;
+    background: none;
+/*    left: 0px;
+    top: 0px;
+    z-index: 21;*/
+}
+
+.reveal section div.overlappedR {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 20;
+}
+
+.reveal section div.overlapperR {
+    position: absolute;
+    background: none;
+    right: 0px;
+    top: 0px;
+    z-index: 21;
+}
+
+.reveal section img.nobg {
+    background: none;
+}
+
+.reveal section img.nods {
+	box-shadow: 0 0 0px rgba(0, 0, 0, 0.0); }
+}
+
+.reveal section img.darken {
+	background: rgba(0, 0, 0, 0.02);
+}
+
+.reveal section img.ontop {
+	z-index:55;
+}
+
+.reveal section div.hoistright {
+	position: absolute;
+	right:0px;
+	top:0px;
+    background: none;
+}
+
+/*.betwixt div #slipstream {
+	min-width:150px;
+	min-height:10%;
+	font-size: 12px;
+	overflow:hidden;
+	z-index:50;
+}*/
+
+
+#changeFraming {
+  position:relative;
+  width: 500px;  /* size of your big element */
+  height: 1000px;
+  margin-top:-75px;
+  margin-left:250px;
+}
+#changeFraming .background {
+  background: url(http://coriolis.no-ip.org/clearance/oldvrsn/pub/image/hadley_40-1200_1000w.gif);
+  background-position: 0 0;
+  width:  500px; /* width and height of the sprite image you want to display */
+  height: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/*
+.slipring {
+	background-position: -500px 0px;
+}*/
+
+
+/* #container {
+  position:relative;
+  width: 80%;   
+  height: 80%;
+}
+#container .background {
+  background: url(http://coriolis.no-ip.org/clearance/oldvrsn/pub/image/hadley_40-1200_1000w.gif);
+  background-position: 0px 0px;
+  width:  500px;
+  height: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+*/
+
+
+
+.fa-rotating {
+  -webkit-animation: spin-ccw 6s infinite linear;
+  -moz-animation: spin-ccw 6s infinite linear;
+  -o-animation: spin-ccw 6s infinite linear;
+  animation: spin-ccw 6s infinite linear;
+}
+@-moz-keyframes spin-ccw {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-359deg);
+  }
+}
+@-webkit-keyframes spin-ccw {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-359deg);
+  }
+}
+@-o-keyframes spin-ccw {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(-359deg);
+  }
+}
+@-ms-keyframes spin-ccw {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(-359deg);
+  }
+}
+@keyframes spin-ccw {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-359deg);
+  }
+}
 
 
 
