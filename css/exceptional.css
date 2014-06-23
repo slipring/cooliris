@@ -2,6 +2,9 @@
 	height: 9px;
 }
 
+
+/* solid */
+
 .reveal table th {
 	text-shadow: rgb(255,255,255) 1px 1px 2px;
 	font-size: 18pt;
@@ -12,6 +15,11 @@
 	font-size: 14pt;
 }
 
+/*.reveal #horizonline:after{
+  content:'aaaaaaa';
+  position:absolute;
+}*/
+
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
 .reveal video,
@@ -21,9 +29,9 @@
 
 .reveal section img {
   margin: 0px 0px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.0);
   border: 0px solid #eeeeee;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0); }
 
 .reveal section img.aliasedWhite {
 	background: rgba(255, 255, 255, 0.88);
@@ -79,10 +87,6 @@
 
 .reveal section img.nods {
 	box-shadow: 0 0 0px rgba(0, 0, 0, 0.0); }
-}
-
-.reveal section img.darken {
-	background: rgba(0, 0, 0, 0.02);
 }
 
 .reveal section img.ontop {

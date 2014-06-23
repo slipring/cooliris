@@ -53,30 +53,37 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">			
-				<section>
+			
+
+
+			<section>
 					<section>
-						<div style="position:relative">
-							<i style="position:absolute;margin-left:-20px;" class="fa fa-eye fa-rotating"></i>
-							<i style="position:absolute;margin-left:-55px;margin-top:-35px" class="fa fa-3x fa-circle-o-notch fa-rotating"></i>
+						<div style="position:relative;-webkit-transform:rotateX(45deg)">
+							<i style="position:absolute;margin-left:-20px;margin-top:50px" class="fa fa-eye fa-rotating"></i>
+							<i style="position:absolute;margin-left:-55px;margin-top:15px" class="fa fa-3x fa-circle-o-notch fa-rotating"></i>
 						</div>
 					</section>
+
 					<section>
 						<br>
-						<i class="fa fa-bug"></i><small>controls aren't displaying</small><br>
 						<small>redirect lab.rotating.co <i class="fa fa-adjust"></i> port to /clear dir</small><br>
 						<i class="fa fa-trophy"></i><small>title-line + lookback window</small><br>
 						<i class="fa fa-bug"></i><small>vimeo data-autoplay for iframe</small><br>
-					</section>
-					<!--<section>
 						<i class="fa fa-trophy"></i><small>
-						<section data-background="http://coriolis.no-ip.org/coloriis/UI/ypan_transpgrid.png"> backdrop img offset sprite sweep</small>
-					</section>-->
+						data-background="http://coriolis.no-ip.org/coloriis/UI/ypan_transpgrid.png" backdrop img offset sprite sweep</small>
+					</section>
 				</section>
 
-				<section id="splash">
-					<section>
+				<!-- 	<section id="splash"> -->
+				<!-- <div style="position:relative">
+							<i style="position:absolute;margin-left:-20px;" class="fa fa-eye fa-rotating"></i>
+							<i style="position:absolute;margin-left:-55px;margin-top:-35px" class="fa fa-3x fa-circle-o-notch fa-rotating"></i>
+							</div> -->
+
+				<section>
+			
 						<img class="aliasedWhite" data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/trigger/gcsplash.gif">
-					</section>		
+						
 				</section>
 				
 				<section>
@@ -88,16 +95,29 @@
 							<div class="overlapper">
 								<img data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/trigger/gcworldspin_trans.gif">
 							</div>
-							<div class="overlapper">
-								<img class="fragment fade-out darken" data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/trigger/gctankspin_eddy.gif"  >
+							<div class="overlapper ">
+								<img style="background:rgba(0,0,0,0.0)" class="fragment fade-out" data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/trigger/gctankspin_eddy.gif"  >
 							</div>
 						</div>
 					</section>
+				</section>
+
+				<section>
 					<section>
-						<img data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/image/H1B0.png">
+					<div class="holds">
+						<div class="overlapped">
+						<img class="fragment fade-out" data-fragment-index="0" data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/image/H1B0.png">
+						</div>
+						<div class="overlapper">
+						<!--<img data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/image/hadley_superprox.gif"> -->
+						<img class="fragment fade-in" data-fragment-index="0" data-src="http://web.mit.edu/wdmc/Public/gfd/cite/flux/H2A0.png">
+						</div>
+					</div>
+
+
 					</section>
 					<section>
-						<img data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/image/hadley_superprox.gif">
+						<img data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/image/H2C0.png">
 					</section>
 				</section>
 				
@@ -114,7 +134,7 @@
 							<div class="overlapper">
 								<img class="fragment roll-in" data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/image/H2B2.png">
 							</div>
-							<div class="overlapper">
+							<div id="horizonline" class="overlapper">
 								<img class="fragment roll-in" data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/image/H2B1.png">
 						</div>
 						<h4 id="predict"><a href="http://scratch.mit.edu/projects/embed/10459062/" data-preview-link>draw a prediction</a></h4>
@@ -125,9 +145,6 @@
 					</section>
 					<section>
 						<img data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/image/hadley_norotato.gif">
-					</section>
-					<section>
-						<img data-src="http://coriolis.no-ip.org/clearance/oldvrsn/pub/image/H2C0.png">
 					</section>
 				</section>
 				
@@ -219,9 +236,9 @@
 					 -->
             	</section>
 
-			<!-- 	<section id="analysis">
+				<section id="analysis">
 					<h3>tracer analyses</h3>
-				</section> -->
+				</section>
 
 				<section>
 					<section>
@@ -409,9 +426,9 @@
 				history: true,
 				loop: false, //~
 
-				transitionSpeed: 'default', // default/fast/slow //~
+				// transitionSpeed: 'default', // default/fast/slow //~
 				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				autoSlide: Reveal.getQueryHash().timer || 12000, // time in milliseconds before auto-advancing slides or fragments //~
 				fragments: Reveal.getQueryHash().fragments || true, // turns fragments on and off globally, fragments stay hidden if false //~
 
@@ -441,7 +458,7 @@
 				// previewLinks: false, //~
 
 				// Number of slides away from the current that are visible
-				viewDistance: 3,
+				viewDistance: 1,
 
 				math: {
 					// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js', //~
@@ -475,6 +492,12 @@
 		<!-- <script language="javascript" type="text/javascript" src="js/overlayUI.js"></script> -->
 		<!--<script language="javascript" type="text/javascript" defer src="js/eventListeners.js"></script> -->
 		<!--script language="javascript" type="text/javascript" defer src="js/vestigial.js"></script-->
+
+
+<!-- 		<div class="text-jumps" style="display: block; position: absolute; bottom: 4px; left: 50%; margin-left: -45px; z-index: 20;">
+			<a href="#/analysis" style="color: #fff; font-family: Helvetica; padding: 4px 8px; border: 2px solid #fff; text-decoration: none; font-size: 12px; margin-right: 15px; position: relative; top: -6px;">analyze</a>
+		</div> -->
+
 
 	</body>
 </html>

@@ -102,10 +102,10 @@ $('.inflate').hover(
 );
 
 
-$('#Dpad').click(function() {
-    $( "canvas[class='playback']" ).toggle();
-    $( "aside[class='controls']" ).toggle();
-    });
+// $('#Dpad').click(function() {
+//     $( "canvas[class='playback']" ).toggle();
+//     $( "aside[class='controls']" ).toggle();
+//     });
 
 $('#eraser').click(function() {
     $( "#overlayUI" ).toggle();

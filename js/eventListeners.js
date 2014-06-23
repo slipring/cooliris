@@ -86,11 +86,11 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 		}
 	
 	// reporting to console.log
-	console.log("Slide: "+(event.indexh)+"-"+event.indexv+": #"+slID);
-	var notes = $(".slides section:nth-child("+(event.indexh)+") aside.notes").text()
-	if (notes) {
-		console.log(notes);
-		}		
+	// console.log("Slide: "+(event.indexh)+"-"+event.indexv+": #"+slID);
+	// var notes = $(".slides section:nth-child("+(event.indexh)+") aside.notes").text()
+	// if (notes) {
+	// 	console.log(notes);
+	// 	}		
 	// console.log(event.currentSlide)
 
 } );
