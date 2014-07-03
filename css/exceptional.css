@@ -15,6 +15,10 @@
 	font-size: 14pt;
 }
 
+img #patafizz::after {
+  content:"1 day  |  6 - 60 seconds";
+}
+
 /*.reveal #horizonline:after{
   content:'aaaaaaa';
   position:absolute;
