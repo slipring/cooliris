@@ -47,7 +47,7 @@
 
 	</head>
 
-	<!-- 6.5.14: shawmut ../reveal.js/index.html -->
+	
 
 	<body>
 
@@ -56,12 +56,25 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section>
 					<section>
 						<p>cool iris</p>
 						<i class="fa fa-eye"></i>
 					</section>
 					
+				<section text-to-speech="Hello, thank you for coming">
+				<h3>text-to-speech</h3>
+				</section>
+
+
+				<section>
+					<h3>audio-slideshow</h3>
+					<ul>
+						<li>'r' to record (Chrome, Firefox)</li>
+						<li>'z' to download zip file</li>
+					</ul>
+				</section>
+
+
 					<section>
 					
 						<table>
@@ -101,17 +114,11 @@
 						</aside>
 						
 					</section>
-				</section>
 
-				<section>
-					<h3>audio-slideshow</h3>
-					<ul>
-						<li>'r' to record (Chrome, Firefox)</li>
-						<li>'z' to download zip file</li>
-					</ul>
-				</section>
-
-				<section>
+<!-- 				<section>
+					<section>
+						<h3>&darr; experimental iframes &darr;</h3>
+					</section>
 					<section>
 						<iframe style="filter:xray" data-src="http://gfycat.com/ConventionalFirmFrigatebird" frameborder="0" scrolling="no" width="960" height="700">
 						</iframe>
@@ -119,7 +126,7 @@
 					<section>
 						<iframe width="550" height="700" data-src="http://globalfax.kinja.com/annotations-to-animations-1523678080"></iframe>
 					</section>
-				</section>
+				</section> -->
 
 
 			</div>
@@ -142,11 +149,11 @@
 				history: true,
 				loop: false, //~
 
-				transitionSpeed: 'default', // default/fast/slow //~
+				// transitionSpeed: 'default', // default/fast/slow //~
 				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				autoSlide: Reveal.getQueryHash().timer || 12000, // time in milliseconds before auto-advancing slides or fragments //~
-				fragments: Reveal.getQueryHash().fragments || true, // turns fragments on and off globally, fragments stay hidden if false //~
+				// fragments: Reveal.getQueryHash().fragments || true, // turns fragments on and off globally, fragments stay hidden if false //~
 
 				// Audio Slideshow plugin (care of: http://www.faculty.jacobs-university.de/agoel/audio-slideshow/)
 				audioPrefix: 'audio/',	// audio files are stored in the "audio" folder //~
@@ -184,25 +191,28 @@
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
 					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'http://coriolis.no-ip.org/coloriis/cooliris/pkg/text-to-speech/tts.js', async:true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } },
+					{ src: '../reveal.js/plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },				
 					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: '../reveal.js/plugin/math/math.js', async: true },
 					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../reveal.js/plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },				
-					{ src: '../reveal.js/plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } }
-					//, { src: 'pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } },
-					// { src: 'pkg/tagcloud/tagcloud.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					
 				]
 			});
 
 		</script>
 
+				<!--{ src: 'pkg/tagcloud/tagcloud.js', async: true, condition: function() { return !!document.body.classList; } } 
+						{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+						{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },-->
+
 		<script language="javascript" type="text/javascript" src="pkg/h5utils.js"></script>	
 		<script language="javascript" type="text/javascript" src="pkg/jquery-1.11.0.js"></script>
 		<script language="javascript" type="text/javascript" src="pkg/jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script>
 		<script language="javascript" type="text/javascript" src="pkg/jbrowser/jquery.browser.js"></script>
+
 		<!-- <script language="javascript" type="text/javascript" src="js/overlayUI.js"></script> -->
 		<!-- <script language="javascript" type="text/javascript" defer src="js/eventListeners.js"></script> -->
 		<!--script language="javascript" type="text/javascript" defer src="js/vestigial.js"></script-->

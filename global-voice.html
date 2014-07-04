@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Talking Points</title>
+
+		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section text-to-speech="Messages stored on the entry slide will not play unless reviewed">
+					<h2>Package Demo: Text-to-Speech</h2>
+
+					<p>
+						<small>Adjust the volume of your device.</small>
+					</p>
+				</section>
+
+				<section text-to-speech="Use commas to adjust cadence. Use commas, to adjust, cadence.">
+					<h2>Adding text to be read aloud</h2>
+
+					<p>
+						<small>The text to be converted into speech is added inside the opening &#60;section&#62; tag of a slide or slide stack, following the format of text-to-speech="Use commas to adjust cadence. Use commas, to adjust, cadence."</small>
+					</p>
+				</section>
+
+<!-- 				<section text-to-speech="Reloading the slyder will not replay if history is turned on, because you will be loading the slyder to this page, which is your new entry slide. Long strings of words may be cut into chunks according to a string conversion character limit. If you change slides before the audio is through, it will overlap with freshly spoken content. If loop is set to true, you may hear what was on the first slide without backtracking.">
+					<h2>Toggling Text-to-Speech</h2>
+					<h3>Character breaklimiting:</h3>
+					<h4>Reloading the slider...<br>
+							100 loading the slider(break)to this page<br>
+							100 chunks according(break)to a string conversion<br>
+							100 audio is through, it will o(break)verlap with freshly spoken<br>
+							100 first slide(break)without backtracking 22</h4>
+					<p>
+						<small>Currently no ability to toggle this functionality on front end. If slides have text-to-speech content, and you would like to disable text-to-speech, comment it out in the reveal.initialize dependencies. To disable text to speech on an individual slide, you could change the text-to-speech= property to equal something like silent="" for off or narration="" projecting a future capability to toggle optional narration. Other possibilities: Text-to-speech is only triggered by user if it is available to hear. Encourages observation before audio jarring. May be other narrative voice over capabilities than computer read voice, but this feature can be used to help time a presentation or hear how voice over operates with image. OR Narration is turned (by user) visiting a hyperlink that extends URL with something akin to ?=narrate, dependency triggers (in early init? or in classList callback of dependency list?) to parse text-to-speech content only when narration is set to on</small>
+					</p>
+				</section> -->
+
+			</div>
+		</div>
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				loop: true,
+				center: true,
+
+				autoSlide: Reveal.getQueryHash().timer || 12000,
+			
+
+				// Audio Slideshow plugin (care of: http://www.faculty.jacobs-university.de/agoel/audio-slideshow/)
+				audioPrefix: 'audio/',	// audio files are stored in the "audio" folder //~
+				audioSuffix: '.wav',	// audio files have the ".wav" ending //~
+				keyboard: { 
+					82: function() { Recorder.toggleRecording(); },	// press 'r' to start/stop recording
+					90: function() { Recorder.downloadZip(); } 	// press 'z' to download zip containing audio files
+				},
+
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal.js/plugin/notes/notes.js' },
+					{ src: 'http://coriolis.no-ip.org/coloriis/cooliris/pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } },
+					{ src: '../reveal.js/plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },				
+					{ src: '../reveal.js/plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
