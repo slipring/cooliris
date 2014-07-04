@@ -36,7 +36,7 @@
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'http://coriolis.no-ip.org/coloriis/reveal.js/css/print/pdf.css' : 'http://coriolis.no-ip.org/coloriis/reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
@@ -930,23 +930,23 @@
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
+				// controls: true,
 				mouseWheel: true, //~
 				progress: true,
 				slideNumber: true, //~
 				history: true,
 				loop: false, //~
 
-				// transitionSpeed: 'default', // default/fast/slow //~
-				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'default', // default/fast/slow //~
+				transition: 'cube', // default/cube/page/concave/zoom/linear/fade/none Reveal.getQueryHash().transition ||
 				// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				autoSlide: Reveal.getQueryHash().timer || 12000, // time in milliseconds before auto-advancing slides or fragments //~
 				fragments: Reveal.getQueryHash().fragments || true, // turns fragments on and off globally, fragments stay hidden if false //~
 
 				// Parallax scrolling
-				parallaxBackgroundImage: 'http://coriolis.no-ip.org/coloriis/UI/space_hedron.jpg',
-				parallaxBackgroundSize: '4000px 2500px',
-				parallaxForceVertical: false, //~
+				// parallaxBackgroundImage: 'http://coriolis.no-ip.org/coloriis/UI/space_hedron.jpg',
+				// parallaxBackgroundSize: '4000px 2500px',
+				// parallaxForceVertical: false, //~
 				// parallaxBackgroundImage: '../UI/green-spread.jpg',
 				// parallaxBackgroundSize: '1800px 1600px',
 
@@ -969,7 +969,7 @@
 				// previewLinks: false, //~
 
 				// Number of slides away from the current that are visible
-				viewDistance: 1,
+				viewDistance: 2,
 
 				math: {
 					// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js', //~
