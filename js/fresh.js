@@ -58,11 +58,6 @@ Reveal.addEventListener( 'customevent', function() {
 /*end MathJax*/
 
 
-
-
-
-
-
 $('.spin-up').hover(
        function(){ $(this).addClass('fa-spin') },
        function(){ $(this).removeClass('fa-spin') }
@@ -82,11 +77,13 @@ function setUIpositions( ) {
         at: "left top",
         of: ".reveal"
     });
+
      $( "#reveal-right-top" ).position({
         my: "right top",
         at: "right top",
         of: ".reveal"
     });
+    
       $( "#reveal-left-center" ).position({
         my: "left center",
         at: "left center",
@@ -104,11 +101,17 @@ function setUIpositions( ) {
         of: ".reveal"
     });
 
-  $( "#slipstream" ).position({
-        my: "left top",
-        at: "right center",
-        of: "#reveal-left-center"
+     $( "#reveal-left-bottom" ).position({
+        my: "left-bottom",
+        at: "left-bottom",
+        of: ".reveal"
     });
+
+  // $( "#slipstream" ).position({
+  //       my: "left top",
+  //       at: "right center",
+  //       of: "#reveal-left-center"
+  //   });
 
     $( "#defrag" ).position({
         my: "left center",
@@ -116,23 +119,42 @@ function setUIpositions( ) {
         of: "#reveal-left-top"
     });
 
-    $( "#revealing" ).position({
-        my: "center center",
-        at: "center bottom",
-        of: "#reveal-left-top"
-    });
+    // $( "#inertial" ).position({
+    //     my: "left center",
+    //     at: "right center",
+    //     of: "#reveal-left-top"
+    // });
 
-    $( "#turntable" ).position({
-        my: "center bottom",
-        at: "center top",
-        of: "#revealing"
-    });
+    // $( "#revealing" ).position({
+    //     my: "center bottom",
+    //     at: "center top",
+    //     of: "#reveal-left-center"
+    // });
 
-    $( "#details" ).position({
-        my: "left center",
-        at: "right center",
-        of: "#revealing"
-    });
+    // $( "#circle-over" ).position({
+    //     my: "center center",
+    //     at: "center center",
+    //     of: "#revealing"
+    // });
+
+
+    // $( "#turntable" ).position({
+    //     my: "center center",
+    //     at: "center center",
+    //     of: "#revealing"
+    // });
+
+    // $( "#labframe" ).position({
+    //     my: "right center",
+    //     at: "right bottom",
+    //     of: "#turntable"
+    // });
+
+    // $( "#fluidframe" ).position({
+    //     my: "left center",
+    //     at: "right center",
+    //     of: "#revealing"
+    // });
 };
 
 setUIpositions();
@@ -195,9 +217,9 @@ Reveal.addEventListener( 'fragmentshown', function( event ) {
 
 	var subsplash = event.fragment.title;
 	if(subsplash) {
-		document.getElementById('details').innerHTML = subsplash;
+		document.getElementById('fluidframe').innerHTML = subsplash;
 		} else {
-			document.getElementById('details').innerHTML = "undetailed";
+			document.getElementById('fluidframe').innerHTML = "undetailed";
 		}
 
 	setUIpositions();
