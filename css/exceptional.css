@@ -2,6 +2,12 @@
 	height: 9px;
 }
 
+.reveal img {}
+
+.reveal.cube .slides section:not(.stack):before {
+  background:rgba(0,0,0,0.0);
+}
+
 .black-hovercraft:hover{
   background:rgba(0,0,0,.5);
 }
