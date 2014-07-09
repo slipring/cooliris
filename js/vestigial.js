@@ -84,6 +84,16 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
     setUIpositions();
 });
 
+
+
+Reveal.addEventListener( 'yeah', function( event ) {
+       $('#centroid').removeClass('fa-asterisk');
+       $('#centroid').addClass('fa-eye');
+});
+
+
+
+
 $( ".resetUI" ).on( "click", function() {
     setUIpositions();
 });
