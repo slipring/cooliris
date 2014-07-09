@@ -309,6 +309,9 @@ div #test {
 img #patafizz::after {
   content:"1 day  |  6 - 60 seconds";
 }
+/*div #quickest::after {
+  content:"lab frame";
+}*/
 
 /*.reveal #horizonline:after{
   content:'aaaaaaa';
