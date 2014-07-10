@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Hadley Cell</title> <!-- 60 characters or less -->
+		
+		<meta name="title" content="">  
+		<meta name="description" content=""> <!-- 160 characters or less -->
+		<meta name="author" content="">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		
+		<link rel="shortcut icon" href="spin_face.ico">
+
+		<!-- <link rel="stylesheet" href="css/anticipatory.css"> -->
+		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
+
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" type="text/css"> -->
+		<link rel="stylesheet" href="pkg/font-awesome-4.1.0/css/font-awesome.css">
+		<!-- <link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery-ui.css">
+		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery.ui.theme.css">-->
+
+		<!-- For syntax highlighting -->
+		<!-- <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css"> -->
+
+		<link rel="stylesheet" href="css/exceptional.css">
+		<!-- <link rel="stylesheet" href="css/vestigial.css" /> -->
+
+		<!-- Include the appropriate print stylesheet -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'http://coriolis.no-ip.org/coloriis/reveal.js/css/print/pdf.css' : 'http://coriolis.no-ip.org/coloriis/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">			
+
+
+
+				<section>
+
+
+					<div class="fragment fade-out" style="border-radius:20px;position:absolute;float:left;width:100%;height:80%;margin:0;background:rgba(125,125,125,1);border:1px white dashed;">
+					<h2 style="margin:-20px">dynamics across scales</h2>
+						<div style="display:inline-block; float:left; margin-left:300px">
+						<div style="-webkit-transform:scale(1.5,.6666) perspective(2px) rotateX(1deg);">
+							<i style="margin-top:80px;color:skyblue;" class="fa fa-2x  fa-circle-o-notch fa-1rpm"></i> 
+						</div>
+					<i style="margin-top:-80px" class="fa fa-5x fa-globe"></i>
+					
+				</div>
+			
+
+				 <div id="quickest" style="position:inline-block;-webkit-transform:scale(1.5,.6666) perspective(3px) rotateX(1deg); float:right;margin-top:80px;margin-right:300px;">
+				 	<span class="fa fa-stack fa-2x">
+						<!-- <i style="margin-top:-300px;" class="fa fa-eye fa-2x fa-stack-1x fa-1rpm"></i> -->
+				 	<i class="fa fa-bitbucket-square fa-2x fa-stack-1x"></i>
+					<i style="margin-top:-26px;color:skyblue" class="fa fa-circle-o-notch fa-stack-2x fa-1rpm"></i>
+				 	</span>
+				 </div>
+
+				 <div style="position:inline-block;clear:left;">
+						<i class="fa fa-2x fa-child"></i></div>
+				 		<h4> world frame &rarr; lab frame </h4> 
+						<h4>  macroscopic  &rarr;  human scale</h4>
+				 <h4> days  &rarr;  seconds</h4><br>
+					<!-- <span style="position:fixed;bottom:0%;right:40%;"><h4>1 day  :   6 seconds</h4></span> -->
+				</div>
+
+					<img id="patafizz" data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					<aside class="notes">
+					(image class formerly aliasedWhite; correct aliasing in a redraft {w/ re-oriented globe armiture} instead of upping opacity of backdrop)
+					</aside>
+				</section>
+				
+
+				<section>
+					<section>
+
+
+
+
+					<div class="fragment fade-out" data-fragment-index="1" style="border-radius:20px;position:absolute;width:100%;height:80%;margin:0;background:rgba(125,125,125,1);border:1px white dashed;z-index:100">
+					<h2 style="margin-top:-20px">analogy</h2>
+						<div style="width:30%;float:left;margin-top:30px">
+						<i class="fa fa-5x fa-globe"></i>
+						<h4>atmosphere</h4>
+						</div>
+
+				 <div style="width:40%;float:left">
+					<i class="fa fa-lg fa-openid fa-flip-horizontal"></i>&nbsp;&rarr;&nbsp;<i class="fa fa-lg fa-undo fa-rotating"></i>
+					<br><br><i class="fa fa-lg fa-sun-o"></i>&nbsp;&rarr;&nbsp;<i class="fa fa-lg fa-ge"></i>	
+					<br><br><i class="fa fa-vine fa-flip-vertical"></i><span class="position:relative;margin-top:-20px"><i class="fa fa-2x fa-soundcloud "></i></span>&nbsp;&rarr;&nbsp;&nbsp;<i class="fa fa-lg fa-tint"></i>
+				</div>
+
+					<div style="float:right;width:30%;margin-top:30px">
+					 <div style="-webkit-transform:scale(1.5,.6666) perspective(4px) rotateX(1deg);">
+					 	<i class="fa fa-bitbucket fa-4x"></i></div>
+					 	<h4>turntable & tank</h4>
+					 </div>
+
+					<br style="clear:both">
+					<br>
+					<h4>fluids : rotation : temperature difference</h4>
+
+					
+						</div>
+
+					<div class="holds">
+						<!-- <div class="overlapped">
+						<img class="fragment current-visible"  data-src="http://coriolis.no-ip.org/clear/up/load/H1B0.png">
+						</div> -->
+						<div class="overlapper">
+						<img class="" data-src="http://coriolis.no-ip.org/coloriis/UI/O/compar0.png">
+						</div>
+						<div class="overlapped">
+						<img class="fragment fade-in" data-fragment-index="2" data-src="http://coriolis.no-ip.org/coloriis/UI/O/compared2.png">
+						</div>
+						<div class="overlapper">
+						<img class="fragment fade-in" data-fragment-index="3" data-src="http://coriolis.no-ip.org/coloriis/UI/O/compar3e.png">
+						</div>
+						<!--<img data-src="http://coriolis.no-ip.org/clear/up/load/clearance/oldvrsn/pub/image/hadley_superprox.gif"> -->
+					</div>
+
+			<aside class="notes">
+				(text placement via span tag not appearing below, altered positioning caused by overlapping content divs)
+
+					</section>
+	</section>
+
+				<section>
+					<section>
+						<div class="holds">
+							<div class="overlapped">
+								<img style="border-radius:15px" data-src="http://coriolis.no-ip.org/clear/up/load/gctankspin_horzn.gif">
+							</div>
+							<div class="overlapper">
+								<img style="border-radius:15px"  data-src="http://coriolis.no-ip.org/clear/up/load/gcworldspin_trans.gif">
+							</div>
+							<div class="overlapper ">
+								<img style="border-radius:15px;background:rgba(0,0,0,0.0)" class="fragment fade-out" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/gctankspin_eddy.gif"  >
+							</div>
+						</div>
+
+						<div class="overlapper fragment fade-out" data-fragment-index="1" style="position:absolute;margin-top:25%;margin-left:31%;-webkit-transform:rotateZ(-45deg)">
+							<i style="" class="fa fa-hand-o-left"></i>
+							
+						</div>
+						<div class="overlapper fragment fade-in" data-fragment-index="1"style="position:absolute;margin-top:33%;margin-left:35%;-webkit-transform:rotateZ(-15deg)">
+							<i style="" class="fa fa-hand-o-left"></i>
+							
+						</div>
+
+					</section>
+					<section>
+							<img class="" data-src="http://coriolis.no-ip.org/coloriis/UI/O/gradT.png">
+						</section>
+				</section>
+
+
+					<section>
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/H2C0.png">
+					</section>
+					
+
+					<section>
+
+	<img class="" data-src="http://coriolis.no-ip.org/coloriis/UI/O/add_ice.png">
+					
+</section>
+</section>
+
+<section>
+			<section>
+						<div class="holds">
+							<div class="overlapped">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/H2B0.png">
+							</div>
+							</div>
+							<div class="overlapper">
+								<img class="fragment roll-in" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/H2B3.png">
+							</div>
+							<div class="overlapper">
+								<img class="fragment roll-in" data-fragment-index="2" data-src="http://coriolis.no-ip.org/clear/up/load/H2B2.png">
+							</div>
+							<div id="horizonline" class="overlapper">
+								<img class="fragment roll-in" data-src="http://coriolis.no-ip.org/clear/up/load/H2B1.png">
+						</div>
+							<span style="position:fixed;left:5%"><h4 id="predict"><a href="http://scratch.mit.edu/projects/embed/10459062/" data-preview-link>predict how these tracers will go with the flow</a></h4></span>
+						<span style="position:fixed;bottom:-600px;right:33%"><h4 id="predict"><a href="http://scratch.mit.edu/projects/embed/10459062/" data-preview-link>hint: see what happens without the effect of rotation&darr;</a></h4></span>
+
+						<div class="hoistright">
+							<img id="blanktank" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1rpm.gif">
+						</div>
+					</section>
+					<section>
+						<img id="resetterer" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_norotato.gif" onClick="document.getElementById('resetterer').src='http://coriolis.no-ip.org/clear/up/load/hadley_norotato.gif'">
+						<h4>axisymmetric overturning</h4>
+						<aside class="notes">
+							click the image to reset/sync/hide spoiler, later, to clear drawview
+							</aside>
+					</section>
+				</section>
+				
+				<section>
+					<section id="video">
+						<iframe data-autoplay src="http://player.vimeo.com/video/62612780?api=1&amp;title=0&amp;byline=0&amp;portrait=0" data-autoplay width="960" height="600" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					</section>
+		           	<section>
+		           		<div style="float:right;">
+		           			<input id="slipring" type="button" value="change frames">
+		           		</div>
+
+		           		<div id="changeFraming">
+  							<div id="changingFrame" class="background"></div>
+						</div>
+
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_40-1200_1000w.gif"> -->
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/H3C0.png"> -->
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_replay1bdrop.png">-->	     
+					</section>
+					<!--<section id="nullsprite">
+						 <div id="speedthru">AA</div>
+			 			<div id="controllers" style="top:-280px;position:absolute;">
+			                <button onclick="$('#speedthru').spState(1);">co-rotating</button>
+			                <button onclick="$('#speedthru').spState(2);">side view</button>
+			                <button onclick="$('#speedthru').goToFrame(1);">reset</button>
+			                <button onclick="$('#speedthru').spReverse(true);">rewind</button>
+			                <button onclick="$('#speedthru').spToggle();">play/pause</button>
+			                <button onclick="$('#speedthru').spReverse(false);">forward</button>
+			                <button onclick="$('#speedthru').fps(1);">fps 1</button>
+			                <button onclick="$('#speedthru').fps(6);">6</button>
+			                <button onclick="$('#speedthru').fps(12);">12</button>
+			 				<button onclick="$('#speedthru').fps(24);">24 fps</button>
+	            		</div>
+		            </section>-->
+		                	<!-- <button onclick="$('#speedthru').spStop();">.spStop()</button> -->
+			                <!-- <button onclick="$('#speedthru').spStop(true);">.spStop(true) (returns to frame 1)</button> -->
+							<!--<button onclick="$('#speedthru').spStart();">.spStart()</button> -->
+							<!--<button onclick="$('#speedthru').spChangeDir('left');">.spChangeDir('left')</button>
+			                <button onclick="$('#speedthru').spChangeDir('right');">.spChangeDir('right')</button> -->
+		            
+				</section>
+
+				<section>				
+					<section id="virtual">
+
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_replay1.gif"> -->
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_mediumless.jpg"> -->
+	            		<div class="holds">
+		            		<div class="overlapperR">
+			            		<img class="fragment fade-out" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1p5wind.png">
+		            		</div>
+		            		<div class="overlappedR">
+			            		<img style="margin-right:-18px" class="fragment roll-in" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1wind.png">
+		            		</div>
+
+	            			<div class="overlapper">
+			            		<img style="margin-left:-18px" data-fragment-index="2" class="fragment roll-in" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_mediumless.gif">
+		            		</div>
+		            		<div class="overlapped">
+			            		<img id="canlessless" style="margin-top:80%;margin-left:-30px" class="fragment roll-in" data-fragment-index="3" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_canless.gif" onClick="document.getElementById('canlessless').src='http://coriolis.no-ip.org/clear/up/load/hadley_canless.gif'">
+										</div>
+		            		</div>
+
+					</section>
+	            	<section>
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourside.jpg"> -->
+						<!--<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourover.jpg"> -->
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_inking.jpg"> -->
+	            		
+	            		<div class="holds">
+	            		<div class="overlapped">
+	            		<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_rotoscope.png">
+	            		<img class="fragment roll-in" style="float:left;margin-left:10%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourover.gif">
+	            		<img class="fragment roll-in" style="float:right;margin-right:10%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourside.gif">
+	            		
+	            		</div>
+	            		<div class="overlapping">
+	            		<img class="fragment roll-in"  style="float:left;margin-left:5%"  data-src="http://coriolis.no-ip.org/clear/up/load/hadley_inking.gif">
+	            		</div>
+	            	</section>
+					<section>
+	            		<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_fcontext.gif">
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_fcontext.jpg"> -->
+		        		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_wcontext.jpg"> -->
+		        		<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_wcontext.gif">
+					</section>
+				</section>
+				
+            	<section data-background="http://coriolis.no-ip.org/clear/up/load/hadley_roamview.gif">
+            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_roamview.jpg"> -->
+            	<!-- 	<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_roamview.gif">
+					 -->
+            	</section>
+
+				<section id="analysis">
+					
+					<h3>flow feature studies</h3>
+					<h4>short timescale</h4>
+					<h5><ul style="list-style-type:none;">
+						<li>I. <a href="#/13">particles around</a></li>
+						<li>II. <a href="#/9" style="color:seagreen;">green dye drop</a></li>
+						<li>III. <a href="#/10" style="color:violet;">permanganate fall</a></li>
+					</ul></h5>
+					<h4>long timescale</h4>
+					<h5><ul style="list-style-type:none;">
+						<li>I. <a href="#/13">particles inward</a></li>
+						<li>I. <a href="#/12" style="color:seagreen;">green dye mixing</a></li>
+						<li>II. <a href="#/11" style="color:violet;">permanganate spread</a></li>
+					</ul></h5>
+
+				<!-- <h3>tracer analyses</h3> -->
+				<!-- <table>
+						<thead>
+							<tr>
+								<th>tracer</th>
+								<th>short time</th>
+								<th>long time</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>particles</td>
+								<td>free surface u</td>
+								<td>free surface v</td>
+							</tr>
+							<tr>
+								<td>dyeblob</td>
+								<td>interior u,v</td>
+								<td>interior w</td>
+							</tr>
+							<tr>
+								<td>crystals</td>
+								<td>vertical u</td>
+								<td>bottom u,v,w</td>
+							</tr>
+						</tbody>
+					</table> -->
+				</section>
+
+				<section>
+					<section>
+						<div class="holds" style="margin-left:100px;margin-top:-40px">
+							<div class="overlapped">
+			            		<img style="margin-left:15px;margin-top:15px" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_top-level-ana.png">
+    						</div>
+    						<div class="overlapper">
+		    	        		<img class="fragment roll-in nobg" style="margin-top:-20px" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_greendye256_4sdelay.gif">
+							</div>
+						</div>
+					</section>
+
+				<!-- <section>
+	            		<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_proxy001.png">
+					</section> -->
+				</section>
+				<section>
+	            	<section>
+	            		<div class="holds">
+	            			<div class="overlapped">
+			            		<img class="nobg" style="margin-top:-190px" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_pdrop.png">
+			            	</div>
+			            	<div class="overlapper">
+			            		<img class="fragment roll-in nobg nods" style="margin-top:265px;margin-left:175px" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_perma256.gif">
+			            	</div>
+			            </div>
+	            	</section>
+
+	            	<section>
+	            		<img class="nobg nods" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_permdrop.png">
+	            		<img class="nobg nods" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_key_perm.png">
+	            	</section>
+
+            	</section>
+            	
+
+            	<section>
+	            	<section>
+	            		<img class="aliasedWhite" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_permdrifter.gif">
+	            		<img class="nobg nods" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_bottomflows.png">
+	            	</section>
+	            	<section>
+	            		<img class="nobg nods" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_permlongterm.gif">
+	            		<img class="nobg nods" style="float:right;margin-top:30%" data-src="http://coriolis.no-ip.org/coloriis/UI/O/drifted-out.png">
+	            	</section>
+            	</section>
+
+            	<section>
+	            	<section>
+	            		<div class="holds">
+							<div class="overlapped">
+							<img style="margin-left:285px;margin-top:356px"   data-src="http://coriolis.no-ip.org/clear/up/load/hadleydome_pattern.gif">
+							
+	        	    		</div>
+		            		<div class="overlapper">
+		            		<img style="margin-top:-20px" class="fragment roll-in" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_topflows.png">
+		            		</div>
+						</div>
+            		</section>
+	            	<section>
+							<img class="nobg nods" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_domezoom.png">
+	            	</section>
+            	</section>
+
+            	<section>
+	            	<section>
+	            		<div class="holds">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_particletracks.gif">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_domeproxy.gif">
+	    				</div>
+	            	</section>
+	            	<section>
+								<img class="" style="margin-top:-25px;" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_ptrackult.png">
+	    					<img class="fragment fade-in aliasedWhite" style="margin-top:-10px;" data-src="http://coriolis.no-ip.org/clear/up/load/fronts_polar_dome.png">
+	    					</section>
+<!-- 					<section>
+					</section>
+ -->				<!-- 	<section>
+	            		<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_proxy001.png">
+					</section> -->
+            	</section>
+
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_schematic.png">
+				</section>
+
+
+
+
+
+
+
+
+
+
+<!-- 				<section id="blank">
+					<h1>blank</h1>
+					<h2>subheading</h2>
+					<h3>font stage</h3>
+					<h4>h4 size</h4>
+				</section> -->
+
+
+
+
+
+<section>
+					
+					<section id="thermalwind">
+						\[\begin{aligned}
+						R_0 = \frac{u}{fL} \\
+						\end{aligned} \]	
+						<br>
+						<span class="fragment">
+						\[\begin{aligned}
+						u_g = \frac{1}{\rho f} \times \nabla{p} \\
+						\end{aligned} \]	
+						</span>
+						<br>
+						<span class="fragment">
+						\[\begin{aligned}
+						\frac{\partial u_g}{\partial z} = -\frac{g}{f \rho_0}\hat{z} \times \nabla{\rho} \\
+						\end{aligned} \]
+						</span>
+						<br>
+						\[\begin{aligned}
+						\frac{\partial u_g}{\partial z} = \frac{\alpha g}{f}\hat{z} \times \nabla{T} \\
+						\end{aligned} \]
+
+					</section>
+					
+
+					<section id="theory">
+						\[\begin{aligned} 
+						tan(\gamma) = \frac{dz}{dy} = \frac{\frac{\partial p_1}{\partial y}-\frac{\partial p_2}{\partial y}}{g(\rho_1 - \rho_2)} \\
+						Eq.(7.4),Eq.(7.16)::Eq.(7.21):\\
+						 Fig.7.17: \angle \gamma, \rho_1 > \rho_2 , \bot y_{\text{axis}} \\
+						\end{aligned} \]
+
+						<!-- <a href="?theme=sky#/theory">Sky</a>
+ -->						<aside class="notes">
+							Delete:  | Modify:  | Add:   | Create:    | Simplify:
+						</aside>
+					</section>
+
+
+					<section>
+						<h3>Margules - Eq.(7.21)</h3>
+
+						\[\begin{aligned}
+						(u_2-u_1) = \frac{g' \tan \gamma}{2 \Omega} \\
+						u: \text{component of the current parallel to the front} \\
+						g' = g \frac{\Delta \rho}{\rho_1} \text{ : 'reduced gravity'} \\
+						\Delta \rho = \rho_1 - \rho_2 \text{ : cf. parcel 'buoyancy', defined in Eq.(4.3)} \\
+						\text{relates swirl speed of the cone to } g', \gamma, \Omega \\
+						\end{aligned} \]
+						<aside class="notes">
+							Delete:  | Modify:  | Add:   | Create:    | Simplify:
+						</aside>
+					</section>
+
+
+					<section>
+						\begin{equation} 
+						\label{notquiteMargules} 
+						\begin{split}
+						tan(\gamma) &= \frac{dz}{dy} \\
+						  &= \frac{\frac{\partial p_1}{\partial y}-\frac{\partial p_2}{\partial y}}{g(\rho_1 - \rho_2)}
+						\end{split}
+						\end{equation}
+						<aside class="notes">
+							Delete:  | Modify:  | Add:   | Create:    | Simplify:
+						</aside>
+					</section>
+
+
+					<section>
+						\[\begin{aligned}
+						\rho_1 , \rho_2 , \rho_1 > \rho_2 , y_{\text{axis}} \bot, \angle \gamma \\
+						\delta\rho, \delta z, \delta y\\
+						\Omega, \bar{\theta}, \overline{T}, \Psi \\
+						\overline{X}(\varphi,z) = \frac{1}{2 \pi} \int_{0}^{2\pi} X(\lambda,\varphi,z) \mathrm{d}\lambda\\
+						(\lambda,\varphi) = (longitude, latitude)
+						\end{aligned} \]
+						<aside class="notes">
+							Delete:  | Modify:  | Add:   | Create:    | Simplify:
+						</aside>
+					</section>
+
+
+					<section>
+						\begin{equation} 
+						\label{whateverequation} 
+						\begin{split}
+						x &= start of long equation \\
+						  &= second half of long equation
+						\end{split}
+						\end{equation}
+						<aside class="notes">
+							Delete:  | Modify:  | Add:   | Create:    | Simplify:
+						</aside>
+					</section>
+
+
+					<section>
+						\[\begin{aligned}
+						\between
+						\end{aligned} \]
+						<aside class="notes">
+							Delete:  | Modify:  | Add:   | Create:    | Simplify:
+						</aside>
+					</section>
+				</section>
+
+				<section>
+						\[\begin{aligned}
+						\frac{\partial u_g}{\partial z} = \frac{\alpha g}{f}\hat{z} \times \nabla{T} \\
+						\end{aligned} \]
+
+				<span class="fragment">
+				\[\begin{aligned}
+				\frac{\partial z}{\partial p} = - \frac{1}{g \rho}
+				\end{aligned} \]
+				</span>
+				<br>
+				<span class="fragment">
+				\[\begin{aligned}
+				\frac{\partial u}{\partial p} = \frac{R}{fp} \left( \frac{\partial T}{\partial y} \right)_p
+				\end{aligned} \]
+				</span>
+				<br>
+				<span class="fragment">
+				\[\begin{aligned}
+				\frac{\partial v}{\partial p} = - \frac{R}{fp} \left( \frac{\partial T}{\partial x} \right)_p
+				\end{aligned} \]
+				</span>
+
+				</section>
+
+
+
+				<section>
+					<section>
+						<h4>[numeric proxies]&rarr;<a href="http://coriolis.no-ip.org/clearance/oldvrsn/pub/idvHadley.html">[parsing IDV]</a></h4>
+						<img style="width:35%" data-src="http://coriolis.no-ip.org/www/loop/Tank-Loop_ProVision.gif">
+
+						<div class="overlapping">
+						\[\begin{aligned}
+							\between \\
+						\end{aligned} \]
+						</div>
+
+						<img style="width:35%"  data-src="http://coriolis.no-ip.org/www/loop/Atmos-Loop.gif">
+<br>							
+						<aside class="notes">
+							Delete:  | Modify:  | Add:   | Create:    | Simplify:
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_LOOP1_PHENOMENA.gif" />
+				</section>
+
+
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH01.PNG" />
+				</section>
+
+				<!-- <section>
+					*<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH03.PNG" />
+				</section> -->
+
+				<section>
+					<h4>u, θtemp, θ+u, ω, ω+θ, v wind, u+v=ψ, ψ+u, u dz</h4>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH02.PNG" />
+				</section>
+
+				<!-- <section>
+					*<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH03.PNG" />
+				</section> -->
+
+
+				<section>
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH03.PNG" />
+					</section>					
+					<section>
+						<div class="holds">
+							<div class="overlapper">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH04ulabel.png" />
+							</div>
+							<div class="overlapped">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH04A.gif" />
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH05.PNG" />
+					</section>
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH0607merge.gif" />
+					</section>
+
+				<section>
+					<div class="holds">
+						<div class="overlapper">
+							<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH08ulabel.png" style="margin-top:-3%;z-index:40;"/>
+						</div>
+						<div class="overlapped">
+							<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH08A.gif" style="margin-top:7%" />
+						</div>
+					</div>
+<!-- 
+					<div id="grouper">
+							<img id="groupee" src="image/zonalH08ulabel.png" style="margin-top:-5%">
+							<img class="proxys" src="image/zonalH08A.gif" alt="zonal_average-zonal_wind">
+						</div> -->
+				</section>
+
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH09.PNG" />
+				</section>
+				<section>
+					<style>
+					#grouper {
+					position: relative;
+					height: 100%;
+					width: 100%;
+					min-height: 640px;
+					}
+					#groupee {
+					position: absolute;
+					left: 0px;
+					top: 0px;}
+					</style>
+
+					<div class="holds">
+						<div class="overlaps">
+							<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH1011label.png" style="margin-top:10px"/>
+						</div>
+						<div class="overlapped">
+							<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH1011merge.gif" />
+						</div>
+					</div>
+					*fix
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH12.PNG" />
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH13.PNG" />
+				</section>
+<!-- 				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH14.PNG" />
+				</section>
+ -->				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH15.PNG" />
+				</section>
+				<section>
+	<!-- 				<div class="holder">
+						<div class="overlapper"> -->
+							<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH16ulabel.png" />
+<!-- 						</div>
+						<div class="overlapped"> -->
+							<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH16A.gif" />
+<!-- 						</div>
+					</div> -->
+					*fix
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH17.PNG" />
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH18.PNG" />
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH_potT-sect.gif" />
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/polarF_xsect.png" />
+				</section>
+			</section>
+			<section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH19.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH20.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH21.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/polarF_sectional-u-stack.gif">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/polarF_zcorner-u-stack.gif">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH22.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH23ulabel.png" style="margin-top:-5%">
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH23A.gif" style="margin-top:-5%">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH24.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH25.PNG">
+				</section>
+			</section>
+
+
+			<section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH26.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH27.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH28.PNG">
+				</section>	
+			</section>
+
+
+			<section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH29.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH28.PNG">
+				</section>
+				<section>
+					G<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH30ulabel.png">
+					G<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH30A.gif">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH31.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH32.PNG">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH33.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH34.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH35.PNG">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH36.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH37.PNG">
+				</section>
+				<section>	
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH38.PNG">	
+				</section>
+			</section>
+			
+
+			<section>
+				<section>	
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH39.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH40.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH41.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH42.PNG">
+				</section>
+				<section>
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH43.PNG">
+				</section>
+
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section id="hotkeyz">
+					<table>
+						<thead>
+							<tr>
+								<th>key / string</th>
+								<th>action / function</th>
+								<th>how-to / more</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>?</td>
+								<td>keyboard shortcuts menu</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>A</td>
+								<td>toggle Autoslide</td>
+								<td>append URL with ?timer=12000 in ms</td>
+							</tr>
+<!-- 							<tr>
+								<td>B or .</td>
+								<td>toggle Pause</td>
+								<td>cover distracting slide</td>
+							</tr> -->
+							<!-- <tr>
+								<td>F</td>
+								<td>Fullscreen</td>
+								<td>Esc to exit</td>
+							</tr> -->
+							<tr>
+								<td>Alt+click</td>
+								<td>Zoom-in</td>
+								<td>Click to zoom out</td>
+							</tr>
+							<!-- <tr>
+								<td>Esc</td>
+								<td>Slide deck overview</td>
+								<td>click to slide or Esc to return</td>
+							</tr> -->
+							<tr>
+								<td>S</td>
+								<td>Speaker notes</td>
+								<td>view additional notes + upcoming slide</td>
+							</tr>
+							<tr>
+								<td>?print-pdf</td>
+								<td>PDF stylesheet for printing</td>
+								<td>append to end of URL after .html</td>
+							</tr>
+						</tbody>
+					</table>
+					<aside class="notes">
+						Navigation with UDLR arrows or scrollwheel. Mobile devices, swipe to change slide, pinch to overview.
+					</aside>
+				</section>
+
+			</div>
+
+		</div>
+
+
+<!-- 		<div class="betwixt">
+
+			<div id="crosshair" class="indicator">
+				<i id="spindle" class="fa fa-lg fa-inverse fa-crosshairs"></i>
+			</div>
+ -->
+			<!-- <div id="targetline" class="indicated">default target</div> -->
+			<!-- <div id="slipstream" class="indicated dash ui-widget-content" style="">
+				<ul>
+					<li>sinking feeling</li>
+				</ul>
+			</div> -->
+<!-- 			
+		</div>
+ -->
+
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				// controls: true,
+				mouseWheel: true, //~
+				progress: true,
+				slideNumber: true, //~
+				history: true,
+				loop: false, //~
+
+				transitionSpeed: 'default', // default/fast/slow //~
+				transition: 'cube', // default/cube/page/concave/zoom/linear/fade/none Reveal.getQueryHash().transition ||
+				// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				autoSlide: Reveal.getQueryHash().timer || 12000, // time in milliseconds before auto-advancing slides or fragments //~
+				fragments: Reveal.getQueryHash().fragments || true, // turns fragments on and off globally, fragments stay hidden if false //~
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'http://coriolis.no-ip.org/coloriis/UI/space_hedron.jpg',
+				// parallaxBackgroundSize: '4000px 2500px',
+				// parallaxForceVertical: false, //~
+				// parallaxBackgroundImage: '../UI/green-spread.jpg',
+				// parallaxBackgroundSize: '1800px 1600px',
+
+				// Audio Slideshow plugin (care of: http://www.faculty.jacobs-university.de/agoel/audio-slideshow/)
+				audioPrefix: 'audio/',	// audio files are stored in the "audio" folder //~
+				audioSuffix: '.wav',	// audio files have the ".wav" ending //~
+				keyboard: { 
+					82: function() { Recorder.toggleRecording(); },	// press 'r' to start/stop recording
+					90: function() { Recorder.downloadZip(); } 	// press 'z' to download zip containing audio files
+				},
+
+				center: false,
+				width: 960, //~
+				height: 700, //~
+				margin: 0.04,  //~
+				// Bounds for smallest/largest possible scale to apply to content 
+				minScale: 0.5, //~
+				maxScale: 4, //~
+				// Opens links in an iframe preview overlay
+				// previewLinks: false, //~
+
+				// Number of slides away from the current that are visible
+				viewDistance: 2,
+
+				math: {
+					// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js', //~
+					config: 'TeX-AMS_HTML-full'
+				},
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal.js/plugin/math/math.js', async: true },
+					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },				
+					{ src: '../reveal.js/plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } }
+					// { src: '../cooliris/pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } },
+					// ,	{ src: 'pkg/tagcloud/tagcloud.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+		<script language="javascript" type="text/javascript" src="pkg/h5utils.js"></script>	
+		<script language="javascript" type="text/javascript" src="pkg/jquery-1.11.0.js"></script>
+		<script language="javascript" type="text/javascript" src="pkg/jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script>
+		<script language="javascript" type="text/javascript" src="pkg/jbrowser/jquery.browser.js"></script>
+		
+		<script language="javascript" type="text/javascript" src="js/ui.js"></script>
+		<!-- <script language="javascript" type="text/javascript" src="js/overlayUI.js"></script> -->
+		<!--<script language="javascript" type="text/javascript" defer src="js/eventListeners.js"></script> -->
+		<!--script language="javascript" type="text/javascript" defer src="js/vestigial.js"></script-->
+
+
+<!-- 		<div class="text-jumps" style="display: block; position: absolute; bottom: 4px; left: 50%; margin-left: -45px; z-index: 20;">
+			<a href="#/analysis" style="color: #fff; font-family: Helvetica; padding: 4px 8px; border: 2px solid #fff; text-decoration: none; font-size: 12px; margin-right: 15px; position: relative; top: -6px;">analyze</a>
+		</div> -->
+
+
+	</body>
+</html>
