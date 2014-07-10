@@ -4,6 +4,10 @@
 
 .reveal img {}
 
+.a #notest:hover{
+  color:rgba(19, 218, 236,1);
+}
+
 .reveal.cube .slides section:not(.stack):before {
   background:rgba(0,0,0,0.0);
 }
