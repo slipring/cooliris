@@ -23,12 +23,15 @@
 		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" type="text/css"> -->
 		<link rel="stylesheet" href="pkg/font-awesome-4.1.0/css/font-awesome.css">
 		<!-- <link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery-ui.css">
-		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery.ui.theme.css">-->
+		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery.ui.theme.css"> -->
+		<link rel="stylesheet" href="pkg/circleslide/jquery-ui-1.7.2slider-lightness.css">
+
 
 		<!-- For syntax highlighting -->
 		<!-- <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css"> -->
 
 		<link rel="stylesheet" href="css/particular.css">
+		<link rel="stylesheet" type="text/css" href="pkg/circleslide/slider.css">
 		<!-- <link rel="stylesheet" href="css/vestigial.css" /> -->
 
 		<!-- Include the appropriate print stylesheet -->
@@ -53,7 +56,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section title="Example with Titlecard">
+				<!--<section title="Example with Titlecard">
 					
 					<div id="titleCard">
 						<div id="imgbox">
@@ -62,10 +65,10 @@
 
 					<aside class="notes">
 					</aside>
-				</section>
+				</section> -->
 
 				<section title="Weather in a Tank">
-					<div class="aliasingWhite binoculus">
+					<div class="aliasingWhite binoculus preface" title="geophysical fluid dynamics">
 					<img class="inset0" data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
 					</div>
 					<!-- <h4>Weather in a Tank</h4> -->
@@ -83,19 +86,19 @@
 					<!-- <h4>Analogies</h4> -->
 
 					<ul class="fa-ul">
-						<li class="preface" title="omega values"><i class="fa-li fa fa-openid fa-flip-horizontal"></i>rotation</li>
+						<li class="fragment" data-fragment-index="2" title="omega values"><i class="fa-li fa fa-openid fa-flip-horizontal"></i>rotation</li>
 						<li class="fragment" data-fragment-index="3" title="light"><i class="fa-li fa fa-sun-o"></i>warm</li>
-						<li class="fragment" data-fragment-index="2" title="rotating fluids"> <i class="fa-li fa fa-soundcloud fa-flip-horizontal"></i>air</li>
-						<li class="fragment" data-fragment-index="4" title="dense"><i class="fa-li fa fa-ge"></i>cold</li>
+						<li class="preface" data-fragment-index="1" title="rotating fluids"> <i class="fa-li fa fa-soundcloud fa-flip-horizontal"></i>air</li>
+						<li class="fragment" data-fragment-index="3" title="dense"><i class="fa-li fa fa-ge"></i>cold</li>
 					</ul>
 					<ul class="hide-dot">
 					<li></li>
 					</ul>
 					<ul class="fa-ul">
-						<li class="" data-fragment-index="1"><i class="fa-li fa fa-undo fa-1rpm"></i>rotation</li>
-						<li class="fragment" data-fragment-index="4"><i class="fa-li fa fa-ge fa-1rpm"></i>cold</li>
-						<li class="fragment" data-fragment-index="2"><i class="fa-li fa fa-tint"></i>water</li>
+						<li class="fragment" data-fragment-index="2"><i class="fa-li fa fa-undo fa-1rpm"></i>rotation</li>
 						<li class="fragment" data-fragment-index="3"><i class="fa-li fa fa-sun-o fa-1rpm"></i>warm</li>
+						<li class="" data-fragment-index="1"><i class="fa-li fa fa-tint"></i>water</li>
+						<li class="fragment" data-fragment-index="3"><i class="fa-li fa fa-ge fa-1rpm"></i>cold</li>
 					</ul>
 
 
@@ -123,25 +126,48 @@
 				<section title="Representing Earth's Rotation in the Lab" data-state="parcelzone">
 					<!-- <img class="no-hilight" data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif"> -->
 					<!-- <h4>Representing Earth's Rotation in the Lab</h4> -->
-					<div class="no-hilight" style="width:700px;height:700px;position:absolute;top:0px;left:0px">
+					<!-- <div class="no-hilight" style="width:700px;height:700px;position:absolute;top:0px;left:0px">
 						<div class="no-hilight" id="troposection" style="display:none;"> 
 							<div class="no-hilight" id="parcelat" style="display:none;">
 								<div class="no-hilight" id="angleread" style="display:none;"></div> 
 							</div> 
 						</div>
-					</div>
+					</div> -->
 
 					<div class="holds no-hilight">
-							<div class="canimation">
-								<img src="http://coriolis.no-ip.org/clear/up/load/frame/xtankrpm0000.png"/>
+							<div id="tankly" class="overlapped canimation">
+								<img style="border-radius:100px;border:white dashed 0px" src="http://coriolis.no-ip.org/clear/up/load/frame/xtankrpm0000.png"/>
 							</div>
 							<!-- <div class="overlapped">
 								<img class="no-hilight" style="border-radius:15px" data-src="http://coriolis.no-ip.org/clear/up/load/gctankspin_horzn.gif">
 							</div> -->
-							<div class="overlapper">
-								<img id="globalzone" class="no-hilight" data-src="http://coriolis.no-ip.org/clear/up/load/gcworldspin_trans.gif">
+
+							<div title="select latitude to model with turntable" class="fragment overlappest">
+							<!-- 	<div style="clear: both"></div> -->
+
+								<div style="-webkit-transform: rotate(5deg);">
+									<div id="slider-container" style="opacity:.5;">
+										<form>
+											<input type="text" size="16" class="slider-input">
+											<div class="slider-content"><h3 id="slider-display">&nbsp;</h3> </div>
+											<div style="position:absolute;top:200px;left:32px;" class="fa-flip-horizontal slider-content"></div>	
+											<span style="clear:both;" id="latlabel">ƒ=2Ωsin(φ)</span> 
+										</form>
+									</div>
+								</div>
+
+								<form style="display:none;" id="display-only" >
+									<p> Latitude
+										<input type="text" size="12" class="slider-display">
+									</p>
+								</form>
 							</div>
-							<span id="#rpm">0 rpm</span>
+
+							<div class="overlapper">
+								<img id="globalzone" style="border:white dashed 0px;" class="no-hilight" data-src="http://coriolis.no-ip.org/clear/up/load/gcworldspin_trans.gif">
+							</div>
+
+							<span style="position:absolute;top-margin:600px;right:40%;z-index:23;" id="rpm">&nbsp; rpm</span>
 							<!-- <div class="overlapper ">
 								<img style="border-radius:15px;background:rgba(0,0,0,0.0)" class="fragment fade-out no-hilight" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/gctankspin_eddy.gif"  >
 							</div> -->
@@ -157,7 +183,7 @@
 				</section>
 
 				<section title="Representing Pole-Equator Temperature Gradient in the Lab" data-state="tempgrad">
-					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					<img class="" data-src="http://coriolis.no-ip.org/coloriis/UI/O/gradT.png">
 					<!-- <h4>Representing Pole-Equator Temperature Gradient in the Lab</h4> -->
 
 					<aside class="notes">
@@ -168,23 +194,41 @@
 					</aside>
 				</section>
 
+				<section>
 
-				<section title="Hadley How-To">
-					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
-					<!-- <h4>Hadley How-To</h4> -->
+					<section title="Hadley How-To">
+						<img data-src="http://coriolis.no-ip.org/coloriis/UI/O/add_ice.png">
+						<!-- <h4>Hadley How-To</h4> -->
 
-					<aside class="notes">
-						Step 1. Center tank and can. Step 2. Fill with water. Step 3. Turn on rotation, monitor the rotating frame, and wait for solid body rotation. Step 4. Add ice and a bit of water in middle. 5. Add gizmos to visualize flow.
-					</aside>
-					<aside class="edits">
-						[Tank:1. walls, 2. water volume, 3. rpm 4. ice water] "we set up an experiment with ice in the center and low rotation and we leave it for a while.."
-						SUBSLIDE: Reference frames and solid body rotation. Contains camera views, co-rotating + turntable record + tripod 3d 
-					</aside>
+						<aside class="notes">
+							Step 1. Center tank and can. Step 2. Fill with water. Step 3. Turn on rotation, monitor the rotating frame, and wait for solid body rotation. Step 4. Add ice and a bit of water in middle. 5. Add gizmos to visualize flow.
+						</aside>
+						<aside class="edits">
+							[Tank:1. walls, 2. water volume, 3. rpm 4. ice water] "we set up an experiment with ice in the center and low rotation and we leave it for a while.."
+							SUBSLIDE: Reference frames and solid body rotation. Contains camera views, co-rotating + turntable record + tripod 3d 
+						</aside>
+					</section>
+					<section title="Solid Body Rotation">
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/H2C0.png">
+					</section>
 				</section>
-
 				<section title="Visualizing the Flow">
-					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
-					<!-- <h4>Visualizing the Flow</h4> -->
+					<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					 --><!-- <h4>Visualizing the Flow</h4> -->
+					 <div class="holds">
+							<div class="overlapped up20">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/H2B0.png">
+							</div>
+							</div>
+							<div class="overlapper">
+								<img title="upper troposphere" class="fragment roll-in" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/H2B3.png">
+							</div>
+							<div class="overlapper">
+								<img title="interior flows" class="fragment roll-in" data-fragment-index="2" data-src="http://coriolis.no-ip.org/clear/up/load/H2B2.png">
+							</div>
+							<div id="horizonline" class="overlapper" >
+								<img title="near-earth surface" class="fragment roll-in" data-fragment-index="3" data-src="http://coriolis.no-ip.org/clear/up/load/H2B1.png">
+						</div>
 
 					<aside class="notes">
 						Paper dots track the upper surface flows. Interior flows. Bottom surface flows.
@@ -195,8 +239,13 @@
 				</section>
 
 				<section title="Prediction">
-					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif"> -->
 					<!-- <h4>Prediction</h4> -->
+					<!-- http://scratch.mit.edu/projects/embed/10459062/ -->
+					<span style="position:absolute;bottom:-20px;left:25%;"><h4 id="predict"><a href="http://scratch.mit.edu/projects/10459062/#fullscreen" data-preview-link>predict how the tracers will go with the flow</a></h4></span>
+					<div>
+						<img id="blanktank" style="width:175%;height:175%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1rpm.gif">
+						</div>
 
 					<aside class="notes">
 						In what fashion do you think these tracers will travel in the tank?
@@ -207,8 +256,9 @@
 				</section>
 
 				<section title="Hadley Video">
-					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif"> -->
 					<!-- <h4>Hadley Video</h4> -->
+					<iframe data-autoplay src="http://player.vimeo.com/video/62612780?api=1&amp;title=0&amp;byline=0&amp;portrait=0" data-autoplay width="960" height="600" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 					<aside class="notes">
 						Synced video streams of the experiment, in the rotating frame of reference. Load the flow explorer to play with speeds, variation in reference frames, even some 3d views.
@@ -222,9 +272,27 @@
 					</aside>
 				</section>
 
+			<section>
 				<section title="Virtual Reconstruction">
-					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif"> -->
 					<!-- <h4>Virtual Reconstruction</h4> -->
+
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_replay1.gif"> -->
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_mediumless.jpg"> -->
+	            		<div class="holds">
+		            		<div class="overlappedL" style="margin-left:18%;">
+			            		<img style="height:200%" class="fragment fade-out" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1wind.png">
+		            		</div>
+		            		<div class="overlapperR fragment fade-out" data-fragment-index="2">
+			            		<img class="fragment fade-in" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1p5wind.png">
+		            		</div>
+
+	            			<div class="overlapper fragment roll-in" data-fragment-index="2" >
+			            		<img style="margin-top:-150px;margin-left:12%;width:90%"   data-src="http://coriolis.no-ip.org/clear/up/load/hadley_mediumless.gif" id="resetme00" onClick="document.getElementById('resetme00').src='http://coriolis.no-ip.org/clear/up/load/hadley_mediumless.gif'">
+			            		<img style="margin-top:0%;margin-left:12%;width:90%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_canless.gif" id="resetme01" onClick="document.getElementById('resetme01').src='http://coriolis.no-ip.org/clear/up/load/hadley_canless.gif'" >
+							</div>
+		            	</div>
+
 
 					<aside class="notes">
 						We can build a virtual model(link:refraction praxinoscope) using the experimental footage. We can filter out the can, the tank, and the clear medium itself to get a clearer picture of the tracer's deformation with the flows.
@@ -237,9 +305,32 @@
 						//add 'skip record' to animations //re-order these first in wind #s, secondly perhaps spatially across a timeline?
 					</aside>
 				</section>
+			    	<section>
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourside.jpg"> -->
+						<!--<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourover.jpg"> -->
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_inking.jpg"> -->
+	            		
+	            		<div class="holds">
+		            		<div class="overlapped">
+			            		<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_rotoscope.png">
+			            		<img class="fragment roll-in" style="float:left;margin-left:10%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourover.gif">
+			            		<img class="fragment roll-in" style="float:right;margin-right:10%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourside.gif">
+		            		</div>
+		            		<div class="overlapper">
+		            			<img class="fragment roll-in"  style="float:left;margin-left:5%"  data-src="http://coriolis.no-ip.org/clear/up/load/hadley_inking.gif">
+		            		</div>
+	            		</div>
+	            	</section>
+					<section>
+	            		<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_fcontext.gif">
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_fcontext.jpg"> -->
+		        		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_wcontext.jpg"> -->
+		        		<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_wcontext.gif">
+					</section>
+			</section>
 
-				<section title="Co-rotating Flyby">
-					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+				<section title="Co-rotating Flyby" data-background="http://coriolis.no-ip.org/clear/up/load/hadley_roamview.gif">
+					<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif"> -->
 					<!-- <h4>Co-rotating Flyby</h4> -->
 
 					<aside class="notes">
@@ -264,16 +355,20 @@
 
 		</div>
 
+		
 
 		<div class="overView">
 			<i class="fa fa-search-minus zoomOut"></i>
 		</div>
 
+		<div class="loadNotes">
+			<i class="fa fa-comments-o notesOn"></i>
+		</div>
 	
 		<div id="inertialFrame">
 			<div id="fluidFrame">
-				&nbsp;&nbsp;<span id="promptText">onload prompt</span>&nbsp;<br><br>
-				&nbsp;&nbsp;<span id="titleText">onload title</span>&nbsp;
+				&nbsp;&nbsp;<span id="promptText">getting up to spin</span>&nbsp;<br><br>
+				&nbsp;&nbsp;<span id="titleText">Weather in a Tank</span>&nbsp;
 			<div>
 			<div id="defrag"></div>
 		</div> 
@@ -351,6 +446,7 @@
 		<script language="javascript" type="text/javascript" src="pkg/jquery-1.11.0.js"></script>
 		<script language="javascript" type="text/javascript" src="pkg/jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script>
 		<script language="javascript" type="text/javascript" src="pkg/jbrowser/jquery.browser.js"></script>	
+		<script type="text/javascript" type="text/javascript" src="pkg/circleslide/slider.js"></script>
 		<script language="javascript" type="text/javascript" src="pkg/canimate/jquery.canimate.js"></script>
 		<script language="javascript" type="text/javascript" src="js/particular.js"></script>
 

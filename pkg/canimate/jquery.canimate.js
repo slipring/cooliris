@@ -116,7 +116,7 @@
 					$nextFrame = $nextFrameLocation + options.imagePrefix + $nextFrameNumber + $filetype;
 					$image.attr( 'src', $nextFrame );
 				}
-
+				
 			};
 			
 

@@ -1,112 +1,76 @@
 
 
 
-$(document).ready(function(){
+// $(document).ready(function(){
     
-      $('.canimation').canimate({
+//       $('.canimation').canimate({
+//         totalFrames: 59,
+//         imagePrefix: 'xtankrpm',
+//         fps: 1,
+//         preload:false
+//       });
+
+
+// document.getElementById("slider-container").addEventListener("mousedown", function (
+// ) {  $('.canimation').canimate({
+//         isPlaying = false;
+//       }); });
+
+
+
+
+
+document.getElementById("slider-container").addEventListener("mousedown", function (
+) { 
+    // var $latitudinal = $('#slider-display');
+    // $('#tankly').removeClass('canimation');
+    // $('#tankly').addClass('canimation');
+     $('.canimation').stop();
+     });
+
+
+
+document.getElementById("slider-container").addEventListener("mouseup", function (
+) { 
+    // var $latitudinal = $('#slider-display');
+    // $('#tankly').removeClass('canimation');
+    // $('#tankly').addClass('canimation');
+    // Window.clearInterval();
+    latitudeInt = parseInt($('.slider-display').val());
+     
+    var $canimator = $('.canimation').canimate({
         totalFrames: 59,
         imagePrefix: 'xtankrpm',
-        fps: 12,
-        preload:true
+        fps: latitudeInt/10,
+        preload:false
       });
-      
-    });
+
+    setTimeout(
+      function() {
+         $canimator.stop(); 
+      }, 10000); 
+   
+
+  });
 
 
 
-// (function () {
-//     var $noselect = $('.no-hilight');
-//   $noselect.draggable = false;
-//   $noselect.mousedown(function(e) { e.preventDefault(); }, false);
-// })();
-
-
-
-/*props to http://jsfiddle.net/sCanr/1/ */
 
 (function () {
-        var $troposection = $('#troposection');
-        var $parcelat = $('#parcelat');
-        var parcelatW2 = $parcelat.width()/2;
-        var parcelatH2 = $parcelat.height()/2;    
-        var radius = 200;
-        var deg = 0;    
-        var elP = $('#troposection').offset();
-        var elPos = { x: elP.left, y: elP.top};
-        var X = 0, Y = 0;
-        var mdown = false;
-        var rpm = 20
-        $('#troposection')
-        .mousedown(function (e) { mdown = true; })
-        .mouseup(function (e) { mdown = false;
-         $('#canimation').fps = rpm; })
-        .mousemove(function (e) {
-            if (mdown) {
-               var mPos = {x: e.clientX-elPos.x, y: e.clientY-elPos.y};
-               var atan = Math.atan2(mPos.x-radius, mPos.y-radius);
-               deg = -atan/(Math.PI/180) + 180; // final (0-360 positive) degrees from mouse position 
-                
-               X = Math.round(radius* Math.sin(deg*Math.PI/180));    
-               Y = Math.round(radius*  -Math.cos(deg*Math.PI/180));
-               $parcelat.css({ left: X+radius-parcelatW2, top: Y+radius-parcelatH2 });              
-               // AND FINALLY apply exact degrees to ball rotation
-               $parcelat.css({ WebkitTransform: 'rotate(' + deg + 'deg)'});
-               $parcelat.css({ '-moz-transform': 'rotate(' + deg + 'deg)'});
-               //
-               // PRINT DEGREES
-               var fromEQ = 90;
-               if ((deg < 360) && (deg > 180)){
-                var flipThis = 270 - deg;
-                fromEQ = -flipThis;
-               }
-               else {
-                fromEQ = 90 - deg;
-               }
-               var latRound = Math.floor(fromEQ);           
-               $('#angleread').html('Latitude = '+latRound); 
-               var coriolis = Math.cos(latRound*Math.PI/180);
-               var rpm = Math.floor((1-coriolis)*20);
-               $('#rpm').html(rpm); 
-            }
-        });
+    var $noselect = $('.no-hilight');
+  $noselect.draggable = false;
+  $noselect.mousedown(function(e) { e.preventDefault(); }, false);
 })();
 
 
-/* generic EventListener cued by data-state="customevent" attributed to a section*/
-Reveal.addEventListener( 'parcelzone', function() {
-  $( "#troposection" ).toggle();
-  $( "#parcelat" ).toggle();
-  $( "#angleread").toggle();
-  console.log( '"parcelzone" has fired' );
-} );
-
-Reveal.addEventListener( 'tempgrad', function() {
-  $( "#troposection" ).hide();
-  $( "#parcelat" ).hide();
-  $( "#angleread").hide();
-  console.log( '"tempgrad" has fired' );
-} );
-
-Reveal.addEventListener( 'analogues', function() {
-  $( "#troposection" ).hide();
-  $( "#parcelat" ).hide();
-  $( "#angleread").hide();
-  console.log( '"analogues" has fired' );
-} );
-
-
-Reveal.addEventListener( 'slidechanged', function( event ) {
- // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-    var lastScene = event.previousSlide;
-    if (lastScene) {
-    console.log(lastScene);}
-    else {return false}
- } );
+document.getElementById('globalzone').draggable = false;
 
 
 
 
-
+// Reveal.addEventListener( 'fragmentshown', function( event ) { 
+//   // $("#slipstream>ul").prepend('<li>'+ event.timeStamp + '</li>');
+//   });
 
 // Reveal.addEventListener( 'slidechanged', function( event ) {
 //  // event.previousSlide, event.currentSlide, event.indexh, event.indexv
@@ -121,6 +85,114 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 //     console.log("this needs fixed");
 //   }
 //  } );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*props to http://jsfiddle.net/sCanr/1/ */
+
+// (function () {
+//         var $troposection = $('#troposection');
+//         var $parcelat = $('#parcelat');
+//         var parcelatW2 = $parcelat.width()/2;
+//         var parcelatH2 = $parcelat.height()/2;    
+//         var radius = 200;
+//         var deg = 0;    
+//         var elP = $('#troposection').offset();
+//         var elPos = { x: elP.left, y: elP.top};
+//         var X = 0, Y = 0;
+//         var mdown = false;
+//         var rpm = 20
+//         $('#troposection')
+//         .mousedown(function (e) { mdown = true; })
+//         .mouseup(function (e) { mdown = false;
+//          $('#canimation').fps = rpm; })
+//         .mousemove(function (e) {
+//             if (mdown) {
+//                var mPos = {x: e.clientX-elPos.x, y: e.clientY-elPos.y};
+//                var atan = Math.atan2(mPos.x-radius, mPos.y-radius);
+//                deg = -atan/(Math.PI/180) + 180; // final (0-360 positive) degrees from mouse position 
+                
+//                X = Math.round(radius* Math.sin(deg*Math.PI/180));    
+//                Y = Math.round(radius*  -Math.cos(deg*Math.PI/180));
+//                $parcelat.css({ left: X+radius-parcelatW2, top: Y+radius-parcelatH2 });              
+//                // AND FINALLY apply exact degrees to ball rotation
+//                $parcelat.css({ WebkitTransform: 'rotate(' + deg + 'deg)'});
+//                $parcelat.css({ '-moz-transform': 'rotate(' + deg + 'deg)'});
+//                //
+//                // PRINT DEGREES
+//                var fromEQ = 90;
+//                if ((deg < 360) && (deg > 180)){
+//                 var flipThis = 270 - deg;
+//                 fromEQ = -flipThis;
+//                }
+//                else {
+//                 fromEQ = 90 - deg;
+//                }
+//                var latRound = Math.floor(fromEQ);           
+//                $('#angleread').html('Latitude = '+latRound); 
+//                var coriolis = Math.cos(latRound*Math.PI/180);
+//                var rpm = Math.floor((1-coriolis)*20);
+//                $('#rpm').html(rpm); 
+//             }
+//         });
+// })();
+
+
+// /* generic EventListener cued by data-state="customevent" attributed to a section*/
+// Reveal.addEventListener( 'parcelzone', function() {
+//   $( "#troposection" ).toggle();
+//   $( "#parcelat" ).toggle();
+//   $( "#angleread").toggle();
+//   console.log( '"parcelzone" has fired' );
+// } );
+
+// Reveal.addEventListener( 'tempgrad', function() {
+//   $( "#troposection" ).hide();
+//   $( "#parcelat" ).hide();
+//   $( "#angleread").hide();
+//   console.log( '"tempgrad" has fired' );
+// } );
+
+// Reveal.addEventListener( 'analogues', function() {
+//   $( "#troposection" ).hide();
+//   $( "#parcelat" ).hide();
+//   $( "#angleread").hide();
+//   console.log( '"analogues" has fired' );
+// } );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reveal.addEventListener( 'slidechanged', function( event ) {
+ // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+    var lastScene = event.previousSlide;
+    if (lastScene) {
+    console.log(lastScene);}
+    else {return false}
+ } );
+
 
 
 
@@ -214,6 +286,8 @@ Reveal.addEventListener( 'fragmentshown', function( event ) {
     } else {
       document.getElementById('promptText').innerHTML = " ";
     }
+
+
 
 });
 
