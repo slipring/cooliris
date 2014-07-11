@@ -83,7 +83,7 @@
 					<!-- <h4>Analogies</h4> -->
 
 					<ul class="fa-ul">
-						<li class="prefacing" title="omega values"><i class="fa-li fa fa-openid fa-flip-horizontal"></i>rotation</li>
+						<li class="preface" title="omega values"><i class="fa-li fa fa-openid fa-flip-horizontal"></i>rotation</li>
 						<li class="fragment" data-fragment-index="3" title="light"><i class="fa-li fa fa-sun-o"></i>warm</li>
 						<li class="fragment" data-fragment-index="2" title="rotating fluids"> <i class="fa-li fa fa-soundcloud fa-flip-horizontal"></i>air</li>
 						<li class="fragment" data-fragment-index="4" title="dense"><i class="fa-li fa fa-ge"></i>cold</li>
@@ -123,16 +123,28 @@
 				<section title="Representing Earth's Rotation in the Lab" data-state="parcelzone">
 					<!-- <img class="no-hilight" data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif"> -->
 					<!-- <h4>Representing Earth's Rotation in the Lab</h4> -->
+					<div class="no-hilight" style="width:700px;height:700px;position:absolute;top:0px;left:0px">
+						<div class="no-hilight" id="troposection" style="display:none;"> 
+							<div class="no-hilight" id="parcelat" style="display:none;">
+								<div class="no-hilight" id="angleread" style="display:none;"></div> 
+							</div> 
+						</div>
+					</div>
+
 					<div class="holds no-hilight">
-							<div class="overlapped">
+							<div class="canimation">
+								<img src="http://coriolis.no-ip.org/clear/up/load/frame/xtankrpm0000.png"/>
+							</div>
+							<!-- <div class="overlapped">
 								<img class="no-hilight" style="border-radius:15px" data-src="http://coriolis.no-ip.org/clear/up/load/gctankspin_horzn.gif">
-							</div>
+							</div> -->
 							<div class="overlapper">
-								<img class="no-hilight" style="border-radius:15px"  data-src="http://coriolis.no-ip.org/clear/up/load/gcworldspin_trans.gif">
+								<img id="globalzone" class="no-hilight" data-src="http://coriolis.no-ip.org/clear/up/load/gcworldspin_trans.gif">
 							</div>
-							<div class="overlapper ">
+							<span id="#rpm">0 rpm</span>
+							<!-- <div class="overlapper ">
 								<img style="border-radius:15px;background:rgba(0,0,0,0.0)" class="fragment fade-out no-hilight" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/gctankspin_eddy.gif"  >
-							</div>
+							</div> -->
 						</div>
 
 					<aside class="notes">
@@ -257,12 +269,7 @@
 			<i class="fa fa-search-minus zoomOut"></i>
 		</div>
 
-		
-
-		<div id="troposection" style="display:none;"> 
-			<div id="parcelat" style="display:none;"><div id="angleread" style="display:none;"></div> </div> 
-		</div>
-
+	
 		<div id="inertialFrame">
 			<div id="fluidFrame">
 				&nbsp;&nbsp;<span id="promptText">onload prompt</span>&nbsp;<br><br>
@@ -311,7 +318,7 @@
 			
 				width: 960, //~  queue2   //768(portrait),1024(landscape)
 				height: 700, //~ queue2   //946(portrait);690(portrait);
-				margin: 0.11,  //~ *! min % padding around slide content queue1
+				margin: 0.15,  //~ *! min % padding around slide content queue1
 				// Bounds for smallest/largest possible scale to apply to content 
 				minScale: 0.5, //~
 				maxScale: 4, //~
@@ -344,6 +351,7 @@
 		<script language="javascript" type="text/javascript" src="pkg/jquery-1.11.0.js"></script>
 		<script language="javascript" type="text/javascript" src="pkg/jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script>
 		<script language="javascript" type="text/javascript" src="pkg/jbrowser/jquery.browser.js"></script>	
+		<script language="javascript" type="text/javascript" src="pkg/canimate/jquery.canimate.js"></script>
 		<script language="javascript" type="text/javascript" src="js/particular.js"></script>
 
 	</body>

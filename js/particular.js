@@ -1,10 +1,24 @@
 
 
-(function () {
-    var $noselex = $('.no-hilight');
-  $noselex.draggable = false;
-  $noselex.mousedown(function(e) { e.preventDefault(); }, false);
-})();
+
+$(document).ready(function(){
+    
+      $('.canimation').canimate({
+        totalFrames: 59,
+        imagePrefix: 'xtankrpm',
+        fps: 12,
+        preload:true
+      });
+      
+    });
+
+
+
+// (function () {
+//     var $noselect = $('.no-hilight');
+//   $noselect.draggable = false;
+//   $noselect.mousedown(function(e) { e.preventDefault(); }, false);
+// })();
 
 
 
@@ -21,9 +35,11 @@
         var elPos = { x: elP.left, y: elP.top};
         var X = 0, Y = 0;
         var mdown = false;
+        var rpm = 20
         $('#troposection')
         .mousedown(function (e) { mdown = true; })
-        .mouseup(function (e) { mdown = false; })
+        .mouseup(function (e) { mdown = false;
+         $('#canimation').fps = rpm; })
         .mousemove(function (e) {
             if (mdown) {
                var mPos = {x: e.clientX-elPos.x, y: e.clientY-elPos.y};
@@ -48,6 +64,9 @@
                }
                var latRound = Math.floor(fromEQ);           
                $('#angleread').html('Latitude = '+latRound); 
+               var coriolis = Math.cos(latRound*Math.PI/180);
+               var rpm = Math.floor((1-coriolis)*20);
+               $('#rpm').html(rpm); 
             }
         });
 })();
@@ -79,8 +98,12 @@ Reveal.addEventListener( 'analogues', function() {
 Reveal.addEventListener( 'slidechanged', function( event ) {
  // event.previousSlide, event.currentSlide, event.indexh, event.indexv
     var lastScene = event.previousSlide;
-    console.log(lastScene);
+    if (lastScene) {
+    console.log(lastScene);}
+    else {return false}
  } );
+
+
 
 
 
@@ -149,7 +172,7 @@ var fragWidth = 24;
 /* defrag bar */
 Reveal.addEventListener( 'slidechanged', function( event ) {
   document.getElementById('promptText').innerHTML = " ";
-  var alreadyScene = event.currentSlide.querySelector( '.prefacing' );
+  var alreadyScene = event.currentSlide.querySelector( '.preface' );
   if (alreadyScene) {
     var subsplash = alreadyScene.title;
     document.getElementById('promptText').innerHTML = subsplash;
@@ -195,7 +218,6 @@ Reveal.addEventListener( 'fragmentshown', function( event ) {
 });
 
 
-
-$('zoomOut').click(function() {
+$('.zoomOut').click(function() {
     Reveal.toggleOverview();
     });
