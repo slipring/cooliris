@@ -14,7 +14,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 		
-		<link rel="shortcut icon" href="spin_face.ico">
+		<link rel="shortcut icon" href="tank_blank.ico">
 
 		<!-- <link rel="stylesheet" href="css/anticipatory.css"> -->
 		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
@@ -53,38 +53,224 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section title="making the analogy">
+				<section title="Example with Titlecard">
 					
-					<div id="titlecard">
+					<div id="titleCard">
 						<div id="imgbox">
 						</div>
 					</div>
-					<img data-src="http://coriolis.no-ip.org/coloriis/UI/O/analog.png">
-					
+
 					<aside class="notes">
 					</aside>
 				</section>
 
-				<section title="">
-					<h4>macro  |  micro</h4>
-					<span style="position:fixed;bottom:0%;right:40%;"><h4>1 day  |  6 - 60 seconds</h4></span>
-					<img id="patafizz" data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+				<section title="Weather in a Tank">
+					<div class="aliasingWhite binoculus">
+					<img class="inset0" data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					</div>
+					<!-- <h4>Weather in a Tank</h4> -->
+
 					<aside class="notes">
-					(image class formerly aliasedWhite; correct aliasing in a redraft {w/ re-oriented globe armiture} instead of upping opacity of backdrop)
+						Two rotating systems.
+					</aside>
+					<aside class="edits">
+						(Atmos) | [Tank] "chaotic phenomena" "evidenced" "clouds" "tracers"// white aliasing. re-oriented globe armiture. backdrop. {{branches: hurricane tropical circle:radial inflow, hadley tropical cell:general circulation slow,eddies extratropical: general circulation fast, polar fronts and jetstreams:cylinder collapse, ocean currents:taylor columns }}
+					</aside>
+				</section>
+
+				<section title="Analogies" data-state="analogues">
+					<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif"> -->
+					<!-- <h4>Analogies</h4> -->
+
+					<ul class="fa-ul">
+						<li class="prefacing" title="omega values"><i class="fa-li fa fa-openid fa-flip-horizontal"></i>rotation</li>
+						<li class="fragment" data-fragment-index="3" title="light"><i class="fa-li fa fa-sun-o"></i>warm</li>
+						<li class="fragment" data-fragment-index="2" title="rotating fluids"> <i class="fa-li fa fa-soundcloud fa-flip-horizontal"></i>air</li>
+						<li class="fragment" data-fragment-index="4" title="dense"><i class="fa-li fa fa-ge"></i>cold</li>
+					</ul>
+					<ul class="hide-dot">
+					<li></li>
+					</ul>
+					<ul class="fa-ul">
+						<li class="" data-fragment-index="1"><i class="fa-li fa fa-undo fa-1rpm"></i>rotation</li>
+						<li class="fragment" data-fragment-index="4"><i class="fa-li fa fa-ge fa-1rpm"></i>cold</li>
+						<li class="fragment" data-fragment-index="2"><i class="fa-li fa fa-tint"></i>water</li>
+						<li class="fragment" data-fragment-index="3"><i class="fa-li fa fa-sun-o fa-1rpm"></i>warm</li>
+					</ul>
+
+
+					<div class="holds">
+						<div class="overlapper">
+							<img data-fragment-index="1" data-src="http://coriolis.no-ip.org/coloriis/UI/O/compar0.png">
+						</div>
+						<div class="overlapped">
+							<img class="fragment fade-in" data-fragment-index="2" data-src="http://coriolis.no-ip.org/coloriis/UI/O/compared2.png">
+						</div>
+						<div class="overlapper">
+							<img class="fragment fade-in" data-fragment-index="3" data-src="http://coriolis.no-ip.org/coloriis/UI/O/compar3e.png">
+						</div>
+					</div>
+
+
+					<aside class="notes">
+						Air on in earth's atmosphere and water in a laboratory turntable-tank with a low-pressure center. Both are rotating fluids with temperature difference.
+					</aside>
+					<aside class="edits">
+						(Atmos:Sealevel-Air-Tropopause) | [Tank:Bottom-Water annulus-Fill level] "z-bounds" "medium" "volumes" "omega" "deltaT" "dense/cold/L" //   // {{generic reference (specializations: ())}}
+					</aside>
+				</section>
+
+				<section title="Representing Earth's Rotation in the Lab" data-state="parcelzone">
+					<!-- <img class="no-hilight" data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif"> -->
+					<!-- <h4>Representing Earth's Rotation in the Lab</h4> -->
+					<div class="holds no-hilight">
+							<div class="overlapped">
+								<img class="no-hilight" style="border-radius:15px" data-src="http://coriolis.no-ip.org/clear/up/load/gctankspin_horzn.gif">
+							</div>
+							<div class="overlapper">
+								<img class="no-hilight" style="border-radius:15px"  data-src="http://coriolis.no-ip.org/clear/up/load/gcworldspin_trans.gif">
+							</div>
+							<div class="overlapper ">
+								<img style="border-radius:15px;background:rgba(0,0,0,0.0)" class="fragment fade-out no-hilight" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/gctankspin_eddy.gif"  >
+							</div>
+						</div>
+
+					<aside class="notes">
+						Varying turntable speed to model the effect of earth's rotation on air at various latitudes.
+					</aside>
+					<aside class="edits">
+						(Atmos:Interior Angle of G|Latitude|Circumference ringaround to axis) | [Tank:G-field|Rpm|Circumference ringaround to axis ] "system angular momentum" "omega bounds" "zone" "annulus" "table" 
+						\\This will probably require a sprite. First get the slider that you found in there! *N/A* SUBSLIDE calculation of omega dot g, calculating the coriolis parameter
+					</aside>
+				</section>
+
+				<section title="Representing Pole-Equator Temperature Gradient in the Lab" data-state="tempgrad">
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					<!-- <h4>Representing Pole-Equator Temperature Gradient in the Lab</h4> -->
+
+					<aside class="notes">
+						Heating driven by sun. Larger radius warmer, smaller radius cooler. Cooling driven by ice.
+					</aside>
+					<aside class="edits">
+						(Atmos:Innermost radius|Bandwidth|Outermost Radius)SUN | [Tank:ICE)Innercan radius|Bandwidth|Outertank wall] "r-theta bounds" "walls"
 					</aside>
 				</section>
 
 
+				<section title="Hadley How-To">
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					<!-- <h4>Hadley How-To</h4> -->
 
-				<section title="next title">
-					<span class="fragment" title="this fragment">INFO</span>
-					<span class="fragment" title="next fragment">RMAT</span>
-					<span class="fragment" title="last fragment">ION</span>
+					<aside class="notes">
+						Step 1. Center tank and can. Step 2. Fill with water. Step 3. Turn on rotation, monitor the rotating frame, and wait for solid body rotation. Step 4. Add ice and a bit of water in middle. 5. Add gizmos to visualize flow.
+					</aside>
+					<aside class="edits">
+						[Tank:1. walls, 2. water volume, 3. rpm 4. ice water] "we set up an experiment with ice in the center and low rotation and we leave it for a while.."
+						SUBSLIDE: Reference frames and solid body rotation. Contains camera views, co-rotating + turntable record + tripod 3d 
+					</aside>
 				</section>
+
+				<section title="Visualizing the Flow">
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					<!-- <h4>Visualizing the Flow</h4> -->
+
+					<aside class="notes">
+						Paper dots track the upper surface flows. Interior flows. Bottom surface flows.
+					</aside>
+					<aside class="edits">
+						[Tank:it's rotating at {1rpm,10rpm}, real tilt angle view, , superimposed z-bounds, discrete particles top, discrete input dye inside, discrete crystals bottom]
+					</aside>
+				</section>
+
+				<section title="Prediction">
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					<!-- <h4>Prediction</h4> -->
+
+					<aside class="notes">
+						In what fashion do you think these tracers will travel in the tank?
+					</aside>
+					<aside class="edits">
+						[Tank:it's still, above angle and tilt angle iso orthonormals, these may combine into an axo] // dropping copies of a object (if not easy, make the drop points already fixed) versus painting the trails color.  "We'll show you this again after" {gizmo bar has either (green dye, red dye, permanganate, particle tracks)} "lil' real lab frame from last slide"
+					</aside>
+				</section>
+
+				<section title="Hadley Video">
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					<!-- <h4>Hadley Video</h4> -->
+
+					<aside class="notes">
+						Synced video streams of the experiment, in the rotating frame of reference. Load the flow explorer to play with speeds, variation in reference frames, even some 3d views.
+					</aside>
+					<aside class="edits">
+						//Download from Vimeo or find resource on HDs.
+						//Upload to Youtube for 1.25, 1.5, 2x speeds. 
+						//Make Director's Cut with Playback speeds (logarithmic scaling)
+						\\Offload site with the Hadley Flow Explorer spritely.
+						[Tank: Rotating Frames, Over view large focus, side view corner focus. Turntable indicator. Rotation count. Timer since recording intiatialization. Timeline with already utilized gizmo icons and tracer sprites [[port .ai reference file to workingdir]]
+					</aside>
+				</section>
+
+				<section title="Virtual Reconstruction">
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					<!-- <h4>Virtual Reconstruction</h4> -->
+
+					<aside class="notes">
+						We can build a virtual model(link:refraction praxinoscope) using the experimental footage. We can filter out the can, the tank, and the clear medium itself to get a clearer picture of the tracer's deformation with the flows.
+					</aside>
+					<aside class="edits">
+						1. water, transcan-noice, 1.5 green winds, minus tank, plus turntable, plus floor, plus lit wall [tilt angle low ico, still]
+						2.water, transcan, 1 green wind {should go before other}, plus turntable, plus floor, no wall, 
+						3. no water, transcan-noice, animated, plus floor counter rotating, from 0 winds to about 2 winds
+						4. 0 to 1.5 winds. no can, yes wall, yes turntable, subtlefloor
+						//add 'skip record' to animations //re-order these first in wind #s, secondly perhaps spatially across a timeline?
+					</aside>
+				</section>
+
+				<section title="Co-rotating Flyby">
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+					<!-- <h4>Co-rotating Flyby</h4> -->
+
+					<aside class="notes">
+						
+					</aside>
+					<aside class="edits">
+						discounting the non-rotating floor. discounting the manual overlay frames. matchmoving the initiating and final keyframes {may splinter into 3 slides?}
+					</aside>
+				</section>
+
+				<!-- <section id="storage" title="this section is intentionally broken">
+					<span preface="virtual fragment">WORLD</span>
+					<span class="fragment" title="next fragment">&nbsp;OBSERVER&nbsp;</span>
+					<span class="fragment" title="last fragment">LAB</span>
+					<img class="fragment" data-src="http://coriolis.no-ip.org/coloriis/UI/O/analog.png">
+					<h4>macro | micro</h4>
+					<span style="position:fixed;bottom:10%;right:35%;">
+						<h4>1 day | 60s seconds</h4></span>
+				</section> -->
 
 			</div>
 
 		</div>
+
+
+		<div class="overView">
+			<i class="fa fa-search-minus zoomOut"></i>
+		</div>
+
+		
+
+		<div id="troposection" style="display:none;"> 
+			<div id="parcelat" style="display:none;"><div id="angleread" style="display:none;"></div> </div> 
+		</div>
+
+		<div id="inertialFrame">
+			<div id="fluidFrame">
+				&nbsp;&nbsp;<span id="promptText">onload prompt</span>&nbsp;<br><br>
+				&nbsp;&nbsp;<span id="titleText">onload title</span>&nbsp;
+			<div>
+			<div id="defrag"></div>
+		</div> 
+
 
 		<script src="../reveal.js/lib/js/head.min.js"></script>
 		<script src="../reveal.js/js/reveal.js"></script>
@@ -98,7 +284,7 @@
 				progress: true,
 				slideNumber: true, //~
 				history: true,
-				loop: false, //~
+				loop: true, //~
 				center: false, //~ queue0
 
 				transitionSpeed: 'default', // default/fast/slow //~
@@ -123,9 +309,9 @@
 				// parallaxBackgroundSize: '1800px 1600px',
 
 			
-				width: 960, //~  queue2
-				height: 700, //~ queue2
-				margin: 0,  //~ *! min % padding around slide content queue1
+				width: 960, //~  queue2   //768(portrait),1024(landscape)
+				height: 700, //~ queue2   //946(portrait);690(portrait);
+				margin: 0.11,  //~ *! min % padding around slide content queue1
 				// Bounds for smallest/largest possible scale to apply to content 
 				minScale: 0.5, //~
 				maxScale: 4, //~
