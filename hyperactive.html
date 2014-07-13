@@ -24,14 +24,13 @@
 		<link rel="stylesheet" href="pkg/font-awesome-4.1.0/css/font-awesome.css">
 		<!-- <link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery-ui.css">
 		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery.ui.theme.css"> -->
-		<link rel="stylesheet" href="pkg/circleslide/jquery-ui-1.7.2slider-lightness.css">
-
+		<!-- <link rel="stylesheet" href="pkg/circleslide/jquery-ui-1.7.2slider-lightness.css"> -->
 
 		<!-- For syntax highlighting -->
 		<!-- <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css"> -->
 
-		<link rel="stylesheet" href="css/particular.css">
-		<link rel="stylesheet" type="text/css" href="pkg/circleslide/slider.css">
+		<link rel="stylesheet" href="css/general.css">
+		<!-- <link rel="stylesheet" type="text/css" href="pkg/circleslide/slider.css"> -->
 		<!-- <link rel="stylesheet" href="css/vestigial.css" /> -->
 
 		<!-- Include the appropriate print stylesheet -->
@@ -49,27 +48,42 @@
 
 	</head>
 
-	<!-- sync to reveal.js/index.html, 6.5.14  -->
-
 	<body>
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<!--<section title="Example with Titlecard">
+				<section title="climate data fields">
 					
+					<i class="fa fa-undo fa-cyclonic"></i>
 					<div id="titleCard">
-						<div id="imgbox">
+					<h3>v-wind</h3>
+						<div class="preface" id="imgBox">
 						</div>
+						<span class="component fragment highlight-current-white">-v</span>
+						<span class="component fragment highlight-current-black">+v</span>
+						<form>
+						 <fieldset>
+						  <legend>v-component</legend>
+						  Projection: <input type="text" value="rectangular"><br>
+						  Scale: <input type="text" value="global 30yr"><br>
+						  Display: <input type="text" value="zonal avg section"><br>
+						  POV: <input type="text" value="facing east">
+						 </fieldset>
+						</form>
 					</div>
 
 					<aside class="notes">
+						These will display in speaker notes (press 'S') or an optional on-screen display, triggered with the comments button to the left of the controls.
 					</aside>
-				</section> -->
+					<aside class="notes">
+					
+					</aside>
+				</section> 
 
-				<section title="Weather in a Tank">
-					<div class="aliasingWhite binoculus preface" title="geophysical fluid dynamics">
-					<img class="inset0" data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
+				<section title="weather in a tank">
+					<div class="aliasing binoculus preface" title="geophysical fluid dynamics">
+					<img class="pb100px" data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif">
 					</div>
 					<!-- <h4>Weather in a Tank</h4> -->
 
@@ -81,7 +95,7 @@
 					</aside>
 				</section>
 
-				<section title="Analogies" data-state="analogues">
+				<section title="analogies" data-state="analogues">
 					<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif"> -->
 					<!-- <h4>Analogies</h4> -->
 
@@ -123,7 +137,7 @@
 					</aside>
 				</section>
 
-				<section title="Representing Earth's Rotation in the Lab" data-state="parcelzone">
+				<section title="Earth's Rotation &rarr; Lab" data-state="parcelzone">
 					<!-- <img class="no-hilight" data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif"> -->
 					<!-- <h4>Representing Earth's Rotation in the Lab</h4> -->
 					<!-- <div class="no-hilight" style="width:700px;height:700px;position:absolute;top:0px;left:0px">
@@ -134,7 +148,7 @@
 						</div>
 					</div> -->
 
-					<div class="holds no-hilight">
+					<div class="holds unselectable">
 							<div id="tankly" class="overlapped canimation">
 								<img style="border-radius:100px;border:white dashed 0px" src="http://coriolis.no-ip.org/clear/up/load/frame/xtankrpm0000.png"/>
 							</div>
@@ -182,12 +196,12 @@
 					</aside>
 				</section>
 
-				<section title="Representing Pole-Equator Temperature Gradient in the Lab" data-state="tempgrad">
+				<section title="Temperature Gradient &rarr; Lab" data-state="tempgrad">
 					<img class="" data-src="http://coriolis.no-ip.org/coloriis/UI/O/gradT.png">
 					<!-- <h4>Representing Pole-Equator Temperature Gradient in the Lab</h4> -->
 
 					<aside class="notes">
-						Heating driven by sun. Larger radius warmer, smaller radius cooler. Cooling driven by ice.
+						Equator-Pole Temperature Gradient. Heating driven by sun. Larger radius warmer, smaller radius cooler. Cooling driven by ice.
 					</aside>
 					<aside class="edits">
 						(Atmos:Innermost radius|Bandwidth|Outermost Radius)SUN | [Tank:ICE)Innercan radius|Bandwidth|Outertank wall] "r-theta bounds" "walls"
@@ -258,7 +272,7 @@
 				<section title="Hadley Video">
 					<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif"> -->
 					<!-- <h4>Hadley Video</h4> -->
-					<iframe data-autoplay src="http://player.vimeo.com/video/62612780?api=1&amp;title=0&amp;byline=0&amp;portrait=0" data-autoplay width="960" height="600" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					<!-- <iframe data-autoplay src="http://player.vimeo.com/video/62612780?api=1&amp;title=0&amp;byline=0&amp;portrait=0" data-autoplay width="960" height="600" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> -->
 
 					<aside class="notes">
 						Synced video streams of the experiment, in the rotating frame of reference. Load the flow explorer to play with speeds, variation in reference frames, even some 3d views.
@@ -272,8 +286,15 @@
 					</aside>
 				</section>
 
+			<section title="Virtual Reconstruction">
+					<img style="height:50%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_fcontext.gif">
+	            	<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_fcontext.jpg"> -->
+		        	<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_wcontext.jpg"> -->
+		        	<img  style="height:50%"  data-src="http://coriolis.no-ip.org/clear/up/load/hadley_wcontext.gif">
+			</section>
+
 			<section>
-				<section title="Virtual Reconstruction">
+				<section title="Render Views">
 					<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/gcsplash.gif"> -->
 					<!-- <h4>Virtual Reconstruction</h4> -->
 
@@ -281,7 +302,7 @@
 	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_mediumless.jpg"> -->
 	            		<div class="holds">
 		            		<div class="overlappedL" style="margin-left:18%;">
-			            		<img style="height:200%" class="fragment fade-out" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1wind.png">
+			            		<img style="height:200%" class="fragment preface fade-out" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1wind.png">
 		            		</div>
 		            		<div class="overlapperR fragment fade-out" data-fragment-index="2">
 			            		<img class="fragment fade-in" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1p5wind.png">
@@ -305,28 +326,25 @@
 						//add 'skip record' to animations //re-order these first in wind #s, secondly perhaps spatially across a timeline?
 					</aside>
 				</section>
-			    	<section>
-	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourside.jpg"> -->
-						<!--<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourover.jpg"> -->
-	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_inking.jpg"> -->
+
+
+			    <section>
+	            	<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourside.jpg"> -->
+					<!--<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourover.jpg"> -->
+	            	<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_inking.jpg"> -->
 	            		
-	            		<div class="holds">
-		            		<div class="overlapped">
-			            		<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_rotoscope.png">
-			            		<img class="fragment roll-in" style="float:left;margin-left:10%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourover.gif">
-			            		<img class="fragment roll-in" style="float:right;margin-right:10%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourside.gif">
-		            		</div>
-		            		<div class="overlapper">
-		            			<img class="fragment roll-in"  style="float:left;margin-left:5%"  data-src="http://coriolis.no-ip.org/clear/up/load/hadley_inking.gif">
-		            		</div>
+	            	<div class="holds">
+	            		<div class="overlapped">
+		            		<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_rotoscope.png">
+		            		<img class="fragment roll-in" style="float:left;margin-left:10%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourover.gif">
+		            		<img class="fragment roll-in" style="float:right;margin-right:10%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourside.gif">
 	            		</div>
-	            	</section>
-					<section>
-	            		<img style="height:50%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_fcontext.gif">
-	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_fcontext.jpg"> -->
-		        		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_wcontext.jpg"> -->
-		        		<img  style="height:50%"  data-src="http://coriolis.no-ip.org/clear/up/load/hadley_wcontext.gif">
-					</section>
+	            		<div class="overlapper">
+	            			<img class="fragment roll-in"  style="float:left;margin-left:5%"  data-src="http://coriolis.no-ip.org/clear/up/load/hadley_inking.gif">
+	            		</div>
+	            	</div>
+	            </section>
+
 			</section>
 
 				<section title="Co-rotating Flyby" data-background="http://coriolis.no-ip.org/clear/up/load/hadley_roamview.gif">
@@ -334,43 +352,35 @@
 					<!-- <h4>Co-rotating Flyby</h4> -->
 
 					<aside class="notes">
-						
+						With the virtual model, we can freely manipulate the pitch of our view and travel along with the flow. Following the upper mo(i)st tip of the dye, we are sped faster in the direction of system rotation by the density gradient caused by heat exchange between system walls.
 					</aside>
 					<aside class="edits">
 						discounting the non-rotating floor. discounting the manual overlay frames. matchmoving the initiating and final keyframes {may splinter into 3 slides?}
 					</aside>
 				</section>
 
-				<!-- <section id="storage" title="this section is intentionally broken">
-					<span preface="virtual fragment">WORLD</span>
-					<span class="fragment" title="next fragment">&nbsp;OBSERVER&nbsp;</span>
-					<span class="fragment" title="last fragment">LAB</span>
-					<img class="fragment" data-src="http://coriolis.no-ip.org/coloriis/UI/O/analog.png">
-					<h4>macro | micro</h4>
-					<span style="position:fixed;bottom:10%;right:35%;">
-						<h4>1 day | 60s seconds</h4></span>
-				</section> -->
-
 			</div>
 
 		</div>
-
 		
+		<div class="clearFace">
+			<i id="tilt" class="fa fa-eraser clearUI"></i>
+		</div>
 
 		<div class="overView">
 			<i class="fa fa-search-minus zoomOut"></i>
 		</div>
 
 		<div class="loadNotes">
-			<i class="fa fa-comments-o notesOn"></i>
+			<i class="fa fa-comment-o notesToggle"></i>
 		</div>
 	
 		<div id="inertialFrame">
 			<div id="fluidFrame">
-				&nbsp;&nbsp;<span id="promptText">getting up to spin</span>&nbsp;<br><br>
-				&nbsp;&nbsp;<span id="titleText">Weather in a Tank</span>&nbsp;
-			<div>
-			<div id="defrag"></div>
+				&nbsp;<span id="promptText">up to spin with</span>&nbsp;<br>
+				&nbsp;<span id="titleText">Weather in a Tank</span>&nbsp;
+				<div id="defrag"></div>
+			</div>
 		</div> 
 
 
@@ -442,13 +452,13 @@
 			});
 		</script>
 
-		<script language="javascript" type="text/javascript" src="pkg/h5utils.js"></script>	
+		<!-- <script language="javascript" type="text/javascript" src="pkg/h5utils.js"></script>	 -->
 		<script language="javascript" type="text/javascript" src="pkg/jquery-1.11.0.js"></script>
-		<script language="javascript" type="text/javascript" src="pkg/jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script>
-		<script language="javascript" type="text/javascript" src="pkg/jbrowser/jquery.browser.js"></script>	
-		<script type="text/javascript" type="text/javascript" src="pkg/circleslide/slider.js"></script>
-		<script language="javascript" type="text/javascript" src="pkg/canimate/jquery.canimate.js"></script>
-		<script language="javascript" type="text/javascript" src="js/particular.js"></script>
+		<!-- <script language="javascript" type="text/javascript" src="pkg/jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script> -->
+		<!-- <script language="javascript" type="text/javascript" src="pkg/jbrowser/jquery.browser.js"></script>	 -->
+		<!-- <script type="text/javascript" type="text/javascript" src="pkg/circleslide/slider.js"></script> -->
+		<!-- <script language="javascript" type="text/javascript" src="pkg/canimate/jquery.canimate.js"></script>-->
+		<script language="javascript" type="text/javascript" src="js/general.js"></script>
 
 	</body>
 </html>

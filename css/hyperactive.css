@@ -1,0 +1,742 @@
+
+
+
+/* general purpose style changes */
+
+.noBG {
+	background:none;
+}
+
+.inbound {
+  list-style-position:inside;
+}
+
+.dashing {
+  border:1px dashed white;
+}
+
+.bluehover:hover {
+  background:rgba(19, 218, 236,1);
+}
+
+
+
+
+
+/*  -webkit-transition: all 400ms ease;
+     -moz-transition: all 400ms ease;
+          transition: all 400ms ease;*/
+
+
+
+
+
+
+
+
+
+
+/* overlayed UI outside Reveal frame */
+
+
+.clearFace {
+  position:fixed;
+  display:block;
+   bottom:-2px;
+  left:2px;
+  z-index:55;
+}
+
+
+  .clearUI {
+    color:#13daec;
+    opacity:.6;
+  }
+
+  .clearUI:hover{
+    color:#13daec;
+    opacity:1;
+  }
+
+.overView {
+  position:fixed;
+  display:block;
+  /* bottom:30px;
+  right:10px;*/
+  bottom:6px;
+  right:6px;
+  z-index:55;
+}
+
+  .zoomOut {
+    color:#13daec;
+    opacity:.6;
+  }
+
+  .zoomOut:hover{
+    color:#13daec;
+    opacity:1;
+  }
+
+
+.loadNotes {
+  position:fixed;
+  display:block;
+  bottom:24px;
+  right:12px;
+  z-index:54;
+}
+
+  .notesToggle {
+    color:#13daec;
+    opacity:.6;
+  }
+
+
+  .notesToggle:hover{
+    color:#13daec;
+    opacity:1;
+  }
+
+
+#inertialFrame {
+  display: inline-block; 
+  position: absolute; 
+  bottom: 2px; 
+  right:72px; 
+  z-index: 20;
+  /* padding:4px 20px 4px 50px;*/
+  background:rgba(0,0,0,.25);
+  -moz-border-radius: 0px 90px 0px 90px;
+  -webkit-border-radius: 0px;
+  -webkit-border-top-left-radius: 90px;
+   -webkit-border-top-right-radius: 90px;
+  /*min-width:600px;*/
+  /*-webkit-transform: perspective(10px) rotateX(1deg);*/
+}
+
+#fluidFrame {
+  top:0;
+  right:0;
+/*  margin-top:5px;
+  margin-left:3px;*/
+  padding:0px 40px 0px 40px;
+  color: #fff;/*
+  background:rgba(0,0,0,.25);
+  border-top: 0px dashed rgba(255,255,255,.25);
+  border-right: 0px dashed rgba(255,255,255,.25);
+  border-left: 0px dashed rgba(255,255,255,.25);
+  -moz-border-radius: 0px 100px 0px 100px;
+  -webkit-border-radius: 0px;
+  -webkit-border-top-left-radius: 100px;
+   -webkit-border-top-right-radius: 100px;*/
+  position: relative; 
+  z-index:20;
+  text-align:left;
+}
+
+/*#fluidFrame:hover {
+  background:rgba(19, 218, 236,1);
+}*/
+
+#promptText{
+  font-family: Helvetica;
+  text-decoration: none; 
+  font-size: 12px;
+  line-height:1em;
+  padding:4px;
+  z-index:23;
+  position:relative;
+} 
+
+#titleText {
+  margin: 0 0 20px 0;
+  color: #eeeeee;
+  font-family: "League Gothic", Impact, sans-serif;
+  line-height: 1em;
+  font-size:24px;
+  padding:8px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  /* text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);*/
+  word-wrap: break-word; 
+  position:relative;
+  z-index:22;
+}
+
+#defrag {
+  float:right;
+  /* top:20px;
+  left:70px;*/
+  display:inline-block;
+  width:100%;
+  height:8px;
+  margin-right:2px;
+  background:rgba(0,0,0,.4);
+  border:1px dashed rgba(19, 218, 236,1);
+  border-radius:4px;
+  opacity: .8;
+  z-index:19;
+  -webkit-transition: width 1.5s; /* For Safari 3.1 to 6.0 */
+  -moz-transition: width 1.5s;
+  transition: width 1.5s;
+}
+
+
+/*  hiding development notes */
+.reveal aside.edits {
+  display: none;
+}
+
+
+
+
+/*platform for platform shifts*/
+
+.reveal .slide-number {
+  position: fixed;
+  display: block;
+  right: 30px; 
+  bottom: 9px; 
+  opacity: 0.75;
+  font-size: 12px;
+  z-index: 31;
+}
+
+
+.reveal .progress {
+  z-index:52;
+}
+
+
+
+
+/* Reveal overrides */
+
+/* topological */
+
+.reveal section div.holds {
+    position: relative;
+}
+
+.reveal section div.overlapped {
+    position: absolute;
+    left: 0px;
+    z-index: 20;
+}
+
+
+.reveal section div.underlapper {
+    position: absolute;
+    bottom:  0px;
+    right:0px;
+    z-index: 12;
+}
+
+.reveal section div.overlapper {
+    position: absolute;
+    background: none;
+    left: 0px;
+    top: 0px;
+    z-index: 21;
+}
+
+.reveal section div.overlappest {
+    position: absolute;
+    background: none;
+    left: 0px;
+    top: 0px;
+    z-index: 22;
+}
+.reveal section div.overlappedR {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 20;
+}
+
+.reveal section div.overlapperR {
+    position: absolute;
+    background: none;
+    right: 0px;
+    top: 0px;
+    z-index: 21;
+}
+
+.reveal section div.overlappedL {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 20;
+}
+
+.reveal section div.overlapperL {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 21;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* layers, backdrops, visibility, masking
+
+
+/* z-index adiabats */
+
+
+
+
+/* general background, frameshape, */
+.reveal section .aliasing {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.reveal section .binoculus {
+  border-radius:800px;
+  padding-bottom:0;
+}
+
+
+
+
+
+
+
+
+
+
+/* in-section mostly position shifts */
+
+.reveal section .pb100px {
+  padding-bottom:100px;
+}
+
+.reveal section div.up20 {
+   top: -20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* in-platform, content-specific shifts*/
+
+/*  removing bullet points from font-awesome lists and hide-dot classes */
+.reveal .fa-ul,
+.reveal .hide-dot {  list-style-type: none; }
+
+/* avoid hilighting the play button; latent no-drag  */
+.reveal .playback {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  draggable: false;
+}
+
+.reveal .unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	draggable: false;
+}
+
+/* remove img schmaltz */
+.reveal section img {
+  margin: 0px 0px;
+  background: rgba(255, 255, 255, 0.0);
+  border: 0px solid #eeeeee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 00); }
+
+/* scaling, alignment sensitivities, display tweaking, cross-browser cross-platform */
+
+/* ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 100%;
+  max-height: 100%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COLORIZING
+
+
+
+
+
+
+
+/* default color for an unhilighted component ~ */
+span.component {
+  color:gray;
+}
+
+/* fragment color hilighting */
+.reveal .slides section .fragment.highlight-pink, 
+.reveal .slides section .fragment.highlight-current-pink,
+.reveal .slides section .fragment.highlight-white, 
+.reveal .slides section .fragment.highlight-current-white,
+.reveal .slides section .fragment.highlight-black, 
+.reveal .slides section .fragment.highlight-current-black,
+.reveal .slides section  {
+  opacity: 1;
+  visibility: visible;
+}
+
+  .reveal .slides section .fragment.highlight-pink.visible {
+    color: #ff5e99;
+  }
+
+  .reveal .slides section .fragment.highlight-orange.visible {
+  color: rgba(255,94,71,1); /*#FF5E47*/
+  }
+
+  .reveal .slides section .fragment.highlight-white.visible {
+    color: rgba(255,255,255,.8);
+  }
+
+  .reveal .slides section .fragment.highlight-black.visible {
+    color: rgba(0,0,0,.8);
+  }
+
+  .reveal .slides section .fragment.highlight-current-pink.current-fragment {
+    color: #ff5e99;
+  }
+
+  .reveal .slides section .fragment.highlight-current-orange.current-fragment {
+  color: rgba(255,94,71,1); /*#FF5E47*/
+  }
+
+  .reveal .slides section .fragment.highlight-current-white.current-fragment {
+    color: rgba(255,255,255,.8);
+  }
+
+  .reveal .slides section .fragment.highlight-current-black.current-fragment {
+    color: rgba(0,0,0,.8);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reveal overrides for font-awesome */
+.reveal .fa-p25x {
+  font-size: 0.25em;
+}
+.reveal .fa-p33x {
+  font-size: 0.33333333em;
+}
+.reveal .fa-p5x {
+  font-size: 0.5em;
+}
+.reveal .fa-p66x {
+  font-size: 0.66666666em;
+}
+.reveal .fa-p75x {
+  font-size: 0.75em;
+}
+.reveal span.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+.reveal span.fa-2x {
+  font-size: 2em;
+}
+
+.reveal span.fa-3x {
+  font-size: 3em;
+}
+.reveal span.fa-4x {
+  font-size: 4em;
+}
+.reveal span.fa-5x {
+  font-size: 5em;
+}
+
+.reveal span.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.reveal span.fa-stack-1x,
+.reveal span.fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.reveal span.fa-stack-1x {
+  line-height: inherit;
+}
+.reveal span.fa-stack-2x {
+  font-size: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* richer spin definitions */
+
+.fa-cyclonic {
+  -webkit-animation: anticlockwise 2s infinite linear;
+  -moz-animation: anticlockwise 2s infinite linear;
+  -o-animation: anticlockwise 2s infinite linear;
+  animation: anticlockwise 2s infinite linear;
+}
+@-moz-keyframes anticlockwise {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-359deg);
+  }
+}
+@-webkit-keyframes anticlockwise {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-359deg);
+  }
+}
+@-o-keyframes anticlockwise {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(-359deg);
+  }
+}
+@keyframes anticlockwise {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-359deg);
+    transform: rotate(-359deg);
+  }
+}
+
+.fa-1rpm {
+  -webkit-animation: anticlockwise 60s infinite linear;
+  -moz-animation: anticlockwise 60s infinite linear;
+  -o-animation: anticlockwise 60s infinite linear;
+  animation: anticlockwise 60s infinite linear;
+}
+
+.fa-10rpm {
+  -webkit-animation: anticlockwise 6s infinite linear;
+  -moz-animation: anticlockwise 6s infinite linear;
+  -o-animation: anticlockwise 6s infinite linear;
+  animation: anticlockwise 6s infinite linear;
+}
+
+
+
+
+.fa-anticyclonic {
+  -webkit-animation: clockwise 2s infinite linear;
+  -moz-animation: clockwise 2s infinite linear;
+  -o-animation: clockwise 2s infinite linear;
+  animation: clockwise 2s infinite linear;
+}
+@-moz-keyframes clockwise {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes clockwise {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes clockwise {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes clockwise {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.fa-1rpmS {
+  -webkit-animation: clockwise 60s infinite linear;
+  -moz-animation: clockwise 60s infinite linear;
+  -o-animation: clockwise 60s infinite linear;
+  animation: clockwise 60s infinite linear;
+}
+
+.fa-10rpmS {
+  -webkit-animation: clockwise 6s infinite linear;
+  -moz-animation: clockwise 6s infinite linear;
+  -o-animation: clockwise 6s infinite linear;
+  animation: clockwise 6s infinite linear;
+}
+
+
+
+
+
+
+/* Spin out of page */
+
+.fa-spinOut {
+  -webkit-animation: spinOut 6s infinite linear;
+  -moz-animation: spinOut 6s infinite linear;
+  -o-animation: spinOut 6s infinite linear;
+  animation: spinOut 6s infinite linear;
+}
+
+.fa-spinOut1rpm {
+  -webkit-animation: spinOut 60s infinite linear;
+  -moz-animation: spinOut 60s infinite linear;
+  -o-animation: spinOut 60s infinite linear;
+  animation: spinOut 60s infinite linear;
+}
+
+.fa-spinOut10rpm {
+  -webkit-animation: spinOut 6s infinite linear;
+  -moz-animation: spinOut 6s infinite linear;
+  -o-animation: spinOut 6s infinite linear;
+  animation: spinOut 6s infinite linear;
+}
+@-moz-keyframes spinOut {
+  0% {
+    -moz-transform: rotateY(0deg);
+  }
+  100% {
+    -moz-transform: rotateY(359deg);
+  }
+}
+@-webkit-keyframes spinOut {
+  0% {
+    -webkit-transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(359deg);
+  }
+}
+@-o-keyframes spinOut {
+  0% {
+    -o-transform: rotateY(0deg);
+  }
+  100% {
+    -o-transform: rotateY(359deg);
+  }
+}
+@-ms-keyframes spinOut {
+  0% {
+    -ms-transform: rotateY(0deg);
+  }
+  100% {
+    -ms-transform: rotateY(359deg);
+  }
+}
+@keyframes spinOut {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(359deg);
+    transform: rotateY(359deg);
+  }
+}
+
