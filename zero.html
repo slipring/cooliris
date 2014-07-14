@@ -20,10 +20,10 @@
 		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
 
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" type="text/css">
-		<!-- <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+		<!-- <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
 		<!-- <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css'> -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" type="text/css">
 		
 		<link rel="stylesheet" href="pkg/font-awesome-4.1.0/css/font-awesome.css">
 		<!-- <link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery-ui.css">
@@ -80,35 +80,44 @@
 				</section>  -->
 
 
+				<!-- holds : overlapper overlapped underlapped 
+				   - vessel : surface interior bottom -->
 
 
+				<section id="tank" title="Weather in a Tank" timer="10">
+						
+						<i class="preface" data-fragment-index="0" title="using water on a turntable"></i>
+						<i class="fragment" timer="2" data-fragment-index="1" title="to reveal invisible forces"></i>
+						<i class="fragment" timer="6" data-fragment-index="2" title="acting on rotating fluids"></i>
+						<i class="fragment" timer="12" data-fragment-index="3" title="reflecting dynamics in earth's climate"></i>
 
-				<section id="tank" title="Weather in a Tank" timer="6">
 					<div class="holds">
-						<div class="aliasing binoculus preface overlapped" title="getting up to spin with">
+						<div class="aliasing binoculus overlapped">
 							<img class="pb100px" data-src="http://coriolis.no-ip.org/clear/up/load/O/clearsplash.gif">
 						</div>
 
-						<div class="binoculus fragment overlapper fade-out" style="margin-top:-50px;"  title="to understand our atmosphere" data-fragment-index="1">
+						<div class="binoculus fragment overlapper fade-out" style="margin-top:-80px;z-index:23" data-fragment-index="1">
 							<img style="-webkit-transform:rotateY(315deg) scale(.75,.75);"  data-src="http://coriolis.no-ip.org/clear/up/load/O/HUMANR.png">
 						</div>
-						<div class="binoculus fragment overlapper current-visible" style="margin-top:-50px;"  data-fragment-index="1">
-							<img style="-webkit-transform:rotateY(315deg) scale(.75,.75);"  data-src="http://coriolis.no-ip.org/clear/up/load/O/HUMANL.png">
+
+						<div class="binoculus fragment overlappest current-visible" style="margin-top:-50px;z-index:24"  data-fragment-index="1">
+							<img style="-webkit-transform:rotateY(315deg) scale(1,1);"  data-src="http://coriolis.no-ip.org/clear/up/load/O/HUMANL.png">
 						</div>
-						<div class="fragment overlapper current-visible" style="-webkit-transform:rotateY(315deg) scale(1.5,1.5);" title="studying water on a turntable" data-fragment-index="2">
+						
+						<div class="fragment overlapper current-visible" style="-webkit-transform:rotateY(315deg) scale(1.5,1.5);margin-top:-20px;z-index:25;" data-fragment-index="2">
 							<img data-src="http://coriolis.no-ip.org/clear/up/load/O/HUMANR.png">
 						</div>
-						<div class="fragment overlapper fade-in" style="-webkit-transform:rotateY(315deg) scale(2,2);" data-fragment-index="3" title="seeing 30 years of climate in color">
+						
+						<div class="fragment overlapper current-visible" style="-webkit-transform:rotateY(315deg) scale(2,2);margin-top:20px;z-index:26;" data-fragment-index="3">
 							<img data-src="http://coriolis.no-ip.org/clear/up/load/O/HUMANL.png">
 						</div>
 					</div>
 					<aside class="notes">
-						Two rotating systems, macro and micro.
+						Two rotating systems, macro and micro, a walking encyclopedia.
 					</aside>
 					<aside class="edits">
 						{{additional fragment, flip central character, fragment title about our atmosphere, fragment title the tank}
-						(Atmos) | [Tank] "chaotic phenomena" "evidenced" "clouds" "tracers"// white aliasing. re-oriented globe armiture. backdrop. {{branches: hurricane tropical circle:radial inflow, hadley tropical cell:general circulation slow,eddies extratropical: general circulation fast, polar fronts and jetstreams:cylinder collapse, ocean currents:taylor columns }} ()
-						}
+						(Atmos) | [Tank] "chaotic phenomena" "evidenced" "clouds" "tracers"// white aliasing. re-oriented globe armiture. backdrop. {{branches: hurricane tropical circle:radial inflow, hadley tropical cell:general circulation slow,eddies extratropical: general circulation fast, polar fronts and jetstreams:cylinder collapse, ocean currents:taylor columns }} ()}
 					</aside>
 				</section>
 
@@ -117,14 +126,20 @@
 
 
 				<section title="Analogy" data-state="analogues" timer="6">
+						<i class="preface" data-fragment-index="0" title="using water on a turntable"></i>
+						<i class="fragment" timer="2" data-fragment-index="1" title="to reveal invisible forces"></i>
+						<i class="fragment" timer="6" data-fragment-index="2" title="acting on rotating fluids"></i>
+						<i class="fragment" timer="12" data-fragment-index="3" title="reflecting dynamics in earth's climate"></i>
+
+
 					<ul class="hide-dot" style="float:left;">
-						<li class="fragment" style="position:relative;top:0px;left:58px;" timer="6" data-fragment-index="2" title="system rotation">
+						<li class="fragment" style="position:relative;top:0px;left:58px;" data-fragment-index="2" title="system rotation">
 							rotating&nbsp;&nbsp;<i  style="color:rgba(171,137,224,1)" class="fa fa-openid fa-flip-horizontal"></i></li>
 						<li class="fragment" style="position:relative;top:75px;left:20px;"  data-fragment-index="3" title="temperature gradient">
 							cold&nbsp;&nbsp;<i class="fa fa-lg fa-ge" style="color:rgba(131,83,157,1)"></i></li>
-						<li class="preface fa-rotate-75"  timer="6" data-fragment-index="1" style="position:relative;top:130px;right:-360px;" title="between 2 fluids">
+						<li class="preface fa-rotate-75" data-fragment-index="1" style="position:relative;top:130px;right:-360px;" title="between 2 fluids">
 							air&nbsp;&nbsp;<i class="fa fa-soundcloud fa-flip-horizontal"></i></li>
-						<li class="fragment fa-rotate-45" timer="6" style="position:relative;top:120px;right:130px;" data-fragment-index="3" title="light">
+						<li class="fragment fa-rotate-45" style="position:relative;top:120px;right:130px;" data-fragment-index="3" title="light">
 							<i style="color:rgba(236,228, 155,1);" class="fa fa-sun-o fa-lg fa-1rpm"></i>&nbsp;&nbsp;warm</li>
 					</ul>
 					<!-- <ul class="hide-dot">
@@ -138,14 +153,16 @@
 							<i style="color:rgba(131,83,157,1)" class="fa fa-ge fa-lg fa-1rpm"></i>&nbsp;&nbsp;cold</li>
 						<li class="" style="position:relative;top:25px;right:105px;" data-fragment-index="1"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:rgba(119,192,185,1)"class="fa fa-lg fa-tint"></i><br>
 							water<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:rgba(119,192,185,1)"class="fa fa-tint fa-2x"></i></li>
-						<li class="fragment" style="position:relative;top:0px;right:-195px;" data-fragment-index="3">
+						<li class="fragment" style="position:relative;top:40px;right:-195px;" data-fragment-index="3">
 							<!-- <span class="fa fa-spinIn"> --><i style="color:rgba(236,228, 155,1);" class="fa fa-lg fa-cube fa-rotate-240"></i><!-- </span> -->&nbsp;&nbsp;warm</li>
 					</ul>
+
 					<div style="position:absolute;top:0px;left:0px" class="holds">
 						<div class="overlapper">
 							<img data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/O/2COMPARE.png">
 						</div>
 					</div>
+					
 					<aside class="notes">
 						Air on in earth's atmosphere and water in a laboratory turntable-tank with a low-pressure center. Both are rotating fluids with temperature difference.
 					</aside>
@@ -156,7 +173,7 @@
 
 
 
-
+				<!-- parse titles & timers into preface playlist spans -->
 
 				<section title="Earth Rotation in the Lab" timer="24" data-state="parcelzone">
 					<div class="holds unselectable">
@@ -178,7 +195,10 @@
 					<div class="overlapper fragment fade-in" data-fragment-index="1"style="position:absolute;z-index:55;margin-top:35%;margin-left:37%;-webkit-transform:rotateZ(120deg)">
 						<i style="color:rgba(255,94,71,1);" class="fa fa-search"></i>
 					</div>
-					<div class="overlapper" style="z-index:56;margin-top:25%;margin-left:46%;">
+					<div class="overlapper fragment fade-out" data-fragment-index="1" style="z-index:56;margin-top:25%;margin-left:46%;">
+						<i id="handIn" class="fa fa-lg fa-hand-o-right"></i>
+					</div>
+					<div class="overlapper fragment fade-in" data-fragment-index="1" style="z-index:56;margin-top:35%;margin-left:46%;">
 						<i id="handIn" class="fa fa-lg fa-hand-o-right"></i>
 					</div>
 					<div class="overlapper fragment fade-out" data-fragment-index="1" style="z-index:56;margin-top:14.5%;margin-left:43.5%;position:relative;-webkit-transform:scale(1.5,-.5) perspective(2px) rotateX(1deg);">
@@ -196,10 +216,6 @@
 					<div class="overlapper fragment fade-in" data-fragment-index="1" style="z-index:59;margin-top:48%;margin-left:70%;position:absolute;-webkit-transform:scale(1.5,.5) perspective(2px) rotateX(1deg);">
 						<i style="color:rgba(22,25,6,.9);" class="fa fa-lg fa-undo fa-1rpm"></i>
 					</div>
-
-
-					
-
 
 					<aside class="notes">
 						Varying turntable speed to model the effect of earth's rotation on air at various latitudes.
@@ -227,7 +243,7 @@
 						<img style="-webkit-transform:rotate(-15deg);"title="cool driven can in the lab" data-src="http://coriolis.no-ip.org/coloriis/UI/O/INPUTSUN.png">
 					</div>
 					<div class="overlapper" style="top:255px;right:-455px;">
-<!-- 						<img class="fragment fade-out" data-fragment-index="0" title="cool driven can in the lab" data-src="http://coriolis.no-ip.org/coloriis/UI/O/INPUTICE00.png">
+						<!-- <img class="fragment fade-out" data-fragment-index="0" title="cool driven can in the lab" data-src="http://coriolis.no-ip.org/coloriis/UI/O/INPUTICE00.png">
 						<img  style="position:relative;left:-156px;top:-4px"class="fragment" title="cool driven can in the lab" data-fragment-index="1" data-src="http://coriolis.no-ip.org/coloriis/UI/O/INPUTICE0.png"> -->
 						<img  class="fragment" title="cool driven can in the lab" data-fragment-index="1" data-src="http://coriolis.no-ip.org/coloriis/UI/O/INPUTICE.png">
 					<!-- <img title="" data-src="http://coriolis.no-ip.org/coloriis/UI/O/NICE.png"> -->
@@ -246,15 +262,21 @@
 
 				<section>
 					<section title="Hadley How-To">
-						<img data-src="http://coriolis.no-ip.org/coloriis/UI/O/add_ice.png" class="preface" title="step 1 place tank, can, weight @ turntable center ">
-						<img data-src="http://coriolis.no-ip.org/coloriis/UI/O/add_ice.png" class="fragment" title="step 2 fill tank to just under can">
-						<img data-src="http://coriolis.no-ip.org/coloriis/UI/O/add_ice.png" class="fragment" title="step 3 spin up to solid body rotation">
-						<img data-src="http://coriolis.no-ip.org/coloriis/UI/O/add_ice.png" class="fragment" title="step 4 add ice and a bit of water to center can">
-						<img data-src="http://coriolis.no-ip.org/coloriis/UI/O/add_ice.png" class="fragment" title="step 5 add tracers to visualize flow">
+						<i class="preface" data-fragment-index="0" title="step 1 place tank, can, weight @ turntable center"></i>
+						<i class="fragment" data-fragment-index="1" title="step 2 fill tank to just under can"></i>
+						<i class="fragment" data-fragment-index="2" title="step 3 spin up to solid body rotation"></i>
+						<i class="fragment" data-fragment-index="3" title="step 4 add ice and some water to center can"></i>
+						<i class="fragment" data-fragment-index="4" title="step 5 add tracers to visualize flow"></i>
+
+
+						<img data-src="http://coriolis.no-ip.org/coloriis/UI/O/add_ice.png">
+
+							
 						<aside class="notes">
 							Step 1. Center tank and can. Step 2. Fill with water. Step 3. Turn on rotation, monitor the rotating frame, and wait for solid body rotation. Step 4. Add ice and a bit of water in middle. 5. Add gizmos to visualize flow.
 						</aside>
 						<aside class="edits">
+							overlay circle icon focuses - depending on whether faster / reliable enough to do in-HTML finishing with position or easier to export transparent same-size image overlays transparent PNG with modifying the .AI files
 							[Tank:1. walls, 2. water volume, 3. rpm 4. ice water] "we set up an experiment with ice in the center and low rotation and we leave it for a while.."
 							SUBSLIDE: Reference frames and solid body rotation. Contains camera views, co-rotating + turntable record + tripod 3d 
 						</aside>
@@ -265,6 +287,11 @@
 
 
 					<section title="Solid Body Rotation">
+						<i class="preface" data-fragment-index="0" title="we add a paper dot to the rotating water"></i>
+						<i class="fragment" data-fragment-index="1" title="and view monitor its position"></i>
+						<i class="fragment" data-fragment-index="2" title="in the co-rotating frame"></i>
+						<i class="fragment" data-fragment-index="3" title="the tank has reached solid body rotation"></i>
+						<i class="fragment" data-fragment-index="4" title="when the surface floating particle appears still"></i>
 						<img data-src="http://coriolis.no-ip.org/clear/up/load/H2C0.png">
 						<aside class="notes">
 							Solid body rotation
@@ -735,6 +762,7 @@
 
 
 					<section title="mitgcm">
+					<a href="https://www.youtube.com/watch?v=xusdWPuWAoU">Perpetual Ocean (2005-2007)</a>
 					</section>
 				</section>
 
@@ -1244,8 +1272,11 @@
 		<!-- <div id="perspectival" style="-webkit-transform: perspective(12px) rotateX(1deg);"> -->
 		<div id="inertialFrame">
 			<div id="fluidFrame">
-				&nbsp;<span id="promptText">getting up to spin with</span>&nbsp;<br>
-				<span id="titleText" data-title="Weather in a Tank" class="reflected">Weather in a Tank</span>
+				<!-- <i id="jetSyncer" style="position:absolute;margin-left:-23px;margin-top:2px" class="fa fa-openid fa-flip-horizontal"></i> -->
+				&nbsp;<span id="promptText">using water on a turntable</span>&nbsp;
+				<br>
+				<!-- <i id="globalFax" style="position:absolute;margin-left:-23px;margin-top:2px;" class="fa fa-lg fa-globe"></i> -->
+				&nbsp;<span id="titleText" data-title="Weather in a Tank" class="reflected">Weather in a Tank</span>&nbsp;
 				<div id="defrag">
 					<div id="notesPane">
 					</div>

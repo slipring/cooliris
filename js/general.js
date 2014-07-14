@@ -30,6 +30,7 @@ $('.coRotator').click(function() {
     $('.radome').toggle();
     $('.startTank').toggle();
     $(this).toggleClass('fa-spinOut-1rpm');
+    $('.cryo').toggle();
     });
 
 $('.overView').click(function() {
@@ -175,7 +176,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
                 var slID = event.currentSlide.id;
                 var slTitle = event.currentSlide.title;
                 // reporting to console.log
-                console.log((event.indexh)+"-"+event.indexv+": #"+slID+" / "+slTitle);
+                // console.log((event.indexh)+"-"+event.indexv+": #"+slID+" / "+slTitle);
                 var notes = $("section.stack section.present aside.notes").text();
                 if (notes) {
                  console.log(notes);

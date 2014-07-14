@@ -210,7 +210,8 @@
   }
 
   .viewData:hover{
-    color:rgba(255,255,255,.8);
+  /*  color:rgba(255,255,255,.8);*/
+    color:rgba(171,137,224,1);
     /*color:#13daec;*/
     /*color:rgba(3,188,112,1);*/
   }
