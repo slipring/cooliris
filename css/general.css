@@ -86,18 +86,22 @@
 
 
   .worldData {
-    color:#13daec;
-    /*color:#eeeeee;*/
+    /*color:rgba(236,228, 155,1);*/
+    color:#eeeeee;
     opacity:.5;
   }
 
   .worldData:hover{
-    color:rgb(255,255,255);
+    /*color:rgb(255,255,255);*/
+    color:#13daec;
+    margin-left:-3px;
     /*color:#ffffff;*/
     /*color:#13daec;*/
     /*color:rgba(3,188,112,1);*/
     opacity:.75;
-    font-size:12px;
+    /*font-size:12px;*/
+     font-size:18px;
+     left:-3px;
   }
 
 /* the planet's troposphere is distoring our signal */ 
@@ -111,13 +115,13 @@
 }
 
   .goOut {
-    color:#13daec;
-    /*color:#eeeeee;*/
+    /*color:#13daec;*/
+    color:#eeeeee;
     opacity:.5;
   }
 
   .goOut:hover{
-    color:rgb(255,255,255);
+    color:rgba(236,228, 155,1);
     /*color:#13daec;*/
     /*color:rgba(3,188,112,1);*/
     opacity:.75;
@@ -128,28 +132,29 @@
 .startTank {
   position:fixed;
   display:block;
-  bottom:4px;
-  left:66px;
+  bottom:7px;
+  left:67px;
   font-size:18px;
   z-index:55;
 }
 
 .startTank:hover {
-  bottom:7px;
+  bottom:9px;
   z-index:55;
 }
 
   .tankData {
-    color:#13daec;
+    
+    color:rgb(255,255,255);
     /*color:#eeeeee;*/
-    opacity:1;
+    opacity:.8;
   }
 
   .tankData:hover{
-    color:rgb(255,255,255);
+    color:#13daec;
     /*color:#13daec;*/
     /*color:rgba(3,188,112,1);*/
-    opacity:.9;
+    opacity:.8;
   }
 
 
@@ -160,7 +165,9 @@
   display:block;
 /*  bottom:6px;
   left:80px;*/
-  bottom:18px;
+/*  bottom:18px;
+  left:67px;*/
+  bottom:55px;
   left:67px;
   font-size:12px; 
   z-index:60;
@@ -258,9 +265,15 @@
   }
 
 
+#handIn {
+  color:rgba(0,0,0,.8);
+}
 
+#handIn:hover {
+  margin-left:100px;
+  color:rgba(130, 130, 130, 1);
 
-
+}
 
 
 
@@ -1082,6 +1095,73 @@ span.component {
 
 
 
+
+
+
+
+.fa-spinIn {
+  -webkit-animation: spinIn 6s infinite linear;
+  -moz-animation: spinIn 6s infinite linear;
+  -o-animation: spinIn 6s infinite linear;
+  animation: spinIn 6s infinite linear;
+}
+
+.fa-spinIn-1rpm {
+  -webkit-animation: spinIn 60s infinite linear;
+  -moz-animation: spinIn 60s infinite linear;
+  -o-animation: spinIn 60s infinite linear;
+  animation: spinIn 60s infinite linear;
+}
+
+.fa-spinIn-10rpm {
+  -webkit-animation: spinIn 6s infinite linear;
+  -moz-animation: spinIn 6s infinite linear;
+  -o-animation: spinIn 6s infinite linear;
+  animation: spinIn 6s infinite linear;
+}
+
+@-moz-keyframes spinIn {
+  0% {
+    -moz-transform: rotateY(0deg);
+  }
+  100% {
+    -moz-transform: rotateY(-359deg);
+  }
+}
+@-webkit-keyframes spinIn {
+  0% {
+    -webkit-transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(-359deg);
+  }
+}
+@-o-keyframes spinIn {
+  0% {
+    -o-transform: rotateY(0deg);
+  }
+  100% {
+    -o-transform: rotateY(-359deg);
+  }
+}
+@-ms-keyframes spinIn {
+  0% {
+    -ms-transform: rotateY(0deg);
+  }
+  100% {
+    -ms-transform: rotateY(-359deg);
+  }
+}
+@keyframes spinIn {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(-359deg);
+    transform: rotateY(-359deg);
+  }
+}
 
 
 
