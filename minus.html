@@ -1,5 +1,24 @@
 
 
+Reveal.addEventListener( 'slidechanged', function( event ) {
+    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+    // console.log (event.currentSlide.dataset);
+    var timeControl = event.currentSlide.getAttribute('timer');
+    
+    console.log ();
+    if(event.currentSlide.dataset.timer) {
+      var autoslideDuration = event.currentSlide.dataset.timer;
+      console.log( autoslideDuration + ' second play window' );
+      msTimer = autoslideDuration * 1000;
+    Reveal.configure({ autoSlide: msTimer });
+  } });
+
+
+
+
+
+
+
 
 					<p>
 						themes built in: <br>

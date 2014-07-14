@@ -2,6 +2,21 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 
+
+
+/* box model */
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+
+
+
+
+
+
 /* general purpose style changes */
 .noBG {
 	background:none;
@@ -18,6 +33,14 @@
 .bluehover:hover {
   background:rgba(19, 218, 236,1);
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -47,9 +70,152 @@
 
   .clearUI:hover{
     /*color:#ffffff;*/
-    color:#13daec;
+    /*color:#13daec;*/
+    color:rgba(3,188,112,1);
     opacity:1;
   }
+
+
+.radome {
+  position:fixed;
+  display:block;
+   bottom:17px;
+  left:5px;
+  z-index:55;
+}
+
+
+  .worldData {
+    color:#13daec;
+    /*color:#eeeeee;*/
+    opacity:.5;
+  }
+
+  .worldData:hover{
+    color:rgb(255,255,255);
+    /*color:#ffffff;*/
+    /*color:#13daec;*/
+    /*color:rgba(3,188,112,1);*/
+    opacity:.75;
+    font-size:12px;
+  }
+
+/* the planet's troposphere is distoring our signal */ 
+
+.greenBuilding {
+  position:fixed;
+  display:block;
+   bottom:2px;
+  left:6px;
+  z-index:55;
+}
+
+  .goOut {
+    color:#13daec;
+    /*color:#eeeeee;*/
+    opacity:.5;
+  }
+
+  .goOut:hover{
+    color:rgb(255,255,255);
+    /*color:#13daec;*/
+    /*color:rgba(3,188,112,1);*/
+    opacity:.75;
+    font-size:18px;
+  }
+
+
+.startTank {
+  position:fixed;
+  display:block;
+  bottom:4px;
+  left:66px;
+  font-size:18px;
+  z-index:55;
+}
+
+.startTank:hover {
+  bottom:7px;
+  z-index:55;
+}
+
+  .tankData {
+    color:#13daec;
+    /*color:#eeeeee;*/
+    opacity:1;
+  }
+
+  .tankData:hover{
+    color:rgb(255,255,255);
+    /*color:#13daec;*/
+    /*color:rgba(3,188,112,1);*/
+    opacity:.9;
+  }
+
+
+
+
+.clockLock {
+  position:fixed;
+  display:block;
+/*  bottom:6px;
+  left:80px;*/
+  bottom:18px;
+  left:67px;
+  font-size:12px; 
+  z-index:60;
+}
+
+.clockLock:hover {
+/*  bottom:8px;*/
+}
+
+  .timeData {
+    color:rgba(200,200,200,.9);
+/*    color:rgba(131,83,157,.2);
+    color:rgba(19, 218, 236,.5);*/
+  }
+
+  .timeData:hover{
+    color:rgba(255,255,255,1);
+    /*color:#13daec;*/
+    /*color:rgba(3,188,112,1);*/
+  }
+
+
+
+
+.coRotator {
+  position:fixed;
+  display:block;
+/*  bottom:6px;
+  left:80px;*/
+  bottom:32px;
+  left:68px;
+  font-size:12px; 
+  z-index:60;
+}
+
+
+ .viewData {
+    color:rgba(255,255,255,.3);
+  /* color:rgba(19, 218, 236,.5);*/
+  }
+
+  .viewData:hover{
+    color:rgba(255,255,255,.8);
+    /*color:#13daec;*/
+    /*color:rgba(3,188,112,1);*/
+  }
+
+
+
+
+
+
+
+
+
 
 .overView {
   position:fixed;
@@ -71,7 +237,7 @@
     opacity:1;
   }
 
-/*
+
 .loadNotes {
   position:fixed;
   display:block;
@@ -86,10 +252,11 @@
   }
 
   .notesToggle:hover{
-    color:#13daec;
+    /* color:#13daec;*/
+    color:rgba(255,94,71,1);
     opacity:1;
   }
-*/
+
 
 
 
@@ -104,12 +271,35 @@
 }*/
 
 
+.fluidSpan {
+  width: 280px;
+}
+
+#notesPane {
+  display:none;
+  width: 100%;
+  margin-top:-10px;
+  padding:20px;
+  letter-spacing: 0.02em;
+  line-height:1.5em;
+  font-family: 'Droid Sans', sans-serif;
+  font-size:13px;
+  font-size:2.3vw;
+  /* font-family: 'Droid Serif', serif;*/
+  /* font-family: 'Old Standard TT', serif;*/
+  /*font-family: "Open Sans", sans-serif;*/
+
+}
+
 #inertialFrame {
   display: inline-block; 
   position: absolute; 
-  bottom: -14px; 
+  bottom: -12px; 
   right:79px; 
   z-index: 29;
+  padding-bottom:555px;
+  margin-bottom:-555px;
+  margin-left:75px;
   border-top: dashed 1px rgba(255,94,71,.5);
   background:rgba(0,0,0,.5);
   -moz-border-radius: 0px 25px 0px 25px;
@@ -165,14 +355,15 @@
   left:70px;*/
   width:100%;
   height:24px;
+  padding-bottom:1000px;
   margin-right:0px;
-  margin-bottom:-12px;
+  margin-bottom:-988px;
   background:rgba(0,0,0,.4);
   border-top:1px dashed rgba(19, 218, 236,.5);
-  -moz-border-radius: 50px 0px 50px 0px;
+  -moz-border-radius: 500px 0px 500px 0px;
   -webkit-border-radius: 0px;
-  -webkit-border-top-left-radius: 50px;
-  -webkit-border-top-right-radius: 50px;
+  -webkit-border-top-left-radius: 500px;
+  -webkit-border-top-right-radius: 500px;
   -webkit-transition: width 1.5s; /* For Safari 3.1 to 6.0 */
   -moz-transition: width 1.5s;
   transition: width 1.5s;
@@ -182,9 +373,10 @@
 
 #promptText{
   position:relative;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Dosis", sans-serif;
   text-decoration: none; 
-  font-size: 11px;
+  font-size: 10px;
+  font-size: 2.4vw;
   line-height:1em;
   letter-spacing: 0.1em;
   padding:4px;
@@ -195,7 +387,8 @@
 #titleText {
   position:relative;
   margin: 0 0 20px 0;
-  font-size:24px;
+  font-size:18px;
+  font-size:3.4vw;
   padding:8px;
   color: #eeeeee;
   font-family: "Quicksand", sans-serif;
@@ -203,9 +396,34 @@
   letter-spacing: -0.00em;
   text-transform: uppercase;
   word-wrap: break-word; 
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
-  z-index:22;
+   text-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+   z-index:22;
 }
+
+
+
+#titleText.reflected {
+    position: relative;
+}
+#titleText.reflected:after {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    bottom: -.65em; /* You should change this value to fit your font */
+    left: 8px;
+    right: 0;
+    opacity: .2;
+
+    /* This is how the text is flipped vertically */
+    -webkit-transform: scaleY(-1);
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+}
+
+
+  /*color: #fff !important;
+  text-shadow: 1px 1px 0 #333, 2px 2px 0 #333,3px 3px 0 #333,3px 3px 0 #333,4px 4px 0 #333,5px 5px 0 #333,6px 6px 0 #333,7px 7px 0 #333, 8px 8px 0 #333, 9px 9px 0 #333, 10px 10px 0 #333, 11px 11px 0 #333;*/ 
+
 
   /*font-family: "League Gothic", Impact, sans-serif;
   line-height: 1em;
@@ -394,6 +612,66 @@
 .reveal .fa-ul,
 .reveal .hide-dot {  list-style-type: none; }
 
+
+
+
+
+.reveal .prettyPad {
+    overflow: auto;
+    color: #fff;
+  }
+
+  .reveal .prettyPad {
+    width: 80%;
+    margin: 0 auto;
+    padding: 60px;
+    text-align: center;
+    letter-spacing: normal;
+  }
+
+  .reveal .prettyPad .title {
+    font-size: 20px;
+  }
+
+  .reveal .prettyPad table {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    font-size: 16px;
+  }
+
+  .reveal .prettyPad table th,
+  .reveal .prettyPad table td {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #fff;
+    vertical-align: middle;
+  }
+
+  .reveal .prettyPad table th {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* avoid hilighting the play button; latent no-drag  */
 .reveal .playback {
 	-webkit-touch-callout: none;
@@ -540,19 +818,25 @@ span.component {
 
 
 /* Reveal overrides for font-awesome */
-.reveal .fa-p25x {
+.reveal .fa-p25x, .fa-p1x {
+  font-size: 0.1em;
+}
+.reveal .fa-p25x, .fa-p2x {
+  font-size: 0.2em;
+}
+.reveal .fa-p25x, .fa-p25x {
   font-size: 0.25em;
 }
-.reveal .fa-p33x {
+.reveal .fa-p33x, .fa-p33x{
   font-size: 0.33333333em;
 }
-.reveal .fa-p5x {
+.reveal .fa-p5x, .fa-p5x {
   font-size: 0.5em;
 }
-.reveal .fa-p66x {
+.reveal .fa-p66x, .fa-p66x {
   font-size: 0.66666666em;
 }
-.reveal .fa-p75x {
+.reveal .fa-p75x, .fa-p75x {
   font-size: 0.75em;
 }
 .reveal span.fa-lg {
@@ -671,10 +955,10 @@ span.component {
 
 
 .fa-anticyclonic {
-  -webkit-animation: clockwise 2s infinite linear;
-  -moz-animation: clockwise 2s infinite linear;
-  -o-animation: clockwise 2s infinite linear;
-  animation: clockwise 2s infinite linear;
+  -webkit-animation: clockwise 6s infinite linear;
+  -moz-animation: clockwise 6s infinite linear;
+  -o-animation: clockwise 6s infinite linear;
+  animation: clockwise 6s infinite linear;
 }
 @-moz-keyframes clockwise {
   0% {
@@ -739,14 +1023,14 @@ span.component {
   animation: spinOut 6s infinite linear;
 }
 
-.fa-spinOut1rpm {
+.fa-spinOut-1rpm {
   -webkit-animation: spinOut 60s infinite linear;
   -moz-animation: spinOut 60s infinite linear;
   -o-animation: spinOut 60s infinite linear;
   animation: spinOut 60s infinite linear;
 }
 
-.fa-spinOut10rpm {
+.fa-spinOut-10rpm {
   -webkit-animation: spinOut 6s infinite linear;
   -moz-animation: spinOut 6s infinite linear;
   -o-animation: spinOut 6s infinite linear;
@@ -795,3 +1079,157 @@ span.component {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* more fa-rotations */
+
+.fa-rotate-15 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  transform: rotate(15deg);
+  }
+
+.fa-rotate-30 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.fa-rotate-60 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.fa-rotate-75 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(75deg);
+  -moz-transform: rotate(75deg);
+  -ms-transform: rotate(75deg);
+  -o-transform: rotate(75deg);
+  transform: rotate(75deg);
+}
+.fa-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.fa-rotate-105 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(105deg);
+  -moz-transform: rotate(105deg);
+  -ms-transform: rotate(105deg);
+  -o-transform: rotate(105deg);
+  transform: rotate(105deg);
+}
+.fa-rotate-120 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+.fa-rotate-150 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  -o-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+.fa-rotate-165 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(165deg);
+  -moz-transform: rotate(165deg);
+  -ms-transform: rotate(165deg);
+  -o-transform: rotate(165deg);
+  transform: rotate(165deg);
+}
+.fa-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.fa-rotate-210 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(210deg);
+  -moz-transform: rotate(210deg);
+  -ms-transform: rotate(210deg);
+  -o-transform: rotate(210deg);
+  transform: rotate(210deg);
+}
+.fa-rotate-240 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(240deg);
+  -moz-transform: rotate(240deg);
+  -ms-transform: rotate(240deg);
+  -o-transform: rotate(240deg);
+  transform: rotate(240deg);
+}
+.fa-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.fa-rotate-300 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(300deg);
+  -moz-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  -o-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+.fa-rotate-330 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(330deg);
+  -moz-transform: rotate(330deg);
+  -ms-transform: rotate(330deg);
+  -o-transform: rotate(330deg);
+  transform: rotate(330deg);
+}
+.fa-rotate-345 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(345deg);
+  -moz-transform: rotate(345deg);
+  -ms-transform: rotate(345deg);
+  -o-transform: rotate(345deg);
+  transform: rotate(345deg);
+  }
