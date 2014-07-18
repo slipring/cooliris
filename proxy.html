@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Cells</title> <!-- 60 characters or less -->
+		
+		<meta name="title" content="">  
+		<meta name="description" content=""> <!-- 160 characters or less -->
+		<meta name="author" content="">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		
+		<link rel="shortcut icon" href="tank_blank.ico">
+
+		<!-- <link rel="stylesheet" href="css/anticipatory.css"> -->
+		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
+
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+		<!-- <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+		<!-- <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css'> -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" type="text/css">
+		
+		<link rel="stylesheet" href="pkg/font-awesome-4.1.0/css/font-awesome.css">
+		<!-- <link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery-ui.css">
+		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery.ui.theme.css"> -->
+		<!-- <link rel="stylesheet" href="pkg/circleslide/jquery-ui-1.7.2slider-lightness.css"> -->
+
+		<!-- For syntax highlighting -->
+		<!-- <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css"> -->
+
+		<link rel="stylesheet" href="css/general.css">
+		<!-- <link rel="stylesheet" type="text/css" href="pkg/circleslide/slider.css"> -->
+		<!-- <link rel="stylesheet" href="css/vestigial.css" /> -->
+
+		<!-- Include the appropriate print stylesheet -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'http://coriolis.no-ip.org/coloriis/reveal.js/css/print/pdf.css' : 'http://coriolis.no-ip.org/coloriis/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- <section title="Widdershins" timer="3">
+					<i class="fa fa-undo fa-cyclonic"></i><br>
+					<i class="fa fa-refresh"></i>
+					<i class="fa fa-refresh fa-rotate-30"></i>
+					<i class="fa fa-refresh fa-rotate-60"></i>
+					<i class="fa fa-refresh fa-rotate-90"></i>
+					<i class="fa fa-refresh fa-rotate-120"></i>
+					<i class="fa fa-refresh fa-rotate-150"></i>
+					<i class="fa fa-refresh fa-rotate-180"></i>
+					<i class="fa fa-refresh fa-rotate-210"></i>
+					<i class="fa fa-refresh fa-rotate-240"></i>
+					<i class="fa fa-refresh fa-rotate-270"></i>
+					<i class="fa fa-refresh fa-rotate-300"></i>
+					<i class="fa fa-refresh fa-rotate-330"></i>
+					<i class="fa fa-refresh"></i>
+					<aside class="notes">
+						These will display in speaker notes (press 'S') or an optional on-screen display, triggered with the comments button to the left of the controls.
+					</aside>
+					<aside class="edits">	
+					</aside>
+				</section>  -->
+
+
+				<section id="hotkeyz" title="Keyboard Shortcuts">
+
+					<div class="prettyPad">
+						<table>
+							<thead>
+								<tr>
+									<th>KEY</th>
+									<th>ACTION</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>?</td>
+									<td>navigation hotkeys</td>
+								</tr>
+								<tr>
+									<td>A</td>
+									<td>toggle Autoslide</td>
+								</tr>
+								<tr>
+									<td>?timer=n</td>
+									<td>after .html to adjust time in seconds</td>
+								</tr>
+								<tr>
+									<td>S</td>
+									<td>load speaker view window</td>
+								</tr>
+								<tr>
+									<td>R</td>
+									<td>turn on record mode</td>
+								</tr>
+								<tr>
+									<td>Z</td>
+									<td>download a .zip of recordings</td>
+								</tr>
+								<tr>
+									<td>Alt + {click}</td>
+									<td>zoom in, {click} to zoom out</td>
+								</tr>
+								<tr>
+									<td>?print-pdf</td>
+									<td>after .html for print styling</td>
+								</tr>
+								<!-- <tr>
+									<td>Esc</td>
+									<td>Slide deck overview</td>
+									<td>click to slide or Esc to return</td>
+								</tr> -->
+								<!-- <tr>
+									<td>B or .</td>
+									<td>toggle Pause</td>
+									<td>cover distracting slide</td>
+								</tr> -->
+								<!-- <tr>
+									<td>F</td>
+									<td>Fullscreen</td>
+									<td>Esc to exit</td>
+								</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<aside class="notes">
+						Navigation with UDLR arrows or scrollwheel. Mobile devices, swipe to change slide, pinch to overview.
+					</aside>
+				</section>
+
+
+
+
+				<section>
+				
+				<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT0.png">
+				</section>
+
+			<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT1.png">
+				</section>
+
+						<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT2.png">
+				</section>
+
+						<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT3.png">
+				</section>
+
+						<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT4.png">
+				</section>
+
+							<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT5.png">
+				</section>
+
+							<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT6.png">
+				</section>
+
+							<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT7.png">
+				</section>
+
+				<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT8.png">
+				</section>
+
+					<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT9.png">
+				</section>
+
+					<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT10.png">
+				</section>
+
+					<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT11.png">
+				</section>
+				</section>
+
+
+
+
+
+
+			<section>
+				
+				<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/A.png">
+				</section>
+
+			<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/B.png">
+				</section>
+
+				<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/C.png">
+				</section>
+
+						<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/D.png">
+				</section>
+
+						<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/E.png">
+				</section>
+
+							<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/F.png">
+				</section>
+
+							<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/G.png">
+				</section>
+
+							<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/H.png">
+				</section>
+
+											<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/I.png">
+				</section>
+
+					<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/J.png">
+				</section>
+
+					<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/K.png">
+				</section>
+
+					<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/L.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/M.png">
+				</section>
+
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/N.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/O.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/P.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/Q.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/R.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/S.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/T.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/T120.png">
+				</section>
+
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/U.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/V.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/W.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/X.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/Y.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/Z.png">
+				</section>
+
+									<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/Z700H.png">
+				</section>
+
+		<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/Z1200.png">
+				</section>
+
+		<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/Z2400.png">
+				</section>
+</section>
+<section>
+		<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w1.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w2.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w3.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w4.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w5.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w6.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w7.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w8.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w9.png">
+				</section>
+
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w11.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w12.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w13.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w14.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w15.png">
+				</section>
+
+<section>
+				<img data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w16.png">
+				</section>
+
+
+
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+		
+		<div class="clearFace">
+			<i id="tilt" class="fa fa-eraser clearUI"></i>
+		</div>
+
+		<div class="startTank" style="display:none">
+			<a href="#/tank"><i style="position:relative;-webkit-transform:scale(1.5,1) perspective(.5px) rotateX(1deg);" 
+			 class="fa fa-bitbucket tankData"></i></a>
+		</div>
+
+		<div class="clockLock" style="display:none;">
+			<i class="fa fa-history fa-1rpm fa-lg timeData"></i>
+		</div>
+
+		<div class="coRotator fa-spinOut-1rpm">
+			<i class="fa fa-video-camera fa-rotate-90 viewData"></i>
+		</div>
+
+
+		<div class="radome">
+			<a href="#/world"><i class="fa fa-globe fa-p33x worldData"></i></a>
+		</div>
+
+		<div class="greenBuilding">
+			<a href="http://coriolis.no-ip.org/clear/up">
+			<i class="fa fa-building goOut"></i></a>
+		</div>
+
+		<div class="overView">
+			<i class="fa fa-search-minus zoomOut"></i>
+		</div>
+
+		<div class="loadNotes">
+			<i class="fa fa-comments-o notesToggle"></i>
+		</div>
+
+		<!-- <div id="perspectival" style="-webkit-transform: perspective(12px) rotateX(1deg);"> -->
+		<div id="inertialFrame">
+			<div id="fluidFrame">
+				<!-- <i id="jetSyncer" style="position:absolute;margin-left:-23px;margin-top:2px" class="fa fa-openid fa-flip-horizontal"></i> -->
+				&nbsp;<span id="promptText">using water on a turntable</span>&nbsp;
+				<br>
+				<!-- <i id="globalFax" style="position:absolute;margin-left:-23px;margin-top:2px;" class="fa fa-lg fa-globe"></i> -->
+				&nbsp;<span id="titleText" data-title="Weather in a Tank" class="reflected">Weather in a Tank</span>&nbsp;
+				<div id="defrag">
+					<div id="notesPane">
+					</div>
+				</div>		
+			</div>
+		</div> 
+		<!-- </div> -->
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
+
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				mouseWheel: true, //~
+				progress: true,
+				slideNumber: true, //~
+				history: true,
+				loop: true, //~
+				center: false, //~ queue0
+
+				transitionSpeed: 'default', // default/fast/slow //~
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				autoSlide: 1000*(Reveal.getQueryHash().timer) || 2000, // time in seconds before auto-advancing slides or fragments //~
+				fragments: Reveal.getQueryHash().fragments || true, // turns fragments on and off globally, fragments stay hidden if false //~
+
+				// Audio Slideshow plugin (care of: http://www.faculty.jacobs-university.de/agoel/audio-slideshow/)
+				audioPrefix: 'audio/',	// audio files are stored in the "audio" folder //~
+				audioSuffix: '.wav',	// audio files have the ".wav" ending //~
+				keyboard: { 
+					82: function() { Recorder.toggleRecording(); },	// press 'r' to start/stop recording
+					90: function() { Recorder.downloadZip(); } 	// press 'z' to download zip containing audio files
+				},
+
+				// Parallax scrolling
+				parallaxBackgroundImage: 'http://coriolis.no-ip.org/coloriis/UI/space_hedron.jpg',
+				parallaxBackgroundSize: '4000px 2500px',
+				parallaxForceVertical: false, //~
+				// parallaxBackgroundImage: 'http://coriolis.no-ip.org/coloriis/UI/green-spread.jpg',
+				// parallaxBackgroundSize: '1800px 1600px',
+
+			
+				width: 960, //~  queue2   //768(portrait),1024(landscape)
+				height: 700, //~ queue2   //946(portrait);690(portrait);
+				margin: 0.14,  //~ *! min % padding around slide content queue1
+				// Bounds for smallest/largest possible scale to apply to content 
+				minScale: 0.2, //~
+				maxScale: 4, //~
+				// Opens links in an iframe preview overlay
+				// previewLinks: false, //~
+
+				// Number of slides away from the current that are visible
+				viewDistance: 3,
+
+				math: {
+					// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js' 
+					config: 'TeX-AMS_HTML-full'
+				},
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					// { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal.js/plugin/math/math.js', async: true },
+					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } }
+					// { src: 'pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } }
+				]
+			});
+		</script>
+
+		<!-- <script language="javascript" type="text/javascript" src="pkg/h5utils.js"></script>	 -->
+		<script language="javascript" type="text/javascript" src="pkg/jquery-1.11.0.js"></script>
+		<!-- <script language="javascript" type="text/javascript" src="pkg/jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script> -->
+		<!-- <script language="javascript" type="text/javascript" src="pkg/jbrowser/jquery.browser.js"></script>	 -->
+		<!-- <script type="text/javascript" type="text/javascript" src="pkg/circleslide/slider.js"></script> -->
+		<!-- <script language="javascript" type="text/javascript" src="pkg/canimate/jquery.canimate.js"></script>-->
+		<script language="javascript" type="text/javascript" src="js/general.js"></script>
+
+	</body>
+</html>
