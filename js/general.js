@@ -1,3 +1,9 @@
+
+
+
+
+
+
 //* mostly harmless
 
 var flipper = 0
@@ -71,7 +77,7 @@ $('#inertialFrame').click(function() {
 
   if (titleShowing == 0) {
      $(this).css("width","auto");
-     $(this).css("bottom", -2+"px");
+     $(this).css("bottom", 2+"px");
      $('#promptText').css("font-size", 2.2+"vw");
      $('#titleText').css("font-size", 3.2+"vw");
      titleShowing = 1; 
@@ -88,7 +94,7 @@ $('#inertialFrame').click(function() {
               $('#titleText').css("font-size", 2.8+"vw");
               titleShowing = 2;   
             } else {
-                if (titleShowing == 2) {
+                if (titleShowing < 8) {
                    $(this).css("bottom", "25%");
                    var notesHeight = $('.notesPane').css('height');
                   $('#promptText').css("font-size", 2.5+"vw");
@@ -97,22 +103,22 @@ $('#inertialFrame').click(function() {
                   var currentViewWind = $(window).width();
                   $('.fluidSpan').css("width",parseInt(currentViewWind)-155+"px");
                   $('#notesPane').show();
-                  titleShowing = 3;   
+                  titleShowing++;  
                  } else {
-                      if (titleShowing == 3) {
+                      if (titleShowing == 8) {
                           var currentViewWind = $(window).width();
                           $('.fluidSpan').css("width",parseInt(currentViewWind)-155+"px");
                           $('#notesPane').hide();
-                          $(this).css("bottom", 0+"px");
+                          $(this).css("bottom", 2+"px");
                           // $('#promptText').css("font-size", 2+"vw");
                           // $('#titleText').css("font-size", 3+"vw");
-                        titleShowing = 4;   
+                        titleShowing = 9;   
                        } else {
                           $(this).removeClass("fluidSpan");
                           $(this).css("width","auto");
-                          $(this).css("bottom", -12+"px");
-                          $('#promptText').css("font-size", 2.4+"vw");
-                          $('#titleText').css("font-size", 3.4+"vw");
+                          $(this).css("bottom", 3+"px");
+                          $('#promptText').css("font-size", 2+"vw");
+                          $('#titleText').css("font-size", 2.5+"vw");
                           // $('#promptText').css("font-size", 10+"px");
                           // $('#titleText').css("font-size", 18+"px");
                           titleShowing = 0; 
@@ -234,6 +240,35 @@ Reveal.addEventListener( 'fragmentshown', function( event ) {
 
 
 
+
+
+
+
+
+
+
+
+
+// var editable = document.getElementById('editable');
+
+// addEvent(editable, 'blur', function () {
+//   // lame that we're hooking the blur event
+//   localStorage.setItem('contenteditable', this.innerHTML);
+//   document.designMode = 'off';
+// });
+
+// addEvent(editable, 'focus', function () {
+//   document.designMode = 'on';
+// });
+
+// addEvent(document.getElementById('clear'), 'click', function () {
+//   localStorage.clear();
+//   window.location = window.location; // refresh
+// });
+
+// if (localStorage.getItem('contenteditable')) {
+//   editable.innerHTML = localStorage.getItem('contenteditable');
+// }
 
 
 
