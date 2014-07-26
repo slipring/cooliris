@@ -1,8 +1,13 @@
 
 
 
-
-
+$('.clearTome').click(function() {
+  //   var currentViewHeight = $(window).height();
+  //   var newHt = parseInt(currentViewHeight)+"px";
+  //   console.log(newHt);
+  // console.log(    $('.piecewise').css('height'));
+    $('.piecewise').toggle();
+});
 
 //* mostly harmless
 
@@ -35,7 +40,10 @@ $('.coRotator').click(function() {
     $('.greenBuilding').toggle();
     $('.radome').toggle();
     $('.startTank').toggle();
-    $(this).toggleClass('fa-spinOut-1rpm');
+    // $(this).toggleClass('fa-spinOut-1rpm');
+     // $(this).toggleClass('glowering');
+      $(this).toggleClass('shadowing');
+     $('.viewData').toggleClass('purpleif');
     $('.cryo').toggle();
     });
 
@@ -44,9 +52,28 @@ $('.overView').click(function() {
     });
 
 
-$('.loadNotes').click(function() {
-    $('#inertialFrame').toggle();
-    });
+var mapState = 0;
+
+$('.map').click(function() {
+  if (mapState == 0 ) {
+    $('.piecewise').css("margin-left",-220+"px");
+    mapState = 1;
+  } else {
+    $('.piecewise').css("margin-left",-262+"px");
+    mapState = 0;
+  }
+  });
+
+
+
+
+Reveal.addEventListener( 'slidechanged', function( event ) {
+  // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+  var slideID = event.currentSlide.id;
+  console.log (slideID);
+});
+
+
 
 
 var autoStream = 0;
@@ -63,71 +90,46 @@ $('.timeData').click(function() {
 
 
 
-
-
-
-
-
 //* cross-check on devices
 
 
-var titleShowing = 0;
+var titleShowing = 1;
 
-$('#inertialFrame').click(function() {
+$('.loadNotes').click(function() {
+    switch (titleShowing) {
+      case 0:
+        $('#inertialFrame').css("right",80+"px");
+        $('#inertialFrame').css("left","auto");
+        $('#inertialFrame').show();
+        titleShowing = 1;
+        break;
+      case 1:
+        var currentViewWind = $(window).width();
+        $('#inertialFrame').addClass("fluidSpan");
+        $('.fluidSpan').css("width",parseInt(currentViewWind)-155+"px");
+        titleShowing = 2;
+        break;
+      case 2:
+       $('#inertialFrame').css("bottom", "50%");
+        $('#notesPane').show();
+        titleShowing = 3;
+        break;
+      case 3:
+        $('#notesPane').hide();
+        $('#inertialFrame').css("bottom", 4+"px");
+        $('#inertialFrame').removeClass("fluidSpan");
+        $('#inertialFrame').css("width","auto");
+        $('#inertialFrame').css("right","auto");
+        $('#inertialFrame').css("left",0+"px");
+        titleShowing = 4;
+        break;
+      default:
+        $('#inertialFrame').hide();
+        titleShowing = 0;
+        console.log('subtitle switch');
+    }
+});
 
-  if (titleShowing == 0) {
-     $(this).css("width","auto");
-     $(this).css("bottom", 2+"px");
-     $('#promptText').css("font-size", 2.2+"vw");
-     $('#titleText').css("font-size", 3.2+"vw");
-     titleShowing = 1; 
-  } else { 
-        if (titleShowing == 1) {
-           $(this).css("bottom", 12+"px");
-           $('#promptText').css("font-size", 2+"vw");
-           $('#titleText').css("font-size", 3+"vw");
-           titleShowing = 1.5;  
-        } else {
-            if (titleShowing == 1.5) {
-              $(this).css("bottom", 53+"px");
-              $('#promptText').css("font-size", 1.8+"vw");
-              $('#titleText').css("font-size", 2.8+"vw");
-              titleShowing = 2;   
-            } else {
-                if (titleShowing < 8) {
-                   $(this).css("bottom", "25%");
-                   var notesHeight = $('.notesPane').css('height');
-                  $('#promptText').css("font-size", 2.5+"vw");
-                  $('#titleText').css("font-size", 2.5+"vw");
-                  $(this).addClass("fluidSpan");
-                  var currentViewWind = $(window).width();
-                  $('.fluidSpan').css("width",parseInt(currentViewWind)-155+"px");
-                  $('#notesPane').show();
-                  titleShowing++;  
-                 } else {
-                      if (titleShowing == 8) {
-                          var currentViewWind = $(window).width();
-                          $('.fluidSpan').css("width",parseInt(currentViewWind)-155+"px");
-                          $('#notesPane').hide();
-                          $(this).css("bottom", 2+"px");
-                          // $('#promptText').css("font-size", 2+"vw");
-                          // $('#titleText').css("font-size", 3+"vw");
-                        titleShowing = 9;   
-                       } else {
-                          $(this).removeClass("fluidSpan");
-                          $(this).css("width","auto");
-                          $(this).css("bottom", 3+"px");
-                          $('#promptText').css("font-size", 2+"vw");
-                          $('#titleText').css("font-size", 2.5+"vw");
-                          // $('#promptText').css("font-size", 10+"px");
-                          // $('#titleText').css("font-size", 18+"px");
-                          titleShowing = 0; 
-                    }  
-                }
-              }
-            }
-          }
-        });
 
 
 
@@ -193,7 +195,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
                   console.log(notes);
                  document.getElementById('notesPane').innerHTML = notes;}
                  else {
-                  console.log("blank");
+                  console.log("blank page of notes");
                   document.getElementById('notesPane').innerHTML = " ";
                  }
                 }
@@ -211,8 +213,6 @@ Reveal.addEventListener( 'fragmentshown', function( event ) {
       document.getElementById('promptText').innerHTML = " ";
     }
 });
-
-
 
 
 
@@ -238,6 +238,168 @@ Reveal.addEventListener( 'fragmentshown', function( event ) {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Reveal.addEventListener( 'fragmenthidden', function( event ) {
+//   var lastFrag = event.prevFragment();
+//   console.log(lastFrag);
+//   // var fragger = lastFrag.title;
+//   // console.log(fragger);
+//   // if(fragger) {
+//   //   document.getElementById('promptText').innerHTML = fragger;
+//   //   } 
+//   // else {
+//   //     document.getElementById('promptText').innerHTML = " ";
+//   //   }
+// });
+
+
+
+
+
+// (function($) {
+//     // Attrs
+//     $.fn.attrs = function(attrs) {
+//         var t = $(this);
+//         if (attrs) {
+//             // Set attributes
+//             t.each(function(i, e) {
+//                 var j = $(e);
+//                 for (var attr in attrs) {
+//                     j.attr(attr, attrs[attr]);
+//                 };
+//             });
+//             return t;
+//         } else {
+//             // Get attributes
+//             var a = {},
+//                 r = t.get(0);
+//             if (r) {
+//                 r = r.attributes;
+//                 for (var i in r) {
+//                     var p = r[i];
+//                     if (typeof p.nodeValue !== 'undefined') a[p.nodeName] = p.nodeValue;
+//                 }
+//             }
+//             return a;
+//         }
+//     };
+// })(jQuery);
+
+
+// // Setter
+// $('#element').attrs({
+//     'name' : 'newName',
+//     'id' : 'newId',
+//     'readonly': true
+// });
+
+// // Getter
+// var attrs = $('#element').attrs();
+
+
+
+// Reveal.addEventListener( 'slidechanged', function( event ) {
+//   // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+//   var slideID = event.currentSlide.id;
+//   console.log(slideID);
+  // var el = document.getElementsByClassName("map");
+  // console.log (el);
+  // var nodes=[], values=[];
+  // for (var attr, i=0, attrs=el.attributes, l=attrs.length; i<l; i++){
+  //   attr = attrs.item(i)
+  //   nodes.push(attr.nodeName);
+  //   values.push(attr.nodeValue);
+  // // }
+  // });
+
+//   $mapper = $('.map');
+//   console.log($mapper);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+// $('.loadNotes').click(function() {
+//     $('#inertialFrame').toggle();
+//     });
+
+
+
+
+  // if (titleShowing == 0) {
+  //    $(this).css("width","auto");
+  //    $(this).css("bottom", 2+"px");
+  //    $('#promptText').css("font-size", 2.2+"vw");
+  //    $('#titleText').css("font-size", 3.2+"vw");
+  //    titleShowing = 1; 
+  // } else { 
+  //       if (titleShowing == 1) {
+  //          $(this).css("bottom", 12+"px");
+  //          $('#promptText').css("font-size", 2+"vw");
+  //          $('#titleText').css("font-size", 3+"vw");
+  //          titleShowing = 1.5;  
+  //       } else {
+  //           if (titleShowing == 1.5) {
+  //             $(this).css("bottom", 53+"px");
+  //             $('#promptText').css("font-size", 1.8+"vw");
+  //             $('#titleText').css("font-size", 2.8+"vw");
+  //             titleShowing = 2;   
+  //           } else {
+  //               if (titleShowing < 8) {
+  //                  $(this).css("bottom", "25%");
+  //                  var notesHeight = $('.notesPane').css('height');
+  //                 $('#promptText').css("font-size", 2.5+"vw");
+  //                 $('#titleText').css("font-size", 2.5+"vw");
+  //                 $(this).addClass("fluidSpan");
+  //                 var currentViewWind = $(window).width();
+  //                 $('.fluidSpan').css("width",parseInt(currentViewWind)-155+"px");
+  //                 $('#notesPane').show();
+  //                 titleShowing++;  
+  //                } else {
+  //                     if (titleShowing == 8) {
+  //                         var currentViewWind = $(window).width();
+  //                         $('.fluidSpan').css("width",parseInt(currentViewWind)-155+"px");
+  //                         $('#notesPane').hide();
+  //                         $(this).css("bottom", 2+"px");
+  //                         // $('#promptText').css("font-size", 2+"vw");
+  //                         // $('#titleText').css("font-size", 3+"vw");
+  //                       titleShowing = 9;   
+  //                      } else {
+  //                         $(this).removeClass("fluidSpan");
+  //                         $(this).css("width","auto");
+  //                         $(this).css("bottom", 3+"px");
+  //                         $('#promptText').css("font-size", 2+"vw");
+  //                         $('#titleText').css("font-size", 2.5+"vw");
+  //                         // $('#promptText').css("font-size", 10+"px");
+  //                         // $('#titleText').css("font-size", 18+"px");
+  //                         titleShowing = 0; 
+  //                   }  
+  //               }
+  //             }
+  //           }
+  //         }
+  //       });
 
 
 
