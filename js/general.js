@@ -1,6 +1,10 @@
 
 
 
+
+
+
+
 $('.clearTome').click(function() {
   //   var currentViewHeight = $(window).height();
   //   var newHt = parseInt(currentViewHeight)+"px";
@@ -15,6 +19,7 @@ var flipper = 0
 
 $('.clearFace').click(function() {
     $('#inertialFrame').toggle();
+    $('.titleBlock').toggle();
     $('.overView').toggle();
     $('.loadNotes').toggle();
     $('.clockLock').toggle();
