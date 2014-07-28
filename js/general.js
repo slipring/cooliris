@@ -2,16 +2,19 @@
 
 
 
+  // function updateProgress() {
+
+  //   // Update progress if enabled
+  //   // if( config.progress && dom.progressbar ) {
+  //   //   console.log("ok")
+  //   //   var getWidth = dom.progressbar.style.width;
+  //   //    // = getProgress() * window.innerWidth + 'px';
+  //   //    console.log(getWidth);
+  //   }
+
+  // }
 
 
-
-$('.clearTome').click(function() {
-  //   var currentViewHeight = $(window).height();
-  //   var newHt = parseInt(currentViewHeight)+"px";
-  //   console.log(newHt);
-  // console.log(    $('.piecewise').css('height'));
-    $('.piecewise').toggle();
-});
 
 //* mostly harmless
 
@@ -47,7 +50,7 @@ $('.coRotator').click(function() {
     $('.startTank').toggle();
     // $(this).toggleClass('fa-spinOut-1rpm');
      // $(this).toggleClass('glowering');
-      $(this).toggleClass('shadowing');
+      $(this).toggleClass('glowering');
      $('.viewData').toggleClass('purpleif');
     $('.cryo').toggle();
     });
@@ -57,17 +60,7 @@ $('.overView').click(function() {
     });
 
 
-var mapState = 0;
 
-$('.map').click(function() {
-  if (mapState == 0 ) {
-    $('.piecewise').css("margin-left",-220+"px");
-    mapState = 1;
-  } else {
-    $('.piecewise').css("margin-left",-262+"px");
-    mapState = 0;
-  }
-  });
 
 
 
@@ -95,7 +88,70 @@ $('.timeData').click(function() {
 
 
 
+
+
+
+
+// var spiralbound = 0;
+
+// $('.clearTome').click(function() {
+//   //   var currentViewHeight = $(window).height();
+//   //   var newHt = parseInt(currentViewHeight)+"px";
+//   //   console.log(newHt);
+//   // console.log(    $('.piecewise').css('height'));
+//   // $('.piecewise').toggle();
+//     switch (spiralbound) {
+//       case 0:
+//         $('.piecewise').show();
+//         spiralbound = 1;
+//         break;
+//       case 1:
+//         var currentViewWind = $(window).width();
+//         $('#inertialFrame').addClass("fluidSpan");
+//         $('.fluidSpan').css("width",parseInt(currentViewWind)-155+"px");
+//         spiralbound = 2;
+//         break;
+//       case 2:
+        
+//         spiralbound = 3;
+//         break;
+//       case 3:
+
+//         spiralbound = 0;
+//         break;
+
+//       default:
+    
+// });
+
+
+$('.clearTome').click(function() {
+  //   var currentViewHeight = $(window).height();
+  //   var newHt = parseInt(currentViewHeight)+"px";
+  //   console.log(newHt);
+  // console.log(    $('.piecewise').css('height'));
+  $('.piecewise').toggle();});
+
+
+var mapState = 0;
+
+$('.map').click(function() {
+  if (mapState == 0 ) {
+    $('.piecewise').css("left",-3+"px");
+    mapState = 1;
+  } else {
+    $('.piecewise').css("left",-45+"px");
+    mapState = 0;
+  }
+  });
+
+
 //* cross-check on devices
+
+
+
+
+
 
 
 var titleShowing = 1;
@@ -103,8 +159,8 @@ var titleShowing = 1;
 $('.loadNotes').click(function() {
     switch (titleShowing) {
       case 0:
-        $('#inertialFrame').css("right",80+"px");
-        $('#inertialFrame').css("left","auto");
+        $('#inertialFrame').css("left",0+"px");
+        $('#inertialFrame').css("right","auto");
         $('#inertialFrame').show();
         titleShowing = 1;
         break;
@@ -121,11 +177,11 @@ $('.loadNotes').click(function() {
         break;
       case 3:
         $('#notesPane').hide();
-        $('#inertialFrame').css("bottom", 4+"px");
+        $('#inertialFrame').css("bottom", 9+"px");
         $('#inertialFrame').removeClass("fluidSpan");
         $('#inertialFrame').css("width","auto");
-        $('#inertialFrame').css("right","auto");
-        $('#inertialFrame').css("left",0+"px");
+        $('#inertialFrame').css("left","auto");
+        $('#inertialFrame').css("right",80+"px");
         titleShowing = 4;
         break;
       default:
@@ -232,6 +288,8 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
   });
 
 
+
+
 Reveal.addEventListener( 'fragmentshown', function( event ) {
   // event.previousSlide, event.currentSlide, event.indexh, event.indexv
   var timeControl = event.fragment.getAttribute('data-timer');
@@ -249,22 +307,22 @@ Reveal.addEventListener( 'fragmentshown', function( event ) {
 
 
 /*MathJax tweaks to prevent display errors in equation formatting  */
-/* currently is giving scope errors, only re-enable and bugfix if display errors are apparent  */
+    /* disable if performance is dragging */
+
 Reveal.addEventListener( 'fragmentshown', function( event ) {
  setTimeout(
        function() {
        MathJax.Hub.Rerender(document.querySelector(".slides .present")) 
-       }, 100);
+       }, 500);
        } );
 Reveal.addEventListener( 'slidechanged', function( event ) {
  // event.previousSlide, event.currentSlide, event.indexh, event.indexv
- MathJax.Hub.Rerender(); 
- } );
-
-
-
-
-
+ setTimeout(
+       function() {
+       MathJax.Hub.Rerender(document.querySelector(".slides .present")) 
+       }, 500);
+       } ); 
+ 
 
 
 
@@ -283,6 +341,19 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 // });
 
 
+
+
+
+
+ // // var titleLength = parseInt($('#titleText').css("width"));
+ //     // var $getWidth = $(".progress");
+ //       // = getProgress() * window.innerWidth + 'px';
+ //      var elo = document.getElementsByClassName("progress");
+ //       console.log(elo);
+ //       var eloi = elo.item[0];
+
+ //       // elo.firstChild;
+ //       console.log(eloi);
 
 
 

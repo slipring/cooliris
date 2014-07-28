@@ -48,8 +48,10 @@
   position:fixed;
   min-width:auto;
   display:inline-block;
-  margin-left:-262px;
-  bottom:256px;
+/*  margin-left:-262px;
+  bottom:256px;*/
+  bottom:-27px;
+  left:-45px;
   color:white;
   opacity:.2;
   z-index:25;
@@ -58,6 +60,9 @@
 .piecewise:hover {
     opacity:.5;
 }
+
+.map
+{ margin-right:-24px;}
 
 .map:after {
     content: attr(data-label);
@@ -73,6 +78,12 @@
     opacity: .9;
     z-index:2;
 }
+
+.hypernav:after {
+    color: black;
+}
+
+
 
 
 
@@ -267,7 +278,7 @@
     min-height:13px;
     margin-top:1px;
     margin-left:.1em;
-    padding:3px 1px 0px 0px;
+    padding:4px 0px 0px 0px;
 
 }
 
@@ -398,13 +409,12 @@
 
 
 
-
 #inertialFrame {
   display: inline-block; 
   position: absolute; 
-  bottom: 4px; 
+  bottom: 9px; 
   /*right:79px; */
-  right:80px;
+  left:0px;
   z-index: 29;
   padding-bottom:555px;
   margin-bottom:-555px;
