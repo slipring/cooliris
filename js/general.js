@@ -164,7 +164,7 @@ $( window ).resize(function() {
 
 Reveal.addEventListener( 'slidechanged', function( event ) {
   // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-  var slideTitled = event.currentSlide.title;
+  var slideTitled = event.currentSlide.getAttribute('data-title');
   if (slideTitled) {
     document.getElementById('titleText').innerHTML = slideTitled;
     document.getElementById('titleText').setAttribute( 'data-title', slideTitled );
@@ -177,7 +177,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
   document.getElementById('promptText').innerHTML = " ";
   var preEstablished = event.currentSlide.querySelector( '.preface' );
   if (preEstablished) {
-    var lineDetail = preEstablished.title;
+    var lineDetail = preEstablished.getAttribute('data-title');
     document.getElementById('promptText').innerHTML = lineDetail;
   } else {
     document.getElementById('promptText').innerHTML = " ";
@@ -187,7 +187,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
              function() {
                  document.getElementById('notesPane').innerHTML = " ";
                 var slID = event.currentSlide.id;
-                var slTitle = event.currentSlide.title;
+                var slTitle = event.currentSlide.getAttribute('data-title');
                 // reporting to console.log
                 // console.log((event.indexh)+"-"+event.indexv+": #"+slID+" / "+slTitle);
                 var notes = $("section.stack section.present aside.notes").text();
@@ -210,7 +210,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 
 
 Reveal.addEventListener( 'fragmentshown', function( event ) {
-  var titleBytes = event.fragment.title;
+  var titleBytes = event.fragment.getAttribute('data-title');
   if(titleBytes) {
     document.getElementById('promptText').innerHTML = titleBytes;
     } 
@@ -223,7 +223,7 @@ Reveal.addEventListener( 'fragmentshown', function( event ) {
 
 Reveal.addEventListener( 'slidechanged', function( event ) {
     // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-    var timeControl = event.currentSlide.getAttribute('timer');
+    var timeControl = event.currentSlide.getAttribute('data-timer');
     if(timeControl && autoStream == 1) {
       console.log( timeControl + ' second window' );
       msTimer = timeControl * 1000;
@@ -234,7 +234,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 
 Reveal.addEventListener( 'fragmentshown', function( event ) {
   // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-  var timeControl = event.fragment.getAttribute('timer');
+  var timeControl = event.fragment.getAttribute('data-timer');
   if(timeControl && autoStream == 1) {
       console.log( timeControl + ' second window' );
       msTimer = timeControl * 1000;
@@ -248,6 +248,18 @@ Reveal.addEventListener( 'fragmentshown', function( event ) {
 
 
 
+/*MathJax tweaks to prevent display errors in equation formatting  */
+/* currently is giving scope errors, only re-enable and bugfix if display errors are apparent  */
+Reveal.addEventListener( 'fragmentshown', function( event ) {
+ setTimeout(
+       function() {
+       MathJax.Hub.Rerender(document.querySelector(".slides .present")) 
+       }, 100);
+       } );
+Reveal.addEventListener( 'slidechanged', function( event ) {
+ // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+ MathJax.Hub.Rerender(); 
+ } );
 
 
 

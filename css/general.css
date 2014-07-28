@@ -388,8 +388,8 @@
   letter-spacing: 0.02em;
   line-height:1.5em;
   font-family: 'Droid Sans', sans-serif;
-  font-size:13px;
-  font-size:2.3vw;
+  font-size:14px;
+/*  font-size:1.5vw;*/
   /* font-family: 'Droid Serif', serif;*/
   /* font-family: 'Old Standard TT', serif;*/
   /*font-family: "Open Sans", sans-serif;*/
@@ -487,7 +487,7 @@
 /*  font-size: 10px;
   font-size: 2.4vw;*/
     font-size: 12px;
-  font-size: 2vw;
+  font-size: 1.8vw;
   line-height:1em;
   letter-spacing: 0.1em;
   padding:0px;
@@ -616,10 +616,16 @@
 
 
 
-
-
-
-
+#grouper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-height: 640px;
+}
+#groupee {
+  position: absolute;
+  left: 0px;
+  top: 0px;}
 
 
 
