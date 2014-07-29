@@ -1,0 +1,1830 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Hadley Cell</title> <!-- 60 characters or less -->
+		
+		<meta name="title" content="">  
+		<meta name="description" content=""> <!-- 160 characters or less -->
+		<meta name="author" content="">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		
+		<link rel="shortcut icon" href="tank_blank.ico">
+
+		<!-- <link rel="stylesheet" href="css/anticipatory.css"> -->
+		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
+
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+		<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:800italic,400,700&subset=latin,greek' rel='stylesheet' type='text/css'> -->
+		<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,600&subset=latin,greek' rel='stylesheet' type='text/css'> -->
+		<!-- <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+		<!-- <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css'> -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" type="text/css">
+		
+		<link rel="stylesheet" href="pkg/font-awesome-4.1.0/css/font-awesome.css">
+		<!-- <link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery-ui.css">
+		<link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery.ui.theme.css"> -->
+		<!-- <link rel="stylesheet" href="pkg/circleslide/jquery-ui-1.7.2slider-lightness.css"> -->
+
+		<!-- For syntax highlighting -->
+		<!-- <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css"> -->
+
+		<link rel="stylesheet" href="css/general.css">
+		<!-- <link rel="stylesheet" type="text/css" href="pkg/circleslide/slider.css"> -->
+		<!-- <link rel="stylesheet" href="css/vestigial.css" /> -->
+
+		<!-- Include the appropriate print stylesheet -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'http://coriolis.no-ip.org/coloriis/reveal.js/css/print/pdf.css' : 'http://coriolis.no-ip.org/coloriis/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- <section title="Widdershins" timer="3">
+					<i class="fa fa-undo fa-cyclonic"></i><br>
+					<i class="fa fa-refresh"></i>
+					<i class="fa fa-refresh fa-rotate-30"></i>
+					<i class="fa fa-refresh fa-rotate-60"></i>
+					<i class="fa fa-refresh fa-rotate-90"></i>
+					<i class="fa fa-refresh fa-rotate-120"></i>
+					<i class="fa fa-refresh fa-rotate-150"></i>
+					<i class="fa fa-refresh fa-rotate-180"></i>
+					<i class="fa fa-refresh fa-rotate-210"></i>
+					<i class="fa fa-refresh fa-rotate-240"></i>
+					<i class="fa fa-refresh fa-rotate-270"></i>
+					<i class="fa fa-refresh fa-rotate-300"></i>
+					<i class="fa fa-refresh fa-rotate-330"></i>
+					<i class="fa fa-refresh"></i>
+					<aside class="notes">
+						These will display in speaker notes (press 'S') or an optional on-screen display, triggered with the comments button to the left of the controls.
+					</aside>
+					<aside class="edits">	
+					</aside>
+				</section>  -->
+
+
+				<!-- holds : overlapper overlapped underlapped 
+				   - vessel : surface interior bottom -->
+
+				<section id="tank" title="Weather in a Tank" timer="10">
+						
+						<i class="preface" data-fragment-index="0" title="using water on a turntable"></i>
+						<i class="fragment" timer="2" data-fragment-index="1" title="to reveal invisible forces"></i>
+						<i class="fragment" timer="6" data-fragment-index="2" title="acting on rotating fluids"></i>
+						<i class="fragment" timer="12" data-fragment-index="3" title="reflecting dynamics in earth's climate"></i>
+	
+					<div class="holds">
+						<div class="aliasing binoculus overlapped">
+							<img class="pb100px" data-src="http://coriolis.no-ip.org/clear/up/load/O/clearsplash.gif">
+						</div>
+
+						<div class="binoculus fragment overlapper fade-out" style="margin-top:-80px;z-index:23" data-fragment-index="1">
+							<img style="-webkit-transform:rotateY(315deg) scale(.75,.75);"  data-src="http://coriolis.no-ip.org/clear/up/load/O/HUMANR.png">
+						</div>
+
+						<div class="binoculus fragment overlappest current-visible" style="margin-top:-50px;z-index:24"  data-fragment-index="1">
+							<img style="-webkit-transform:rotateY(315deg) scale(1,1);"  data-src="http://coriolis.no-ip.org/clear/up/load/O/HUMANL.png">
+						</div>
+						
+						<div class="fragment overlapper current-visible" style="-webkit-transform:rotateY(315deg) scale(1.5,1.5);margin-top:-20px;z-index:25;" data-fragment-index="2">
+							<img data-src="http://coriolis.no-ip.org/clear/up/load/O/HUMANR.png">
+						</div>
+						
+						<div class="fragment overlapper current-visible" style="-webkit-transform:rotateY(315deg) scale(2,2);margin-top:20px;z-index:26;" data-fragment-index="3">
+							<img data-src="http://coriolis.no-ip.org/clear/up/load/O/HUMANL.png">
+						</div>
+					</div>
+					<aside class="notes">
+						Two rotating systems, macro and micro, a walking encyclopedia.
+					</aside>
+					<aside class="edits">
+						{{additional fragment, flip central character, fragment title about our atmosphere, fragment title the tank}
+						(Atmos) | [Tank] "chaotic phenomena" "evidenced" "clouds" "tracers"// white aliasing. re-oriented globe armiture. backdrop. {{branches: hurricane tropical circle:radial inflow, hadley tropical cell:general circulation slow,eddies extratropical: general circulation fast, polar fronts and jetstreams:cylinder collapse, ocean currents:taylor columns }} ()}
+					</aside>
+				</section>
+
+
+
+
+				<section id="analogy" title="Analogies Between Scales" data-state="analogues" timer="6">
+						<i class="preface" data-fragment-index="1" title="fluids"></i>
+						<i class="fragment" timer="2" data-fragment-index="2" title="rotating"></i>
+						<i class="fragment" timer="6" data-fragment-index="3" title="temperature gradient"></i>
+					
+
+
+					<ul class="hide-dot" style="float:left;">
+						<li class="fragment" style="position:relative;top:100px;left:184px;z-index:88;font-family: 'Quicksand', sans-serif;color:rgba(171,137,224,1);text-shadow: 6px 4px rgba(0,0, 0,.8);z-index:99" data-fragment-index="4" title="system rotation">
+							ROTATION<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<i  style="" class="fa fa-3x fa-openid fa-flip-horizontal"></i>&nbsp;</li>
+						<li class="fragment" style="position:absolute;top:175px;left:255px;font-family: 'Quicksand', sans-serif;color:rgba(255, 255, 236,.8);z-index:88;text-shadow: 0 1px 0 rgba(46,200, 180,.8), 0 2px 0 rgba(46,200, 180,.8), 0 3px 0 #bbbbbb, 0 4px 0 rgba(19, 218, 236,.8), 0 5px 0 rgba(19, 218, 236,.8), 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);"  data-fragment-index="3" title="temperature gradient">
+							COLD&nbsp;&nbsp;<!-- <i class="fa fa-lg fa-ge" style="color:rgba(131,83,157,1)"></i> --></li>
+						<li  data-fragment-index="1" style="position:relative;top:110px;left:24px;font-family: 'Quicksand', sans-serif;z-index:80;" title="between 2 fluids">
+							AIR&nbsp;<i style="z-index:81;text-shadow: 0px 0px 24px rgba(119,192,185,1)" class="fa fa-lg fa-soundcloud"></i></li>
+						<li class="fragment fa-rotate-45" style="position:absolute;top:280px;left:58px;font-family: 'Quicksand', sans-serif;color:rgba(236,228, 155,1);z-index:55;text-shadow: 0px 0px 6px rgba(255,94,71,1);" data-fragment-index="2" title="light">
+							WARM</li>
+
+					</ul>
+					<!-- <ul class="hide-dot">
+					text-shadow: 0px 0px 6px rgba(105, 225, 231, 0.8)
+						<li>color:rgba(19, 218, 236,1)</li>
+						<li>color:rgba(155,123,234,1)</li>
+						<li>color:rgba(243,243,181,1)</li> </ul> -->
+					<ul class="hide-dot" style="float:right;">
+						<li class="fragment" style="position:relative;top:320px;right:230px;font-family: 'Quicksand', sans-serif;z-index:90;color:rgba(171,137,224,1);z-index:99" data-fragment-index="4">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="text-shadow: 4px -2px rgba(0,0, 0,.8);" class="fa fa-undo fa-lg fa-10rpm"></i><br><br>
+							&nbsp;rotation</li>
+						<li class="fragment" style="position:absolute;top:270px;right:270px;font-family: 'Quicksand', sans-serif;color:rgba(255, 255, 255,.8);z-index:88;text-shadow: 0 1px 0 rgba(46,200, 180,.8), 0 2px 0 rgba(46,200, 180,.8), 0 3px 0 #bbbbbb, 0 4px 0 rgba(19, 218, 236,.8), 0 5px 0 rgba(19, 218, 236,.8), 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
+" data-fragment-index="3">
+							<!-- <i style="color:rgba(131,83,157,1)" class="fa fa-ge fa-lg fa-1rpm"> --></i>&nbsp;&nbsp;cold</li>
+						<li class="" style="position:relative;top:22px;right:240px;color:rgba(119,192,185,1);z-index:55;opacity:.8;font-family: 'Quicksand', sans-serif;" data-fragment-index="1"><!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:rgba(119,192,185,1)"class="fa fa-lg fa-tint"></i><br> -->
+							water<br>&nbsp;&nbsp;&nbsp;<i style="color:rgba(119,192,185,1);text-shadow: 0px 6px 6px rgba(255,255,255,1)" class="fa fa-flip-horizontal fa-tint fa-2x"></i></li>
+						<li class="fragment" style="position:absolute;top:350px;right:105px;font-family: 'Quicksand', sans-serif;color:rgba(236,228, 155,1);z-index:68;" data-fragment-index="2">
+							<!-- <span class="fa fa-spinIn"> --><i style="" class="fa fa-lg"></i><!-- </span> -->&nbsp;&nbsp;&nbsp;<span style="text-shadow: 0px 0px 6px rgba(255,94,71,1)">warm</span></li>
+					</ul>
+
+					<!-- <div style="position:absolute;top:0px;left:0px" class="holds">
+						<div class="overlapper">
+							<img data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/O/2COMPARE.png">
+						</div>
+					</div> -->
+
+
+					<div class="holds">
+						<div class="overlapped">
+							<img class="preface" title="warm and cool air masses" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT1.png">
+						</div>
+						<!-- <div class="overlapper fragment" data-fragment-index="3" title="heat driven EQ to 30 N" style="-webkit-transform:scale(-1.8,1.3) perspective(3px) rotate(10deg);postion:relative;top:240px;left:175px;">
+							<i class="fa fa-moon-o fa-5x fa-rotate-300" ></i>
+						</div> -->
+					</div>
+
+
+					<div class="overlapper easey" style="top:0px;right:0px;position:absolute;z-index:28;">
+						<i id="arctic" style="color:rgba(46,200, 180,.8);position:absolute;top:230px;left:260px;-webkit-transform:scale(1.5,1.2) perspective(14px) rotateX(2deg);z-index:29;" data-fragment-index="3" class="fragment fade-in fa fa-circle fa-3x"></i>
+						<i id="equatorial" style="color:rgba(236,228, 155,1);position:absolute;top:185px;left:215px;-webkit-transform:scale(1.5,1.2) perspective(14px) rotateX(2deg);text-shadow: 0px 0px 20px rgba(255,94,71,.8);opacity:.75;" data-fragment-index="2"  class="fragment fade-in fa fa-circle-o fa-6x"></i>
+						<i id="icecore" style="color:rgba(46,200, 180,.8);position:absolute;top:303px;right:286px;-webkit-transform:scale(1.3,1) perspective(14px) rotateX(2deg);" data-fragment-index="3" class="fragment fade-in fa fa-1x fa-circle fa-lg"></i>
+						<i id="ambientwarm" style="color:rgba(236,228, 155,1);position:absolute;top:244px;right:230px;-webkit-transform:scale(1.3,1.1) perspective(14px) rotateX(2deg);text-shadow: 0px 0px 20px rgba(255,94,71,.8);opacity:.75;" data-fragment-index="2" class="fragment fade-in fa fa-5x fa-circle-o"></i>
+					</div>
+					
+					<aside class="notes">
+						Air on in earth's atmosphere and water in a laboratory turntable-tank with a low-pressure center. Both are rotating fluids with temperature difference.
+					</aside>
+					<aside class="edits">
+						(Atmos:Sealevel-Air-Tropopause) | [Tank:Bottom-Water annulus-Fill level] "z-bounds" "medium" "volumes" "omega" "deltaT" "dense/cold/L" //   // {{generic reference (specializations: ())}}
+					</aside>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+				<!-- parse titles & timers into preface playlist spans -->
+
+				<section title="Representing Earth Rotation" timer="24" data-state="parcelzone">
+					<div class="holds unselectable">
+						<div class="overlapped">
+							<img class="no-hilight preface" title="representing upper latitudes @ 10rpm" style="border-radius:15px" data-src="http://coriolis.no-ip.org/clear/up/load/gctankspin_horzn.gif">
+						</div>
+						<!-- <div class="overlappest"> -->
+							<div class="overlapper">
+								<img id="globalzone" style="border:white dashed 0px;" class="no-hilight" data-src="http://coriolis.no-ip.org/clear/up/load/gcworldspin_trans.gif">
+							</div>
+							<div class="overlapper">
+								<img style="border-radius:15px;background:rgba(0,0,0,0.0)" title="representing lower latitudes @ 1rpm" class="fragment fade-out no-hilight" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/gctankspin_eddy.gif" >
+							</div>
+					<!-- 	</div> -->
+					</div>
+					<div class="overlapper fragment fade-out" data-fragment-index="1" style="position:absolute;z-index:55;margin-top:26%;margin-left:32%;-webkit-transform:rotateZ(270deg)">
+						<i style="color:rgba(46,200, 180,.8);" old-style="color:rgba(19, 218, 236,1);" class="fa fa-search"></i>
+					</div>
+					<div class="overlapper fragment fade-in" data-fragment-index="1"style="position:absolute;z-index:55;margin-top:35%;margin-left:36%;-webkit-transform:rotateZ(300deg)">
+						<i style="color:rgba(236,228, 155,1)" old-style="color:rgba(255,94,71,1);" class="fa fa-search"></i>
+					</div>
+			<!-- 		<div class="overlapper fragment fade-out" data-fragment-index="1" style="z-index:56;margin-top:25%;margin-left:46%;">
+						<i id="handIn" class="fa fa-lg fa-hand-o-right"></i>
+					</div>-->				
+ 				<div class="overlapper" data-fragment-index="1" style="z-index:56;margin-top:32%;margin-left:46%;">
+						<i id="handIn" class="fa fa-lg fa-hand-o-right"></i>
+					</div>
+					<div class="overlapper fragment fade-out" data-fragment-index="1" style="z-index:56;margin-top:14.5%;margin-left:43.5%;position:relative;-webkit-transform:scale(1.5,-.5) perspective(2px) rotateX(1deg);">
+						<i style="color:rgba(171,137,224,1);" class="fa fa-lg fa-undo fa-10rpm"></i>
+					</div>
+
+					<div class="overlapper fragment fade-out" data-fragment-index="1" style="z-index:57;margin-top:27.5%;margin-left:44.5%;position:relative;-webkit-transform:scale(1.5,.5) perspective(2px) rotateX(1deg);">
+						<i style="color:rgba(22,25,6,.9);" class="fa fa-lg fa-undo fa-10rpm"></i>
+					</div>
+
+					<div class="overlapper fragment fade-in" data-fragment-index="1" style="z-index:59;margin-top:17%;margin-left:69.6%;position:absolute;-webkit-transform:scale(1.5,-.5) perspective(2px) rotateX(1deg);">
+						<i style="color:rgba(171,137,224,1);" class="fa fa-lg fa-undo fa-1rpm"></i>
+					</div>
+
+					<div class="overlapper fragment fade-in" data-fragment-index="1" style="z-index:59;margin-top:48%;margin-left:70%;position:absolute;-webkit-transform:scale(1.5,.5) perspective(2px) rotateX(1deg);">
+						<i style="color:rgba(22,25,6,.9);" class="fa fa-lg fa-undo fa-1rpm"></i>
+					</div>
+
+					<aside class="notes">
+						Varying turntable speed to model the effect of earth's rotation on air at various latitudes.
+					</aside>
+					<aside class="edits">
+						(Atmos:Interior Angle of G|Latitude|Circumference ringaround to axis) | [Tank:G-field|Rpm|Circumference ringaround to axis ] "system angular momentum" "omega bounds" "zone" "annulus" "table" 
+						\\This will probably require a sprite. First get the slider that you found in there! *N/A* SUBSLIDE calculation of omega dot g, calculating the coriolis parameter
+					</aside>
+				</section>
+
+
+
+
+
+				<section title="Representing Temperature Gradient" data-state="tempgrad" timer="6">
+						<i class="preface" data-fragment-index="0" title="the sun produces differential heating"></i>
+						<i class="fragment" timer="6" data-fragment-index="1" title="concentrated around the earth's equatorial region"></i>
+						<i class="fragment" timer="6" data-fragment-index="2" title="polar regions typically give off more energy in infrared than they absorb"></i>
+						<i class="fragment" timer="6" data-fragment-index="3" title="we introduce a similar temperature gradient by cooling the pole"></i>	
+						<i class="fragment" timer="6" data-fragment-index="4" title="leaving the warming up to laboratory's ambient room temperature"></i>
+
+
+						<div style="position:absolute;margin-top:248px;margin-left:55px;" class="fa-rotate-180" id="thesun">
+						<img style="-webkit-transform:scale(2,2)" data-src="http://coriolis.no-ip.org/coloriis/UI/O/INPUTSUN.png">
+						</div>
+
+						<div style="position:absolute;margin-top:125px;margin-left:580px;z-index:88;-webkit-transform:scale(1.3,1.3) perspective(1px) rotate(1deg);" class="fragment fade-in" id="theice" data-fragment-index="3">
+					
+						<img  data-src="http://coriolis.no-ip.org/coloriis/UI/O/INPUTICE.png">
+					
+						</div>
+						
+
+					<ul class="hide-dot" style="float:left;">
+				
+						<li class="fragment fade-in" style="position:absolute;top:195px;left:268px;font-family: 'Quicksand', sans-serif;color:rgba(255, 255, 236,.8);z-index:88;text-shadow: 0 1px 0 rgba(46,200, 180,.8), 0 2px 0 rgba(46,200, 180,.8), 0 3px 0 #bbbbbb, 0 4px 0 rgba(19, 218, 236,.8), 0 5px 0 rgba(19, 218, 236,.8), 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);"  data-fragment-index="2" title="temperature gradient">
+							cold&nbsp;&nbsp;<!-- <i class="fa fa-lg fa-ge" style="color:rgba(131,83,157,1)"></i> --></li>
+						<li class="fa-rotate-45 fragment fade-in" style="position:absolute;top:430px;left:252px;font-family: 'Quicksand', sans-serif;color:rgba(236,228, 155,1);z-index:88;text-shadow: 0px 0px 6px rgba(255,94,71,1)" data-fragment-index="1" title="light">
+							WARM</li>
+
+					</ul>
+					<!-- <ul class="hide-dot">
+					text-shadow: 0px 0px 6px rgba(105, 225, 231, 0.8)
+						<li>color:rgba(19, 218, 236,1)</li>
+						<li>color:rgba(155,123,234,1)</li>
+						<li>color:rgba(243,243,181,1)</li> </ul> -->
+					<ul class="hide-dot" style="float:right;">
+						<li class="fragment fade-in" style="position:absolute;top:265px;right:256px;font-family: 'Quicksand', sans-serif;color:rgba(255, 255, 255,.8);z-index:59;text-shadow: 0 1px 0 rgba(46,200, 180,.8), 0 2px 0 rgba(46,200, 180,.8), 0 3px 0 #bbbbbb, 0 4px 0 rgba(19, 218, 236,.8), 0 5px 0 rgba(19, 218, 236,.8), 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);" data-fragment-index="3">
+							<!-- <i style="color:rgba(131,83,157,1)" class="fa fa-ge fa-lg fa-1rpm"> --></i>&nbsp;&nbsp;COLD</li>
+						<li class="fragment fade-in" style="position:absolute;top:430px;right:250px;font-family: 'Quicksand', sans-serif;color:rgba(236,228, 155,1);z-index:68;" data-fragment-index="4">
+							<!-- <span class="fa fa-spinIn"> --><i style="" class="fa fa-lg"></i><!-- </span> -->&nbsp;&nbsp;&nbsp;<span style="text-shadow: 0px 0px 6px rgba(255,94,71,1)">warm</span></li>
+					</ul>
+
+					<!-- <div style="position:absolute;top:0px;left:0px" class="holds">
+						<div class="overlapper">
+							<img data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/O/2COMPARE.png">
+						</div>
+					</div> -->
+
+
+					<div class="holds">
+						<div class="overlapped">
+							<img class="preface" title="warm and cool air masses" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/WT1.png">
+						</div>
+						<!-- <div class="overlapper fragment" data-fragment-index="3" title="heat driven EQ to 30 N" style="-webkit-transform:scale(-1.8,1.3) perspective(3px) rotate(10deg);postion:relative;top:240px;left:175px;">
+							<i class="fa fa-moon-o fa-5x fa-rotate-300" ></i>
+						</div> -->
+					</div>
+
+
+					<div class="overlapper" style="top:0px;right:0px;position:absolute;z-index:29;">
+						<i id="arctic" style="color:rgba(19, 218, 236,.8);position:absolute;top:230px;left:260px;-webkit-transform:scale(1.5,1.2) perspective(14px) rotateX(2deg);" data-fragment-index="2" class="fragment fade-in fa fa-circle fa-3x"></i>
+						<i id="equatorial" style="color:rgba(255,94,71,.8);position:absolute;top:185px;left:215px;-webkit-transform:scale(1.5,1.2) perspective(14px) rotateX(2deg);text-shadow: 0px 0px 20px rgba(236,228, 155,1);opacity:.75;" data-fragment-index="1"  class="fragment fade-in fa fa-circle-o fa-6x"></i>
+						<i id="icecore" style="color:rgba(19, 218, 236,.8);position:absolute;top:303px;right:286px;-webkit-transform:scale(1.3,1) perspective(14px) rotateX(2deg);" data-fragment-index="3" class="fa fa-1x fa-circle fa-lg fragment fade-in"></i>
+						<i id="ambientwarm" style="color:rgba(255,94,71,.8);position:absolute;top:244px;right:230px;-webkit-transform:scale(1.3,1.1) perspective(14px) rotateX(2deg);text-shadow: 0px 0px 20px rgba(236,228, 155,1);opacity:.75;" data-fragment-index="4" class="fragment fade-in fa fa-5x fa-circle-o"></i>
+					</div>
+					
+	
+					<aside class="notes">
+						Equator-Pole Temperature Gradient. Heating driven by sun. Larger radius warmer, smaller radius cooler. Cooling driven by ice.
+					</aside>
+					<aside class="edits">
+						(Atmos:Innermost radius|Bandwidth|Outermost Radius)SUN | [Tank:ICE)Innercan radius|Bandwidth|Outertank wall] "r-theta bounds" "walls"
+					</aside>
+				</section>
+
+
+
+
+
+				<section>
+					<section id="setup" title="Hadley How-To">
+						<i class="preface" data-fragment-index="1" title="with a rotating turntable apparatus.."></i>
+						<i class="fragment" data-fragment-index="1" title="1. place tank, can, weight @ turntable center"></i>
+						<i class="fragment" data-fragment-index="2" title="2. fill tank to just under can"></i>
+						<i class="fragment" data-fragment-index="3" title="3. spin up to solid body rotation"></i>
+						<i class="fragment" data-fragment-index="4" title="4. add ice and some water to center can"></i>
+						<i class="fragment" data-fragment-index="5" title="5. add tracers to visualize flow"></i>
+
+						<div class="holds">
+							<div class="overlapped" style="position:absolute;top:160px;left:75px;-webkit-transform:scale(-.6,.6);opacity:.8">
+						<img data-src="turntableau.png" data-fragment-index="1">
+						</div>
+						<div class="overlapped">
+						<img class="fragment fade-out" data-src="howto/0.png" data-fragment-index="1">
+						</div>
+						<div class="overlapper">
+						<img class="fragment current-visible" data-src="howto/1.png" data-fragment-index="1">
+						</div>
+						<div class="overlapper">
+						<img class="fragment current-visible" data-src="howto/2.png" data-fragment-index="2">
+						</div>
+						<div class="overlapper">
+												<img class="fragment current-visible" data-src="howto/3.png" data-fragment-index="3">
+									</div>
+									<div class="overlapper">
+																		<img class="fragment current-visible" data-src="howto/4.png" data-fragment-index="4">
+																		</div>
+																		<div class="overlapper">
+
+																								<img class="fragment current-visible" data-src="howto/5.png" data-fragment-index="5">
+																		</div>
+																		<div class="overlapped" style="right:22px;top:188px;-webkit-transform:scale(1.2,1.2)">
+																			<img class="fragment roll-in" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1rpm.gif" style="border-radius:25px" data-fragment-index="3">
+																		</div>
+						</div>
+						<aside class="notes">
+							Step 1. Center tank and can. Step 2. Fill with water. Step 3. Turn on rotation, monitor the rotating frame, and wait for solid body rotation. Step 4. Add ice and a bit of water in middle. 5. Add gizmos to visualize flow.
+						</aside>
+						<aside class="edits">
+							overlay circle icon focuses - depending on whether faster / reliable enough to do in-HTML finishing with position or easier to export transparent same-size image overlays transparent PNG with modifying the .AI files
+							[Tank:1. walls, 2. water volume, 3. rpm 4. ice water] "we set up an experiment with ice in the center and low rotation and we leave it for a while.."
+							SUBSLIDE: Reference frames and solid body rotation. Contains camera views, co-rotating + turntable record + tripod 3d 
+						</aside>
+					</section>
+
+
+
+
+
+					<section title="Solid Body Rotation">
+						<i class="preface" data-fragment-index="0" title="we add a paper dot to the rotating water"></i>
+						<i class="fragment" data-fragment-index="1" title="and view monitor its position"></i>
+						<i class="fragment" data-fragment-index="2" title="in the co-rotating frame"></i>
+						<i class="fragment" data-fragment-index="3" title="the tank has reached solid body rotation"></i>
+						<i class="fragment" data-fragment-index="4" title="when the surface floating particle appears still"></i>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/H2C0.png">
+						<aside class="notes">
+							Solid body rotation
+						</aside>
+						<aside class="edits">
+							Animate
+						</aside>
+					</section>
+				</section>
+
+
+
+
+				<section title="Visualizing Flows" timer="6">
+
+
+
+
+						<i class="preface" data-fragment-index="0" title="we can visualize the flow"></i>
+						<i class="fragment" timer="12" data-fragment-index="1" title="tracking paper dots on the fluid's upper surface"></i>
+						<i class="fragment" timer="12" data-fragment-index="2" title="deploying liquid dye drops into the working fluid's interior"></i>
+						<i class="fragment" timer="12" data-fragment-index="3" title="permanganate crystals sink to the tank bottom"></i>
+						<i class="fragment" timer="12" data-fragment-index="4" title="staining lower surface flows"></i>
+
+
+						<div style="background:white;position:absolute;top:-120px;left:395px;min-width:150px;min-height:150px;border-radius:90px;opacity:.8;">
+						</div>
+
+						<div class="" data-fragment-index="" style="position:absolute;top:-260px;left:150px;-webkit-transform:scale(.5,.5);">
+
+			<!-- 		<img data-src="http://coriolis.no-ip.org/coloriis/cooliris/howto/corotator_002_transand.gif" style="opacity:1"> -->
+				<!-- 	<img style="margin-top:-20px" data-src="coro1rpm.gif" style="opacity:1"> -->
+				<img style="margin-top:-12px" data-src="coro1rpm.gif" style="opacity:1">
+					</div>
+
+
+					<img data-fragment-index="1" class="fragment shrink" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/E.png" style="opacity:.9">
+					<img data-fragment-index="2" style="margin-left:-10px;opacity:.9" class="fragment shrink" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/F.png">
+					<img data-fragment-index="3" style="opacity:.9" class="fragment shrink fa-flip-horizontal" data-src="Gprime.png">
+					<br>
+
+					<img class="fragment fade-out" style="position:absolute;top:200px;left:300px;-webkit-transform:scale(1.5,1.5)"  data-fragment-index="1" src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w9.png">
+					<img data-fragment-index="1" style="position:absolute;left:310px;top:200px;-webkit-transform:scale(-1.6,1.6)" class="fragment current-visible" src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w12.png">
+					<img data-fragment-index="2" style="position:absolute;left:310px;top:190px;-webkit-transform:scale(1.6,1.6)" class="fragment current-visible" src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w13.png">
+					<img data-fragment-index="3" style="position:absolute;left:350px;top:180px;-webkit-transform:scale(2.4,2)" class="fragment current-visible" src="http://coriolis.no-ip.org/clear/up/load/O/W/P/X.png">
+					<img data-fragment-index="4" style="position:absolute;left:350px;top:180px;-webkit-transform:scale(-2.4,2)" class="fragment current-visible" src="http://coriolis.no-ip.org/clear/up/load/O/W/P/X.png">
+					<img class="fragment fade-out" data-fragment-index="1" style="position:absolute;top:320px;left:80px;-webkit-transform:scale(-.8,.8)" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/Z1200.png">
+					<img class="fragment current-visible" data-fragment-index="2"style="position:absolute;top:320px;left:80px;-webkit-transform:scale(.8,.8)" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/Z1200.png">
+					<img class="fragment current-visible" data-fragment-index="1"style="position:absolute;top:320px;left:80px;-webkit-transform:scale(-.8,.8)" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/Z1200.png">
+					<img class="fragment current-visible" data-fragment-index="1"style="position:absolute;top:320px;left:80px;-webkit-transform:scale(.8,.8)" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/Z1200.png">
+				
+			
+					<div style="position:absolute;top:100px;left:530px;" class="fragment current-visible" data-fragment-index="3">
+						<img data-src="perma.png">
+					</div>
+					<div style="position:absolute;top:285px;left:530px;" class="fragment roll-in" data-fragment-index="4">
+						<img data-src="perma.png">
+					</div>
+
+
+					<div style="position:absolute;top:120px;left:280px;-webkit-transform:scale(.8,.8) " class="fragment current-visible fa-flip-vertical" data-fragment-index="1">
+						<img data-src="paperdot.png">
+					</div>
+
+					<div style="position:absolute;top:125px;left:465px;" class="fragment current-visible" data-fragment-index="2">
+						<img data-src="dyedropg.png">
+					</div>
+
+					<div style="position:absolute;top:190px;left:280px;opacity:.9" class="fragment current-visible fa-flip-vertical" data-fragment-index="2">
+						<img data-src="paperdot.png">
+					</div>
+
+					<div style="position:absolute;top:220px;left:330px;" class="fragment current-visible " data-fragment-index="3">
+						<img id="trailer"  data-src="part.png" old-style="box-shadow: -1px -1px rgba(105, 225, 231, 0.8);border-radius:200px;">
+					</div>
+
+					<div style="position:absolute;top:230px;left:380px;" class="fragment current-visible " data-fragment-index="4">
+						<img id="trailer2"  data-src="part.png" old-style="box-shadow: -1px -1px rgba(105, 225, 231, 0.8);border-radius:200px;">
+					</div>
+
+					<div class="fragment current-visible" style="position:absolute;top:230px;left:472px;opacity:.9;-webkit-transform:scale(1,2) rotate(32deg)" data-fragment-index="4">
+						<img data-src="dyedropg.png">
+					</div>
+
+					<div style="position:absolute;top:230px;left:472px;opacity:.9;-webkit-transform:scale(1.5,1.5) " class="fragment current-visible" data-fragment-index="3">
+						<img data-src="dyedropg.png" style="z-index:20">
+					</div>
+
+					<div class="fragment fade-in" data-fragment-index="3" style="position:absolute;top:450px;left:300px;-webkit-transform:scale(1.5,1) perspective(4px) rotateX(1deg);">
+					<img data-src="tripod.png" style="opacity:.6">
+					</div>
+
+						<div class="fragment fade-out" data-fragment-index="3" style="position:absolute;top:450px;left:320px;-webkit-transform:scale(1.5,1) perspective(1.5px) rotateX(1deg);">
+					<img data-src="tripod.png" style="opacity:.6">
+					</div>
+
+					<aside class="notes">
+						Paper dots track the upper surface flows. Interior flows. Bottom surface flows.
+					</aside>
+					<aside class="edits">
+						[Tank:it's rotating at {1rpm,10rpm}, real tilt angle view, , superimposed z-bounds, discrete particles top, discrete input dye inside, discrete crystals bottom]
+					</aside>
+				</section>
+
+
+
+<!-- 
+
+<section title="Visualizing the Flow" timer="6">
+
+						<i class="preface" data-fragment-index="0" title="we can visualize the flow"></i>
+						<i class="fragment" timer="12" data-fragment-index="1" title="tracking paper dots on the fluid's upper surface"></i>
+						<i class="fragment" timer="12" data-fragment-index="2" title="deploying liquid dye drops into the working fluid's interior"></i>
+						<i class="fragment" timer="12" data-fragment-index="3" title="and permanganate crystals which sink and stain the lower surface"></i>
+
+
+					<img data-fragment-index="1" class="fragment grow" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/E.png">
+					<img data-fragment-index="2" class="fragment grow" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/F.png">
+					<img data-fragment-index="3" class="fragment grow" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/G.png">
+					<br>
+
+					<img class="fragment fade-out fa-spinOut" style="position:absolute;top:200px;left:300px;-webkit-transform:scale(1.5,1.5)"  data-fragment-index="1" src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w9.png">
+					<img data-fragment-index="1" style="position:absolute;left:300px;top:200px;-webkit-transform:scale(1.6,1.6)" class="fragment current-visible fa-spinOut" src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w12.png">
+					<img data-fragment-index="2" style="position:absolute;left:300px;top:200px;-webkit-transform:scale(1.6,1.6)" class="fragment current-visible fa-spinOut" src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w13.png">
+					<img data-fragment-index="3" style="position:absolute;left:300px;top:200px;-webkit-transform:scale(1.5,1.5)" class="fragment current-visible fa-spinOut" src="http://coriolis.no-ip.org/clear/up/load/O/W/P/w9.png">
+					
+			
+			</section> -->
+
+
+
+
+
+
+<!-- 			<section>
+
+			 <div class="holds">
+						<div class="overlapped up20">
+							<img data-src="http://coriolis.no-ip.org/clear/up/load/H2B0.png">
+						</div>
+					</div>
+					<div class="overlapper">
+						<img title="upper troposphere" class="fragment roll-in" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/H2B3.png">
+					</div>
+					<div class="overlapper">
+						<img title="interior flows" class="fragment roll-in" data-fragment-index="2" data-src="http://coriolis.no-ip.org/clear/up/load/H2B2.png">
+					</div>
+					<div id="horizonline" class="overlapper" >
+						<img title="near-earth surface" class="fragment roll-in" data-fragment-index="3" data-src="http://coriolis.no-ip.org/clear/up/load/H2B1.png">
+					</div>
+				</div>
+			</section> -->
+
+
+
+
+				<section id="predict" title="Prediction">
+
+						<i class="preface" data-fragment-index="0" title="releasing the 3 tracers"></i>
+						<i class="fragment" data-fragment-index="1" title="into the set-up fluid"></i>
+						<i class="fragment" data-fragment-index="2" title="view through a co-rotating camera"></i>
+						<i class="fragment" data-fragment-index="3" title="load scratch paper in a separate tab (requires flash)"></i>
+
+				<!-- 		<i class="fragment" timer="1" data-fragment-index="1" title="upper flows with paper dots"></i>
+						<i class="fragment" timer="2" data-fragment-index="2" title="interior flows with liquid dye"></i>
+						<i class="fragment" timer="3" data-fragment-index="3" title="bottom flows with permanganate crystals"></i> --><!-- 
+
+
+					<img data-fragment-index="1" class="fragment grow" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/E.png">
+					<img data-fragment-index="2" class="fragment grow" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/F.png">
+					<img data-fragment-index="3" class="fragment grow" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/G.png">
+					<br> -->
+
+					<!-- <img data-fragment-index="1" style="display:inline-block;position:absolute;top:50px;left:-120px;-webkit-transform:scale(.8,.8)" data-src="predictable.png"> -->
+
+					<img data-fragment-index="1" class="fragment shrink" style="display:inline-block;position:absolute;top:50px;left:-120px;" data-src="predictable.png">
+
+
+
+					<!-- <div class="fragment fade-out" data-fragment-index="2" style="position:absolute;top:0px;left:60px;-webkit-transform:scale(.5,.5);">
+					<img data-src="http://coriolis.no-ip.org/coloriis/cooliris/howto/corotator_002_transand.gif" style="opacity:1">
+					</div> -->
+<!-- 
+
+					<div class="fragment fade-out" data-fragment-index="2" style="position:absolute;top:480px;left:107px;-webkit-transform:scale(.8,.4) perspective(4px) rotateX(1deg);">
+					<img data-src="tripod.png" style="opacity:.3">
+					</div> -->
+
+								<!-- <div class="" data-fragment-index="" style="position:absolute;top:480px;left:107px;-webkit-transform:scale(.5,.5)">
+								<img data-src="tripod.png" style="opacity:.4">
+								</div> -->
+
+<!-- 
+					<div class="fragment fade-in" data-fragment-index="2" style="position:absolute;top:500px;left:555px;-webkit-transform:scale(.5,.5)">
+					<img data-src="tripod.png" style="opacity:.6">
+					</div> -->
+
+					<div class="fragment fade-in" data-fragment-index="2" style="position:absolute;top:450px;right:-25px;-webkit-transform:scale(.5,.5) rotate(-45deg)">
+					<img data-src="cam.png">
+					</div>
+					<span style="position:absolute;top:560px;left:-40px;" >
+					<img id="timeSketch" style="opacity:.4;-webkit-transform:scale(1.1,-1.2)" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/T120.png">
+					</span>
+
+					<!-- <span class="fragment fade-in" data-fragment-index="1" style="position:absolute;top:528px;left:20px;z-index:55;">
+						<img id="timeSketchy" style="opacity:.2;-webkit-transform:scale(1,.5) perspective(1.5px) rotateX(2deg)" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/T120.png">
+					</span> -->
+
+		<!-- 			<span class="fragment fade-in" data-fragment-index="2" style="position:absolute;top:440px;left:-180px;z-index:55;font-size:24px;">
+						<p id="predictee" class="fa-rotate-90"><a href="http://scratch.mit.edu/projects/25073888/#fullscreen" target="none">click to sketch</a><br>spacebar to select color</p>
+					</span>
+ -->
+					
+					<!-- http://scratch.mit.edu/projects/10459062/#fullscreen -->
+
+					<div class="fragment fade-in" style="background:white;position:absolute;top:0px;left:198px;min-width:150px;min-height:150px;border-radius:90px;opacity:.8;z-index:122;" data-fragment-index="2" >
+						</div>
+
+						<img style="position:absolute;top:-200px;left:-40px;-webkit-transform:scale(.8,.8);z-index:123;" data-src="coro1rpmA.gif" class="fragment fade-in" data-fragment-index="2" style="opacity:1">
+
+						<img class="fragment roll-in" data-fragment-index="3" style="position:absolute;top:-120px;right:-240px;-webkit-transform:scale(.7,.7);opacity:.8;border-radius:30px;z-index:121" data-src="scratchblank.png">
+					
+<div class="standard-mask fragment fade-in" style="bottom: 0%; margin-left:-200px; height: 52px; top:300px; color: #111; background: rgba(152, 100, 201,.9); -webkit-transform: rotate(5deg) translate3d(15%, 0, 0);z-index:124;" data-fragment-index="3"><a href="http://scratch.mit.edu/projects/25073888/#fullscreen" target="none">click here to sketch</a></div>
+
+						
+
+
+
+					<!-- <div>
+						<img id="blanktank" style="width:175%;height:175%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1rpm.gif">
+					</div> -->
+							<!-- <div id="canvasDiv"></div> -->
+					
+					
+					<img id="predictAngle" style="position:relative;right:15px;top:100px;-webkit-transform:scale(1.5,1.5)"data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/X.png">
+					<img class="fragment fade-in" data-fragment-index="2" style="-webkit-transform:scale(1.5,1.5);position:relative;left:50px;top:100px" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/Q.png">
+					<aside class="notes">
+						Consider relative deformations over a roughly equal period of time.
+					</aside>
+					<aside class="edits">
+						[Tank:it's still, above angle and tilt angle iso orthonormals, these may combine into an axo] // dropping copies of a object (if not easy, make the drop points already fixed) versus painting the trails color.  "We'll show you this again after" {gizmo bar has either (green dye, red dye, permanganate, particle tracks)} "lil' real lab frame from last slide"
+					</aside>
+				</section>
+
+
+
+
+
+				<section id="video" title="Hadley Video">
+
+						<i class="preface" data-fragment-index="0" title="scrub through video footage"></i>
+						
+
+
+					<iframe data-autoplay src="http://player.vimeo.com/video/62612780?api=1&amp;title=0&amp;byline=0&amp;portrait=0" data-autoplay width="960" height="600" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					<aside class="notes">
+						Synced video streams of the experiment, in the rotating frame of reference. Load the flow explorer to play with speeds, variation in reference frames, even some 3d views.
+					</aside>
+					<aside class="edits">
+						//Download from Vimeo or find resource on HDs.
+						//Upload to Youtube for 1.25, 1.5, 2x speeds. 
+						//Make Director's Cut with Playback speeds (logarithmic scaling)
+						\\Offload site with the Hadley Flow Explorer spritely.
+						[Tank: Rotating Frames, Over view large focus, side view corner focus. Turntable indicator. Rotation count. Timer since recording intiatialization. Timeline with already utilized gizmo icons and tracer sprites [[port .ai reference file to workingdir]]
+					</aside>
+				</section>
+
+
+
+				<section title="Co-rotating Flyby" data-background="http://coriolis.no-ip.org/clear/up/load/hadley_roamview.gif">
+
+					<i class="preface" data-fragment-index="0" title="1rpm, variable pitch &amp; orbit"></i>
+
+					<aside class="notes">
+						With the virtual model, we can freely manipulate the pitch of our view and travel along with the flow. Following the upper mo(i)st tip of the dye, we are sped faster in the direction of system rotation by the density gradient caused by heat exchange between system walls.
+					</aside>
+					<aside class="edits">
+						discounting the non-rotating floor. discounting the manual overlay frames. matchmoving the initiating and final keyframes {may splinter into 3 slides?}
+					</aside>
+				</section>
+
+
+
+				<section id="colorflow" title="Hadley Flow Patterns">		
+
+					<i class="preface" data-fragment-index="0" title="intuiting currents in the tank from evidenced tracer deformations"></i>
+					<i class="" data-fragment-index="1" title="particle traveling over a short time scale"></i>
+					<i class="" data-fragment-index="2" title="dye plume evo"></i>
+					<i class="" data-fragment-index="3" title="permanganate trails"></i>
+					<i class="" data-fragment-index="4" title="crystal staining slow spread outward"></i>
+					<i class="" data-fragment-index="5" title="green dye dome winding"></i>
+					<i class="" data-fragment-index="6" title="long term inward"></i>
+
+					<table>
+						<tbody>
+							<tr>
+								<td>particles</td>
+								<td class="" data-fragment-index="1"><a href="#/13">free surface u</a></td>
+								<td class="" data-fragment-index="6"><a href="#/13">free surface v</a></td>
+							</tr>
+							<tr>
+								<td>dyeblob</td>
+								<td class="" data-fragment-index="2"><a href="#/13" style="color:seagreen;">interior u,v</a></td>
+								<td class="" data-fragment-index="5"><a href="#/13" style="color:seagreen;">interior w</a></td>
+							</tr>
+							<tr>
+								<td>crystals</td>
+								<td class="" data-fragment-index="3"><a href="#/13" style="color:violet;">vertical u</a></td>
+								<td class="" data-fragment-index="4"> <a href="#/13" style="color:violet;">bottom u,v,w</a></td>
+							</tr>
+							<thead>
+							<tr>
+								<th>tracer</th>
+								<th class="" data-fragment-index="1">short time</th>
+								<th class="" data-fragment-index="4">long time</th>
+							</tr>
+						</thead>
+						</tbody>
+					</table>
+					<aside class="notes">
+					</aside>
+					<aside class="edits">
+					</aside>
+				</section>
+
+
+
+
+				<section id="reconstruction" title="Virtual Reconstruction">
+
+				<i class="preface" data-fragment-index="0" title="rotating frame of reference"></i>
+	            	<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_fcontext.jpg"> -->
+		<!-- 			<img style="height:50%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_fcontext.gif"> -->
+		        	<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_wcontext.jpg"> --><br><br><br><br><br>
+		        	<img  style="height:50%"  data-src="http://coriolis.no-ip.org/clear/up/load/hadley_wcontext.gif">
+				</section>
+
+
+
+
+
+				<section>
+					<section title="Render Views">
+
+						<i class="preface" data-fragment-index="0" title="1 'wind' after x seconds"></i>
+						<i class="fragment" data-fragment-index="1" title="1.5 'wind' after x+y seconds"></i>
+						<i class="fragment" data-fragment-index="2" title="hidden medium / can"></i>
+
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_replay1.gif"> -->
+	            		<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_mediumless.jpg"> -->
+	            		<div class="holds">
+		            		<div class="overlappedL" style="margin-left:18%;">
+			            		<img style="height:200%" class="fragment preface fade-out" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1wind.png">
+		            		</div>
+		            		<div class="overlapperR fragment fade-out" data-fragment-index="2">
+			            		<img class="fragment fade-in" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_1p5wind.png">
+		            		</div>
+	            			<div class="overlapper fragment roll-in" data-fragment-index="2" >
+			            		<img style="margin-top:-150px;margin-left:12%;width:90%"   data-src="http://coriolis.no-ip.org/clear/up/load/hadley_mediumless.gif" id="resetme00" onClick="document.getElementById('resetme00').src='http://coriolis.no-ip.org/clear/up/load/hadley_mediumless.gif'">
+			            		<img style="margin-top:0%;margin-left:12%;width:90%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_canless.gif" id="resetme01" onClick="document.getElementById('resetme01').src='http://coriolis.no-ip.org/clear/up/load/hadley_canless.gif'" >
+							</div>
+		            	</div>
+						<aside class="notes">
+							We can build a virtual model(link:refraction praxinoscope) using the experimental footage. We can filter out the can, the tank, and the clear medium itself to get a clearer picture of the tracer's deformation with the flows.
+						</aside>
+						<aside class="edits">
+							1. water, transcan-noice, 1.5 green winds, minus tank, plus turntable, plus floor, plus lit wall [tilt angle low ico, still]
+							2.water, transcan, 1 green wind {should go before other}, plus turntable, plus floor, no wall, 
+							3. no water, transcan-noice, animated, plus floor counter rotating, from 0 winds to about 2 winds
+							4. 0 to 1.5 winds. no can, yes wall, yes turntable, subtlefloor
+							//add 'skip record' to animations //re-order these first in wind #s, secondly perhaps spatially across a timeline?
+						</aside>
+					</section>
+
+
+
+				    <section>
+
+
+						<i class="preface" data-fragment-index="0" title="praxinoscope reconstruction"></i>
+						<i class="fragment" data-fragment-index="1" title="evolving overhead contour"></i>
+						<i class="fragment" data-fragment-index="2" title="evolving elevation contour"></i>
+						<i class="fragment" data-fragment-index="3" title="surfacing 3d lineaments"></i>
+
+
+		            	<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourside.jpg"> -->
+						<!--<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourover.jpg"> -->
+	    	        	<!-- <img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_inking.jpg"> -->
+	        	    	<div class="holds">
+	            			<div class="overlapped">
+		            			<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_rotoscope.png">
+		            			<img class="fragment roll-in" data-fragment-index="1" style="float:left;margin-left:10%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourover.gif">
+		            			<img class="fragment roll-in" data-fragment-index="2" style="float:right;margin-right:10%" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_contourside.gif">
+	            			</div>
+	            			<div class="overlapper">
+	            				<img class="fragment roll-in" data-fragment-index="3" style="float:left;margin-left:5%"  data-src="http://coriolis.no-ip.org/clear/up/load/hadley_inking.gif">
+	            			</div>
+	            		</div>
+	            		<aside class="notes">
+	            		</aside>
+	            		<aside class="edits">
+	            		</aside>
+	            	</section>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+				<section title="Dye drop">
+
+					<i class="preface" data-fragment-index="0" title="schematic of shearing forces on the dye drop"></i>
+					<i class="fragment" data-fragment-index="1" title="overlaying real data frames with 4s delay"></i>
+
+
+					<div class="holds" style="margin-left:100px;margin-top:-40px">
+						<div class="overlapped">
+		            		<img style="margin-left:15px;margin-top:15px" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_top-level-ana.png">
+						</div>
+						<div class="overlapper">
+	    	        		<img class="fragment roll-in nobg" data-fragment-index="1" style="margin-top:-20px" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_greendye256_4sdelay.gif">
+						</div>
+					</div>
+					<aside class="notes">
+					</aside>
+					<aside class="edits">
+					</aside>
+				</section>
+
+
+
+
+
+				<section>
+        	    	<section title="permanganate trails">
+
+        	    		<i class="preface" data-fragment-index="0" title="crystals will sink to tank bottom"></i>
+						<i class="fragment" data-fragment-index="1" title="revealing profile of current variation in the vertical"></i>
+
+            			<div class="holds">
+            				<div class="overlapped">
+		            			<img class="nobg" style="margin-top:-190px" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_pdrop.png">
+		            		</div>
+		            		<div class="overlapper" data-store="margin-left:175px;">
+		            			<img class="fragment roll-in nobg nods" data-fragment-index="1" style="margin-top:265px;margin-left:175px" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_perma256.gif">
+		            		</div>
+		            	</div>
+
+		            	<img class="nobg nods" data-fragment-index="0" style="margin-top:290px;margin-left:115px" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_permdrop.png">
+            
+
+						<aside class="notes">
+						</aside>
+						<aside class="edits">
+						</aside>
+            		</section>
+<!-- 
+            		<section title="sync with hadley schematic">
+
+            			<i class="preface" data-fragment-index="0" title="interior flows reflected in green dye plume's spread"></i>
+
+            			<img class="nobg nods" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_key_perm.png">
+
+            		</section> -->
+	        	</section>
+
+
+
+
+
+        		<section>
+            		<section title="surface easterlies">
+
+            		<i class="preface" data-fragment-index="0" title="fast forward of permangante crystal spread"></i>
+            				<i class="fragment" data-fragment-index="1" title="radially outward + circumferentially clockwise (counter to table rotation) "></i>
+						<i class="fragment" data-fragment-index="2" title="as the spread reaches the warm periphery, it heats and tends to rise"></i>
+
+
+					<div class="holds">
+            			<div class="overlapped">
+						<img class="nobg nods" style="float:left;margin-top:-180px" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_permlongterm.gif">
+        	    		<img class="nobg nods" style="margin-left:200px;margin-top:220px" data-src="http://coriolis.no-ip.org/coloriis/UI/O/drifted-out.png">
+        	    		</div>
+
+        	    		<div class="overlapper">
+            			<img class="aliasedWhite fragment" style="margin-top:0px;margin-left:25px;height:200%;width:200%" data-fragment-index="1" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_permdrifter.gif">
+            			<img class="nobg nods fragment" style="height:80%;width:80%;" data-fragment-index="2" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_bottomflows.png">
+            			</div>
+
+
+						<aside class="notes">
+						</aside>
+						<aside class="edits">
+						</aside>
+    	        	</section>
+	            	<section>
+    	        		
+            		</section>
+        		</section>
+
+
+
+
+
+	        	<section>
+
+	    
+
+
+    	        	<section title="green dye wound up">
+    	        			<i class="preface" data-fragment-index="0" title="dye drop release superimposed on a snapshot of its late-stage isosurface"></i>
+						<i class="fragment" data-fragment-index="1" title="upper fluid tends to move circumferentially faster in the direction of the turntable, radially slowly inward to the cold sink"></i>
+						<i class="fragment" data-fragment-index="2" title="clear upper fluid getting cold, sinking along can walls"></i>
+
+
+        	    		<div class="holds">
+							<div class="overlapped">
+								<img style="margin-left:285px;margin-top:356px"   data-src="http://coriolis.no-ip.org/clear/up/load/hadleydome_pattern.gif">		
+        	    			</div>
+	            			<div class="overlapper">
+	    	        			<img style="margin-top:-20px" data-fragment-index="1" class="fragment current-visible" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_topflows.png">
+	            			</div>
+	            			<div class="overlapper">
+	    	        			<img style="margin-left:120px"  class="nobg nods fragment current-visible" data-fragment-index="2" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_domezoom.png">
+	            			</div>
+						</div>
+						<aside class="notes">
+						</aside>
+						<aside class="edits">
+						</aside>
+		        	</section>
+
+
+
+<!--         			<section>
+						<img class="nobg nods" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_domezoom.png">
+            		</section> -->
+        		</section>
+
+
+
+
+
+        		<section>
+
+     
+
+
+            		<section id="num" title="particle velocities">
+
+            		 					<i class="preface" data-fragment-index="0" title="paper dots tend to move slower the further they are away from the cool core"></i>
+						<i class="fragment" data-fragment-index="1" title="these measures can be catalogged relative to radius"></i>
+						<i class="fragment" data-fragment-index="2" title="and compared to slope of the dome surface, akin to a front in a tank"></i>
+
+            			<div class="holds">
+            				<div class="overlapper fragment current-visible" data-fragment-index="1">
+								<img style="margin-top:43px;margin-left:113px;opacity:.5" data-src="http://coriolis.no-ip.org/clear/up/load/hadley_ptrackult.png">
+							</div>
+							<div class="overlapper fragment fade-in" data-fragment-index="2">
+									<img class="aliasedWhite" style="margin-top:250px;margin-left:0px;opacity:.5" data-src="http://coriolis.no-ip.org/clear/up/load/fronts_polar_dome.png">
+							</div>
+							<div class="overlapped">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_particletracks.gif">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_domeproxy.gif">
+							</div>
+    					</div>
+						<aside class="notes">
+						</aside>
+						<aside class="edits">
+						</aside>
+  		          	</section>
+
+
+	<!--             	<section>
+				
+	    	
+	    				<aside class="notes">
+						</aside>
+						<aside class="edits">
+						</aside>
+    				</section> -->
+        		</section>
+
+
+
+
+
+				<section title="Hadley Cell Schematic">
+
+				    		<i class="preface" data-fragment-index="0" title="Sketch displaying overturning circulation + vertical currents profile"></i>
+
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/hadley_schematic.png">
+					<aside class="notes">
+					</aside>
+					<aside class="edits">
+					</aside>
+				</section>
+
+
+
+
+
+				<section>
+					<section id="intheory" title="thermal wind">
+						\[\begin{aligned}
+						R_0 = \frac{u}{fL} \\
+						\end{aligned} \]	
+						<br>
+						<span class="fragment">
+						\[\begin{aligned}
+						u_g = \frac{1}{\rho f} \times \nabla{p} \\
+						\end{aligned} \]	
+						</span>
+						<br>
+						<span class="fragment">
+						\[\begin{aligned}
+						\frac{\partial u_g}{\partial z} = -\frac{g}{f \rho_0}\hat{z} \times \nabla{\rho} \\
+						\end{aligned} \]
+						</span>
+						<br>
+						\[\begin{aligned}
+						\frac{\partial u_g}{\partial z} = \frac{\alpha g}{f}\hat{z} \times \nabla{T} \\
+						\end{aligned} \]
+						<aside class="notes">
+						</aside>
+					</section>
+					
+
+
+					<section id="theory">
+						\[\begin{aligned} 
+						tan(\gamma) = \frac{dz}{dy} = \frac{\frac{\partial p_1}{\partial y}-\frac{\partial p_2}{\partial y}}{g(\rho_1 - \rho_2)} \\
+						Eq.(7.4),Eq.(7.16)::Eq.(7.21):\\
+						 Fig.7.17: \angle \gamma, \rho_1 > \rho_2 , \bot y_{\text{axis}} \\
+						\end{aligned} \]
+						<aside class="notes">
+						</aside>
+					</section>
+
+
+					<section title="Margules - Eq.(7.21)">
+						\[\begin{aligned}
+						(u_2-u_1) = \frac{g' \tan \gamma}{2 \Omega} \\
+						u: \text{component of the current parallel to the front} \\
+						g' = g \frac{\Delta \rho}{\rho_1} \text{ : 'reduced gravity'} \\
+						\Delta \rho = \rho_1 - \rho_2 \text{ : cf. parcel 'buoyancy', defined in Eq.(4.3)} \\
+						\text{relates swirl speed of the cone to } g', \gamma, \Omega \\
+						\end{aligned} \]
+						<aside class="notes">
+						</aside>
+					</section>
+
+
+
+					<section>
+						\[\begin{aligned}
+						\begin{equation} 
+						\label{notquiteMargules} 
+						\begin{split}
+						tan(\gamma) &= \frac{dz}{dy} \\
+						  &= \frac{\frac{\partial p_1}{\partial y}-\frac{\partial p_2}{\partial y}}{g(\rho_1 - \rho_2)}
+						\end{split}
+						\end{equation}
+						\end{aligned} \]
+						<aside class="notes">
+						</aside>
+					</section>
+
+
+
+					<section>
+						\[\begin{aligned}
+						\rho_1 , \rho_2 , \rho_1 > \rho_2 , y_{\text{axis}} \bot, \angle \gamma \\
+						\delta\rho, \delta z, \delta y\\
+						\Omega, \bar{\theta}, \overline{T}, \Psi \\
+						\overline{X}(\varphi,z) = \frac{1}{2 \pi} \int_{0}^{2\pi} X(\lambda,\varphi,z) \mathrm{d}\lambda\\
+						(\lambda,\varphi) = (longitude, latitude)
+						\end{aligned} \]
+						<aside class="notes">
+						</aside>
+					</section>
+
+
+
+					<section>
+						\begin{equation} 
+						\label{whateverequation} 
+						\begin{split}
+						x &= start of long equation \\
+						  & second half of long equation
+						\end{split}
+						\end{equation}
+						<aside class="notes">
+						</aside>
+					</section>
+				</section>
+
+
+
+
+
+				<section>
+					\[\begin{aligned}
+					\frac{\partial u_g}{\partial z} = \frac{\alpha g}{f}\hat{z} \times \nabla{T} \\
+					\end{aligned} \]
+
+					<span class="fragment">
+					\[\begin{aligned}
+					\frac{\partial z}{\partial p} = - \frac{1}{g \rho}
+					\end{aligned} \]
+					</span>
+					<br>
+					<span class="fragment">
+					\[\begin{aligned}
+					\frac{\partial u}{\partial p} = \frac{R}{fp} \left( \frac{\partial T}{\partial y} \right)_p
+					\end{aligned} \]
+					</span>
+					<br>
+					<span class="fragment">
+					\[\begin{aligned}
+					\frac{\partial v}{\partial p} = - \frac{R}{fp} \left( \frac{\partial T}{\partial x} \right)_p
+					\end{aligned} \]
+					</span>
+					<aside class="notes">
+					</aside>
+				</section>
+
+
+
+
+
+				<section>
+					<section title="(tank (numerics) atmosphere)">
+						<img style="width:35%" data-src="http://coriolis.no-ip.org/www/loop/Tank-Loop_ProVision.gif">
+						<div style="display:inline-block;" class="overlapping">
+						\[\begin{aligned}
+							\between \\
+						\end{aligned} \]
+						</div>
+						<img style="width:35%"  data-src="http://coriolis.no-ip.org/www/loop/Atmos-Loop.gif">							
+						<aside class="notes">
+						</aside>
+					</section>
+
+
+
+					<section title="mitgcm">
+					<a href="https://www.youtube.com/watch?v=xusdWPuWAoU">Perpetual Ocean (2005-2007)</a>
+					</section>
+				</section>
+
+
+
+
+
+				<section data-background="http://coriolis.no-ip.org/clear/up/load/hadley_LOOP1_PHENOMENA.gif">
+					<aside class="notes">
+					</aside>
+				</section>
+
+
+
+
+
+				<section id="world">
+					<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH01.PNG" />
+					<aside class="notes">
+					</aside>
+				</section>
+
+
+
+
+
+				<section>
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH03.PNG" />
+					<aside class="notes">
+					</aside>
+					</section>					
+				
+
+
+					<section>
+						<div class="holds">
+							<div class="overlapper">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH04ulabel.png" />
+							</div>
+							<div class="overlapped">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH04A.gif" />
+							</div>
+						</div>
+					<aside class="notes">
+					</aside>
+					</section>
+
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH05.PNG" />
+					<aside class="notes">
+					</aside>
+					</section>
+
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH0607merge.gif" />
+					<aside class="notes">
+					</aside>
+					</section>
+
+
+
+					<section>
+						<div class="holds">
+							<div class="overlapper">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH08ulabel.png" style="margin-top:-3%;z-index:40;"/>
+							</div>
+							<div class="overlapped">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH08A.gif" style="margin-top:7%" />
+							</div>
+						</div>	
+						<!-- <div id="grouper">
+							<img id="groupee" src="image/zonalH08ulabel.png" style="margin-top:-5%">
+							<img class="proxys" src="image/zonalH08A.gif" alt="zonal_average-zonal_wind">
+						</div> -->
+					<aside class="notes">
+					</aside>
+					</section>
+
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH09.PNG" />
+					<aside class="notes">
+					</aside>
+					</section>
+
+
+
+					<section>
+						<style>
+							#grouper {
+								position: relative;
+								height: 100%;
+								width: 100%;
+								min-height: 640px;
+							}
+							#groupee {
+								position: absolute;
+								left: 0px;
+								top: 0px;}
+						</style>
+						<div class="holds">
+							<div class="overlaps">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH1011label.png" style="margin-top:10px"/>
+							</div>
+							<div class="overlapped">
+								<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH1011merge.gif" />
+							</div>
+						</div>
+					<aside class="notes">
+					</aside>
+					</section>
+
+				</section>
+
+
+
+
+
+				<section>
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH12.PNG" />
+					<aside class="notes">
+					</aside>
+					</section>
+
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH13.PNG" />
+					</section>
+					
+
+
+					<!-- <section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH14.PNG" />
+					</section> -->
+		
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH15.PNG" />
+					</section>
+		
+
+
+					<section>
+						<!-- <div class="holder">
+						<div class="overlapper"> -->
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH16ulabel.png" />
+						<!-- </div>
+						<div class="overlapped"> -->
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH16A.gif" />
+						<!-- </div>
+						</div> -->
+					</section>
+		
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH17.PNG" />
+					</section>
+			
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH18.PNG" />
+					</section>
+				
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH_potT-sect.gif" />
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/polarF_xsect.png" />
+					</section>
+				</section>
+				
+
+
+
+
+				<section>
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH19.PNG">
+					<aside class="notes">
+					</aside>
+					</section>
+					
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH20.PNG">
+					</section>
+					
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH21.PNG">
+					</section>
+					
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/polarF_sectional-u-stack.gif">
+					</section>
+				
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/polarF_zcorner-u-stack.gif">
+					</section>
+				</section>
+
+
+
+
+
+				<section>
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH22.PNG">
+						<aside class="notes">
+					</aside>
+					</section>
+				
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH23ulabel.png" style="margin-top:-5%">
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH23A.gif" style="margin-top:-5%">
+					</section>
+				
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH24.PNG">
+					</section>
+				
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH25.PNG">
+					</section>
+				</section>
+
+
+
+
+
+				<section>
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH26.PNG">
+					<aside class="notes">
+					</aside>
+					</section>
+				
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH27.PNG">
+					</section>
+				
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH28.PNG">
+					</section>	
+				</section>
+
+
+
+
+
+				<section title="V-wind">
+					<div id="titleCard">
+						<div class="preface" id="imgBox">
+						</div>
+						<h3>v-wind</h3>
+						<form>
+							<fieldset>
+								<legend>v-component</legend>
+							  	Projection: <input type="text" value="rectangular"><br>
+							  	Scale: <input type="text" value="global 30yr"><br>
+							  	Display: <input type="text" value="zonal avg section"><br>
+							  	POV: <input type="text" value="facing east">
+							 </fieldset>
+						</form>
+						<span class="component fragment highlight-current-white">-v</span>
+						<span class="component fragment highlight-current-black">+v</span>
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+
+
+
+
+
+				<section>
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH29.PNG">
+						<aside class="notes">
+					</aside>
+					</section>
+	
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH28.PNG">
+					</section>
+					
+
+
+					<section>
+						G<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH30ulabel.png">
+						G<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH30A.gif">
+					</section>
+
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH31.PNG">
+					</section>
+			
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH32.PNG">
+					</section>
+				</section>
+
+
+
+
+
+				<section>
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH33.PNG">
+								<aside class="notes">
+					</aside>
+					</section>
+		
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH34.PNG">
+					</section>
+				
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH35.PNG">
+					</section>
+				</section>
+
+
+
+
+
+				<section>
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH36.PNG">
+					</section>
+				
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH37.PNG">
+					</section>
+					
+
+
+					<section>	
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH38.PNG">	
+					</section>
+				</section>
+			
+
+
+
+
+				<section>
+					<section>	
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH39.PNG">
+								<aside class="notes">
+					</aside>
+					</section>
+					
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH40.PNG">
+					</section>
+					
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH41.PNG">
+					</section>
+					
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH42.PNG">
+					</section>
+					
+
+
+					<section>
+						<img data-src="http://coriolis.no-ip.org/clear/up/load/zonalH43.PNG">
+					</section>
+				</section>
+
+
+
+
+
+
+
+
+
+
+				<section id="hotkeyz" title="Keyboard Shortcuts">
+
+					<div class="prettyPad">
+						<table>
+							<thead>
+								<tr>
+									<th>KEY</th>
+									<th>ACTION</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>?</td>
+									<td>navigation hotkeys</td>
+								</tr>
+								<tr>
+									<td>A</td>
+									<td>toggle Autoslide</td>
+								</tr>
+								<tr>
+									<td>?timer=n</td>
+									<td>after .html to adjust time in seconds</td>
+								</tr>
+								<tr>
+									<td>S</td>
+									<td>load speaker view window</td>
+								</tr>
+								<tr>
+									<td>R</td>
+									<td>turn on record mode</td>
+								</tr>
+								<tr>
+									<td>Z</td>
+									<td>download a .zip of recordings</td>
+								</tr>
+								<tr>
+									<td>Alt + {click}</td>
+									<td>zoom in, {click} to zoom out</td>
+								</tr>
+								<tr>
+									<td>?print-pdf</td>
+									<td>after .html for print styling</td>
+								</tr>
+								<!-- <tr>
+									<td>Esc</td>
+									<td>Slide deck overview</td>
+									<td>click to slide or Esc to return</td>
+								</tr> -->
+								<!-- <tr>
+									<td>B or .</td>
+									<td>toggle Pause</td>
+									<td>cover distracting slide</td>
+								</tr> -->
+								<!-- <tr>
+									<td>F</td>
+									<td>Fullscreen</td>
+									<td>Esc to exit</td>
+								</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<aside class="notes">
+						Navigation with UDLR arrows or scrollwheel. Mobile devices, swipe to change slide, pinch to overview.
+					</aside>
+				</section>
+
+
+
+
+
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="clearTome">
+			<i id="booklet" class="fa fa-book fa-1rpm spiralbound"></i>
+		</div>
+
+				<div class="piecewise" style="display:none;">
+					<div id="rescalar" class="fa-rotate-270">
+					<a href="#/analogy"><i style="position:relative;" data-label="&nbsp;bground" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<a href="#/setup"><i data-label="&nbsp;&nbsp;&nbsp;set up" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<a href="#/predict"><i data-label="&nbsp;&nbsp;predict" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<a href="#/video"><i data-label="&nbsp;&nbsp;&nbsp;video" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<a href="#/colorflow"><i data-label="colorflow" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<a href="#/num"><i data-label="&nbsp;&nbsp;&nbsp;#NUM" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<a href="#/intheory"><i data-label="in&nbsp;theory" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<i id="blankpiece" data-label="&nbsp;" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i>
+					</div>
+				</div>
+
+		
+		<div class="clearFace">
+			<i id="tilt" class="fa fa-eraser clearUI"></i>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="startTank" style="">
+			<a href="#/tank"><i style="position:relative;-webkit-transform:scale(1.5,1) perspective(.5px) rotateX(1deg);" 
+			 class="fa fa-bitbucket tankData"></i></a>
+		</div>
+
+		<div class="clockLock" style="">
+			<i class="fa fa-history fa-1rpm fa-lg timeData"></i>
+		</div>
+
+		<div class="coRotator">
+			<i class="fa fa-video-camera fa-rotate-90 viewData"></i>
+		</div>
+
+
+		<div class="radome">
+			<a href="#/world"><i class="fa fa-globe fa-p33x worldData"></i></a>
+		</div>
+
+		<div class="greenBuilding">
+			<a href="http://coriolis.no-ip.org/clear/up">
+			<i class="fa fa-building goOut"></i></a>
+		</div>
+
+		<div class="overView">
+			<i class="fa fa-search-minus zoomOut"></i>
+		</div>
+
+		<div class="loadNotes">
+			<i class="fa fa-comments-o notesToggle"></i>
+		</div>
+
+		<div class="titleBlock">
+		&nbsp;<span id="titleText" data-title="Weather in a Tank" class="reflected" contenteditable="true">Weather in a Tank</span>&nbsp;
+		</div>
+		<!-- <div id="perspectival" style="-webkit-transform: perspective(12px) rotateX(1deg);"> -->
+		<div id="inertialFrame">
+			<div id="fluidFrame">
+				<!-- <i id="jetSyncer" style="position:absolute;margin-left:-23px;margin-top:2px" class="fa fa-openid fa-flip-horizontal"></i> -->
+				&nbsp;<span id="promptText" contenteditable="true">using water on a turntable</span>&nbsp;
+				<br>
+				<!-- <i id="globalFax" style="position:absolute;margin-left:-23px;margin-top:2px;" class="fa fa-lg fa-globe"></i> -->
+				<div id="defrag">
+					<div id="notesPane" contenteditable="true">
+					    <h2>Headline</h2>
+					    <p>Paragraph element</p>
+					    <ol>
+					      <li>List object</li>
+					      <li>Second item</li>
+					      <li>Third item</li>
+					    </ol>
+					</div>
+				</div>		
+			</div>
+		</div> 
+		<!-- </div> -->
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
+
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				mouseWheel: true, //~
+				progress: true,
+				slideNumber: true, //~
+				history: true,
+				loop: false, //~
+				center: false, //~ queue0
+
+				transitionSpeed: 'default', // default/fast/slow //~
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				autoSlide: 1000*(Reveal.getQueryHash().timer) || 2000, // time in seconds before auto-advancing slides or fragments //~
+				fragments: Reveal.getQueryHash().fragments || true, // turns fragments on and off globally, fragments stay hidden if false //~
+
+				// Audio Slideshow plugin (care of: http://www.faculty.jacobs-university.de/agoel/audio-slideshow/)
+				audioPrefix: 'audio/',	// audio files are stored in the "audio" folder //~
+				audioSuffix: '.wav',	// audio files have the ".wav" ending //~
+				keyboard: { 
+					82: function() { Recorder.toggleRecording(); },	// press 'r' to start/stop recording
+					90: function() { Recorder.downloadZip(); } 	// press 'z' to download zip containing audio files
+				},
+
+				// Parallax scrolling
+				parallaxBackgroundImage: 'http://coriolis.no-ip.org/coloriis/UI/space_hedron.jpg',
+				parallaxBackgroundSize: '4000px 2500px',
+				parallaxForceVertical: false, //~
+				// parallaxBackgroundImage: 'http://coriolis.no-ip.org/coloriis/UI/green-spread.jpg',
+				// parallaxBackgroundSize: '1800px 1600px',
+
+			
+				width: 960, //~  queue2   //768(portrait),1024(landscape)
+				height: 700, //~ queue2   //946(portrait);690(portrait);
+				margin: 0.14,  //~ *! min % padding around slide content queue1
+				// Bounds for smallest/largest possible scale to apply to content 
+				minScale: 0.2, //~
+				maxScale: 4, //~
+				// Opens links in an iframe preview overlay
+				// previewLinks: false, //~
+
+				// Number of slides away from the current that are visible
+				viewDistance: 3,
+
+				math: {
+					// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js' 
+					config: 'TeX-AMS_HTML-full'
+				},
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					// { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal.js/plugin/math/math.js', async: true },
+					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } }
+					// { src: 'pkg/text-to-speech/tts.js', async: true, condition: function() { return !!document.querySelector( '[text-to-speech]' ); } }
+				]
+			});
+		</script>
+
+		<script language="javascript" type="text/javascript" src="pkg/h5utils.js"></script>	
+		<script language="javascript" type="text/javascript" src="pkg/jquery-1.11.0.js"></script>
+			<!-- <script language="javascript" type="text/javascript" src="pkg/canvas/excanvas.js"></script>
+			<script language="javascript" type="text/javascript" src="pkg/canvas/html5-canvas-drawing-app.js"></script> -->
+		<!--<script language="javascript" type="text/javascript" src="pkg/jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script>-->
+		<!-- <script language="javascript" type="text/javascript" src="pkg/jbrowser/jquery.browser.js"></script>	 -->
+		<!-- <script type="text/javascript" type="text/javascript" src="pkg/circleslide/slider.js"></script> -->
+		<!-- <script language="javascript" type="text/javascript" src="pkg/canimate/jquery.canimate.js"></script>-->
+		<script language="javascript" type="text/javascript" src="js/general.js"></script>
+
+	</body>
+</html>
