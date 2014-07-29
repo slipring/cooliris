@@ -21,11 +21,13 @@
 		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
 
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" type="text/css">
+
 		<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:800italic,400,700&subset=latin,greek' rel='stylesheet' type='text/css'> -->
 		<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,600&subset=latin,greek' rel='stylesheet' type='text/css'> -->
 		<!-- <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
 		<!-- <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css'> -->
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" type="text/css">
+	
 		
 		<link rel="stylesheet" href="pkg/font-awesome-4.1.0/css/font-awesome.css">
 		<!-- <link rel="stylesheet" href="pkg/jquery-ui-1.10.4/css/themes/dot-luv/jquery-ui.css">
@@ -85,6 +87,35 @@
 
 				<!-- holds : overlapper overlapped underlapped 
 				   - vessel : surface interior bottom -->
+
+	<!-- 			<section id="tests">
+					<section id="ttablee">
+						<div style="-webkit-transform:scale(1,.5) perspective(2px) rotateX(2deg);opacity:.8">
+							<i style="" class="fa fa-circle-o-notch fa-10rpm"></i>
+						</div>
+					</section>
+
+					<section id="corona2">
+						<div style="-webkit-transform:scale(1,1) perspective(2px) rotateX(9deg);opacity:.8">
+							<i style="" class="fa fa-circle-o-notch fa-10rpm"></i>
+						</div>
+					</section>
+
+					<section id="corona">
+						<i style="transform-origin: 0% 0%" class="fa fa-circle-notch fa-10rpm">ooo</i>
+						<br>
+						<i style="transform-origin: 0% 0%" class="fa fa-circle-o-notch fa-10rpm"></i>
+						<br>
+						<i style="" class="fa fa-circle-o-notch fa-10rpm"></i>
+						<div style="-webkit-transform:scale(1.5,1.2) perspective(14px) rotateX(45deg);opacity:.8">
+							<i style="" class="fa fa-circle-o-notch fa-10rpm"></i>
+						</div>
+					</section>
+				</section> -->
+
+					
+
+
 
 
 				<section data-timer="10" data-title="Weather in a Tank" id="tank">	
@@ -644,6 +675,12 @@
 					<img class="" data-src="coro1rpmA.gif" data-fragment-index="0"
 					 	style="position:absolute;top:-200px;right:-10px;-webkit-transform:scale(.8,.8);z-index:123;opacity:1">
 
+
+					<!-- <div style="-webkit-transform:scale(1.5,1.2) perspective(14px) rotateX(45deg);opacity:.8">
+							<i style="" class="fa fa-circle-o-notch fa-10rpm"></i>
+						</div> --><!-- too experimental -->
+
+
 					<img class="fragment roll-in"  data-src="scratchblank.png" data-fragment-index="4"
 						 style="position:absolute;top:-120px;right:200px;-webkit-transform:scale(.7,.7);opacity:.8;border-radius:30px;z-index:121">
 					
@@ -670,6 +707,9 @@
 					<img class="fragment fade-in" data-src="http://coriolis.no-ip.org/clear/up/load/O/W/P/Q.png" data-fragment-index="1"  
 						style="-webkit-transform:scale(1.35,1.35);position:absolute;left:80px;top:100px">
 		
+
+
+
 				</section>
 
 
@@ -2148,7 +2188,8 @@
 			<i style="color:white;opacity:.6" class="fa fa-stack-2x fa-globe"></i>
 			<i style="color:rgba(3,188,112,1);color: rgba(105, 225, 231, 1);;opacity:.9" class="fa fa-stack-1x fa-circle-o"></i>
 			</span> -->
-	
+						
+
 
 
 	<div class="clearTome">
@@ -2158,20 +2199,20 @@
 
 				<div class="piecewise" style="display:none;">
 					<div id="rescalar" class="fa-rotate-270" style="transform-origin: 0% 0%">
-					<i id="blankpiece" style="opacity:.8" data-label="&nbsp;&nbsp;&nbsp;&nbsp;clear" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map hypernav"></i>
-					<a href="#/analogy"><i style="position:relative;" data-label="&nbsp;&nbsp;&nbsp;fluids" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
-					<a href="#/setup"><i data-label="&nbsp;&nbsp;&nbsp;set up" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
-					<a href="#/predict"><i data-label="&nbsp;&nbsp;predict" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
-					<a href="#/video"><i data-label="&nbsp;&nbsp;&nbsp;video" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
-					<a href="#/colorflow"><i data-label="&nbsp;analysis" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
-					<a href="#/num"><i data-label="&nbsp;&nbsp;&nbsp;#num" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
-					<a href="#/intheory"><i data-label="&nbsp;&nbsp;&nbsp;theory" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<i id="blankpiece" title="reveal" style="opacity:.8" data-label="&nbsp;&nbsp;&nbsp;&nbsp;clear" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map hypernav"></i>
+					<a href="#/analogy"><i title="analogies" style="position:relative;" data-label="&nbsp;&nbsp;&nbsp;fluids" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<a href="#/setup"><i title="how-to" data-label="&nbsp;&nbsp;&nbsp;set up" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<a href="#/predict"><i title="make prediction" data-label="&nbsp;&nbsp;predict" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<a href="#/video"><i title="experiment stream" data-label="&nbsp;&nbsp;&nbsp;video" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<a href="#/colorflow"><i title="flow patterns" data-label="&nbsp;&nbsp;analyze" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<a href="#/num"><i title="numerics" data-label="&nbsp;&nbsp;&nbsp;#num" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
+					<a href="#/intheory"><i title="basic theory" data-label="&nbsp;&nbsp;&nbsp;theory" class="fa fa-4x fa-puzzle-piece fa-rotate-90 map"></i></a>
 					</div>
 				</div>
 
 		
 		<div class="clearFace">
-			<i id="tilt" title="clear face" class="fa fa-eraser clearUI"></i>
+			<i id="tilt" title="clear tack" class="fa fa-eraser clearUI"></i>
 		</div>
 
 
@@ -2188,34 +2229,38 @@
 
 
 		<div class="startTank" style="">
-			<a href="#/tank"><i style="position:relative;-webkit-transform:scale(1.5,1) perspective(.5px) rotateX(1deg);" 
+			<a href="#/tank"><i title="tank intro" style="position:relative;-webkit-transform:scale(1.5,1) perspective(.5px) rotateX(1deg);" 
 			 class="fa fa-bitbucket tankData"></i></a>
 		</div>
 
+		<div id="haLo" style="display:inline-block; color:white;position:absolute;bottom:0px;left:67px;z-index:2;-webkit-transform:scale(3,1.5) perspective(2px) rotateX(2deg);">
+			<i style="opacity:.06" class="fa fa-circle-o-notch fa-1rpm"></i>
+		</div>
+
 		<div class="clockLock" style="">
-			<i class="fa fa-history fa-1rpm fa-lg timeData"></i>
+			<i title="auto stream" class="fa fa-history fa-1rpm fa-lg timeData"></i>
 		</div>
 
 		<div class="coRotator">
-			<i class="fa fa-video-camera fa-rotate-90 viewData"></i>
+			<i title="frame focus" class="fa fa-video-camera fa-rotate-90 viewData"></i>
 		</div>
 
 
 		<div class="radome">
-			<a href="#/world"><i class="fa fa-globe fa-p33x worldData"></i></a>
+			<a href="#/world"><i title="world outro" class="fa fa-globe fa-p33x worldData"></i></a>
 		</div>
 
 		<div class="greenBuilding">
 			<a href="http://coriolis.no-ip.org/clear/up">
-			<i class="fa fa-building goOut"></i></a>
+			<i title="exit build" class="fa fa-building goOut"></i></a>
 		</div>
 
 		<div class="overView">
-			<i class="fa fa-search-minus zoomOut"></i>
+			<i title="zoom out" class="fa fa-search-minus zoomOut"></i>
 		</div>
 
 		<div class="loadNotes">
-			<i class="fa fa-comments-o notesToggle"></i>
+			<i title="sub texts" class="fa fa-comments-o notesToggle"></i>
 		</div>
 
 		<div class="titleBlock">

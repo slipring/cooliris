@@ -1,11 +1,10 @@
 /* offsite fonts */
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic);
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,800&subset=latin,greek);
 /*@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);*/
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,600&subset=latin,greek);*/
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans:800italic,400,700&subset=latin,greek);
 */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,800&subset=latin,greek);
 
 /* box model */
 
@@ -275,8 +274,7 @@
   }
 
   .timeData:hover{
-    /*color:rgba(255,255,255,1);*/
-    color:rgba(3,188,112,1);
+    color:rgba(255,255,255,1);
     /*color:#13daec;*/
     /*color:rgba(3,188,112,1);*/
   }
@@ -299,7 +297,7 @@
     min-height:13px;
     margin-top:1px;
     margin-left:.1em;
-    padding:4px 0px 0px 0px;
+    padding:2px 0px 0px 0px;
 
 }
 
@@ -321,9 +319,6 @@
   color:rgba(171,137,224,1);
 }
 
-.orangeif {
-  color:rgba(255,94,71,1);
-}
 
 
 /*.shadowing {
@@ -362,17 +357,9 @@ i.glowring {
   -webkit-text-shadow: -1px 4px  rgba(105, 225, 231, 1);
 }
 
-.dropshadneon {
-  color:white;
-  opacity:1;
-  text-shadow: -1px 4px #13daec;
-  -moz-text-shadow: -1px 4px  #13daec;
-  -webkit-text-shadow: -1px 4px  #13daec;;
-}
-
 /* rgba(105, 225, 231, 0.9)  light blue */
 
-/*color:#13daec;*/
+
 
 
 
@@ -382,8 +369,8 @@ i.glowring {
   display:block;
   /* bottom:30px;
   right:10px;*/
-  bottom:6px;
-  right:4px;
+  bottom:13px;
+  right:5px;
   z-index:55;
 }
 
@@ -401,8 +388,8 @@ i.glowring {
 .loadNotes {
   position:fixed;
   display:block;
-  bottom:24px;
-  right:12px;
+  bottom:28px;
+  right:16px;
   z-index:54;
 }
 
@@ -654,8 +641,8 @@ i.glowring {
 .reveal .slide-number {
   position: fixed;
   display: block;
-  right: 24px; 
-  bottom: 9px; 
+  right: 28px; 
+  bottom: 16px; 
   opacity: 0.75;
   font-size: 12px;
   z-index: 31;

@@ -23,7 +23,6 @@ var flipper = 0
 $('.clearFace').click(function() {
     $('#inertialFrame').toggle();
     $('.titleBlock').toggle();
-    $('#haLo').toggle();
     $('.overView').toggle();
     $('.clearTome').toggle();
     $('.loadNotes').toggle();
@@ -81,14 +80,13 @@ var autoStream = 0;
 $('.timeData').click(function() {
     if (autoStream == 0) {
       autoStream = 1; 
-      $('.timeData').css("color","rgba(3,188,112,.8)");     
+      $('.timeData').css("color","rgba(255,255,255,.9)");     
     } else {
       autoStream = 0;
       $('.timeData').css("color","#13daec;");
     }
   });
 
-/* rgba(255,94,71,1)       ORANGE RED COLOR */
 
 
 
