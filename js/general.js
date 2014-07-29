@@ -24,6 +24,7 @@ $('.clearFace').click(function() {
     $('#inertialFrame').toggle();
     $('.titleBlock').toggle();
     $('.overView').toggle();
+    $('.clearTome').toggle();
     $('.loadNotes').toggle();
     $('.clockLock').toggle();
     $('.coRotator').toggle();
@@ -91,59 +92,108 @@ $('.timeData').click(function() {
 
 
 
+var mapState = 1;
+var spiralbounds = 0;
 
-// var spiralbound = 0;
+$('.map').click(function() {
+  switch (mapState) {
+    case 0:
+     $('.piecewise').css("left",-3+"px");
+    mapState = 1;
+    spiralbounds = 1;
+      break;
+    case 1:
+      $('.piecewise').css("left",-45+"px");
+      mapState = 0;
+     spiralbounds = 2;
+      break;
+    case 2:
+      console.log('case 2')
+      break;
+    default:
+      console.log('map ping')
+  }
+});
+
+
+
+$('.clearTome').click(function() {
+    switch (spiralbounds) {
+      case 0:
+        $('.piecewise').show();
+        mapState = 1;
+        spiralbounds = 1;
+         $('#booklet').addClass("expansion");
+        break;
+      case 1:
+        $('.piecewise').css("left",-45+"px"); 
+        $('#booklet').removeClass("expansion");
+        spiralbounds = 2;
+        mapState = 0;
+        break;
+      case 2:
+        $('.piecewise').css("left",-3+"px");
+          $('#booklet').addClass("glowring");
+        mapState = 2;
+        spiralbounds = 3;
+        break;
+      case 3:
+        $('.piecewise').hide();
+         $('.titleBlock').hide();
+               $('#booklet').removeClass("glowring");
+         $('#booklet').addClass("dropshad");
+
+         mapState = 0;
+        spiralbounds = 4;
+        break;
+      case 4:
+        $('.titleBlock').show();
+        $('#booklet').removeClass("dropshad");
+        spiralbounds = 0;
+      default:
+        console.log(spiralbounds);
+           }
+});
+
+
+
+
+$( "i.map" ).hover(function() {
+  $( this ).fadeOut( 100 );
+  $( this ).fadeIn( 500 );
+});
+
+
+$('.hypernav').click(function() {
+  if (mapState == 2) {
+        $('.piecewise').hide();
+        $('#booklet').removeClass("glowring");
+        mapState = 1;
+        spiralbounds = 0;
+  } else { console.log('hypernav clear');}
+});
+
+
+     // var currentViewWind = $(window).width();
+     //    $('#inertialFrame').addClass("fluidSpan");
+     //    $('.fluidSpan').css("width",parseInt(currentViewWind)-155+"px");
+     //    spiralbounds = 2;
+   
+
+  //   var currentViewHeight = $(window).height();
+  //   var newHt = parseInt(currentViewHeight)+"px";
+  //   console.log(newHt);
+  // console.log(    $('.piecewise').css('height'));
+  // $('.piecewise').toggle();
+
+
 
 // $('.clearTome').click(function() {
 //   //   var currentViewHeight = $(window).height();
 //   //   var newHt = parseInt(currentViewHeight)+"px";
 //   //   console.log(newHt);
 //   // console.log(    $('.piecewise').css('height'));
-//   // $('.piecewise').toggle();
-//     switch (spiralbound) {
-//       case 0:
-//         $('.piecewise').show();
-//         spiralbound = 1;
-//         break;
-//       case 1:
-//         var currentViewWind = $(window).width();
-//         $('#inertialFrame').addClass("fluidSpan");
-//         $('.fluidSpan').css("width",parseInt(currentViewWind)-155+"px");
-//         spiralbound = 2;
-//         break;
-//       case 2:
-        
-//         spiralbound = 3;
-//         break;
-//       case 3:
-
-//         spiralbound = 0;
-//         break;
-
-//       default:
-    
-// });
-
-
-$('.clearTome').click(function() {
-  //   var currentViewHeight = $(window).height();
-  //   var newHt = parseInt(currentViewHeight)+"px";
-  //   console.log(newHt);
-  // console.log(    $('.piecewise').css('height'));
-  $('.piecewise').toggle();});
-
-
-var mapState = 0;
-
-$('.map').click(function() {
-  if (mapState == 0 ) {
-    $('.piecewise').css("left",-3+"px");
-    mapState = 1;
-  } else {
-    $('.piecewise').css("left",-45+"px");
-    mapState = 0;
-  }
-  });
+//   $('.piecewise').toggle();});
 
 
 //* cross-check on devices
