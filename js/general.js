@@ -543,7 +543,7 @@ $('.help').click(function( event ) {
   });
 
 
-// $( ".hide-time" ).trigger( "click" );
+$( ".hide-time" ).trigger( "click" );
 $( ".clearFace" ).trigger( "click" );
 
 
