@@ -233,17 +233,19 @@ var spiralbounds = 0;
 $('.map').click(function() {
   switch (mapState) {
     case 0:
-     $('.piecewise').css("left",-3+"px");
+     $('.piecewise').css("left",3+"px");
     mapState = 1;
     spiralbounds = 1;
       break;
     case 1:
-      $('.piecewise').css("left",-45+"px");
+      var navWidth = $('.piecewise');
+      var theWidth = navWidth.width();
+      $('.piecewise').css("left",-theWidth+25+"px");
       mapState = 0;
-     spiralbounds = 2;
+     spiralbounds = 1;
       break;
     case 2:
-      console.log('case 2')
+      console.log('nav locked')
       break;
     default:
       console.log('map ping')
@@ -256,36 +258,36 @@ $('.clearTome').click(function() {
     switch (spiralbounds) {
       case 0:
         $('.piecewise').show();
+         $('#booklet').removeClass("expansion");
         mapState = 1;
         spiralbounds = 1;
-         $('#booklet').addClass("expansion");
         break;
       case 1:
-        $('.piecewise').css("left",-45+"px"); 
-        $('#booklet').removeClass("expansion");
-          $('#booklet').addClass("contraction");
+       $('#booklet').addClass("glowring");
+       $('.piecewise').css("left",3+"px");
         spiralbounds = 2;
-        mapState = 0;
+        mapState = 2;
         break;
       case 2:
-       $('#booklet').removeClass("contraction");
-        $('.piecewise').css("left",-3+"px");
-          $('#booklet').addClass("glowring");
-        mapState = 2;
+          $('#booklet').removeClass("glowring");
+         var navWidth = $('.piecewise');
+          var theWidth = navWidth.width();
+        $('.piecewise').css("left",-theWidth+25+"px"); 
+        mapState = 0;
         spiralbounds = 3;
         break;
       case 3:
         $('.piecewise').hide();
          $('.titleBlock').hide();
-               $('#booklet').removeClass("glowring");
          $('#booklet').addClass("dropshad");
-
          mapState = 0;
         spiralbounds = 4;
         break;
       case 4:
         $('.titleBlock').show();
+        $('.piecewise').css("left",3+"px");
         $('#booklet').removeClass("dropshad");
+        $('#booklet').addClass("expansion")
         spiralbounds = 0;
       default:
         console.log(spiralbounds);
@@ -541,7 +543,7 @@ $('.help').click(function( event ) {
   });
 
 
-$( ".hide-time" ).trigger( "click" );
+// $( ".hide-time" ).trigger( "click" );
 $( ".clearFace" ).trigger( "click" );
 
 
