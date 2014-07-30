@@ -14,6 +14,134 @@
 
   // }
 
+function zeroPadInteger( num ) {
+
+          var str = '00' + parseInt( num );
+          return str.substring( str.length - 2 );
+
+        }
+
+      function setupTimer() {
+
+          var start = new Date(),
+            timeEl = document.querySelector( '.speaker-controls-time' ),
+            clockEl = timeEl.querySelector( '.clock-value' ),
+            hoursEl = timeEl.querySelector( '.hours-value' ),
+            minutesEl = timeEl.querySelector( '.minutes-value' ),
+            secondsEl = timeEl.querySelector( '.seconds-value' );
+
+          function _updateTimer() {
+
+            var diff, hours, minutes, seconds,
+              now = new Date();
+
+            diff = now.getTime() - start.getTime();
+            hours = Math.floor( diff / ( 1000 * 60 * 60 ) );
+            minutes = Math.floor( ( diff / ( 1000 * 60 ) ) % 60 );
+            seconds = Math.floor( ( diff / 1000 ) % 60 );
+
+            clockEl.innerHTML = now.toLocaleTimeString( 'en-US', { hour12: true, hour: '2-digit', minute:'2-digit' } );
+            hoursEl.innerHTML = zeroPadInteger( hours );
+            hoursEl.className = hours > 0 ? '' : 'mute';
+            minutesEl.innerHTML = ':' + zeroPadInteger( minutes );
+            minutesEl.className = minutes > 0 ? '' : 'mute';
+            secondsEl.innerHTML = ':' + zeroPadInteger( seconds );
+
+          }
+
+          // Update once directly
+          _updateTimer();
+
+          // Then update every second
+          setInterval( _updateTimer, 1000 );
+
+          timeEl.addEventListener( 'click', function() {
+            start = new Date();
+            _updateTimer();
+            return false;
+          } );
+
+        }
+
+setupTimer();
+
+
+
+$('.hide-time').click(function() {
+  $('.clock').toggle();
+  $('.timer').toggle();
+  $('.reset-button').toggle();
+  $('.hide-time').toggleClass('purpleiff');
+});
+
+$('.tone-arm').click(function(){
+  var syncs = document.getElementsByClassName("skips");
+  // console.log(syncs);     //report all resyncers
+  $('#dudea').removeClass('fa-1rpmS');
+  var jets = [].map.call(syncs, function (el) {
+        if (el.src){
+        el.src = el.src;}
+        });
+  setTimeout(
+             function() {
+  $('#dudea').addClass('fa-1rpmS');}, 1 );
+});
+
+$('#dudea').click(function(){
+  $('#dudea').removeClass('fa-1rpmS');
+  setTimeout(
+             function() {
+  $('#dudea').addClass('fa-1rpmS');}, 1 );
+});
+
+$('.reset-button').click(function(){
+  $('#dudea').removeClass('fa-1rpmS');
+  setTimeout(
+             function() {
+  $('#dudea').addClass('fa-1rpmS');}, 1 );
+});
+
+
+
+// $('.sychro').click(function(){
+//   var syncs = document.getElementsByClassName("skips");
+//   console.log(syncs);
+//   var onicities = [].map.call(syncs, function (el) {
+//         el.src = el.src;
+//         return el.getAttribute("src");
+//         });
+//   console.log(onicities)
+// });
+
+
+// var scratches = toArray(document.getElementsByClassName('skips'));
+
+// scratches.forEach(function(entry) {
+//     var reSync = entry.attr('data-title');
+//         entry.src=reSync;
+//         console.log(reSync);
+//   });
+
+
+   // var looper = Reveal.getCurrentSlide;
+   // console.log(looper);
+
+// scratches.forEach(function(entry) {
+//     var reSync = entry.attr('data-title');
+//         entry.src=reSync;
+//         console.log(reSync);
+//   });
+
+// arrSync = dojo.map(scratches, function(item) {
+//             var reSync = item.attr('data-title');
+//             item.src=reSync;
+//             return reSync;
+//         });
+// console.log(arrSync);
+// var scratches = event.currentSlide.querySelectorAll( '.skips' );
+// onClick="document.getElementById('resetme00').src='http://coriolis.no-ip.org/clear/up/load/hadley_mediumless.gif'"
+
+
 
 
 //* mostly harmless
@@ -21,28 +149,29 @@
 var flipper = 0
 
 $('.clearFace').click(function() {
-    $('#inertialFrame').toggle();
-    $('.titleBlock').toggle();
+    // $('#inertialFrame').toggle();
+    // $('.titleBlock').toggle();
     $('#haLo').toggle();
     $('.overView').toggle();
-    $('.clearTome').toggle();
+    // $('.clearTome').toggle();
     $('.loadNotes').toggle();
     $('.clockLock').toggle();
     $('.coRotator').toggle();
-    $('.playback').toggle();
-    $('.controls').toggle();
+    $('.help').toggle();
+    // $('.controls').toggle();
     $('.greenBuilding').toggle();
     $('.radome').toggle();
     $('.startTank').toggle();
     if (flipper) {
        $('#tilt').removeClass('fa-flip-horizontal');
+       $('.playback').show();
        flipper = 0;      
     } else {
       $('#tilt').addClass('fa-flip-horizontal');
+      $('.playback').hide();
       flipper = 1;
     }
   });
-
 
 
 $('.coRotator').click(function() {
@@ -66,11 +195,13 @@ $('.overView').click(function() {
 
 
 
-
 Reveal.addEventListener( 'slidechanged', function( event ) {
   // event.previousSlide, event.currentSlide, event.indexh, event.indexv
   var slideID = event.currentSlide.id;
-  console.log (slideID);
+  if (slideID) {
+  console.log (slideID);} else {
+    console.log ('noid')
+  }
 });
 
 
@@ -81,10 +212,12 @@ var autoStream = 0;
 $('.timeData').click(function() {
     if (autoStream == 0) {
       autoStream = 1; 
-      $('.timeData').css("color","rgba(3,188,112,.8)");     
+      $('.timeData').css("color","rgba(3,188,112,.9)");
+      Reveal.configure({ loop: true });     
     } else {
       autoStream = 0;
       $('.timeData').css("color","#13daec;");
+      Reveal.configure({ loop: true });
     }
   });
 
@@ -130,10 +263,12 @@ $('.clearTome').click(function() {
       case 1:
         $('.piecewise').css("left",-45+"px"); 
         $('#booklet').removeClass("expansion");
+          $('#booklet').addClass("contraction");
         spiralbounds = 2;
         mapState = 0;
         break;
       case 2:
+       $('#booklet').removeClass("contraction");
         $('.piecewise').css("left",-3+"px");
           $('#booklet').addClass("glowring");
         mapState = 2;
@@ -331,11 +466,11 @@ Reveal.addEventListener( 'fragmentshown', function( event ) {
 
 Reveal.addEventListener( 'slidechanged', function( event ) {
     // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-    var timeControl = event.currentSlide.getAttribute('data-timer');
+    var timeControl = event.currentSlide.getAttribute('data-period');
     if(timeControl && autoStream == 1) {
       console.log( timeControl + ' second window' );
-      msTimer = timeControl * 1000;
-    Reveal.configure({ autoSlide: msTimer });
+      msperiod = timeControl * 1000;
+    Reveal.configure({ autoSlide: msperiod });
     }
   });
 
@@ -344,11 +479,11 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 
 Reveal.addEventListener( 'fragmentshown', function( event ) {
   // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-  var timeControl = event.fragment.getAttribute('data-timer');
+  var timeControl = event.fragment.getAttribute('data-period');
   if(timeControl && autoStream == 1) {
       console.log( timeControl + ' second window' );
-      msTimer = timeControl * 1000;
-    Reveal.configure({ autoSlide: msTimer });
+      msperiod = timeControl * 1000;
+    Reveal.configure({ autoSlide: msperiod });
     }
 });
 
@@ -374,7 +509,92 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
        MathJax.Hub.Rerender(document.querySelector(".slides .present")) 
        }, 500);
        } ); 
- 
+
+
+
+
+
+
+var controlMode = 0;
+
+
+$('.help').click(function( event ) {
+  // $('.playback').toggle();
+  $('.controls').toggle();
+    if (controlMode == 0) {
+    Reveal.showHelp( true );
+      $('.helpicon').removeClass('fa-gamepad');
+         $('.helpicon').removeClass('fa-flip-horizontal');
+       $('.helpicon').addClass('fa-keyboard-o');
+    $('.notesToggle').toggle();
+    // $('.clearFace').toggle();
+    controlMode = 1; }
+    else {
+              $('.helpicon').removeClass('fa-keyboard-o');
+    $('.helpicon').addClass('fa-gamepad');
+    $('.helpicon').addClass('fa-flip-horizontal');
+
+       $('.notesToggle').toggle();
+       // $('.clearFace').toggle();
+       controlMode = 0;
+    }
+  });
+
+
+$( ".hide-time" ).trigger( "click" );
+$( ".clearFace" ).trigger( "click" );
+
+
+
+// $('.help').click(function( event ) {
+//   // $('.playback').toggle();
+//   $('.controls').toggle();
+//     if (controlMode == 0) {
+//     $('.helpicon').removeClass('fa-keyboard-o');
+//     $('.helpicon').addClass('fa-gamepad');
+//     // $('.helpicon').addClass('fa-flip-horizontal');
+//     Reveal.showHelp( true );
+//     controlMode = 1}
+//     else {
+//       $('.helpicon').removeClass('fa-gamepad');
+//          // $('.helpicon').removeClass('fa-flip-horizontal');
+//        $('.helpicon').addClass('fa-keyboard-o');
+//           $('.clockLock').toggle();
+//        controlMode = 0;
+//     }
+//   });
+
+
+// $('.help').click(function( event ) {
+//   $('.playback').toggle();
+//   $('.controls').toggle();
+//     if (controlMode == 0) {
+//     $('.helpicon').removeClass('fa-keyboard-o');
+//     $('.helpicon').addClass('fa-gamepad');
+//     $('.helpicon').addClass('fa-flip-horizontal');
+//        $('.clockLock').toggle();
+//     $('.coRotator').toggle();
+//  $('.greenBuilding').toggle();
+//     $('.radome').toggle();
+//     $('.startTank').toggle();
+//     $('.clearTome').toggle();
+//     $('.clearFace').toggle();
+//     $('.overView').toggle();
+//     $('#haLo').toggle();
+//     Reveal.showHelp( true );
+//     controlMode = 1}
+//     else {
+//       $('.helpicon').removeClass('fa-gamepad');
+//          $('.helpicon').removeClass('fa-flip-horizontal');
+//        $('.helpicon').addClass('fa-keyboard-o');
+//           $('.clockLock').toggle();
+//     $('.coRotator').toggle();
+//  $('.greenBuilding').toggle();
+//     $('.radome').toggle();
+//     $('.startTank').toggle();
+//        controlMode = 0;
+//     }
+//   });
 
 
 

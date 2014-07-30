@@ -15,6 +15,146 @@
  }
 
 
+.arrow::before {
+  font-family: 'Arial' !important;
+  color: rgba(255,255,255,.2) !important;  
+  content: '►' !important;
+  padding-right: 5px !important;
+  font-size: 12px !important;
+}
+.arrow.expanded::before {
+  content: '▼' !important;
+}
+
+
+/*.split-view {
+  box-shadow: -5px 0 50px rgba(0, 0, 0, .5);
+}
+*/
+
+
+#speaker-controls {
+        position: absolute;
+        top: 4px;
+        right: 0;
+        width: 26%;
+        height: 60%;
+        font-size: 1.5vw;
+      }
+
+        .speaker-controls-time.hidden,
+        .speaker-controls-notes.hidden {
+          display: none;
+        }
+
+        .speaker-controls-time .label,
+        .speaker-controls-notes .label {
+          text-align: right;
+          text-transform: uppercase;
+          font-weight: normal;
+          font-size: .75em;
+          color: #666;
+          margin: 0;
+        }
+
+        .speaker-controls-time {
+          border-bottom: 0px solid rgba( 200, 200, 200, 0.5 );
+          margin-bottom: 10px;
+          padding: 0px 16px;
+          padding-bottom: 20px;
+          cursor: pointer;
+        }
+
+        .speaker-controls-time .reset-button {
+          opacity: 0;
+          float: left;
+          color: #666;
+          text-decoration: none;
+        }
+        .speaker-controls-time:hover .reset-button {
+          opacity: 1;
+        }
+
+        .speaker-controls-time .timer,
+        .speaker-controls-time .clock {
+          width: 50%;
+          font-size: 1.6em;
+        }
+
+        .speaker-controls-time .timer {
+          float: left;
+        }
+
+        .speaker-controls-time .clock {
+          float: right;
+          text-align: right;
+        }
+
+        .speaker-controls-time span.mute {
+          color: rgba(0,0,0,.25);
+        }
+
+        .speaker-controls-notes {
+          padding: 10px 16px;
+        }
+
+        .speaker-controls-notes .value {
+          margin-top: 5px;
+          line-height: 1.4;
+          font-size: 1.2em;
+        }
+
+      .clear {
+        clear: both;
+      }
+/*
+
+
+      @media screen and (max-width: 1080px) {
+        #speaker-controls {
+          font-size: 14px;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        #speaker-controls {
+          font-size: 12px;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        #speaker-controls {
+          font-size: 10px;
+        }
+      }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .clearTome {
@@ -23,10 +163,14 @@
 /*   top:18px;
   left:14px;*/
      bottom:55px;
-  left:6px;
+/*  left:6px;*/
+left:-6px;
   z-index:80;
 }
 
+.clearTome:hover {
+  left:8px;
+}
   .spiralbound {
     /*color:#13daec;*/
     color:#eeeeee;
@@ -38,9 +182,20 @@
   .expansion {
     /*color:#13daec;*/
     color:#eeeeee;
-    opacity:.7;
+    opacity:.8;
     font-size:24px;
+    text-shadow: 0px 0px 10px rgba(105, 225, 231, 1);
+  }
 
+  .contraction {
+    /*color:#13daec;*/
+    color:#bbbbbb;
+    opacity:.8;
+    font-size:22px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+    /*  text-shadow: -4px 2px rgba(105, 225, 231, 1);
+     -moz-text-shadow: -4px 2px  rgba(105, 225, 231, 1);
+     -webkit-text-shadow: -4px 2px  rgba(105, 225, 231, 1);*/
   }
 
   .spiralbound:hover{
@@ -50,8 +205,12 @@
     /*color:rgba(236,228, 155,1);*/
     /*color:#13daec;*/
     /*color:rgba(3,188,112,1);*/
-    font-size:28px;
+    font-size:26px;
     opacity:1;
+          text-shadow: -3px -3px rgba(105, 225, 231, 1);
+     -moz-text-shadow: -3px -3px  rgba(105, 225, 231, 1);
+     -webkit-text-shadow: -3px -3px  rgba(105, 225, 231, 1);
+    
   }
 
 .PE {
@@ -74,7 +233,7 @@
 }
 
 .piecewise:hover {
-    opacity:.8;
+    opacity:.65;
 }
 
 .map
@@ -165,6 +324,37 @@
   }
 
 
+
+.help {
+  position:fixed;
+  display:block;
+  color:#13daec;
+/*  bottom:25px;
+  right:87px;*/
+    bottom:22px;
+  right:5px;
+  z-index:99;
+  opacity:.3;
+
+}
+
+/*  bottom:25px;
+  right:87px;*/
+/*    font-size:20px;
+    bottom:22px;
+    right:86px;*/
+
+.help:hover {
+/*  color:rgba(171,137,224,1);*/
+color:#13daec;;
+    opacity:1;
+   /* font-size:19px;*/
+/*    bottom:20px;
+    right:4px;*/
+}
+
+
+
 .radome {
   position:fixed;
   display:block;
@@ -177,7 +367,7 @@
   .worldData {
     /*color:rgba(236,228, 155,1);*/
     color:#eeeeee;
-    opacity:.5;
+    opacity:.6;
   }
 
   .worldData:hover{
@@ -188,7 +378,7 @@
     /*color:#ffffff;*/
     /*color:#13daec;*/
     /*color:rgba(3,188,112,1);*/
-    opacity:.75;
+    opacity:1;
     /*font-size:12px;*/
      font-size:24px;
      left:-3px;
@@ -237,7 +427,7 @@
     
     color:rgb(255,255,255);
     /*color:#eeeeee;*/
-    opacity:.5;
+    opacity:.6;
   }
 
   .tankData:hover{
@@ -245,7 +435,8 @@
     /*color:#13daec;*/
     /*color:#13daec;*/
     /*color:rgba(3,188,112,1);*/
-    opacity:.8;
+    opacity:1;
+
   }
 
 
@@ -277,11 +468,18 @@
   .timeData:hover{
     /*color:rgba(255,255,255,1);*/
     color:rgba(3,188,112,1);
+      font-size:19px; 
     /*color:#13daec;*/
     /*color:rgba(3,188,112,1);*/
   }
 
 
+
+.monocolor::selection {
+  background: slategray;
+  color: #fff;
+  text-shadow: none;
+}
 
 
 .coRotator {
@@ -303,7 +501,24 @@
 
 }
 
+.coRotator:hover {
+   bottom:50px;
+}
 
+.hide-time:hover {
+  color:rgba(171,137,224,.9);
+}
+
+.tone-arm {
+  font-size:12px;
+}
+.tone-arm:hover {
+  color:rgba(171,137,224,.9);
+}
+
+#dudea:hover {
+  color:rgba(171,137,224,.9);
+}
 
  .viewData {
     color:rgba(255,255,255,.3);
@@ -313,12 +528,17 @@
   .viewData:hover{
   /*  color:rgba(255,255,255,.8);*/
     color:rgba(171,137,224,1);
+
     /*color:#13daec;*/
     /*color:rgba(3,188,112,1);*/
   }
 
 .purpleif {
   color:rgba(171,137,224,1);
+}
+
+.purpleiff {
+  color:rgba(171,137,224,.6);
 }
 
 .orangeif {
@@ -344,6 +564,7 @@
 }
 
 .glowring {
+    color:rgba(0,0,0,.5);
     text-shadow: 0px 0px 14px  rgba(171,137,224,1);
     -moz-text-shadow: 0px 0px 14px  rgba(171,137,224,1);
     -webkit-text-shadow: 0px 0px 14px  rgba(171,137,224,1);
@@ -355,7 +576,8 @@ i.glowring {
 }
 
 .dropshad {
-  color:white;
+  /*color:white;*/
+
   opacity:1;
   text-shadow: -1px 4px rgba(105, 225, 231, 1);
   -moz-text-shadow: -1px 4px  rgba(105, 225, 231, 1);
@@ -369,6 +591,17 @@ i.glowring {
   -moz-text-shadow: -1px 4px  #13daec;
   -webkit-text-shadow: -1px 4px  #13daec;;
 }
+
+
+.bentshad {
+  color:white;
+  opacity:1;
+  text-shadow: -3px -3px #13daec;
+  -moz-text-shadow: -3px -3px  #13daec;
+  -webkit-text-shadow: -3px -3px  #13daec;;
+}
+
+
 
 /* rgba(105, 225, 231, 0.9)  light blue */
 
@@ -401,20 +634,29 @@ i.glowring {
 .loadNotes {
   position:fixed;
   display:block;
-  bottom:24px;
-  right:12px;
+/*  bottom:24px;
+  right:12px;*/
+  bottom:23px;
+  right:88px;
   z-index:54;
+    color:#13daec;
+}
+
+.loadNotes:hover {
+      color:rgba(255,94,71,1);
+/*    bottom:24px;
+    right:84px;*/
 }
 
   .notesToggle {
-    color:#13daec;
+  
     opacity:.6;
   }
 
   .notesToggle:hover{
     /* color:#13daec;*/
-    color:rgba(255,94,71,1);
     opacity:1;
+ /*   font-size:20px;*/
   }
 
 
@@ -469,6 +711,7 @@ i.glowring {
   padding-bottom:555px;
   margin-bottom:-555px;
   margin-left:75px;
+/*  margin-right:100px;*/
   border-top: dashed 1px rgba(255,94,71,.5);
   background:rgba(0,0,0,.5);
   -moz-border-radius: 0px 15px 0px 15px;
@@ -498,6 +741,7 @@ i.glowring {
   bottom:0;
   right:0;
   padding:1px 12px 0px 12px;
+  /*margin-right:75px;*/
   color: #fff;
   /* margin-top:10px;*/
   /* margin-left:3px;*/
@@ -584,6 +828,7 @@ i.glowring {
   z-index:50
 }
 
+/*img {color:#ffffff}*/
 
 #titleText.reflected {
     position: relative;
@@ -592,7 +837,8 @@ i.glowring {
     content: attr(data-title);
     display: block;
     position: absolute;
-    bottom: -.65em; /* You should change this value to fit your font */
+  /*  bottom: -.65em;  You should change this value to fit your font */
+     bottom: -.42em; /* You should change this value to fit your font */
     left: 8px;
     right: 0;
     opacity: .06;
