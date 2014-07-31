@@ -18,43 +18,43 @@
   // });
  
 
- $(function() {
-    $('.collapsible').on('click', '.toggle', function () {
-        //Gets all <tr>'s  of greater depth
-        //below element in the table
-        var findChildren = function (tr) {
-            var depth = tr.data('depth');
-            return tr.nextUntil($('tr').filter(function () {
-                return $(this).data('depth') <= depth;
-            }));
-        };
+//  $(function() {
+//     $('.collapsible').on('click', '.toggle', function () {
+//         //Gets all <tr>'s  of greater depth
+//         //below element in the table
+//         var findChildren = function (tr) {
+//             var depth = tr.data('depth');
+//             return tr.nextUntil($('tr').filter(function () {
+//                 return $(this).data('depth') <= depth;
+//             }));
+//         };
 
-        var el = $(this);
-        var tr = el.closest('tr'); //Get <tr> parent of toggle button
-        var children = findChildren(tr);
+//         var el = $(this);
+//         var tr = el.closest('tr'); //Get <tr> parent of toggle button
+//         var children = findChildren(tr);
 
-        //Remove already collapsed nodes from children so that we don't
-        //make them visible. 
-        //(Confused? Remove this code and close Item 2, close Item 1 
-        //then open Item 1 again, then you will understand)
-        var subnodes = children.filter('.expand');
-        subnodes.each(function () {
-            var subnode = $(this);
-            var subnodeChildren = findChildren(subnode);
-            children = children.not(subnodeChildren);
-        });
+//         //Remove already collapsed nodes from children so that we don't
+//         //make them visible. 
+//         //(Confused? Remove this code and close Item 2, close Item 1 
+//         //then open Item 1 again, then you will understand)
+//         var subnodes = children.filter('.expand');
+//         subnodes.each(function () {
+//             var subnode = $(this);
+//             var subnodeChildren = findChildren(subnode);
+//             children = children.not(subnodeChildren);
+//         });
 
-        //Change icon and hide/show children
-        if (tr.hasClass('collapse')) {
-            tr.removeClass('collapse').addClass('expand');
-            children.hide();
-        } else {
-            tr.removeClass('expand').addClass('collapse');
-            children.show();
-        }
-        return children;
-    });
-});
+//         //Change icon and hide/show children
+//         if (tr.hasClass('collapse')) {
+//             tr.removeClass('collapse').addClass('expand');
+//             children.hide();
+//         } else {
+//             tr.removeClass('expand').addClass('collapse');
+//             children.show();
+//         }
+//         return children;
+//     });
+// });
 
 
 
@@ -229,12 +229,12 @@ $('.clearFace').click(function() {
     // $('.titleBlock').toggle();
     $('#haLo').toggle();
     $('.overView').toggle();
-    // $('.clearTome').toggle();
+    $('.clearTome').toggle();
     $('.loadNotes').toggle();
     $('.clockLock').toggle();
     $('.coRotator').toggle();
-    $('.help').toggle();
-    // $('.controls').toggle();
+    // $('.help').toggle();
+    $('.controls').toggle();
     $('.greenBuilding').toggle();
     $('.radome').toggle();
     $('.startTank').toggle();
@@ -309,14 +309,16 @@ var spiralbounds = 0;
 $('.map').click(function() {
   switch (mapState) {
     case 0:
-     $('.piecewise').css("left",3+"px");
+        $('.settling').removeClass('fa-flip-horizontal');
+     $('.piecewise').css("left",-4+"px");
     mapState = 1;
     spiralbounds = 1;
       break;
     case 1:
+       $('.settling').addClass('fa-flip-horizontal');
       var navWidth = $('.piecewise');
       var theWidth = navWidth.width();
-      $('.piecewise').css("left",-theWidth+25+"px");
+      $('.piecewise').css("left",-theWidth+22+"px");
       mapState = 0;
      spiralbounds = 1;
       break;
@@ -328,36 +330,42 @@ $('.map').click(function() {
   }
 });
 
-$('.toggle').click(function(){
-  if (mapState == 1) {
-          var navWidth = $('.piecewise');
-      var theWidth = navWidth.width();
-      $('.piecewise').css("left",-theWidth+25+"px");
-      mapState = 0;
-     spiralbounds = 1;
-  }
-});
+// $('.toggle').click(function(){
+//   if (mapState == 1) {
+//           var navWidth = $('.piecewise');
+//       var theWidth = navWidth.width();
+//       $('.piecewise').css("left",-theWidth+25+"px");
+//       mapState = 0;
+//      spiralbounds = 1;
+//   }
+// });
 
 
 $('.clearTome').click(function() {
     switch (spiralbounds) {
       case 0:
+      $('.settling').removeClass('fa-flip-horizontal');
         $('.piecewise').show();
+        $('.piecewise').css("left",-2+"px");
          $('#booklet').removeClass("expansion");
         mapState = 1;
         spiralbounds = 1;
         break;
       case 1:
        $('#booklet').addClass("glowring");
-       $('.piecewise').css("left",3+"px");
+       $('.settling').addClass("borderlock");
+        $('.settling').removeClass('fa-flip-horizontal');
+       $('.piecewise').css("left",-4+"px");
         spiralbounds = 2;
         mapState = 2;
         break;
       case 2:
           $('#booklet').removeClass("glowring");
+           $('.settling').removeClass("borderlock");
          var navWidth = $('.piecewise');
           var theWidth = navWidth.width();
-        $('.piecewise').css("left",-theWidth+25+"px"); 
+        $('.piecewise').css("left",-theWidth+22+"px");
+        $('.settling').addClass('fa-flip-horizontal'); 
         mapState = 0;
         spiralbounds = 3;
         break;
@@ -370,7 +378,8 @@ $('.clearTome').click(function() {
         break;
       case 4:
         $('.titleBlock').show();
-        $('.piecewise').css("left",3+"px");
+        $('.piecewise').css("left",-4+"px");
+         $('.settling').removeClass('fa-flip-horizontal');
         $('#booklet').removeClass("dropshad");
         $('#booklet').addClass("expansion")
         spiralbounds = 0;
@@ -389,7 +398,7 @@ $('.clearTome').click(function() {
 
 
 
-$( "td.map" ).hover(function() {
+$( "li.map" ).hover(function() {
   $( this ).fadeOut( 100 );
   $( this ).fadeIn( 500 );
 });
@@ -610,33 +619,33 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 
 
 
-var controlMode = 0;
+// var controlMode = 0;
 
 
-$('.help').click(function( event ) {
-  // $('.playback').toggle();
-  $('.controls').toggle();
-    if (controlMode == 0) {
-    Reveal.showHelp( true );
-      $('.helpicon').removeClass('fa-gamepad');
-         $('.helpicon').removeClass('fa-flip-horizontal');
-       $('.helpicon').addClass('fa-keyboard-o');
-    $('.notesToggle').toggle();
-    // $('.clearFace').toggle();
-    controlMode = 1; }
-    else {
-              $('.helpicon').removeClass('fa-keyboard-o');
-    $('.helpicon').addClass('fa-gamepad');
-    $('.helpicon').addClass('fa-flip-horizontal');
+// $('.help').click(function( event ) {
+//   // $('.playback').toggle();
+//   $('.controls').toggle();
+//     if (controlMode == 0) {
+//     Reveal.showHelp( true );
+//       $('.helpicon').removeClass('fa-gamepad');
+//          $('.helpicon').removeClass('fa-flip-horizontal');
+//        $('.helpicon').addClass('fa-keyboard-o');
+//     $('.notesToggle').toggle();
+ 
+//     controlMode = 1; }
+//     else {
+//               $('.helpicon').removeClass('fa-keyboard-o');
+//     $('.helpicon').addClass('fa-gamepad');
+//     $('.helpicon').addClass('fa-flip-horizontal');
 
-       $('.notesToggle').toggle();
-       // $('.clearFace').toggle();
-       controlMode = 0;
-    }
-  });
+//        $('.notesToggle').toggle();
+       
+//        controlMode = 0;
+//     }
+//   });
 
 
-$( ".hide-time" ).trigger( "click" );
+// $( ".hide-time" ).trigger( "click" );
 $( ".clearFace" ).trigger( "click" );
 
 

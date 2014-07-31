@@ -1370,7 +1370,7 @@
 
 
 
-				<section data-period="16" data-title="hadley blackout" data-background="http://coriolis.no-ip.org/clear/up/load/hadley_LOOP1_PHENOMENA.gif">
+				<section data-period="16" data-title="hadley blackout" id="blackout" data-background="http://coriolis.no-ip.org/clear/up/load/hadley_LOOP1_PHENOMENA.gif">
 						<i class="preface" data-fragment-index="0" data-title="rotating frame of reference"></i>
 						<i data-period="3" class="" data-fragment-index="1" data-title="blank1"></i>
 						<i data-period="3" class="" data-fragment-index="2" data-title="blank2"></i>
@@ -2269,7 +2269,7 @@
 				<div class="timer" style="color:rgba(174,128,246,.7)">
 					<span class="hours-value">00</span><span class="minutes-value">:00</span><span class="seconds-value">:00</span>
 				</div>
-				<h4 class="label"><span class="reset-button">Click to Reset</span> <i id="dudea" title="reset indicator" class="fa fa-circle-o-notch fa-1rpmS"></i>&nbsp;<i title="reset imagery" class="fa fa-retweet tone-arm"></i>&nbsp;<span title="toggle numeric" class="hide-time">Time</span></h4>
+				<h4 class="label"><span class="reset-button">Click to Reset</span> <i id="dudea" title="min marker" class="fa fa-circle-o-notch fa-1rpmS"></i>&nbsp;<i title="reset animation" class="fa fa-retweet tone-arm"></i>&nbsp;<span title="show time" class="hide-time">Time</span></h4>
 			</div>
 			<!-- <div class="clear">sync sources. time elapse.</div> -->
 </div>
@@ -2299,19 +2299,7 @@
  			-->
 
 
-				
-
-	<div class="clearTome" style="">
-	<!-- <i class="fa fa-codepen" style="color:white;opacity:.8;"></i> -->
-			<i id="booklet" title="section overview" data-alt-style="text-shadow: 0px 0px 10px rgba(105, 225, 231, 1)" class="fa fa-soundcloud fa-flip-horizontal spiralbound expansion"></i>
-		</div>
-
-				<div class="piecewise" style="display:none;">
-
-							<table id="navtable" class="collapsible">
-
-							
-
+<!-- 			<table id="navtable" class="collapsible">
 
 								<tr data-depth="0" class="collapse level0" title="of rotating fluids">
 									<td class="map">&nbsp;&nbsp;<a href="#/intheory">theory</a>&nbsp;&nbsp;<span class="toggle"></span></td>
@@ -2360,26 +2348,63 @@
 								</tr>
 
 							</table>
+ -->
 
+
+
+
+
+
+
+
+
+
+				
+
+	<div class="clearTome" style="">
+	<!-- <i class="fa fa-codepen" style="color:white;opacity:.8;"></i> -->
+			<i id="booklet" title="levels" data-alt-style="text-shadow: 0px 0px 10px rgba(105, 225, 231, 1)" class="fa fa-soundcloud fa-flip-horizontal spiralbound expansion"></i>
+		</div>
+
+				<div class="piecewise" style="display:none;">
+
+
+
+
+
+
+
+					<ul class="settling" style="background:rgba(0,0,0,.8);padding:6px;border-radius:0px 12px 12px 0px;">
+							<li title="" style="border-top:none;padding-top:6px"></li>
+<!-- 						<li title="" style="border-top:none" class="map"><i class="fa mapico fa-power-off fa-rotate-360"></i>&nbsp;<a href="#/slID">synthesis</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-345"></i>&nbsp;<a href="#/slID">global</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-330"></i>&nbsp;<a href="#/slID">seasonal</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-315"></i>&nbsp;<a href="#/slID">compare</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-300"></i>&nbsp;<a href="#/slID">polarize</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-285"></i>&nbsp;<a href="#/slID">relations</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-270"></i>&nbsp;<a href="#/slID">theta</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-255"></i>&nbsp;<a href="#/slID">u-wind</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-240"></i>&nbsp;<a href="#/slID">v-wind</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-225"></i>&nbsp;<a href="#/slID">omega</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-210"></i>&nbsp;<a href="#/slID">variables</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-195"></i>&nbsp;<a href="#/slID">projection</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-180"></i>&nbsp;<a href="#/slID">climate</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-165"></i>&nbsp;<a href="#/slID">observation</a></li>
+						<li title="" class="map"><i class="fa mapico fa-power-off fa-rotate-150"></i>&nbsp;<a href="#/slID">models</a></li> -->
+						<li title="observations" class="map" style="border-top:0px"><i class="fa mapico fa-power-off fa-rotate-135"></i>&nbsp;<a href="#/blackout">atmospheric</a></li>
+						<li title="balances"  class="map"><i class="fa mapico fa-power-off fa-rotate-120"></i>&nbsp;<a href="#/intheory">theory</a></li>
+						<li title="quantification" class="map"><i class="fa mapico fa-power-off fa-rotate-105"></i>&nbsp;<a href="#/num">numeric</a></li>
+						<li title="flow patterns" class="map"><i class="fa mapico fa-power-off fa-rotate-90"></i>&nbsp;<a href="#/colorflow">schematic</a></li>
+						<li title="virtual views" class="map"><i class="fa mapico fa-power-off fa-rotate-75"></i>&nbsp;<a href="#/reconstruction">animating</a></li>			
+						<li title="co-rotating camera" class="map"><i class="fa mapico fa-power-off fa-rotate-60"></i>&nbsp;<a href="#/video">video</a></li>
+						<li title="draw dye drops" class="map"><i class="fa mapico fa-power-off fa-rotate-45"></i>&nbsp;<a href="#/predict">predict</a></li>
+						<li title="experiment apparatus" class="map"><i class="fa mapico fa-power-off fa-rotate-30"></i>&nbsp;<a href="#/setup">spin-up</a></li>
+						<li title="lab analogues" class="map"><i class="fa mapico fa-power-off fa-rotate-15"></i>&nbsp;<a href="#/analogy">fluids</a></li>
+						<li title="" class="map hypernav" style="padding-bottom:0px;" data-alt-style="text-align:left;padding-left:8px;"><i class="fa mapico fa-power-off"></i>&nbsp;&nbsp;&nbsp;clear</li>
+						<li title="" class="" style="padding-bottom:8px;"></li>
+					</ul>
+				
 			</div>
-
-
-
-
-
-<!-- 
-					<ul class="settling">
-						<li title="" class="map"><a href="#/slID">visible</a>&nbsp;<i class="fa mapico fa-power-off fa-rotate-135"></i></li>
-						<li title="" class="map"><a href="#/slID">visible</a>&nbsp;<i class="fa mapico fa-power-off fa-rotate-120"></i></li>
-						<li title="of rotating fluids" class="map"><a href="#/intheory">theory</a>&nbsp;<i class="fa mapico fa-power-off fa-rotate-105"></i></li>
-						<li title="#numerics" class="map"><a href="#/num">quantify</a>&nbsp;<i class="fa mapico fa-power-off fa-rotate-90"></i></li>
-						<li title="flow patterns" class="map"><a href="#/colorflow">analyze</a>&nbsp;<i class="fa mapico fa-power-off fa-rotate-75"></i></li>				
-						<li title="experiment stream" class="map"><a href="#/video">video</a>&nbsp;<i class="fa mapico fa-power-off fa-rotate-60"></i></li>
-						<li title="make a prediction" class="map"><a href="#/predict">predict</a>&nbsp;<i class="fa mapico fa-power-off fa-rotate-45"></i></li>
-						<li title="how-to" class="map"><a href="#/setup">set-up</a>&nbsp;<i class="fa mapico fa-power-off fa-rotate-30"></i></li>
-						<li title="analogies" class="map"><a href="#/analogy">fluids</a>&nbsp;<i class="fa mapico fa-power-off fa-rotate-15"></i></li>
-						<li title="reveal" class="map hypernav">clear&nbsp;<i class="fa mapico fa-power-off"></i></li>
-					</ul> -->
 	
 
 		
@@ -2472,11 +2497,11 @@
 			<i style="opacity:1" class="fa fa-flip-horizontal fa-gamepad"></i>
 		</div> -->
 
-		<div class="help" title="nav mode">
-			<!-- <a href="#/hotkeyz" style="color:inherit"> -->
+	<!--	<div class="help" title="nav mode">
+		
 			<i class="fa fa-gamepad fa-flip-horizontal helpicon"></i>
-			<!-- </a> -->
-		</div> 
+		
+		</div> -->
 
 
 
