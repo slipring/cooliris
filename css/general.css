@@ -34,14 +34,60 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .piecewise {
   font-family: Helvetica;
+
   position:fixed;
   min-width:auto;
   display:inline-block;
 /*  margin-left:-262px;
   bottom:256px;*/
-  bottom:80px;
+/*  bottom:80px;
+  left:3px;*/
+  top:28px;
   left:3px;
   color:white;
   opacity:.4;
@@ -53,12 +99,14 @@
 }
 
 .map
-{ margin-right:-2%;}
+{ margin-right:0%;}
+
 
 
 
 ul.settling
 {
+    font-size:16px;
 list-style-type: none;
 padding: 0;
 margin: 0;
@@ -80,6 +128,58 @@ ul.settling a{
           color: #666;
           margin: 0;
 
+}
+.piecewise .table td{
+    border: 0px solid #eee !important;
+    font-family:Helvetica;
+    text-transform:uppercase;
+    text-align:right;
+    text-decoration:none;
+    color:inherit;
+    border-collapse: collapse;
+}
+
+.piecewise a, .map td, .piecewise tr{
+  text-decoration:none;
+    font-family:Helvetica;
+    text-transform:uppercase;
+    text-align:right;
+    font-size:12px;
+    color:inherit;
+}
+.level1 td:first-child {
+    padding-right: 15px;
+}
+.level2 td:first-child {
+    padding-right: 30px;
+}
+.level3 td:first-child {
+    padding-right: 45px;
+}
+.level4 td:first-child {
+    padding-right: 60px;
+}
+.level5 td:first-child {
+    padding-right: 75px;
+}
+.level6 td:first-child {
+    padding-right: 90px;
+}
+
+.collapse .toggle {
+    background: url(../paperdot.png);
+    background-size:16px 16px;
+}
+.expand .toggle {
+    background: url(../part.png);
+    background-size:16px 16px;
+}
+.toggle {
+    height: 16px;
+    width: 16px;
+    margin-bottom:-4px;
+    margin-right:4px;
+    display: inline-block;   
 }
 
 
@@ -1425,6 +1525,13 @@ span.component {
   -moz-animation: anticlockwise 6s infinite linear;
   -o-animation: anticlockwise 6s infinite linear;
   animation: anticlockwise 6s infinite linear;
+}
+
+.fa-2omega {
+  -webkit-animation: anticlockwise 6s 2 linear;
+  -moz-animation: anticlockwise 6s 2 linear;
+  -o-animation: anticlockwise 6s 2 linear;
+  animation: anticlockwise 6s 2 linear;
 }
 
 

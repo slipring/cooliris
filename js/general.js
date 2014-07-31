@@ -2,6 +2,76 @@
 
 
 
+  // $(function() {
+  //   $( "#accordion" ).accordion({
+  //     heightStyle: "fill"
+  //   });
+  // });
+  // $(function() {
+  //   $( "#accordion-resizer" ).resizable({
+  //     minHeight: 140,
+  //     minWidth: 200,
+  //     resize: function() {
+  //       $( "#accordion" ).accordion( "refresh" );
+  //     }
+  //   });
+  // });
+ 
+
+ $(function() {
+    $('.collapsible').on('click', '.toggle', function () {
+        //Gets all <tr>'s  of greater depth
+        //below element in the table
+        var findChildren = function (tr) {
+            var depth = tr.data('depth');
+            return tr.nextUntil($('tr').filter(function () {
+                return $(this).data('depth') <= depth;
+            }));
+        };
+
+        var el = $(this);
+        var tr = el.closest('tr'); //Get <tr> parent of toggle button
+        var children = findChildren(tr);
+
+        //Remove already collapsed nodes from children so that we don't
+        //make them visible. 
+        //(Confused? Remove this code and close Item 2, close Item 1 
+        //then open Item 1 again, then you will understand)
+        var subnodes = children.filter('.expand');
+        subnodes.each(function () {
+            var subnode = $(this);
+            var subnodeChildren = findChildren(subnode);
+            children = children.not(subnodeChildren);
+        });
+
+        //Change icon and hide/show children
+        if (tr.hasClass('collapse')) {
+            tr.removeClass('collapse').addClass('expand');
+            children.hide();
+        } else {
+            tr.removeClass('expand').addClass('collapse');
+            children.show();
+        }
+        return children;
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // function updateProgress() {
 
   //   // Update progress if enabled
@@ -13,6 +83,12 @@
   //   }
 
   // }
+
+
+
+
+
+
 
 function zeroPadInteger( num ) {
 
@@ -252,6 +328,15 @@ $('.map').click(function() {
   }
 });
 
+$('.toggle').click(function(){
+  if (mapState == 1) {
+          var navWidth = $('.piecewise');
+      var theWidth = navWidth.width();
+      $('.piecewise').css("left",-theWidth+25+"px");
+      mapState = 0;
+     spiralbounds = 1;
+  }
+});
 
 
 $('.clearTome').click(function() {
@@ -297,7 +382,14 @@ $('.clearTome').click(function() {
 
 
 
-$( "i.map" ).hover(function() {
+// $('.mapico').hover(function(){
+//   $(this).addClass('fa-2omega');
+//        });
+
+
+
+
+$( "td.map" ).hover(function() {
   $( this ).fadeOut( 100 );
   $( this ).fadeIn( 500 );
 });
@@ -307,6 +399,7 @@ $('.hypernav').click(function() {
   if (mapState == 2) {
         $('.piecewise').hide();
         $('#booklet').removeClass("glowring");
+        $('#booklet').addClass("expansion");
         mapState = 1;
         spiralbounds = 0;
   } else { console.log('hypernav clear');}
