@@ -664,15 +664,16 @@ color:#13daec;;
 }
 
 .tone-arm {
-  font-size:12px;
+/*  font-size:12px;*/
 }
 .tone-arm:hover {
   color:rgba(171,137,224,.9);
 }
 
+/*
 #dudea:hover {
   color:rgba(171,137,224,.9);
-}
+}*/
 
  .viewData {
     color:rgba(255,255,255,.3);
@@ -1552,7 +1553,19 @@ span.component {
   animation: anticlockwise 6s 2 linear;
 }
 
+.fa-24s {
+  -webkit-animation: anticlockwise 24s infinite linear;
+  -moz-animation: anticlockwise 24s infinite linear;
+  -o-animation: anticlockwise 24s infinite linear;
+  animation: anticlockwise 24s infinite linear;
+}
 
+.fa-4p2s {
+  -webkit-animation: anticlockwise 4.2s infinite linear;
+  -moz-animation: anticlockwise 4.2s infinite linear;
+  -o-animation: anticlockwise 4.2s infinite linear;
+  animation: anticlockwise 4.2s infinite linear;
+}
 
 
 .fa-anticyclonic {

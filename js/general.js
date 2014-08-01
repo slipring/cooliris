@@ -134,6 +134,15 @@ function zeroPadInteger( num ) {
           timeEl.addEventListener( 'click', function() {
             start = new Date();
             _updateTimer();
+                var syncs = document.getElementsByClassName("skips");
+                $('.tone-arm').removeClass('fa-1rpmS');
+                var jets = [].map.call(syncs, function (el) {
+                      if (el.src){
+                      el.src = el.src;}
+                      });
+                setTimeout(
+                    function() {
+                $('.tone-arm').addClass('fa-1rpmS');}, 1 );
             return false;
           } );
 
@@ -153,22 +162,22 @@ $('.hide-time').click(function() {
 $('.tone-arm').click(function(){
   var syncs = document.getElementsByClassName("skips");
   // console.log(syncs);     //report all resyncers
-  $('#dudea').removeClass('fa-1rpmS');
+  $('.tone-arm').removeClass('fa-1rpmS');
   var jets = [].map.call(syncs, function (el) {
         if (el.src){
         el.src = el.src;}
         });
   setTimeout(
              function() {
-  $('#dudea').addClass('fa-1rpmS');}, 1 );
+  $('.tone-arm').addClass('fa-1rpmS');}, 1 );
 });
 
-$('#dudea').click(function(){
-  $('#dudea').removeClass('fa-1rpmS');
-  setTimeout(
-             function() {
-  $('#dudea').addClass('fa-1rpmS');}, 1 );
-});
+// $('#dudea').click(function(){
+//   $('#dudea').removeClass('fa-1rpmS');
+//   setTimeout(
+//              function() {
+//   $('#dudea').addClass('fa-1rpmS');}, 1 );
+// });
 
 $('.reset-button').click(function(){
   $('#dudea').removeClass('fa-1rpmS');
@@ -230,6 +239,7 @@ $('.clearFace').click(function() {
     $('#haLo').toggle();
     $('.overView').toggle();
     $('.clearTome').toggle();
+    $('.piecewise').toggle();
     $('.loadNotes').toggle();
     $('.clockLock').toggle();
     $('.coRotator').toggle();
@@ -318,7 +328,7 @@ $('.map').click(function() {
        $('.settling').addClass('fa-flip-horizontal');
       var navWidth = $('.piecewise');
       var theWidth = navWidth.width();
-      $('.piecewise').css("left",-theWidth+22+"px");
+      $('.piecewise').css("left",-theWidth+23+"px");
       mapState = 0;
      spiralbounds = 1;
       break;
@@ -364,7 +374,7 @@ $('.clearTome').click(function() {
            $('.settling').removeClass("borderlock");
          var navWidth = $('.piecewise');
           var theWidth = navWidth.width();
-        $('.piecewise').css("left",-theWidth+22+"px");
+        $('.piecewise').css("left",-theWidth+23+"px");
         $('.settling').addClass('fa-flip-horizontal'); 
         mapState = 0;
         spiralbounds = 3;
@@ -646,7 +656,10 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 
 
 // $( ".hide-time" ).trigger( "click" );
+$('.clearTome').trigger("click");
 $( ".clearFace" ).trigger( "click" );
+
+
 
 
 
