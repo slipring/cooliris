@@ -460,19 +460,21 @@ var titleShowing = 1;
 $('.loadNotes').click(function() {
     switch (titleShowing) {
       case 0:
-        $('#inertialFrame').css("left",0+"px");
-        $('#inertialFrame').css("right","auto");
-        $('#inertialFrame').show();
+         $('#inertialFrame').css("right","auto");
+        $('#inertialFrame').hide();
         titleShowing = 1;
         break;
       case 1:
         var currentViewWind = $(window).width();
         $('#inertialFrame').addClass("fluidSpan");
+        $('#fluidFrame').css("text-align","center");
         $('.fluidSpan').css("width",parseInt(currentViewWind)-155+"px");
+        $('#inertialFrame').show();
         titleShowing = 2;
         break;
       case 2:
-       $('#inertialFrame').css("bottom", "50%");
+        $('#fluidFrame').css("text-align","left");
+        $('#inertialFrame').css("bottom", "50%");
         $('#notesPane').show();
         titleShowing = 3;
         break;
@@ -481,13 +483,18 @@ $('.loadNotes').click(function() {
         $('#inertialFrame').css("bottom", 9+"px");
         $('#inertialFrame').removeClass("fluidSpan");
         $('#inertialFrame').css("width","auto");
-        $('#inertialFrame').css("left","auto");
-        $('#inertialFrame').css("right",80+"px");
         titleShowing = 4;
         break;
-      default:
-        $('#inertialFrame').hide();
+      case 4:
+        $('#fluidFrame').css("text-align","right");
+        $('#inertialFrame').css("left","auto");
+        $('#inertialFrame').css("right",80+"px");
         titleShowing = 0;
+        break;
+      default:
+        // $('#inertialFrame').css("right","auto");
+        // $('#inertialFrame').hide();
+        // titleShowing = 1;
         console.log('subtitle switch');
     }
 });
@@ -656,6 +663,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 
 
 // $( ".hide-time" ).trigger( "click" );
+$('.loadNotes').trigger("click");
 $('.clearTome').trigger("click");
 $( ".clearFace" ).trigger( "click" );
 

@@ -921,7 +921,7 @@ i.glowring {
   -webkit-border-radius: 0px;
   -webkit-border-bottom-left-radius: 15px;
   -webkit-border-bottom-right-radius: 15px;
-  text-align:center:left;
+  text-align:left;
   z-index:20;
 }
 
@@ -962,7 +962,6 @@ i.glowring {
   font-size: 1.8vw;
   line-height:1em;
   letter-spacing: 0.1em;
-
   padding:0px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
   z-index:23;
@@ -1210,12 +1209,12 @@ i.glowring {
 
 
 .reveal section .aliasingGradWhiteRight {
-  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,0.25) 45%, rgba(255,255,255,1) 86%, rgba(255,255,255,1) 88%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(20%,rgba(255,255,255,0)), color-stop(45%,rgba(255,255,255,0.25)), color-stop(86%,rgba(255,255,255,1)), color-stop(88%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,0.25) 45%,rgba(255,255,255,1) 86%,rgba(255,255,255,1) 88%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,0.25) 45%,rgba(255,255,255,1) 86%,rgba(255,255,255,1) 88%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,0.25) 45%,rgba(255,255,255,1) 86%,rgba(255,255,255,1) 88%); /* IE10+ */
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,0.25) 45%,rgba(255,255,255,1) 86%,rgba(255,255,255,1) 88%); /* W3C */
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 33%, rgba(255,255,255,0.25) 45%, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 88%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(33%,rgba(255,255,255,0)), color-stop(45%,rgba(255,255,255,0.25)), color-stop(60%,rgba(255,255,255,1)), color-stop(88%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 33%, rgba(255,255,255,0.25) 45%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 88%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 33%, rgba(255,255,255,0.25) 45%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 88%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 33%, rgba(255,255,255,0.25) 45%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 88%); /* IE10+ */
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 33%, rgba(255,255,255,0.25) 45%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 88%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 }
 
@@ -1251,7 +1250,7 @@ i.glowring {
 
 
 
-.reveal section .aliasingAtmosWhiteHollow {
+.reveal section .aliasingAtmosWhiteCenter {
   background: -moz-radial-gradient(center, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.33) 66%, rgba(255,255,255,.44) 90%, rgba(255,255,255,.30) 100%); /* FF3.6+ */
   background: -webkit-gradient(radial, center top, center top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0)), color-stop(66%,rgba(255,255,255,0.30)), color-stop(90%,rgba(255,255,255,.44)), color-stop(100%,rgba(255,255,255,.30))); /* Chrome,Safari4+ */
   background: -webkit-radial-gradient(center, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.33) 66%,rgba(255,255,255,.44) 90%,rgba(255,255,255,.30) 100%); /* Chrome10+,Safari5.1+ */
@@ -1262,27 +1261,15 @@ i.glowring {
 }
 
 
-.reveal section .aliasingAtmos {
-background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0) 45%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(40%,rgba(255,255,255,0.5)), color-stop(45%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 40%,rgba(255,255,255,0) 45%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 40%,rgba(255,255,255,0) 45%,rgba(255,255,255,0) 100%); /* Opera 12+ */
-background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 40%,rgba(255,255,255,0) 45%,rgba(255,255,255,0) 100%); /* IE10+ */
-background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 40%,rgba(255,255,255,0) 45%,rgba(255,255,255,0) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
 
 
 
 .reveal section .binoculus {
-  border-radius:600px;
+  border-radius:800px;
   padding-bottom:0;
 }
 
-.reveal section .binoculusN {
-  border-radius:900px;
-  padding-bottom:0;
-}
+
 
 /* in-platform, content-specific shifts*/
 
@@ -1517,11 +1504,6 @@ span.component {
 .reveal .fa-p75x, .fa-p75x {
   font-size: 0.75em;
 }
-
-.reveal .fa-2p5x {
-  font-size: 2.5em;
-}
-
 .reveal span.fa-lg {
   font-size: 1.33333333em;
   line-height: 0.75em;
