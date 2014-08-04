@@ -663,7 +663,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 //   });
 
 
-// $( ".hide-time" ).trigger( "click" );
+$( ".hide-time" ).trigger( "click" );
 $('.loadNotes').trigger("click");
 $('.clearTome').trigger("click");
 $( ".clearFace" ).trigger( "click" );
