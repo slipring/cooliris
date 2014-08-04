@@ -268,6 +268,7 @@ $('.coRotator').click(function() {
     // $(this).toggleClass('fa-spinOut-1rpm');
      // $(this).toggleClass('glowering');
       $(this).toggleClass('glowering');
+      $(this).toggleClass('offset50');
      $('.viewData').toggleClass('purpleif');
     $('.cryo').toggle();
     });
