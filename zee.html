@@ -130,7 +130,7 @@
 						<div id="viewframeLy" class="underlapper" style="position:absolute;display;block;bottom:-15%;right:23%;min-width:60%;min-height:90%;border-top:2px dashed rgba(171,137,224,1);border-radius:1000px;">
 							</div>
 
-						<div id="midframeLy" class="underlapper" style="position:absolute;display;block;bottom:0%;right:8%;min-width:84%;min-height:90%;border-top:3px dashed rgba(255,255,255,.4);border-radius:250px;">
+						<div id="midframeLy" class="underlapper" style="position:absolute;display;block;bottom:0%;right:8%;min-width:84%;min-height:90%;border-top:3px solid rgba(255,255,255,.4);border-radius:250px;">
 							</div>
 					
 						<div id="outerframeLy" class="overlapped" style="position:absolute;display;block;bottom:0%;right:0%;min-width:100%;min-height:100%;border-left:16px dashed white;border-top:10px solid white;border-radius:400px;" alt-borders="border-right:10px dashed gray;">
@@ -308,10 +308,10 @@
 
 						<i class="preface" data-fragment-index="0" data-title="We match the west&rarr;east rotation of the Earth about its axis &Omega; with the turntable's spin."></i>
 						<i data-period="8" class="fragment" data-fragment-index="1" data-title="Looking down above the pole, we direct it counterclockwise for the northern hemisphere."></i>
-						<i data-period="12" class="fragment" data-fragment-index="2" data-title="Moving equatorward, a turntable speed of 10rpm effects flows similar to middle latitudes."></i>
-						<i data-period="16" class="fragment"  data-fragment-index="3" data-title="As latitude &phi; decreases, so do effects of rotation; for the Tropics, we slow down to 1rpm."></i>
-						<i data-period="12" class="fragment" data-fragment-index="4" data-title="At the equator, Earth's rotation has little to no effect on fluid motion; turntable at rest."></i>
-						<i data-period="10" class="fragment" data-fragment-index="5" data-title="In the southern hemisphere, the same west to east rotation imparts clockwise spin."></i>
+						<i data-period="12" class="fragment" data-fragment-index="2" data-title="Moving equatorward, a turntable speed of 10 rpm effects flows similar to middle latitudes."></i>
+						<i data-period="16" class="fragment"  data-fragment-index="3" data-title="As latitude &phi; decreases, so do effects of rotation; for the Tropics, we slow down to 1 rpm."></i>
+						<i data-period="12" class="fragment" data-fragment-index="4" data-title="At the equator, the ground is perpendicular to the rotation axis, so we keep the turntable at rest."></i>
+						<i data-period="10" class="fragment" data-fragment-index="5" data-title="In the southern hemisphere, the same west to east rotation is effectively clockwise."></i>
 
 						<aside class="notes">
 							The turntable is spun counterclockwise to model the northern hemisphere.
@@ -361,65 +361,29 @@
 							<img class="no-hilight" id="globalzone" data-src="http://coriolis.no-ip.org/clear/up/load/gcworldspin_trans.gif"
 								style="">
 						</div>
+
+						<div class="overlapper tankSpinUp">
+							<img class="no-hilight fragment fade-out"  data-fragment-index="1" data-src="gctankspin_eddyUP.gif" 
+								style="border-radius:350px 180px 180px 350px;" >
+						</div>
+
 						<div class="overlapper tankAnimPolarSpeed">
-							<img class="fragment fade-out no-hilight" data-fragment-index="2" data-src="gctankspin_polarHalf.gif" alt-data-src="gctankspin_polarHalf.gif" 
+							<img class="fragment current-visible no-hilight" data-fragment-index="1" data-src="gctankspin_polarF.gif" alt-data-src="gctankspin_polarQuarter.gif" 
 								style="border-radius:350px 180px 180px 350px;" >
 						</div>
 						<div class="overlapper tankAnimHadleySpeed">
-							<img class="no-hilight fragment current-visible" data-fragment-index="3" data-src="gctankspin_hadley.gif"
+							<img class="no-hilight fragment current-visible" data-fragment-index="3" data-src="gctankspin_hadleyF.gif"
 								 style="border-radius:350px 180px 180px 350px">
 						</div>
 						<div class="overlapper tankAnimEddySpeed">
-							<img class="fragment current-visible no-hilight" data-fragment-index="2" data-src="http://coriolis.no-ip.org/clear/up/load/gctankspin_eddy.gif" 
+							<img class="fragment current-visible no-hilight" data-fragment-index="2" data-src="gctankspin_eddyF.gif" 
 								style="border-radius:350px 180px 180px 350px;" >
 						</div>
-						<div class="overlapper tankAnimHadleySSpeed">
-							<img class="no-hilight fragment current-visible" data-fragment-index="5" data-src="gctankspin_eddyS.gif"
+						<div class="overlapper tankAnimSouthSpin">
+							<img class="no-hilight fragment current-visible" data-fragment-index="5" data-src="gctankspin_UPS.gif"
 								 style="border-radius:350px 180px 180px 350px">
 						</div>
 					</div>
-
-					<div class="holds" style="z-index:99;position:absolute;top:20px;left:0">
-						
-
-						<div class="overlapper earthSpinOmegaPurple" 
-							style="z-index:59;top:130px;left:205px;position:absolute;-webkit-transform:rotate(6deg) perspective(2px) rotateX(1deg) scale(1.5,.4)">
-							<i class="fa fa-lg fa-undo fa-24s" style="color:rgba(171,137,224,1);"></i>
-						</div>
-						<div class="overlapper earthSpinOmegaShadow"
-							 style="z-index:59;top:520px;left:165px;position:absolute;-webkit-transform:rotate(6deg) perspective(2px) rotateX(1deg) scale(1.5,.4)">
-							<i class="fa fa-lg fa-undo fa-24s" style="color:rgba(22,25,6,.9);"></i>
-						</div>
-
-
-
-						<div class="overlapper fragment current-visible tankSpinPolarPurple" data-fragment-index="1" 
-							style="z-index:56;top:100px;left:670px;position:absolute;-webkit-transform:scale(1.5,-.5) perspective(2px) rotateX(1deg);">
-							<i class="fa fa-lg fa-undo fa-4p2s" style="color:rgba(171,137,224,1);" ></i>
-						</div>
-						<div class="overlapper fragment current-visible tankSpinPolarShadow" data-fragment-index="1" 
-							style="z-index:57;;top:440px;left:672px;position:absolute;-webkit-transform:scale(1.5,.5) perspective(2px) rotateX(1deg);">
-							<i class="fa fa-lg fa-undo fa-4p2s" style="color:rgba(171,137,224,1);color:rgba(22,25,6,.9);"></i>
-						</div>
-
-						<div class="overlapper fragment current-visible tankSpinMidLatitudePurple" data-fragment-index="2" 
-							style="z-index:56;top:100px;left:670px;position:absolute;-webkit-transform:scale(1.5,-.5) perspective(2px) rotateX(1deg);">
-							<i class="fa fa-lg fa-undo fa-10rpm" style="color:rgba(171,137,224,1);" ></i>
-						</div>
-						<div class="overlapper fragment current-visible tankSpinMidLatitudeShadow" data-fragment-index="2" 
-							style="z-index:57;top:440px;left:672px;position:absolute;-webkit-transform:scale(1.5,.5) perspective(2px) rotateX(1deg);">
-							<i class="fa fa-lg fa-undo fa-10rpm" style="color:rgba(171,137,224,1);color:rgba(22,25,6,.9);"></i>
-						</div>
-
-						<div class="overlapper fragment current-visible tankSpinTropicsPurple" data-fragment-index="3" 
-							style="z-index:59;top:100px;left:670px;position:absolute;-webkit-transform:scale(1.5,-.5) perspective(2px) rotateX(1deg);">
-							<i class="fa fa-lg fa-undo fa-1rpm" style="color:rgba(171,137,224,1);" ></i>
-						</div>
-						<div class="overlapper fragment current-visible tankSpinTropicsShadow" data-fragment-index="3"
-							 style="z-index:59;;top:440px;left:672px;position:absolute;-webkit-transform:scale(1.5,.5) perspective(2px) rotateX(1deg);">
-							<i class="fa fa-lg fa-undo fa-1rpm" style="color:rgba(22,25,6,.9);"></i>
-						</div>
-
 
 						<!-- color:rgba(19, 218, 236,.8); COLD -->
 						<!-- color:rgba(46,200, 180,.8) COOL -->
@@ -429,42 +393,116 @@
 
 
 
-						<div class="overlapper fragment fade-in earthPolarAirIndicator" data-fragment-index="1" 
-							style="position:absolute;z-index:55;top:10px;left:145px;-webkit-transform:rotateZ(-40deg) scale(-1, 1)">
-							<i class="fa fa-search fa-5x"style="color:rgba(19, 218, 236,.9);" data-alt-style="color:rgba(255,94,71,1);" ></i>
-						</div>
-						<div class="overlapper fragment fade-in earthPolarSAirIndicator" data-fragment-index="5" 
-							style="position:absolute;z-index:55;top:535px;left:98px;-webkit-transform:rotateZ(140deg) scale(-1, 1)">
+					<div class="holds fragment fade-in" data-fragment-index="5"style="z-index:99;position:absolute;top:20px;left:0">
+
+						<div class="overlapper earthPolarSAirIndicator" data-fragment-index="" 
+							style="position:absolute;z-index:55;top:535px;left:95px;-webkit-transform:rotateZ(145deg) scale(-1, 1)">
 							<i class="fa fa-search fa-5x" style="color:rgba(19, 218, 236,.45);" data-alt-style="color:rgba(255,94,71,1);" ></i>
 						</div>
-							<div class="overlapper fragment fade-in earthMidLatSIndicator" data-fragment-index="5" 
+							<div class="overlapper earthMidLatSIndicator" data-fragment-index="" 
 							style="position:absolute;z-index:55;top:460px;left:-110px;-webkit-transform:rotateZ(-90deg)">
 							<i class="fa fa-search fa-6x" style="color:rgba(46,200, 180,.45);" data-alt-style="color:rgba(19, 218, 236,1);" ></i>
 						</div>
-						<div class="overlapper fragment fade-in earthSTropicsIndicator" data-fragment-index="5" 
-							style="position:absolute;z-index:55;top:356px;left:-215px;-webkit-transform:rotateZ(-70deg);font-size:7em;">
+						<div class="overlapper earthSTropicsIndicator" data-fragment-index="" 
+							style="position:absolute;z-index:55;top:350px;left:-220px;-webkit-transform:rotateZ(-70deg);font-size:7em;">
 							<i class="fa fa-search"style="color:rgba(236,228, 155,.45)" data-alt-style="color:rgba(255,94,71,1);font-size:7em;" ></i>
 						</div>
+					</div>
+
+
+					<div class="holds fragment fade-in" data-fragment-index="1"style="z-index:99;position:absolute;top:20px;left:0">
+
+						<div class="overlapper earthPolarAirIndicator" data-fragment-index="" 
+							style="position:absolute;z-index:55;top:0px;left:150px;-webkit-transform:rotateZ(-35deg) scale(-1, 1)">
+							<i class="fa fa-search fa-5x"style="color:rgba(19, 218, 236,.9);" data-alt-style="color:rgba(255,94,71,1);" ></i>
+						</div>
 						<div class="overlapper fragment fade-in earthEquatorIndicator" data-fragment-index="4" 
-							style="position:absolute;z-index:55;top:210px;left:-270px;-webkit-transform:rotateZ(-42deg);font-size:8em">
-							<i class="fa fa-search-plus"style="color:rgba(255,94,71,.9);" data-alt-style="color:rgba(255,94,71,1);font-size:8em" ></i>
+							style="position:absolute;z-index:55;top:200px;left:-285px;-webkit-transform:rotateZ(-42deg);font-size:8em">
+							<i class="fa fa-search-plus" style="color:rgba(243,150,67,1)" data-alt-alt-style="color:rgba(255,94,71,.9);" data-alt-style="color:rgba(255,94,71,1);font-size:8em" ></i>
 						</div>
 						<div class="overlapper fragment fade-in earthTropicsIndicator" data-fragment-index="3" 
-							style="position:absolute;z-index:55;top:105px;left:-210px;-webkit-transform:rotateZ(-18deg);font-size:7em;">
-							<i class="fa fa-search"style="color:rgba(236,228, 155,.9)" data-alt-style="color:rgba(255,94,71,1);font-size:7em;" ></i>
+							style="position:absolute;z-index:55;top:105px;left:-215px;-webkit-transform:rotateZ(-18deg);font-size:7em;">
+							<i class="fa fa-search"style="color:rgba(236,228, 155,1)" data-alt-style="color:rgba(255,94,71,1);font-size:7em;" ></i>
 						</div>
 						<div class="overlapper fragment fade-in earthMidLatIndicator" data-fragment-index="2" 
-							style="position:absolute;z-index:55;top:18px;left:-75px;-webkit-transform:rotateZ(10deg)">
-							<i class="fa fa-search fa-6x" style="color:rgba(46,200, 180,.9);" data-alt-style="color:rgba(19, 218, 236,1);" ></i>
+							style="position:absolute;z-index:55;top:15px;left:-85px;-webkit-transform:rotateZ(5deg)">
+							<i class="fa fa-search fa-6x" style="color:rgba(46,200, 180,1);" data-alt-style="color:rgba(19, 218, 236,1);" ></i>
 						</div>
-					
-
-
 			
 				</div>
 
 
 
+					<div class="holds" style="z-index:99;position:absolute;top:20px;left:0">
+
+						<div class="overlapper earthSpinOmegaPurple" 
+							style="z-index:59;top:130px;left:205px;position:absolute;-webkit-transform:rotate(6deg) perspective(2px) rotateX(1deg) scale(1.5,.4)">
+							<i class="fa fa-lg fa-undo fa-24s" style="color:rgba(171,137,224,1);text-shadow: -4px 0px rgba(0,0, 0,.8);"></i>
+						</div>
+						<div class="overlapper earthSpinOmegaShadow"
+							 style="z-index:59;top:520px;left:165px;position:absolute;-webkit-transform:rotate(6deg) perspective(2px) rotateX(1deg) scale(1.5,.4)">
+							<i class="fa fa-lg fa-undo fa-24s" style="color:rgba(171,137,224,1);text-shadow: -4px 0px rgba(0,0, 0,.8);"></i>
+						</div>
+
+						<!-- color:rgba(22,25,6,.9) --> 
+
+						<!-- <div class="overlapper fragment current-visible tankSpinPolarPurple" data-fragment-index="1" 
+							style="z-index:56;top:100px;left:670px;position:absolute;-webkit-transform:scale(1.5,-.5) perspective(2px) rotateX(1deg);">
+							<i class="fa fa-lg fa-undo fa-4p2s" style="color:rgba(171,137,224,1);" ></i>
+						</div>
+						<div class="overlapper fragment current-visible tankSpinPolarShadow" data-fragment-index="1" 
+							style="z-index:57;;top:440px;left:672px;position:absolute;-webkit-transform:scale(1.5,.5) perspective(2px) rotateX(1deg);">
+							<i class="fa fa-lg fa-undo fa-4p2s" style="color:rgba(171,137,224,1);color:rgba(22,25,6,.9);"></i>
+						</div>-->
+						<!-- <div class="overlapper fragment current-visible tankSpinMidLatitudePurple" data-fragment-index="2" 
+							style="z-index:56;top:100px;left:670px;position:absolute;-webkit-transform:scale(1.5,-.5) perspective(2px) rotateX(1deg);">
+							<i class="fa fa-lg fa-undo fa-10rpm" style="color:rgba(171,137,224,1);" ></i>
+						</div>
+						<div class="overlapper fragment current-visible tankSpinMidLatitudeShadow" data-fragment-index="2" 
+							style="z-index:57;top:440px;left:672px;position:absolute;-webkit-transform:scale(1.5,.5) perspective(2px) rotateX(1deg);">
+							<i class="fa fa-lg fa-undo fa-10rpm" style="color:rgba(171,137,224,1);color:rgba(22,25,6,.9);"></i>
+						</div> -->
+
+						<!-- <div class="overlapper fragment current-visible tankSpinTropicsPurple" data-fragment-index="3" 
+							style="z-index:59;top:100px;left:670px;position:absolute;-webkit-transform:scale(1.5,-.5) perspective(2px) rotateX(1deg);">
+							<i class="fa fa-lg fa-undo fa-1rpm" style="color:rgba(171,137,224,1);" ></i>
+						</div>
+						<div class="overlapper fragment current-visible tankSpinTropicsShadow" data-fragment-index="3"
+							 style="z-index:59;;top:440px;left:672px;position:absolute;-webkit-transform:scale(1.5,.5) perspective(2px) rotateX(1deg);">
+							<i class="fa fa-lg fa-undo fa-1rpm" style="color:rgba(22,25,6,.9);"></i>
+						</div>
+ 							-->
+
+ 						<div class="overlapper fragment current-visible tankSpinPolarPurple" data-fragment-index="1" 
+							style="z-index:56;top:200px;left:420px;position:absolute;-webkit-transform:scale(1,1);">
+							<i class="fa fa-lg fa-undo fa-4p2s" style="color:rgba(171,137,224,1);text-shadow: -4px 0px rgba(0,0, 0,.8);" ></i>
+						</div>
+
+						<div class="overlapper fragment current-visible tankSpinMidLatitudePurple" data-fragment-index="2" 
+							style="z-index:56;top:250px;left:420px;position:absolute;-webkit-transform:scale(1,.8);">
+							<i class="fa fa-lg fa-undo fa-10rpm" style="color:rgba(171,137,224,1);text-shadow: -4px 0px rgba(0,0, 0,.8);" ></i>
+						</div>
+
+						<div class="overlapper fragment current-visible tankSpinTropicsPurple" data-fragment-index="3" 
+							style="z-index:59;top:300px;left:420px;position:absolute;-webkit-transform:scale(1,.6);">
+							<i class="fa fa-lg fa-undo fa-1rpm" style="color:rgba(171,137,224,1);text-shadow: -4px 0px rgba(0,0, 0,.8);" ></i>
+						</div>
+
+
+						<div class="overlapper fragment current-visible tankSpinEquatorPurple fa-hemisphere" data-fragment-index="4" 
+							style="z-index:59;top:350px;left:420px;position:absolute;-webkit-transform:scale(1,.7);">
+							<i class="fa fa-lg  fa-eq fa-undo" style="color:rgba(171,137,224,1);" ></i>
+						</div>
+
+
+						<div class="overlapper fragment current-visible tankSpinSouthHemispherePurple" data-fragment-index="5" 
+							style="z-index:59;top:450px;left:420px;position:absolute;-webkit-transform:scale(1,-.8);">
+							<i class="fa fa-lg fa-undo fa-10rpm" style="color:rgba(22,25,6,1);text-shadow: -4px 0px rgba(171,137,224,1);" ></i>
+						</div>
+
+
+
+					</div>
 
 
 
@@ -692,14 +730,16 @@
 
 
 			<section data-period="6" data-title="Representing Temperature Gradient" data-state="tempgrad">
-						<i class="preface" data-fragment-index="0" data-title="the sun's parallel rays produces differential heating"></i>
-						<i data-period="6" class="fragment"  data-fragment-index="1" data-title="concentrated around the earth's equatorial region"></i>
-						<i data-period="6" class="fragment"  data-fragment-index="2" data-title="polar regions typically give off more energy in infrared than they absorb"></i>
-						<i data-period="6" class="fragment" data-fragment-index="3" data-title="we introduce a similar temperature gradient by cooling the pole"></i>	
-						<i data-period="6" class="fragment" data-fragment-index="4" data-title="leaving the warming up to laboratory's ambient room temperature"></i>
+						<i class="preface" data-fragment-index="0" data-title="The sun's parallel rays provide differing amounts of heat from equator to poles."></i>
+						<i data-period="6" class="fragment"  data-fragment-index="1" data-title="Equatorial regions receive a greater amount of heat energy from the sun."></i>
+						<i data-period="6" class="fragment"  data-fragment-index="2" data-title="Polar regions receive less solar input and give off more energy than they take in."></i>
+						<i data-period="6" class="fragment" data-fragment-index="3" data-title="We can introduce a similar temperature gradient by cooling the center of the annulus&mdash;"></i>	
+						<i data-period="6" class="fragment" data-fragment-index="4" data-title="&mdash;leaving the warming action up to the laboratory's ambient room temperature."></i>
 						
+
 						<aside class="notes">
 							Equator-Pole Temperature Gradient. Heating driven by sun. Larger radius warmer, smaller radius cooler. Cooling driven by ice.
+							Polar regions receive less solar input but are truly cool because they give off more energy than they receive.
 						</aside>
 						<aside class="edits">
 							*frag 1: large sun backdrop, thin line rays, slight opacity on icon*
@@ -728,37 +768,44 @@
 						</aside>
 
 
-					<div class="fa-rotate-180" id="thesun"
+					<!-- <div class="fa-rotate-180 fragment" id="thesun"
 						style="position:absolute;margin-top:248px;margin-left:55px;">
 						<img data-src="http://coriolis.no-ip.org/coloriis/UI/O/INPUTSUN.png"
 							style="-webkit-transform:scale(2,2)">
+					</div>-->
+
+
+					<div class="fragment shrink" id="thesun" data-fragment-index="1"
+						style="position:absolute;margin-top:248px;margin-left:55px;">
+						<img data-src="http://coriolis.no-ip.org/coloriis/UI/O/INPUTSUN.png"
+							style="-webkit-transform:scale(-6,6)">
 					</div>
 
+
+
 					<div class="fragment fade-in" data-fragment-index="3" id="theice" 
-						style="position:absolute;margin-top:125px;margin-left:580px;z-index:88;-webkit-transform:scale(1.3,1.3) perspective(1px) rotate(1deg);">
+						style="position:absolute;margin-top:100px;margin-left:580px;z-index:88;-webkit-transform:scale(1.3,1.3) perspective(1px) rotate(1deg);">
 						<img data-src="http://coriolis.no-ip.org/coloriis/UI/O/INPUTICE.png">				
 					</div>
 						
 
 					<ul class="hide-dot" style="float:left;">
 						<li class="fragment fade-in" data-fragment-index="2"
-							style="position:absolute;top:195px;left:268px;font-family: 'Quicksand', sans-serif;color:rgba(255, 255, 236,.8);z-index:88;text-shadow: 0 1px 0 rgba(46,200, 180,.8), 0 2px 0 rgba(46,200, 180,.8), 0 3px 0 #bbbbbb, 0 4px 0 rgba(19, 218, 236,.8), 0 5px 0 rgba(19, 218, 236,.8), 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);">
-							cooled
+							 style="position:absolute;top:160px;left:250px;font-family: 'Quicksand', sans-serif;color:rgba(255, 255, 236,.8);z-index:88;text-shadow: 0 1px 0 rgba(46,200, 180,.8), 0 2px 0 rgba(46,200, 180,.8), 0 3px 0 #bbbbbb, 0 4px 0 rgba(19, 218, 236,.8), 0 5px 0 rgba(19, 218, 236,.8), 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);">net cool
 						</li>
-						<li class="fragment fade-in fa-rotate-45"  data-fragment-index="1"
-							style="position:absolute;top:430px;left:252px;font-family: 'Quicksand', sans-serif;color:rgba(236,228, 155,1);z-index:88;text-shadow: 0px 0px 6px rgba(255,94,71,1)" >
-							warmed
+						<li class="fa-rotate-45"  data-fragment-index="0"
+							style="position:absolute;top:400px;left:-70px;font-family: 'Quicksand', sans-serif;color:rgba(243,150,67,1);z-index:88;text-shadow: 0px 0px 6px" alt-color="rgba(255,94,71,1)" >WARMING
 						</li>
 					</ul>
 
 					<ul class="hide-dot" style="float:right;">
-						<li class="fragment fade-in" data-fragment-index="3"
-							style="position:absolute;top:265px;right:256px;font-family: 'Quicksand', sans-serif;color:rgba(255, 255, 255,.8);z-index:59;text-shadow: 0 1px 0 rgba(46,200, 180,.8), 0 2px 0 rgba(46,200, 180,.8), 0 3px 0 #bbbbbb, 0 4px 0 rgba(19, 218, 236,.8), 0 5px 0 rgba(19, 218, 236,.8), 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);">
-							&nbsp;&nbsp;COOLED
+						<li class="fragment fade-in fa-rotate-45" data-fragment-index="3"
+							style="position:absolute;top:220px;right:300px;font-family: 'Quicksand', sans-serif;color:rgba(255, 255, 255,.8);z-index:59;text-shadow: 0 1px 0 rgba(46,200, 180,.8), 0 2px 0 rgba(46,200, 180,.8), 0 3px 0 #bbbbbb, 0 4px 0 rgba(19, 218, 236,.8), 0 5px 0 rgba(19, 218, 236,.8), 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);">
+							&nbsp;&nbsp;COOLING
 						</li>
 						<li class="fragment fade-in" data-fragment-index="4"
-						 	style="position:absolute;top:430px;right:250px;font-family: 'Quicksand', sans-serif;color:rgba(236,228, 155,1);z-index:68;">
-							&nbsp;&nbsp;&nbsp;<span style="text-shadow: 0px 0px 6px rgba(255,94,71,1)">warmed</span>
+						 	style="position:absolute;top:500px;right:170px;font-family: 'Quicksand', sans-serif;color:rgba(236,228, 155,1);z-index:68;">
+							&nbsp;&nbsp;&nbsp;<span style="text-shadow: 0px 0px 6px rgba(255,94,71,1)">ambient warmth</span>
 						</li>
 					</ul>
 
@@ -768,16 +815,23 @@
 						</div>
 					</div>
 
-					<div class="overlapper" style="top:0px;right:0px;position:absolute;z-index:29;">
-						<i class="fragment fade-in fa fa-circle fa-3x" id="arctic2" data-fragment-index="2"
-							style="color:rgba(19, 218, 236,.8);position:absolute;top:230px;left:260px;-webkit-transform:scale(1.5,1.2) perspective(14px) rotateX(2deg);text-shadow: 0px 0px 20px rgba(255,94,71,.8);" ></i>
-						<i class="fragment fade-in fa fa-circle-o fa-6x" id="equatorial2" data-fragment-index="1"
-							style="color:rgba(255,94,71,.8);position:absolute;top:185px;left:215px;-webkit-transform:scale(1.5,1.2) perspective(14px) rotateX(2deg);text-shadow: 0px 0px 20px rgba(236,228, 155,1);opacity:.75;" ></i>
-						<i class="fa fa-1x fa-circle fa-lg fragment fade-in" id="icecore2" data-fragment-index="3" 
-							style="color:rgba(19, 218, 236,.8);position:absolute;top:303px;right:286px;-webkit-transform:scale(1.3,1) perspective(14px) rotateX(2deg);" ></i>
-						<i class="fragment fade-in fa fa-5x fa-circle-o" id="ambientwarm2" data-fragment-index="4"
-							style="color:rgba(255,94,71,.8);position:absolute;top:244px;right:230px;-webkit-transform:scale(1.3,1.1) perspective(14px) rotateX(2deg);text-shadow: 0px 0px 20px rgba(236,228, 155,1);opacity:.75;"></i>
+				<div id="arctic2" class="holds" style="position:absolute;top:0px;left:0px">
+					<div class="overlapper fragment fade-in" style="position:absolute;top:238px;left:268px;position:absolute;z-index:29;font-size:2.5em" data-fragment-index="2">
+						<i class="fa fa-circle" 
+							style="color:rgba(19, 218, 236,.8);-webkit-transform:scale(1.5,1.2) perspective(14px) rotateX(2deg);text-shadow: 0px 0px 20px rgba(255,94,71,.8);opacity:.6" ></i>
 					</div>
+					<div id="equatorial2"  class="overlapper fragment fade-in" style="top:180px;left:215px;position:absolute;z-index:29;font-size:6em" data-fragment-index="1">
+						<i class="fa fa-circle-thin" alt-color="color:rgba(255,94,71,.8);"
+							style="color:rgba(243,150,67,1);-webkit-transform:scale(1.5,1) perspective(14px) rotateX(4deg);text-shadow: 0px 0px 20px rgba(236,228, 155,1);opacity:.8;" ></i>
+					</div>
+					<div id="icecore2" class="overlapper fragment fade-in" data-fragment-index="3" style="top:300px;left:635px;position:absolute;z-index:29;font-size:1.333em;">
+						<i class="fa fa-1x fa-circle"   
+							style="color:rgba(19, 218, 236,.8);-webkit-transform:scale(1.3,1) perspective(14px) rotateX(2deg);opacity:.98" ></i>
+					</div>
+					<div id="ambientwarm2" class="overlapper fragment fade-in"  data-fragment-index="4" style="position:absolute;top:230px;left:560px;z-index:29;font-size:6em">
+						<i class="fa fa-circle-o" alt-style="color:rgba(255,94,71,.8);" style="color:rgba(243,150,67,1);-webkit-transform:scale(1.3,1.1) perspective(14px) rotateX(2deg);text-shadow: 0px 0px 20px rgba(236,228, 155,1);opacity:.5;"></i>
+					</div>
+				</div>
 
 					
 					<!-- <div class="overlapper" data-fragment-index="0" id="sunexperiment"
@@ -796,12 +850,12 @@
 
 				<section>
 					<section  data-period="3" data-title="Hadley How-To" id="setup">
-							<i class="preface" data-fragment-index="0" data-title="with a rotating turntable apparatus.."></i>
-							<i data-period="3" class="fragment" data-fragment-index="1" data-title="1. place tank, can, weight @ turntable center"></i>
-							<i data-period="3" class="fragment" data-fragment-index="2" data-title="2. fill tank to just under can"></i>
-							<i data-period="12" class="fragment" data-fragment-index="3" data-title="3. spin up to solid body rotation"></i>
-							<i data-period="6" class="fragment" data-fragment-index="4" data-title="4. add ice and some water to center can"></i>
-							<i data-period="4" class="fragment" data-fragment-index="5" data-title="5. add tracers to visualize flow"></i>
+							<i class="preface" data-fragment-index="0" data-title="Setting up the experiment apparatus..."></i>
+							<i data-period="3" class="fragment" data-fragment-index="1" data-title="1. Place a clear acrylic tank and a metallic can with a weight @ center on the turntable."></i>
+							<i data-period="3" class="fragment" data-fragment-index="2" data-title="2. Fill the tank with water up to a level under the can height, about 6-8 inches."></i>
+							<i data-period="12" class="fragment" data-fragment-index="3" data-title="3. Spin up the turntable to 1 rpm &amp; give ~10 minutes for the water to reach solid body rotation &darr;"></i>
+							<i data-period="6" class="fragment" data-fragment-index="4" data-title="4. Add ice and some water to the center can to establish a temperature gradient."></i>
+							<i data-period="4" class="fragment" data-fragment-index="5" data-title="5. Give another 10 minutes for flows to set up before adding tracers to visualize."></i>
 							<aside class="notes">
 								Step 1. Center tank and can. Step 2. Fill with water. Step 3. Turn on rotation, monitor the rotating frame, and wait for solid body rotation. Step 4. Add ice and a bit of water in middle. 5. Add gizmos to visualize flow.
 							</aside>
@@ -957,12 +1011,12 @@
 					</div>
 
 					<div class="fragment current-visible"  data-fragment-index="4" 
-						style="position:absolute;top:230px;left:472px;opacity:.9;-webkit-transform:scale(1,2) rotate(32deg)">
+						style="position:absolute;top:230px;left:490px;opacity:.9;-webkit-transform:scale(1,2) rotate(0deg)">
 						<img data-src="dyedropg.png">
 					</div>
 
 					<div class="fragment current-visible" data-fragment-index="3"
-						style="position:absolute;top:230px;left:472px;opacity:.9;-webkit-transform:scale(1.5,1.5)">
+						style="position:absolute;top:230px;left:480px;opacity:.9;-webkit-transform:scale(1.5,1.5)">
 						<img data-src="dyedropg.png" style="z-index:20">
 					</div>
 
