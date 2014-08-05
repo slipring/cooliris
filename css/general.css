@@ -2024,6 +2024,118 @@ span.component {
 
 
 
+.fa-wiggleRo {
+  -webkit-animation: wiggleH 10s infinite linear;
+  -moz-animation: wiggleH 10s infinite linear;
+  -o-animation: wiggleH 10s infinite linear;
+  animation: wiggleH 10s infinite linear;
+}
+@-moz-keyframes wiggleH {
+  0% {
+  top:102px;
+  -moz-transform: rotate(1.1deg);
+    }
+  25% {
+    top:100px;
+  }
+  50% {
+    top:102px;
+   -moz-transform: rotate(-1.1deg);
+ }
+  75% {
+    top:100px;}
+  100% {
+    top:102px;
+  -moz-transform: rotate(1.1deg);}
+}
+
+
+@-webkit-keyframes wiggleH {
+  0% {
+  top:102px;
+   -webkit-transform: rotate(1.1deg);
+    }
+  25% {
+    top:100px;
+  }
+  50% {
+    top:102px;
+  -webkit-transform: rotate(-1.1deg);
+}
+  75% {
+    top:100px;}
+  100% {
+    top:102px;
+   -webkit-transform: rotate(1.1deg);}
+}
+
+
+@-o-keyframes wiggleH {
+  0% {
+  top:102px;
+  -o-transform: rotate(1.1deg);
+    }
+  25% {
+    top:100px;
+  }
+  50% {
+    top:102px;
+  -o-transform: rotate(-1.1deg);}
+  75% {
+    top:100px;}
+  100% {
+    top:102px;
+  -o-transform: rotate(1.1deg);}
+}
+
+
+
+@-ms-keyframes wiggleH {
+  0% {
+  top:102px;
+  -ms-transform: rotate(1.1deg);
+    }
+  25% {
+    top:100px;
+  }
+  50% {
+    top:102px;
+  -ms-transform: rotate(-1.1deg);}
+  75% {
+    top:100px;}
+  100% {
+    top:102px;
+  -ms-transform: rotate(1.1deg);}
+}
+
+
+@keyframes wiggleH {
+  0% {
+  top:102px;
+  -webkit-transform: rotate(1.1deg);
+    transform: rotateY(1.1deg);
+  }
+  25% {
+    top:100px;
+  } 
+  50% {
+    top:102px;
+    -webkit-transform: rotate(-1.1deg);
+    transform: rotateY(-1.1deg);
+  }
+   75% {
+    top:100px;
+  }
+   100% {
+    top:102px;
+    -webkit-transform: rotate(1.1deg);
+    transform: rotateY(1.1deg);
+  }
+}
+
+
+
+
 
 
 
