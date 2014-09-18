@@ -1,0 +1,198 @@
+
+
+
+
+
+
+/*section cutting */
+
+
+
+
+
+
+						<i class="preface" data-fragment-index="0" title="getting up to spin with"></i>
+						<i class="fragment" data-fragment-index="1" title="to understand our atmosphere"></i>
+						<i class="fragment" data-fragment-index="2" title="studying water on a turntable"></i>
+						<i class="fragment" data-fragment-index="3" title="seeing 30 years of climate in color"></i>
+
+
+
+
+
+
+<ul class="icee hide-dot fa-ul" style="position:absolute;top:0%;right:-15%;">
+							<li style="" class="preface" data-fragment-index="0" title="step 1 place tank, can, weight @ turntable center"><!-- <i style="color:rgba(255,255,255,.5);" class="fa-li fa fa-cube"></i> --></li>
+							<li class="fragment grow" data-fragment-index="1" title="step 2 fill tank to just under can"><i style="color:rgba(255,255,255,.5);"class="fa-li fa fa-cube"></i></li>
+							<li class="fragment grow" data-fragment-index="2" title="step 3 spin up to solid body rotation"><i style="color:rgba(255,255,255,.5);" class="fa-li fa fa-cube"></i></li>
+							<li class="fragment grow" data-fragment-index="3" title="step 4 add ice and a bit of water to center can"><i style="color:rgba(255,255,255,.5);" class="fa-li fa fa-cube"></i></li>
+							<li class="fragment grow" data-fragment-index="4" title="step 5 add tracers to visualize flow"><i style="color:rgba(255,255,255,.5);" class="fa-li fa fa-cube"></i></li>
+						</ul>
+
+
+
+
+/* spiralling */
+
+
+						<ul class="icee hide-dot" style="position:absolute;bottom:35px;left:0px;">
+
+							<li><i style="" class="fa fa-p66x fa-fw fa-eye" title="step 1 place tank, can, weight @ turntable center"></i></li>
+							<li><i class="fa fa-p66x fa-fw fa-asterisk fragment shrink" data-fragment-index="1" title="step 2 fill tank to just under can"></i></li>
+							<li><i class="fa fa-p66x fa-fw fa-asterisk fragment shrink" data-fragment-index="2" title="step 3 spin up to solid body rotation"></i></li>
+							<li><i class="fa fa-p66x fa-fw fa-asterisk fragment shrink" data-fragment-index="3" title="step 4 add ice and a bit of water to center can"></i></li>
+							<li><i class="fa fa-p66x fa-fw fa-asterisk fragment shrink" data-fragment-index="4" title="step 5 add tracers to visualize flow"></i></li>
+
+						</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reveal.addEventListener( 'slidechanged', function( event ) {
+    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+    // console.log (event.currentSlide.dataset);
+    var timeControl = event.currentSlide.getAttribute('timer');
+    
+    console.log ();
+    if(event.currentSlide.dataset.timer) {
+      var autoslideDuration = event.currentSlide.dataset.timer;
+      console.log( autoslideDuration + ' second play window' );
+      msTimer = autoslideDuration * 1000;
+    Reveal.configure({ autoSlide: msTimer });
+  } });
+
+
+
+
+
+
+
+
+					<p>
+						themes built in: <br>
+						<a href="?#/themes">Default</a> -
+						<a href="?theme=sky#/themes">Sky</a> -
+						<a href="?theme=beige#/themes">Beige</a> -
+						<a href="?theme=simple#/themes">Simple</a> -
+						<a href="?theme=serif#/themes">Serif</a> -
+						<a href="?theme=night#/themes">Night</a> <br>
+						<a href="?theme=moon#/themes">Moon</a> -
+						<a href="?theme=solarized#/themes">Solarized</a>
+					</p>
+
+
+
+
+
+
+
+					<h4>Fluid Analogies</h4>
+					<ul>
+						<li class="dashing">rotation</li>
+						<li class="inbound">warm</li>
+						<li class="dashing inbound">air</li>
+						<li>cold</li>
+					</ul>
+					<ul class="hide-dot">
+					<li></li>
+					</ul>
+					<ul class="fa-ul">
+						<li><i class="fa-li fa fa-undo fa-spin"></i>rotation</li>
+						<li class="dashing inbound"><i class="fa-li fa fa-spinner fa-spin-cyclonic"></i>cold</li>
+						<li class="dashing"><i class="fa-li fa fa-lg fa-spinner fa-1rpm"></i>water</li>
+						<li class="dashing inbound"><i class="fa-li fa fa-2x fa-spinner fa-spin fa-10rpm"></i>warm</li>
+					</ul>
+
+
+
+<!-- 			<section> -->
+<!-- 					<section>
+						<div style="position:relative;-webkit-transform:rotateX(45deg)">
+							<i style="position:absolute;margin-left:-20px;margin-top:50px" class="fa fa-eye fa-rotating"></i>
+							<i style="position:absolute;margin-left:-55px;margin-top:15px" class="fa fa-3x fa-circle-o-notch fa-rotating"></i>
+						</div>
+						<div style="position:absolute;top:350px;left:450px;">
+							<i class="fa fa-eye"></i>
+						</div>
+						<div style="position:absolute;top:350px;left:0px;">
+							<i class="fa fa-eye"></i>
+						</div>
+						<div style="position:absolute;top:350px;left:900px;">
+							<i class="fa fa-eye"></i>
+						</div>
+						<div style="position:absolute;top:675px;left:900px;">
+							<i class="fa fa-eye"></i>
+						</div>
+						<div style="position:absolute;top:0px;left:900px;">
+							<i class="fa fa-eye"></i>
+						</div>
+						<div style="position:absolute;top:640px;left:450px;">
+							<i class="fa fa-eye"></i>
+						</div>
+						<div style="position:absolute;top:640px;left:0px;">
+							<i class="fa fa-eye"></i>
+						</div>
+					</section>
+ -->
+		<!-- 			<section>
+						<br>
+						<small>redirect lab.rotating.co <i class="fa fa-adjust"></i> port to /clear dir</small><br>
+						<i class="fa fa-trophy"></i><small>title-line + lookback window</small><br>
+						<i class="fa fa-bug"></i><small>vimeo data-autoplay for iframe</small><br>
+						<i class="fa fa-trophy"></i><small>
+						data-background="../UI/ypan_transpgrid.png" backdrop img offset sprite sweep</small>
+					</section>
+				</section>
+ -->
+
+				<!-- 	<section id="splash"> -->
+				<!-- <div style="position:relative">
+							<i style="position:absolute;margin-left:-20px;" class="fa fa-eye fa-rotating"></i>
+							<i style="position:absolute;margin-left:-55px;margin-top:-35px" class="fa fa-3x fa-circle-o-notch fa-rotating"></i>
+							</div> -->
+
+
+
+
+
+						<div style="position:relative;-webkit-transform:rotateX(45deg)">
+					<!-- 		<i style="position:absolute;margin-left:-20px;margin-top:50px" class="fa fa-eye fa-rotating"></i>
+					 -->		<i style="position:absolute;margin-left:-250px;margin-top:15px" class="fa fa-3x fa-circle-o-notch fa-rotating"></i>
+						</div>
+
+
+						
+
+
+						<section>
+						<div style="position:relative;-webkit-transform:rotateX(45deg)">
+							<i style="position:absolute;margin-left:85px;margin-top:45px" class="fa fa-eye fa-rotating"></i>
+							<!-- <i style="position:absolute;margin-left:40px;margin-top:10px" class="fa fa-3x fa-circle-o-notch fa-rotating"></i> -->
+						</div>
+							<div style="position:relative;-webkit-transform:rotateX(45deg)">
+							<!-- <i style="position:absolute;margin-left:-20px;margin-top:50px" class="fa fa-eye fa-rotating"></i> -->
+							<i style="position:absolute;margin-left:-250px;margin-top:15px" class="fa fa-3x fa-circle-o-notch fa-rotating"></i>
+						</div>
+								<div style="position:absolute;margin-top:555px;margin-left:15%">
+							<i style="position:absolute;margin-left:85px;margin-top:45px" class="fa fa-group"></i>
+							<!-- <i style="position:absolute;margin-left:40px;margin-top:10px" class="fa fa-3x fa-circle-o-notch fa-rotating"></i> -->
+						</div>
+
+							<div style="position:absolute;margin-top:555px;margin-left:85%">
+							<i style="position:absolute;margin-left:80px;margin-top:-50px" class="fa fa-camera fa-sm"></i>
+							<i style="position:absolute;margin-left:100px;margin-top:0px" class="fa fa-user"></i>
+							</div>
+
+					<img data-src="http://coriolis.no-ip.org/coloriis/UI/O/analog.png">
+				 		<h4>between systems</h4>
+				</section>
