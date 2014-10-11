@@ -84,12 +84,6 @@
 
 
 
-
-
-
-
-
-
 .piecewise {
   font-family: Helvetica;
 
@@ -1804,7 +1798,12 @@ span.component {
     color:rgba(243,150,67,1);
     text-shadow: -4px 0px rgba(22,25,6,.9);
   }
-  25% {
+  20% {
+    -moz-transform: scale(1,1);
+    color:rgba(171,137,224,1);
+   text-shadow: -4px 0px rgba(22,25,6,.9);
+  }
+  30% {
     -moz-transform: scale(1,1);
     color:rgba(171,137,224,1);
    text-shadow: -4px 0px rgba(22,25,6,.9);
@@ -1814,7 +1813,12 @@ span.component {
     color:rgba(243,150,67,1);
     text-shadow: -4px 0px rgba(22,25,6,.9);
   }
-  75% {
+  70% {
+    -moz-transform: scale(1,-1);
+    color:rgba(22,25,6,.9);
+    text-shadow: -4px 0px rgba(171,137,224,1);
+  }
+  80% {
     -moz-transform: scale(1,-1);
     color:rgba(22,25,6,.9);
     text-shadow: -4px 0px rgba(171,137,224,1);
@@ -1831,7 +1835,12 @@ span.component {
     color:rgba(243,150,67,1);
     text-shadow: -4px 0px rgba(22,25,6,.9);;
   }
-  25% {
+  20% {
+    -webkit-transform: scale(1,1);
+    color:rgba(171,137,224,1);
+    text-shadow: -4px 0px rgba(22,25,6,.9);
+  }
+  30% {
     -webkit-transform: scale(1,1);
     color:rgba(171,137,224,1);
     text-shadow: -4px 0px rgba(22,25,6,.9);
@@ -1841,7 +1850,12 @@ span.component {
     color:rgba(243,150,67,1);
     text-shadow: -4px 0px rgba(22,25,6,.9);
   }
-  75% {
+  70% {
+    -webkit-transform: scale(1,-1);
+    color:rgba(22,25,6,.9);
+    text-shadow: -4px 0px rgba(171,137,224,1);
+  }
+  80% {
     -webkit-transform: scale(1,-1);
     color:rgba(22,25,6,.9);
     text-shadow: -4px 0px rgba(171,137,224,1);
@@ -1856,7 +1870,12 @@ span.component {
     color:rgba(243,150,67,1);
     text-shadow: -4px 0px rgba(22,25,6,.9);;
   }
-  25% {
+  20% {
+    -o-transform: scale(1,1);
+    color:rgba(171,137,224,1);
+    text-shadow: -4px 0px rgba(22,25,6,.9);;
+  }
+  30% {
     -o-transform: scale(1,1);
     color:rgba(171,137,224,1);
     text-shadow: -4px 0px rgba(22,25,6,.9);;
@@ -1866,7 +1885,12 @@ span.component {
     color:rgba(243,150,67,1);
     text-shadow: -4px 0px rgba(22,25,6,.9);
   }
-  75% {
+  70% {
+    -o-transform: scale(1,-1);
+    color:rgba(22,25,6,.9);
+    text-shadow: -4px 0px rgba(171,137,224,1);
+  }
+  80% {
     -o-transform: scale(1,-1);
     color:rgba(22,25,6,.9);
     text-shadow: -4px 0px rgba(171,137,224,1);
@@ -1883,7 +1907,12 @@ span.component {
     color:rgba(243,150,67,1);
     text-shadow: -4px 0px rgba(22,25,6,.9);
   }
-  25% {
+  20% {
+    -ms-transform: scale(1,1);
+    color:rgba(171,137,224,1);
+    text-shadow: -4px 0px rgba(22,25,6,.9);;
+  }
+  30% {
     -ms-transform: scale(1,1);
     color:rgba(171,137,224,1);
     text-shadow: -4px 0px rgba(22,25,6,.9);;
@@ -1893,7 +1922,12 @@ span.component {
     color:rgba(243,150,67,1);
     text-shadow: -4px 0px rgba(22,25,6,.9);
   }
-  75% {
+  70% {
+    -ms-transform: scale(1,-1);
+    color:rgba(22,25,6,.9);
+    text-shadow: -4px 0px rgba(171,137,224,1);
+  }
+  80% {
     -ms-transform: scale(1,-1);
     color:rgba(22,25,6,.9);
     text-shadow: -4px 0px rgba(171,137,224,1);
@@ -1923,7 +1957,13 @@ span.component {
     color:rgba(243,150,67,1);
     text-shadow: -4px 0px rgba(22,25,6,.9);
   }
-  75% {
+  70% {
+     -webkit-transform: scale(1,-1);
+    transform: scale(1,-1);
+    color:rgba(22,25,6,.9);
+    text-shadow: -4px 0px rgba(171,137,224,1);
+  }
+  80% {
      -webkit-transform: scale(1,-1);
     transform: scale(1,-1);
     color:rgba(22,25,6,.9);
