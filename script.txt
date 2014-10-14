@@ -1,0 +1,521 @@
+/0/WEATHER IN A TANK
+How cool, rotating fluid experiments can—
+—revolutionize our understanding of Earth's climate patterns.
+By looking into the dynamics of water on a turntable— 
+—we may reveal the flows & forces at work in our planetary weather systems. 
+
+
+
+
+/1/FLUID ANALOGIES
+Zones of Earth's atmosphere are modelable with a rotating fluid annulus.
+Air and water are both fluids; one can be used to study the other.
+Interactions between cool polar & warm equatorial air in the troposphere—
+—can be investigated by creating temperature-density gradients in the fluid tank.
+Spinning the turntable imparts upon the fluid properties analogous to planetary rotation.
+
+
+
+
+/2/REPRESENTING EARTH'S ROTATION IN THE LAB
+We match the west→east angular momentum Ω of the Earth about its axis with the turntable's spin.
+Looking down above the pole, we direct it counterclockwise for the northern hemisphere.
+Moving equatorward, a turntable speed of 10 rpm effects flows similar to middle latitudes.
+As latitude φ decreases, so do effects of rotation; for the Tropics, we slow down to 1 rpm.
+At the equator, the ground is perpendicular to the rotation axis, so we keep the turntable at rest.
+Viewed from 'down under', the same west to east rotation is effectively clockwise for the S hemisphere.
+
+
+
+
+/3/REPRESENTING TEMPERATURE GRADIENT IN THE LAB
+The Sun's ~parallel rays are incident upon the spheroidal Earth at angles depending on latitude & time of year.
+Tropical zones N & S of the equator, where rays are near perpendicular to the surface, receive more direct heating, concentrated upon a smaller area, and minimizing distance through the atmosphere.
+In polar zones, sunlight enters at shallow angles, spreading over larger areas and passing through more atmosphere along the way. Even cooler, the poles emit more energy (in longwave infrared) than they take in.
+We introduce a similar pole-equator temperature gradient by cooling the can center of the annulus with ice—
+—leaving the warming action up to the laboratory's ambient room temperature.
+
+
+
+
+/4/HADLEY HOW-TO
+Setting up the experiment apparatus...
+1. Place a clear acrylic tank and a metallic can with a weight @ center on the turntable.
+2. Fill the tank with water up to a level under the can height, about 6-8 inches.
+3. Spin up the turntable to 1 rpm & give ~10 minutes for the water to reach solid body rotation ↓
+4. Add ice and some water to the center can to establish a temperature gradient.
+5. Another 10 minutes allows flows to set up before adding tracers to visualize.
+
+
+/4-1/SOLID BODY ROTATION
+we add a paper dot to the rotating water
+and view monitor its position
+in the co-rotating frame
+the tank has reached solid body rotation
+when the surface floating particle appears still
+
+
+
+
+/5/VISUALIZING FLOWS
+We use tracers of distinct buoyancies to reveal flows at various levels in the fluid volume.
+Paper dots (leftover from a hole punch) will float on the fluid's upper surface, tracing its currents.
+Color dye drops create plumes that disperse as directed by currents of the working fluid interior.
+Pink permanganate crystals cast streamers as they sink to tank bottom—
+—where they act as a point sources spreading to stain the lowest of the fluid's flows.
+
+
+
+
+/6/CO-ROTATING PREDICTION
+Moving from the lab frame of reference to an overhead camera co-rotating in sync with the turntable—
+—we can get a steady view of how the tracers spread through the tank. Observers outside the frame appear to be rotating in the opposite direction.
+Within this reference frame, visualize how the color tracers might behave when released into the water.
+
+
+
+
+/7/HADLEY VIDEO
+scrub through video footage
+
+
+
+
+/8/RENDER VIEWS
+8:  1 wrap-around after x seconds
+1.5 wrap-around after x+y seconds
+hiding water medium / central can
+Use your keyboard's right arrow (→) to decompose the spiral into its component flows, or use the down arrow (↓)to see how these images were composed from videospatial contours
+
+
+/8-1/FLOOR 
+rotating frame of reference
+
+
+/8-2/3D BUILDUP
+praxinoscope reconstruction
+evolving overhead contour
+evolving elevation contour
+surfacing 3d lineaments
+
+
+
+
+/9/DYE DROP
+schematic of shearing forces on the dye drop
+overlaying real data frames with 4s delay
+
+
+
+
+/10/CO-ROTATING FLYBY
+1rpm, variable pitch & orbit
+
+
+
+
+/11/REVEALING HADLEY FLOWS
+intuiting currents in the tank from evidenced tracer deformations
+
+
+
+
+/12/PERMANGANATE TRAILS
+crystals will sink to tank bottom
+revealing profile of current variation in the vertical
+
+
+
+
+/13/BOTTOM FLOWS
+fast forward of permangante crystal spread
+radially outward + circumferentially clockwise ( in that wise, counter to table/system rotation !) 
+as the spread reaches the warm periphery, it heats and tends to rise
+
+
+
+
+/14/GREEN DYE WOUND UP
+dye drop release superimposed on a snapshot of its late-stage isosurface
+upper fluid tends to move circumferentially faster in the direction of the turntable, radially slowly inward to the cold sink
+clear upper fluid getting cold, sinking along can walls
+
+
+
+
+/15/PARTICLE VELOCITIES
+paper dots tend to move slower the further they are away from the cool core
+these measures can be catalogged relative to radius
+and compared to slope of the dome surface, akin to a front in a tank
+
+
+
+
+/16/HADLEY CELL SCHEMATIC
+Sketch displaying overturning circulation + vertical currents profile
+
+
+
+
+/17/HADLEY BLACKOUT
+dyeform evo filter view from rotating turntable and inertial laboratory frames of reference
+
+
+
+
+
+
+
+
+/18/WORLD CLIMATE DATA
+our inertial laboratory frame of reference is of course actually a rotating and revolving one. let's pick 1 month (~30 rotations, 1/12 a revolution) to begin, and look at that month averaged over 30 years time
+
+
+
+
+
+
+/19/U-COMPONENT
+Variable: [u] Zonal Wind
+component of air flow along lines of latitude
+magnitude measured in |meters/second|
+directed from the west (westerly blue) or east (easterly pink)
+~~each titlecard like this one will explain a little bit about the variable field, and then dig down to browse through various abstractions and zonal averages
+
+
+
+/19-1/EAST / WEST FLOWS
+
+~~entryline
+
+
+
+/19-2/U SPECTRUM
+
+~~entryline
+
+
+
+/19-3/PRESSURE LEVEL ABSTRACTION
+
+~~entryline
+
+
+
+/19-4/U ZONAL CROSS SECTIONS
+
+~~entryline
+
+
+
+
+
+
+/20/POTENTIAL TEMPERATURE
+Variable: [theta] Potential Temperature
+measured in |Kelvin (K)|
+lower theta air is modeled as /colder green\ more dense fluid
+higher theta air is modeled as \warmer yellow/ less dense fluid
+>>temperature of an air parcel brought down adiabatically to a standard reference pressure - 1000mb, ~sea-level
+>>parcels with equal potential energy have similar entropy per unit mass.
+~~entryline
+
+
+
+/20-1/ABOVE AND BELOW A THETA ISOSURFACE
+
+~~entryline
+
+
+
+/20-2/QUALITIES OF AIR MASSES BY THETA
+
+~~entryline
+
+
+
+/20-3/THETA CROSS-SECTIONS
+
+~~entryline
+
+
+
+/20-4/THETA ZONAL AVERAGING
+
+~~entryline
+
+
+
+/20-5/POTENTIAL TEMPERATURE ZONAL AVERAGE PLOT
+
+~~entryline
+
+
+
+/20-6/OVER THE POLE PROXY
+
+~~entryline
+
+
+
+
+
+
+/21/THETA + U RELATION
+Relation: 
+[theta] Potential Temperature {color-filled plot}
++
+[u] Zonal Wind {color-filled plot}
+~~entryline
+
+
+
+/21-1/ZONAL AVERAGE THETA+U PLOT
+
+~~entryline
+
+
+
+/21-2/THETA + U ISOSURFACES
+
+~~entryline
+
+
+
+/21-3/POLE-CENTRIC VIEW OF U + THETA ISOSRFS
+
+~~entryline
+
+
+
+/21-4/POLAR CROSS-SECTION OF U OVER THETA
+
+~~entryline
+
+
+
+
+
+
+/22/OMEGA RISING
+Variable: [omega] Vertical Motion
+component of air flow's rising or sinking
+magnitude related via millimeters / second
+directed |up-ward yellowish| or down-ward |downward tealish|
+~~entryline
+
+
+
+/22-1/OMEGA CROSS-SECTIONS
+
+~~entryline
+
+
+
+/22-2/SUN TRAVEL SLICES: 6 HOUR WINDOW, 30° BETWEEN CUTS
+
+~~entryline
+
+
+
+/22-3/VOLUMETRIC VISUAL AVERAGE
+
+~~entryline
+
+
+
+/22-4/OMEGA ZONAL-AVERAGED
+
+~~entryline
+
+
+
+/22-5/ZONALLY AVERAGED OMEGA, MERIDIONAL SECTION
+
+~~entryline
+
+
+
+
+
+
+/23/OMEGA + THETA
+Relation: 
+[omega] vertical motion {color-filled plot}
++
+[theta] potential temperature {color-filled plot}
+~~entryline
+
+
+
+/23-1/OMEGA + THETA ZONAL AVERAGE PLOTS
+
+~~entryline
+
+
+
+/23-2/OMEGA + THETA PATTERN ABSTRACTION
+
+~~entryline
+
+
+
+
+
+
+/24/V-COMPONENT, LONGITUDINAL
+Variable: [v] Meridional Wind
+component of air flow along lines of longitude (meridians)
+magnitude measured in |meters / second|
+directed (north-ward white) or (south-ward black dotted)
+~~entryline
+
+
+
+/24-1/V WIND CROSS SECTIONS
+
+~~entryline
+
+
+
+/24-2/V WIND ZONAL AVERAGE
+
+~~entryline
+
+
+
+/24-3/V WIND ZONAL AVERAGE MERIDIONAL SECTION
+
+~~entryline
+
+
+
+
+
+
+/25/V-WIND + OMEGA
+Relation:
+[v] meridional wind {grayscale-filled plot}
++
+[omega] vertical motion {color-filled plot}
+~~entryline
+
+
+
+/25-1/V-WIND + OMEGA PLOTS
+
+~~entryline
+
+
+/25-2/V-WIND + OMEGA FLOW ABSTRACTION
+
+~~entryline
+
+
+
+
+
+
+/26/LINKING CLIMATE DATA TO THE DATE (V+W)+U
+Relation:
+[V+W] overturning circulation {color-filled+abstract arrows plot}
++
+[u] zonal wind
+~~entryline
+
+
+
+/26-1/U ZONAL AVERAGE & W+V FLOW ABSTRACTION
+
+~~meters/second
+
+
+
+/26-2/HADLEY CELL IN JANUARY, ~15S TO 30N
+
+~~as we averaged acoss longitudes, we may consider this pattern a very general world-round rule, for which there are always exceptions according to particularities of place. for our u-field, remember the colors of the wind: magenta flows from east to west, and cyan from west to east
+
+
+
+/26-3/GENERAL SCHEME: NORTHERN HEMISPHERE / CCW TURNTABLE
+
+~~placehold for supporting text
+
+
+
+/26-4/CORRELATION BETWEEN REAL TANK AND ATMOSPHERE
+
+~~entryline
+
+
+
+
+
+
+/27/LINE SLICES THROUGH ZONAL U-WIND
+
+~~entryline
+
+
+
+/27-1/EXTRUDING VOLUMETRIC MIST
+
+~~entryline
+
+
+
+/27-2/POLARIZING THE FIELD
+
+~~entryline
+
+
+
+/27-3/CORRELATION WITH THERMAL WIND IN TANK
+
+~~entryline
+
+
+
+/27-4/POTENTIAL TEMPERATURE SPIRAL CUT
+
+~~entryline
+
+
+
+
+
+/28/OMEGA WHITE-OUT
+
+~~entryline
+
+
+
+
+
+
+
+
+/29/THERMAL WIND & ROSSBY NUMBER
+~~entryline
+
+
+
+
+
+
+/30/GRADIENT T
+~~entryline
+
+
+
+
+
+
+/31/NUMERICAL MODELS: (WORLD) AND [TANK]
+cyan theta-iso
+blue u iso
+white u+ into
+red u- outof 
+~~(NCEP-Global Forecast for May 2010) [MITgcm simulation - cylinder collapse]
+
+

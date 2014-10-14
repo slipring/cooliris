@@ -525,18 +525,32 @@ $( window ).resize(function() {
 
 
 
+Reveal.addEventListener( 'nosubs', function() {
+    // TODO: Sprinkle magic
+    $('#inertialFrame').hide();
+}, false );
+
+Reveal.addEventListener( 'subs', function() {
+    // TODO: Sprinkle magic
+    $('#inertialFrame').show();
+}, false );
+
+
 
 
 Reveal.addEventListener( 'slidechanged', function( event ) {
   // event.previousSlide, event.currentSlide, event.indexh, event.indexv
   var slideTitled = event.currentSlide.getAttribute('data-title');
+  var progshift = event.indexh*5+"px";
+  console.log(progshift);
   if (slideTitled) {
     document.getElementById('titleText').innerHTML = slideTitled;
     document.getElementById('titleText').setAttribute( 'data-title', slideTitled );
+    document.getElementById('titleBloct').style.left = progshift;
     } else {
       document.getElementById('titleText').innerHTML = "weather in a tank";
       document.getElementById('titleText').setAttribute( 'data-title', "weather in a tank" );
-
+      document.getElementById('titleBloct').style.left = progshift;
     }
   // prompt reset, taking title of element with class preface or displaying default message
   document.getElementById('promptText').innerHTML = " ";
@@ -615,6 +629,8 @@ Reveal.addEventListener( 'fragmentshown', function( event ) {
 
 
 
+
+
 /*MathJax tweaks to prevent display errors in equation formatting  */
     /* disable if performance is dragging */
 
@@ -631,7 +647,6 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
        MathJax.Hub.Rerender(document.querySelector(".slides .present")) 
        }, 500);
        } ); 
-
 
 
 
